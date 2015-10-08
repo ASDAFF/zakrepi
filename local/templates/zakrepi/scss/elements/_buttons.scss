@@ -1,0 +1,83 @@
+.btn {
+	display: inline-block;
+	position: relative;
+	border: 1px solid transparent;
+	font-family: inherit;
+	font-size: $base-size;
+	line-height: 38px;
+	height: 40px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: $base-border-radius;
+	padding: 0 $gutter-width/2;
+	
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	
+	&:active,
+	&:focus {
+		outline: none;
+	}
+	
+	&.standart {
+		background: transparent;
+		color: color('text', 'dark');
+		border-color: color('border', 'light');
+	}
+	
+	&.primary {
+		background: color('primary', 'base');
+		border-color: color('primary', 'base');
+		color: white;
+		.icon {
+			fill: white;
+		}
+	}
+	
+	&.standart-color {
+		background: transparent;
+		color: color('primary', 'base');
+		border-color: color('primary', 'base');
+	}
+	
+	&.mediumsize {
+		width: 140px;
+	}
+	&.fullsize {
+		width: 100%;
+	}
+	&.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&.btn-icon {
+		background: transparent;
+		line-height: 100%;
+		border: 0;
+		padding: 2px;
+	}
+	&.btn-with-icon {
+		.icon {
+			display: inline-block;
+			width: 25px;
+			height: 100%;
+			line-height: 100%;
+			margin-right: $gutter-width;
+		}
+	}
+	&.shopping-card {
+		padding: 8px 0;
+	}
+}
+.btn-favorite {
+	width: 25px;
+	height: 20px;
+}
+
+.icon {
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+}

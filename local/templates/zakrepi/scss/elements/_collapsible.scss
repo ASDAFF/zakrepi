@@ -1,0 +1,44 @@
+// collapsible
+.collapsible {
+	.collapsible-body {
+		border: 0;
+		display: none;
+	}
+	.collapsible-body-content {
+		padding: 1px $gutter-width $gutter-width/2;
+		*:first-child {
+			margin-top: 0;
+		}
+	}
+	.collapsible-header {
+		padding: $gutter-width - 2px $gutter-width $gutter-width - 2px;
+		@extend .medium-text;
+		line-height: 1;
+		cursor: pointer;
+		height: 50px;
+		&:after {
+			content: '>';
+			display: block;
+			position: absolute;
+			right: $gutter-width;
+			top: 19px;
+			font-size: 14px;
+			line-height: 1;
+			color: color('icons', 'base');
+			transform: scale(2,1) rotate(90deg) translateZ(0);
+			will-change: transform;
+			//transition: transform .3s ease;
+		}
+		&:not(.active):hover {
+			background-color: color('bg', 'light');
+		}
+		&.active {
+			&:after {
+				transform: scale(2,1) rotate(-90deg) translateZ(0);
+			}
+			& + .collapsible-body {
+				//display: block;
+			}
+		}
+	}
+}

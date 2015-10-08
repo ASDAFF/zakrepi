@@ -1,0 +1,117 @@
+html{
+	font-family: 'open sans', roboto, arial, sans-serif;
+	line-height: 1.5;
+	font-size: $base-size;
+	font-weight: normal;
+	color: color('text', 'base');
+	-webkit-font-smoothing: antialiased;
+}
+.rouble {
+	font-family: rouble, sans-serif;
+	font-style: normal;
+}
+// Text Styles
+em { 
+	font-style: italic; 
+}
+.uppercase {
+	text-transform: uppercase;
+}
+// wight
+.light { 
+	font-weight: 300; 
+}
+strong, .medium { 
+	font-weight: 600; 
+}
+.bold {
+	font-weight: 800;
+}
+// color
+.lighter-color {
+	color: color('text', 'lighter');
+}	
+.light-color {
+	color: color('text', 'light');
+}
+.dark-color {
+	color: color('text', 'dark');
+}
+.darker-color {
+	color: color('text', 'darker');
+}
+// size
+small { 
+	font-size: 75%; 
+}
+.small-text {
+	font-size: 13px;
+}
+.medium-text {
+	font-size: 16px;
+}
+.big-text {
+	font-size: 18px;
+}
+.xbig-text {
+	font-size: 26px;
+}
+.xxbig-text {
+	font-size: 29px;
+}
+.large-text {
+	font-size: 34px;
+}
+
+ul, ol {
+	&.nostyle {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li {
+			padding: 0;
+			margin: 0;
+		}
+	}
+	&.horizontal li {
+		display: inline-block;
+	}
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+
+	// Gets rid of tap active state
+	-webkit-tap-highlight-color: transparent;
+	
+	&.nostyle {
+		color: inherit;
+	}
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	line-height: 1.5;
+}
+
+// Header Styles
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 { font-size: $h1-fontsize; line-height: 1.5; margin: 1em 0;}
+h2 { font-size: $h2-fontsize; line-height: 1.5; margin: 1em 0;}
+h3 { font-size: $h3-fontsize; line-height: 1.5; margin: 1em 0;}
+h4 { font-size: $h4-fontsize; line-height: 1.5; margin: 1em 0;}
+h5 { font-size: $h5-fontsize; line-height: 1.5; margin: 1em 0;}
+h6 { font-size: $h6-fontsize; line-height: 1.5; margin: 1em 0;}
+
+.page-title {
+	@extend .large-text;
+	@extend .light;
+	margin: $gutter-width*1.5 0;
+}
+.box-title {
+	@extend .xxbig-text;
+	@extend .light;
+	margin: $gutter-width 0;
+}

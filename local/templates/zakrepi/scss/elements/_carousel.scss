@@ -1,0 +1,51 @@
+// carousel
+.carousel {
+	margin: $gutter-width/2 auto $gutter-width*2;
+	.carousel-content {
+		overflow: hidden;
+		z-index: 2;
+	}
+	.carousel-inner {
+		width: 9999px;
+		&:after {
+			@extend .row:after;
+		}
+	}
+	.item {
+		@extend .left;
+	}
+	.carousel-controlls {
+		position: absolute;
+		z-index: 3;
+		width: 100%;
+		height: 48px;
+		top: 50%;
+		margin-top: -24px;
+		left: 0;
+		overflow: hidden;
+		transition: width .3s, left .3s;
+		.prev,
+		.next {
+			
+		}
+		.prev {
+			
+		}
+		.next {
+			
+		}
+	}
+	&:hover .carousel-controlls {
+		
+		.prev,
+		.next {
+			
+		}
+		.prev {
+			
+		}
+		.next {
+			
+		}
+	}
+}

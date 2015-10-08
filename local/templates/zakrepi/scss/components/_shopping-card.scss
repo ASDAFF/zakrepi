@@ -1,0 +1,20 @@
+// shopping-card
+.shopping-card-box {
+	padding-top: $gutter-width/2;
+	.btn-minicart {
+		padding-left: $gutter-width*3;
+		text-align: left;
+		.icon {
+			position: absolute;
+			left: 15px;
+			fill: color('icons', 'dark');
+		}
+	}
+	.btn-favorite {
+		margin: $gutter-width/2 7% $gutter-width/2 16%;
+		padding: 0;
+		.icon {
+			fill: color('icons', 'lightest');
+		}
+	}
+}

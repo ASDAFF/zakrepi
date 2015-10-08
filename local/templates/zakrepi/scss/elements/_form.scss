@@ -1,0 +1,100 @@
+// fields
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="password"],
+input[type="search"],
+.inputtext,
+textarea {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid color('border', 'light');
+	border-radius: $base-border-radius;
+	padding: 9px 15px;
+	font-family: inherit;
+	@extend .small-text;
+	line-height: 20px;
+	color: color('text', 'darker');
+	
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	
+	& + .textfield-placeholder {
+		@extend .small-text;
+		line-height: 20px;
+		color: color('text', 'light');
+		position: absolute;
+		top: $gutter-width/2;
+		left: 15px;
+		cursor: text;
+		opacity: 1;
+		will-change: opacity, transform;
+		transform: translate(0,0);
+		transition: transform .1s, opacity .1s;
+	}
+	
+	&.inputtext-small {
+		max-width: 100px;
+		font-size: $base-size;
+		line-height: 1em;
+		padding: 7px 15px;
+		height: 30px;
+		border-radius: $small-border-radius;
+		& + .textfield-placeholder {
+			font-size: $base-size;
+			line-height: 1em;
+			top: 9px;
+		}
+	}
+	
+	&:focus {
+		border-color: color('border', 'dark');
+		outline: none;
+	}
+	&.dirty + .textfield-placeholder {
+		//display: none;
+		opacity: 0;
+		transform: translate(50px,0);
+	}
+}
+.col {
+	>input[type="text"],
+	>input[type="email"],
+	>input[type="url"],
+	>input[type="tel"],
+	>input[type="password"],
+	>input[type="search"],
+	>.inputtext,
+	>textarea {
+		& + .textfield-placeholder {
+			left: $gutter-width*1.25;
+		}
+	}
+}
+
+// checkbox
+input[type="checkbox"] {
+	display: none;
+	& + .checkbox-lbl {
+		line-height: 17px;
+		vertical-align: middle;
+		cursor: pointer;
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 17px;
+			height: 17px;
+			border: 1px solid color('border', 'base');
+			border-radius: $small-border-radius;
+			margin-right: 8px;
+			background-color: white;
+			vertical-align: bottom;
+		}
+	}
+	&:checked + .checkbox-lbl:before {
+		background: white url('images/tick.png') center no-repeat;
+	}
+}

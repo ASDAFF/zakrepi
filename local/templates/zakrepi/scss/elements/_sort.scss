@@ -1,0 +1,13 @@
+// sort
+.sort-box {
+	margin: 0 0 $gutter-width;
+	.sort-item {
+		margin: 0 $gutter-width/2;
+		color: color('primary', 'base');
+		cursor: pointer;
+	}
+	.sort-ctrl:checked + .sort-item {
+		color: color('text', 'base');
+		cursor: default;
+	}
+}

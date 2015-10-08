@@ -1,0 +1,37 @@
+// menu
+.menu {
+	@extend ul.nostyle;
+	.menu-link {
+		@extend a.nostyle;
+	}
+}
+.horizontal-menu {
+	@extend ul.horizontal;
+	.menu-link {
+		display: block;
+		padding: $gutter-width/2;
+	}
+	.menu-item:first-of-type .menu-link {
+		padding-left: 0;
+	}
+}
+.vertical-menu {
+	.menu-item {
+		margin: $gutter-width/2 0;
+	}
+}
+
+.horizontal-multilvl-menu {
+	@extend ul.horizontal;
+	.menu-link {
+		display: block;
+	}
+	> .menu-item > .menu-link {
+		@extend .medium-text;
+		@extend .uppercase;
+		font-size: 13px;
+		font-weight: 600;
+		line-height: 1;
+		padding: $gutter-width - 1px $gutter-width + 2px;
+	}
+}

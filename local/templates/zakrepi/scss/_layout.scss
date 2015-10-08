@@ -1,0 +1,81 @@
+// layout
+html, body {
+	height: 100%;
+}
+.layout,
+.page {
+	min-height: 100%;
+}
+.workarea-wrapper {
+	min-height: calc(100vh - 770px);
+	padding: 0 $gutter-width/2;
+	padding-bottom: $gutter-width*3.5;
+}
+
+.page {
+	background: color("bg", "base");
+}
+.header-wrapper,
+.footer-wrapper {
+	background: white;
+	color: color("text", "base");
+}
+.topbar {
+	background: color("bg", "topbar");
+	color: color("text", "darker");
+}
+.main-menu {
+	background: color("bg", "dark");
+	color: white;
+}
+.phone-box {
+	line-height: 1;
+	.phone-link {
+		margin-bottom: $gutter-width/2;
+	}
+}
+
+// header
+.header {
+	padding-top: $gutter-width;
+	padding-bottom: $gutter-width;
+	.phone-box {
+		padding-top: $gutter-width/2;
+	}
+}
+// subsribe-box
+.subscribe-box {
+	padding-top: $gutter-width*1.5;
+	padding-bottom: $gutter-width*1.5;
+	border-bottom: 1px solid color('border', 'lighter');
+	.sbscr-text {
+		@extend .big-text;
+		padding-top: $gutter-width/2;
+		padding-bottom: $gutter-width/2;
+	}
+}
+// social
+.soc-list {
+	@extend ul.nostyle;
+	.soc-item {
+		margin-right: $gutter-width;
+	}
+}
+// footer
+.footer {
+	padding: $gutter-width*1.5 0;
+	.box-title {
+		margin-top: 0;
+	}
+	.phone-box,
+	.schedule-box {
+		margin-bottom: $gutter-width;
+	}
+	.schedule-box p {
+		margin: $gutter-width/2 0;
+	}
+}
+.bottombar {
+	padding: $gutter-width*1.5 0;
+	border-top: 1px solid color('border', 'lighter');
+}

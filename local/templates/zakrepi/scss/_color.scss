@@ -1,0 +1,103 @@
+// Utility Color Classes
+
+$primary: (
+	//light:,
+	base: #ce2127,
+	//dark:,
+);
+
+$text: (
+	lighter: #b9b9b9,
+	light: #8c8c8c,
+	base: #434343,
+	dark: #363636,
+	darker: #333333
+);
+
+$bg: (
+	light: #f9f9f9,
+	base: #f6f6f6,
+	topbar: #efefef,
+	dark: #363636,
+);
+
+$icons: (
+	lightest: #d8d8d8,
+	lighter: #d4d4d4,
+	light: #9d9d9d,
+	base: #6b6b6b,
+	dark: #242424,
+);
+
+$border: (
+	lighter: #f6f6f6,
+	light: #d7d7d7,
+	base: #c9c9c9,
+	dark: #aaaaaa,
+	darker: #9c9c9c,
+);
+
+$shades: (
+  "black":        #000000,
+  "white":        #FFFFFF,
+  "transparent":  transparent
+);
+
+$colors: (
+  "primary": $primary,
+  "text": $text,
+  "bg": $bg,
+  "icons": $icons,
+  "border": $border,
+  "shades": $shades
+);
+
+
+
+// Color Classes
+@each $color_name, $color in $colors {
+  @each $color_type, $color_value in $color {
+    @if $color_type == "base" {
+      .#{$color_name} {
+        background-color: $color_value !important;
+      }
+      .#{$color_name}-text {
+        color: $color_value !important;
+      }
+    }
+    @else {
+      .#{$color_name}.#{$color_type} {
+        background-color: $color_value !important;
+      }
+      .#{$color_name}-text.text-#{$color_type} {
+        color: $color_value !important;
+      }
+    }
+  }
+}
+
+// Shade classes
+@each $color, $color_value in $shades {
+  .#{$color} {
+    background-color: $color_value !important;
+  }
+  .#{$color}-text {
+    color: $color_value !important;
+  }
+}
+
+
+// usage: color("name_of_color", "type_of_color")
+// to avoid to repeating map-get($colors, ...)
+
+@function color($color, $type) {
+  @if map-has-key($colors, $color) {
+    $curr_color: map-get($colors, $color);
+    @if map-has-key($curr_color, $type) {
+      @return map-get($curr_color, $type);
+    }
+  }
+  @warn "Unknown `#{name}` in $colors.";
+  @return null;
+}
+

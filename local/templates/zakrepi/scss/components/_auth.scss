@@ -1,0 +1,23 @@
+// auth-box
+.auth-box {
+	padding-top: $gutter-width/2;
+	padding-bottom: $gutter-width/2;
+	text-align: right;
+	.auth-link {
+		@extend a.nostyle;
+		display: inline-block;
+		padding: 0 $gutter-width/2;
+	}
+	.auth-link.login {
+		border-right: 1px solid;
+	}
+	.icon {
+		display: inline-block;
+		width: 1.5em;
+		height: 1.5em;
+		padding: 2px;
+		fill: color('icons', 'dark');
+		margin-right: $gutter-width/3;
+		vertical-align: top;
+	}
+}

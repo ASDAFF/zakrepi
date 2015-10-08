@@ -1,0 +1,21 @@
+// search
+.header .search-box {
+	margin-top: $gutter-width/2;
+	.search {
+		width: 100%;
+	}
+	.search-btn {
+		position: absolute;
+		top: $gutter-width/2;
+		right: $gutter-width*1.25;
+		width: $gutter-width;
+		height: $gutter-width;
+		padding: 2px;
+		.icon {
+			fill: color('icons', 'light');
+		}
+	}
+	.search:focus ~ .search-btn .icon {
+		fill: color('text', 'dark');
+	}
+}

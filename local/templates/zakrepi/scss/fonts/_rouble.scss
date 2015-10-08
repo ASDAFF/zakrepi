@@ -1,0 +1,15 @@
+@mixin font_paths($font){
+	//src: url('#{$rouble-font-path}'+$font+'.eot');
+	src: url('#{$rouble-font-path}'+$font+'.eot#iefix') format("embedded-opentype"),
+		 url('#{$rouble-font-path}'+$font+'.woff') format("woff"),
+		 url('#{$rouble-font-path}'+$font+'.ttf') format("truetype"),
+		 url('#{$rouble-font-path}'+$font+'.otf') format("opentype"),
+		 url('#{$rouble-font-path}'+$font+'.svg') format("svg");
+}
+
+@font-face {
+	font-family: rouble;
+	@include font_paths('rouble');
+	font-weight: normal;
+	font-style: normal;
+}

@@ -1,0 +1,36 @@
+// filters
+.filter {
+	background: white;
+	@extend .z-depth-1;
+	border-radius: $base-border-radius;
+	max-width: 260px;
+	.filters-list {
+		@extend ul.nostyle;
+		li {
+			border-bottom: 1px solid #eeeeee;
+		}
+	}
+	.range-field {
+		margin: 1rem 0;
+	}
+	.price {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.lbl-text {
+			position: absolute;
+			top: 9px;
+			left: $gutter-width/2;
+			line-height: 1;
+		}
+		.textfield-placeholder {
+			left: $gutter-width*1.5;
+		}
+		.inputtext-small {
+			padding-left: $gutter-width*1.5;
+		}
+	}
+	.actions {
+		padding: $gutter-width*1.5 $gutter-width;
+	}
+} 
