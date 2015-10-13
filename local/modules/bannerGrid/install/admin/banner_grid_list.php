@@ -1,0 +1,1 @@
+<?require($_SERVER["DOCUMENT_ROOT"]."/local/modules/bannergrid/admin/banner_grid_list.php");?>
