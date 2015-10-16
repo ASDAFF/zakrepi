@@ -1,8 +1,7 @@
 <?php
 use Bitrix\Main\Entity;
 class CBannerGrid{
-    static $MODULE_ID = 'bannergrid';
-
+    const MODULE_ID = 'bannergrid';
     public static function getBannerGrid($num){
         global $DB;
         $sql = "SELECT * FROM b_banner_grid WHERE BG_NUMBER = '".$num."'";
@@ -13,12 +12,9 @@ class CBannerGrid{
         }
         return $arResult;
     }
-    public static function setBannerGrid($id,$number){
-
-    }
     public static function getAllElementIblock(){
         CModule::IncludeModule('iblock');
-        $IBLOCK_ID = 2;
+        $IBLOCK_ID =  COption::GetOptionString(self::MODULE_ID, 'bgIblockId', 1);
         $arSelect = Array("ID", "NAME", "PREVIEW_PICTURE");
         $arFilter = array(
             "IBLOCK_ID" => $IBLOCK_ID,
@@ -37,9 +33,10 @@ class CBannerGrid{
         }
         return $arResult;
     }
+
     public static function getElementIblockBanner($id){
         CModule::IncludeModule('iblock');
-        $IBLOCK_ID = 2;
+        $IBLOCK_ID =  COption::GetOptionString(self::MODULE_ID, 'bgIblockId', 1);
         $arSelect = Array("ID", "NAME", "PREVIEW_PICTURE");
         $arFilter = array(
             "ID"=> $id,
@@ -55,7 +52,8 @@ class CBannerGrid{
         }
         return $arResult;
     }
-    public static function findBannerGrid($id)
+
+    /*public static function findBannerGrid($id)
     {
         global $DB;
         $sql = "SELECT * FROM b_banner_grid WHERE BG_IDBANERS = '".$id."'";
@@ -65,11 +63,7 @@ class CBannerGrid{
             $arResult[] = $record;
         }
         return $arResult;
-    }
-    static function getAllBanner(){
-
-    }
-
+    }*/
     public static function saveParametrBanner($param)
     {
         /*

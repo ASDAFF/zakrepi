@@ -19,8 +19,97 @@ $(document).ready(function(){
 		$('.dark-bg, .modal').fadeOut(500);
 	});
 	
+	// main-menu
+	$('.horizontal-multilevel-menu .menu-item.parent').hover(function(){
+		var l2 = $(this).children('.level-2');
+		var l3 = $(this).find('.level-2 > .submenu-item.active > .level-3');
+		if(l2.outerHeight() < l3.outerHeight()){
+			if((l3.children('.submenu-item').length - l2.children('.submenu-item').length) >= 3){
+				if(l3.children('.submenu-item.parent').length > 0){
+					l2.css('height',l3.outerHeight());
+				} else {
+					l3.addClass('col-2');
+				}
+			} else {
+				l2.css('height',l3.outerHeight());
+			}
+		}
+	});
+	$('.horizontal-multilevel-menu .submenu-item').hover(function(){
+		if($(this).hasClass('parent')){
+			$(this).addClass('active').siblings().removeClass('active');
+			var l2 = $(this).parents('.submenu.level-2');
+			if($(this).parent('.submenu').hasClass('level-2')){
+				var l3 = $(this).children('.submenu');
+			} else {
+				var l3 = $(this).parents('.submenu.level-3');
+			}
+			var l2height = 40;
+			l2.children('.submenu-item').each(function(){
+				l2height = l2height + $(this).height();
+			});
+			var l3height = 40;
+			l3.children('.submenu-item').each(function(){
+				l3height = l3height + $(this).height();
+			});
+			//console.log(l3height);
+			if(l2height > l3height){
+				//console.log('l2 > l3');
+				if(l3.children('.submenu-item.parent').length > 0){
+					//console.log('l3 has childs');
+					var l4 = l3.children('.submenu-item.parent.active').children('.submenu.level-4');
+					l4height = 40;
+					l4.children('.submenu-item').each(function(){
+						l4height = l4height + $(this).height();
+					});
+					if(l4height > l2.outerHeight()){
+						//console.log('l4 > l2');
+						if((l4.children('.submenu-item').length - l2.children('.submenu-item').length) >= 4){
+							//console.log('l4 childs >= 4');
+							l4.addClass('col-2');
+							if((l4height / 2 + 20) > l2.outerHeight()){
+								//console.log('l4 height > l2');
+								l2.animate({'height':l4.outerHeight()},300);
+							}
+						} else {
+							//console.log('l4 childs < 4');
+							l2.animate({'height':l4.outerHeight()},300);
+						}
+					} else {
+						//console.log('l2 > l4');
+						l2.animate({'height':l2height},300);
+					}
+				} else {
+					//console.log('l3 hasn\'t childs');
+					l2.animate({'height':l2height},300);
+				}
+			} else {
+				//console.log('l3 > l2');
+				//console.log(l3height+' > '+l2.outerHeight());
+				if((l3.children('.submenu-item').length - l2.children('.submenu-item').length) >= 3){
+					//console.log('l3 childs >=3');
+					if(l3.children('.submenu-item.parent').length > 0){
+						//console.log('l3 has childs');
+						l2.animate({'height':l3height},300);
+					} else {
+						//console.log('l3 hasn\'t childs');
+						l3.addClass('col-2');
+						if((l3height / 2) > l2height){
+							l2.animate({'height':(l3height / 2 + 20)},300);
+						}
+					}
+				} else {
+					//console.log('l3 childs < 3');
+					l2.animate({'height':l3height},300);
+				}
+			}
+		} else {
+			$(this).toggleClass('active').siblings().removeClass('active');
+		}
+	});
+	
 	// menu
-	$('.js-menu').click(function(){
+	/*$('.js-menu').click(function(){
 		var act = $(this).attr('data-action');
 		switch(act){
 			case 'open':
@@ -36,8 +125,8 @@ $(document).ready(function(){
 				$('.page').css({'position': 'relative', 'top': '0px'});
 				$(window).scrollTop(-pos);
 		}
-	});
-	$('.mobile-menu .parent > .menu-link').click(function(){
+	});*/
+	/*$('.mobile-menu .parent > .menu-link').click(function(){
 		$(this).parent('.parent').siblings().addClass('inactive').removeClass('open');
 		if($(this).parent('.parent').hasClass('submenu-item')){
 			$(this).parent('.submenu-item').parent('.submenu').siblings().addClass('inactive');
@@ -51,7 +140,7 @@ $(document).ready(function(){
 	});
 	$('.mobile-menu .menu-back-btn').click(function(){
 		$('.menu .parent.open:last').removeClass('open');
-	});
+	});*/
 	
 	// placeholder
 	$('.inputtext, input:not([type="submit"])').keyup(function(){
@@ -69,50 +158,7 @@ $(document).ready(function(){
 	$('.collapsible').collapsible();
 	
 	// jcarousel
-	// http://sorgalla.com/jcarousel/docs/
-	$('.carousel').jcarousel({
-		list: '.carousel-inner',
-		wrap: 'circular',
-		transitions: Modernizr.csstransitions ? {
-			transforms:   Modernizr.csstransforms,
-			transforms3d: Modernizr.csstransforms3d,
-			easing:       'ease'
-		} : false
-	});
-	/*$('.carousel-nav')
-		.jcarouselPagination({
-			item: function(page){
-				return '<li class="nav-item"><a class="nav-link" href="#'+page+'"></a></li>';
-			}
-		})
-		.on('jcarouselpagination:active', 'a', function(){ // - вот эта херня не работает почему-то
-			$(this).addClass('active');
-		})
-		.on('jcarouselpagination:inactive', 'a', function(){ // - и эта (а должна!)
-			$(this).removeClass('active');
-		});*/
-	$('.carousel-controlls .prev')
-		.on('jcarouselcontrol:active', function(){
-			$(this).addClass('active');
-		})
-		.on('jcarouselcontrol:inactive', function(){
-			$(this).removeClass('active');
-		})
-		.jcarouselControl({
-			target: '-=1'
-		});
-	$('.carousel-controlls .next')
-		.on('jcarouselcontrol:active', function(){
-			$(this).addClass('active');
-		})
-		.on('jcarouselcontrol:inactive', function(){
-			$(this).removeClass('active');
-		})
-		.jcarouselControl({
-			target: '+=1'
-		});
-	
-	
+
 	// anchor-menu
 	$('.anchor-manu .menu-link.anchor:not(.inactive)').click(function(e){
 		var el = $(this).attr('href');

@@ -1,158 +1,135 @@
 //"use strict"
 var zakrepi = angular.module('zakrepi',[]);
 
-/*zakrepi.controller('HomeProductsCtrl', function($scope, $http){
+zakrepi.controller('actionsCtrl', function($scope, $http){
 	/*$http.get('content/home-products.json').success(function(data){
 		$scope.products = data;
 		console.log($scope.products);
-	});*//*
-	$scope.products = [
+	});*/
+	$scope.actions = [
 		{
 			"id": 1,
-			"name": "3D Ultra HD Led телевизор Sony KD-79X9005B",
-			"image": "images/content/products/product-1.jpg",
-			"rating": 3,
-			"reviews": 4,
-			"oldprice": 499000,
-			"price": 449000,
-			"today": true,
-			"new": false,
-			"bestseller": false,
+			"title": "Скидка 40%  на электроинструменты",
+			"image": "images/content/actions/actions-1.jpg",
+			"anons": "Спецпредложение на технику Bosch",
+			"terms": "Даты проведения акции: 18 сентября - 30 октября 2015г."
 		},
 		{
 			"id": 2,
-			"name": "Игровая приставка Sony PS4 500GB Black",
-			"image": "images/content/products/product-2.jpg",
-			"rating": 4,
-			"reviews": 13,
-			"oldprice": "",
-			"price": 27990,
-			"today": true,
-			"new": false,
-			"bestseller": false,
+			"title": "Cнегоуборщики по прошлогодним ценам!",
+			"image": "images/content/actions/actions-2.jpg",
+			"anons": "Надежный помошник по уборке снега",
+			"terms": "Даты проведения акции: 18 сентября - 30 октября 2015г."
 		},
 		{
 			"id": 3,
-			"name": "Овощерезка Moulinex Dj905",
-			"image": "images/content/products/product-3.jpg",
-			"rating": 1,
-			"reviews": 2,
-			"oldprice": "",
-			"price": 14000,
-			"today": true,
-			"new": false,
-			"bestseller": false,
+			"title": "Новое измерение твоей свободы",
+			"image": "images/content/actions/actions-3.jpg",
+			"anons": "Палатки, рюкзаки, мебель и многое другое",
+			"terms": "Даты проведения акции: 18 сентября - 30 октября 2015г."
 		},
 		{
 			"id": 4,
-			"name": "Фотоаппарат зеркальный Nikon D3200 kit 18-55VRII Black",
-			"image": "images/content/products/product-4.jpg",
-			"rating": 4,
-			"reviews": 5,
-			"oldprice": "",
-			"price": 24000,
-			"today": true,
-			"new": false,
-			"bestseller": false,
+			"title": "Распродажа!",
+			"image": "images/content/actions/actions-4.jpg",
+			"anons": "Надежный помошник по уборке снега",
+			"terms": "Даты проведения акции: 18 сентября - 30 октября 2015г."
 		},
 		{
 			"id": 5,
-			"name": "Ноутбук Lenovo IdeaPad G5030 (80G000FLRK)",
-			"image": "images/content/products/product-5.jpg",
-			"rating": 3,
-			"reviews": 16,
-			"oldprice": 21000,
-			"price": 19790,
-			"today": true,
-			"new": true,
-			"bestseller": true,
+			"title": "Пора на охоту",
+			"image": "images/content/actions/actions-5.jpg",
+			"anons": "Камуфляжная демисезонная  одежда",
+			"terms": "Даты проведения акции: 18 сентября - 30 октября 2015г."
 		},
 		{
 			"id": 6,
-			"name": "Видеокамера экшн GoPro Hero 4 Black Edition Motosport",
-			"image": "images/content/products/product-6.jpg",
-			"rating": 4,
-			"reviews": 117,
-			"oldprice": "",
-			"price": 29990,
-			"today": true,
-			"new": true,
-			"bestseller": false,
+			"title": "Рыбалка",
+			"image": "images/content/actions/actions-6.jpg",
+			"anons": "Большой выбор лодок и мотоблоков",
+			"terms": "Даты проведения акции: 18 сентября - 30 октября 2015г."
+		},
+	];
+});
+zakrepi.controller('newsCtrl', function($scope, $http){
+	/*$http.get('content/home-products.json').success(function(data){
+		$scope.products = data;
+		console.log($scope.products);
+	});*/
+	$scope.news = [
+		{
+			"id": 1,
+			"title": "Настоящий предприниматель – тот, кто умеет работать на пикирующем рынке.",
+			"image": "images/content/news/news-1.jpg",
+			"date": "2015-09-25"
 		},
 		{
+			"id": 2,
+			"title": "Грамотный спрос - грамотное предложение.",
+			"image": "images/content/news/news-2.jpg",
+			"date": "25 сентября 2015"
+		},
+		{
+			"id": 3,
+			"title": "Участвуй в бесплатном вебинаре!",
+			"image": "images/content/news/news-3.jpg",
+			"date": "25 сентября 2015"
+		},
+		{
+			"id": 4,
+			"title": "Мы в \"100 лучших товаров Тюменской области\"",
+			"image": "images/content/news/news-4.jpg",
+			"date": "25 сентября 2015"
+		},
+		{
+			"id": 5,
+			"title": "Подари себе путешествие!",
+			"image": "images/content/news/news-5.jpg",
+			"date": "25 сентября 2015"
+		},
+		{
+			"id": 6,
+			"title": "День Строителя!",
+			"image": "images/content/news/news-6.jpg",
+			"date": "25 сентября 2015"
+		},{
 			"id": 7,
-			"name": "Автомобильный радар Neoline X-COP 8500",
-			"image": "images/content/products/product-7.jpg",
-			"rating": 1,
-			"reviews": 7,
-			"oldprice": "",
-			"price": 7600,
-			"today": true,
-			"new": true,
-			"bestseller": true,
+			"title": "Лодки от 4999 р.",
+			"image": "images/content/news/news-7.jpg",
+			"date": "25 сентября 2015"
 		},
 		{
 			"id": 8,
-			"name": "Фотоэпилятор Remington IPL600F",
-			"image": "images/content/products/product-8.jpg",
-			"rating": 4,
-			"reviews": 2,
-			"oldprice": "",
-			"price": 24990,
-			"today": true,
-			"new": true,
-			"bestseller": false,
+			"title": "Франчайзинг как стратегия развития моего бизнеса",
+			"image": "images/content/news/news-8.jpg",
+			"date": "25 сентября 2015"
 		},
 		{
 			"id": 9,
-			"name": "Смартфон Asus Zenfon 4 White",
-			"image": "images/content/products/product-9.jpg",
-			"rating": 3,
-			"reviews": 64,
-			"oldprice": 7990,
-			"price": 6490,
-			"today": false,
-			"new": true,
-			"bestseller": true,
+			"title": "Подарочные сертификаты КрепыЖ!",
+			"image": "images/content/news/news-9.jpg",
+			"date": "25 сентября 2015"
 		},
 		{
 			"id": 10,
-			"name": "Посудомоечная машина (60 см) Siemens SpeedMatic SN26M285RU",
-			"image": "images/content/products/product-10.jpg",
-			"rating": 4,
-			"reviews": 43,
-			"oldprice": "",
-			"price": 55390,
-			"today": false,
-			"new": true,
-			"bestseller": true,
+			"title": "Рыбалка в Северном Вагае",
+			"image": "images/content/news/news-10.jpg",
+			"date": "25 сентября 2015"
 		},
 		{
 			"id": 11,
-			"name": "Планшет Apple iPad Air 2 Wi-Fi + Cellular 16Gb Black",
-			"image": "images/content/products/product-11.jpg",
-			"rating": 5,
-			"reviews": 237,
-			"oldprice": "",
-			"price": 32000,
-			"today": false,
-			"new": false,
-			"bestseller": true,
+			"title": "Выставка франчайзинг регионы",
+			"image": "images/content/news/news-11.jpg",
+			"date": "25 сентября 2015"
 		},
 		{
 			"id": 12,
-			"name": "Кофемашина капсульного типа Nespresso De Longhi EN550.B",
-			"image": "images/content/products/product-12.jpg",
-			"rating": 4,
-			"reviews": 55,
-			"oldprice": "",
-			"price": 27790,
-			"today": false,
-			"new": false,
-			"bestseller": true,
+			"title": "Распродажа моек высокого давления!",
+			"image": "images/content/news/news-12.jpg",
+			"date": "25 сентября 2015"
 		},
 	];
-});*/
+});
 zakrepi.controller('CatalogProductsCtrl', function($scope, $http){
 	/*$http.get('content/catalog-products.json').success(function(data){
 		$scope.products = data;
@@ -196,7 +173,7 @@ zakrepi.controller('CatalogProductsCtrl', function($scope, $http){
 			"image": "images/content/products/cataloge-product-4.jpg",
 			"rating": 2,
 			"reviews": 11,
-			"oldprice": "",
+			"oldprice": 13990,
 			"price": 9990,
 			"quantity": 10,
 		},
@@ -236,7 +213,7 @@ zakrepi.controller('CatalogProductsCtrl', function($scope, $http){
 			"image": "images/content/products/cataloge-product-2.jpg",
 			"rating": 4,
 			"reviews": 8,
-			"oldprice": "",
+			"oldprice": "9600",
 			"price": 8599,
 			"quantity": 2,
 		},

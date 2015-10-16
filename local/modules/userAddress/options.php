@@ -1,37 +1,34 @@
 <?
-    use Bitrix\Main\Localization\Loc;
-    $module_id = "zakrepiSettigs";
+use Bitrix\Main\Localization\Loc;
+$module_id = "useraddress";
 
-    /*Установка прав на запись*/
-    $MODULE_RIGHT = $APPLICATION->GetGroupRight($module_id);
+/*Установка прав на запись*/
+$MODULE_RIGHT = $APPLICATION->GetGroupRight($module_id);
 
-    if (! ($MODULE_RIGHT >= "R"))
-        $APPLICATION->AuthForm(Loc::getMessage("ACCESS_DENIED"));
-    /*Конец установки прав на запись*/
-    IncludeModuleLangFile($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/options.php");
-    IncludeModuleLangFile(__FILE__);
+if (! ($MODULE_RIGHT >= "R"))
+    $APPLICATION->AuthForm(Loc::getMessage("ACCESS_DENIED"));
+/*Конец установки прав на запись*/
+IncludeModuleLangFile($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/options.php");
+IncludeModuleLangFile(__FILE__);
 ?>
 <?
 /*Какаие параметры необходимы*/
 $arAllOptions = array(
-    array("zPhoneSite", GetMessage("ZAKREPI_PHONE_SITE"), "+7 999 999 99 99", array("text", 30)),
-    array("zPhoneSiteCallTo", GetMessage("ZAKREPI_PHONE_SITE_CALL_TO"), "+7 999 999 99 99", array("text", 30)),
-    array("zTimeWork", GetMessage("ZAKREPI_TIME_WORK"), "", array("textarea", 10,50)),
-    array("zTimeSlider", GetMessage("ZAKREPI_TIME_SLIDER"), "3000", array("text", 30)),
+    array("zCount", GetMessage("USERADDRESS_COUNT"), "6", array("text", 30)),
 );
 /**/
 
 if($_SERVER["REQUEST_METHOD"] == "POST" && strlen($_REQUEST["Update"]) > 0 && check_bitrix_sessid())
 {
 
-        foreach($arAllOptions as $arOption)
-        {
-            $name=$arOption[0];
-            $val=$_REQUEST[$name];
-            if($arOption[2][0]=="checkbox" && $val!="Y")
-                $val="N";
-            COption::SetOptionString($module_id, $name, $val, $arOption[1]);
-        }
+    foreach($arAllOptions as $arOption)
+    {
+        $name=$arOption[0];
+        $val=$_REQUEST[$name];
+        if($arOption[2][0]=="checkbox" && $val!="Y")
+            $val="N";
+        COption::SetOptionString($module_id, $name, $val, $arOption[1]);
+    }
 }
 
 
@@ -64,7 +61,7 @@ $tabControl->Begin();
         </tr>
     <?endforeach?>
     <?$tabControl->Buttons();?>
-    <input <?if ($MODULE_RIGHT<"W") echo "disabled" ?> type="submit" class="adm-btn-green" name="Update" value="<?=Loc::getMessage("ZAKREPI_OPTION_SAVE")?>" />
+    <input <?if ($MODULE_RIGHT<"W") echo "disabled" ?> type="submit" class="adm-btn-green" name="Update" value="<?=Loc::getMessage("USERADDRESS_SAVE")?>" />
     <input type="hidden" name="Update" value="Y" />
     <?=bitrix_sessid_post();?>
     <?$tabControl->End();?>
