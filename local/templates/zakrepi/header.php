@@ -31,6 +31,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/jquery.jcarousel.min.js");
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/svg-lib.js");
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/script.js");
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/function.js");
 
         //Для работы ajax у формы неавторизованным пользователям AJAX_MODE=>Y
         /*
@@ -70,14 +71,14 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         <div class="layout">
             <!-- для главной добавить класс home-page к page, для новостей и благотворительности - news-page,
                 для проектов - projects-page -->
-            <div class="page" ng-app="zakrepi">
+            <div class="page">
                 <!-- если не 404 -->
                 <div class="header-wrapper">
                     <div class="topbar">
                         <div class="container row">
 
                             <!--geo location-->
-                            <div class="geo-box col l3 small-text">
+                            <div class="geo-box col l3">
                                 <svg class="icon"><use xlink:href="#location"/></svg>
                                 Петропавловск-Камчатский
                             </div>
@@ -105,7 +106,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                             <!--logo-->
                             <div class="logo col l3">
                                 <a class="img-link" href="/">
-                                    <img src="images/logo.png"/>
+                                    <img src="/images/logo.png"/>
                                 </a>
                             </div>
                             <!--end logo-->
@@ -125,7 +126,11 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                             <!--cart and like-->
                             <div class="shopping-card-box col l3">
                                 <a href="#" class="btn btn-favorite btn-icon col"><svg class="icon"><use xlink:href="#heart"/></svg></a>
-                                <a class="btn standart btn-with-icon col l2 btn-minicart" href="#"><svg class="icon"><use xlink:href="#cart"/></svg> Нет товаров</a>
+                                <a class="btn standart btn-with-icon col l2 btn-minicart" href="#" id="minicard"><svg class="icon"><use xlink:href="#cart"/></svg><div class="notification"></div> Нет товаров</a>
+                                <?/*?>
+                                <!-- товар добавлен в корзину-->
+                                <a class="btn standart btn-with-icon col l2 btn-minicart" href="#" id="minicard"><svg class="icon"><use xlink:href="#cart"/></svg><div class="notification">1</div> 7&nbsp;299 <span class="rouble">i</span></a>
+                                <?*/?>
                             </div>
                             <!--end cart and like-->
                         </div>
@@ -548,7 +553,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                                 <li class="submenu-item"><a class="submenu-link" href="#">Средства индивидуальной защиты</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a class="menu-link" href="actsii.php">акции</a></li>
+                        <li class="menu-item"><a class="menu-link" href="/promo/">акции</a></li>
                         </ul>
                         </div>
                     </div>

@@ -63,6 +63,45 @@ $APPLICATION->SetTitle('Главная');
         //
     );?>
     <?/*end slider*/?>
+    <div class="brand-box">
+        <ul class="brand-list">
+            <li class="brand-item">
+                <a href="#" class="brand-link img-link"><img class="brand-img" src="images/content/brands/bosch.png" /></a>
+            </li>
+            <li class="brand-item">
+                <a href="#" class="brand-link img-link"><img class="brand-img" src="images/content/brands/dewalt.png" /></a>
+            </li>
+            <li class="brand-item">
+                <a href="#" class="brand-link img-link"><img class="brand-img" src="images/content/brands/makita.png" /></a>
+            </li>
+            <li class="brand-item">
+                <a href="#" class="brand-link img-link"><img class="brand-img" src="images/content/brands/kovea.png" /></a>
+            </li>
+            <li class="brand-item">
+                <a href="#" class="brand-link img-link"><img class="brand-img" src="images/content/brands/metabo.png" /></a>
+            </li>
+            <li class="brand-item">
+                <a href="#" class="brand-link img-link"><img class="brand-img" src="images/content/brands/hitachi.png" /></a>
+            </li>
+            <li class="brand-item">
+                <a href="#" class="brand-link img-link"><img class="brand-img" src="images/content/brands/aeg.png" /></a>
+            </li>
+            <li class="brand-item">
+                <a href="#" class="brand-link">Все бренды</a>
+            </li>
+        </ul>
+    </div>
+    <?/*brend*/?>
+
+    <?/*end brand*/?>
+
+    <?/*bannergrid*/?>
+    <?$APPLICATION->IncludeComponent(
+        "zakrepi:banner.grid",
+        "",
+        Array()
+    );?>
+    <?/*end bannergrid*/?>
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
 ?>

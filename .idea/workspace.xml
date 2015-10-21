@@ -2,26 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b94893a-e1d6-4c97-9d95-37d54e5f8c7a" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Bitrix\www\b.zakrepi.dev\zakrepi\upload\tmp\BXTEMP-2015-10-13\04\bxu\.access.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Bitrix\www\b.zakrepi.dev\zakrepi\upload\tmp\BXTEMP-2015-10-13\04\bxu\6b510aecab8f158ddde93393ec0832bb\file1444645853161\snow.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Bitrix\www\b.zakrepi.dev\zakrepi\upload\tmp\BXTEMP-2015-10-13\04\bxu\6b510aecab8f158ddde93393ec0832bb\file1444645871174\tourism.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Bitrix\www\b.zakrepi.dev\zakrepi\upload\tmp\BXTEMP-2015-10-13\04\bxu\6b510aecab8f158ddde93393ec0832bb\file1444645887917\fish.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Bitrix\www\b.zakrepi.dev\zakrepi\upload\tmp\BXTEMP-2015-10-13\04\bxu\6b510aecab8f158ddde93393ec0832bb\file1444645971478\clothes.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Bitrix\www\b.zakrepi.dev\zakrepi\upload\tmp\BXTEMP-2015-10-13\04\bxu\6b510aecab8f158ddde93393ec0832bb\file1444646075537\dacha.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Bitrix\www\b.zakrepi.dev\zakrepi\upload\tmp\BXTEMP-2015-10-13\04\bxu\6b510aecab8f158ddde93393ec0832bb\file1444646207150\electro.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Bitrix\www\b.zakrepi.dev\zakrepi\upload\tmp\BXTEMP-2015-10-13\04\bxu\6b510aecab8f158ddde93393ec0832bb\file1444646366671\hunt.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Bitrix\www\b.zakrepi.dev\zakrepi\upload\tmp\BXTEMP-2015-10-13\04\bxu\6b510aecab8f158ddde93393ec0832bb\file1444646747314\benzopila.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Bitrix\www\b.zakrepi.dev\zakrepi\upload\tmp\BXTEMP-2015-10-17\03\bxu\.access.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Bitrix\www\b.zakrepi.dev\zakrepi\upload\tmp\BXTEMP-2015-10-17\03\bxu\64acef467257a8576761b0917608d2ed\file1444989012456\bosch.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Bitrix\www\b.zakrepi.dev\zakrepi\upload\tmp\BXTEMP-2015-10-17\03\bxu\64acef467257a8576761b0917608d2ed\file1444989741820\niva.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/modules/bannerGrid/classes/general/cbannergrid.php" afterPath="$PROJECT_DIR$/local/modules/bannerGrid/classes/general/cbannergrid.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/js/content-app.js" afterPath="$PROJECT_DIR$/local/templates/zakrepi/js/content-app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/footer.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/footer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/header.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/modules/bannerGrid/options.php" afterPath="$PROJECT_DIR$/local/modules/bannerGrid/options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/modules/zakrepiSettigs/options.php" afterPath="$PROJECT_DIR$/local/modules/zakrepiSettigs/options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/modules/zakrepiSettigs/lang/ru/options.php" afterPath="$PROJECT_DIR$/local/modules/zakrepiSettigs/lang/ru/options.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/php_interface/init.php" afterPath="$PROJECT_DIR$/local/php_interface/init.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/js/script.js" afterPath="$PROJECT_DIR$/local/templates/zakrepi/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/php_interface/include/settings.php" afterPath="$PROJECT_DIR$/local/php_interface/include/settings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/js/svg-lib.js" afterPath="$PROJECT_DIR$/local/templates/zakrepi/js/svg-lib.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/template_styles.css" afterPath="$PROJECT_DIR$/local/templates/zakrepi/template_styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/urlrewrite.php" afterPath="$PROJECT_DIR$/urlrewrite.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zakrepi.iws" />
@@ -47,91 +38,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/header.php">
+      <file leaf-file-name="template.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/news/template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.462963" vertical-offset="0" max-vertical-offset="9826">
-              <caret line="65" column="41" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.8017817" vertical-offset="181" max-vertical-offset="1105">
+              <caret line="53" column="56" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="75" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="init.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/php_interface/init.php">
+      <file leaf-file-name="list.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/news/list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="153">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="options.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/modules/zakrepiSettigs/lang/ru/options.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="221">
-              <caret line="6" column="30" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="options.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/modules/zakrepiSettigs/options.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="1292">
-              <caret line="19" column="22" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/local/php_interface/include/settings.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3172338" vertical-offset="0" max-vertical-offset="911">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-27.192308" vertical-offset="313" max-vertical-offset="1241">
-              <caret line="60" column="56" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/js/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2397" max-vertical-offset="3757">
-              <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+            <state vertical-scroll-proportion="-29.807692" vertical-offset="211" max-vertical-offset="1122">
+              <caret line="58" column="25" selection-start-line="57" selection-start-column="8" selection-end-line="58" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/slider_home/template.php">
+        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/promo/template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.230769" vertical-offset="234" max-vertical-offset="1921">
-              <caret line="34" column="67" selection-start-line="34" selection-start-column="67" selection-end-line="34" selection-end-column="67" />
+            <state vertical-scroll-proportion="-24.846153" vertical-offset="0" max-vertical-offset="884">
+              <caret line="38" column="86" selection-start-line="38" selection-start-column="86" selection-end-line="38" selection-end-column="86" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#div#2;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-19.923077" vertical-offset="842" max-vertical-offset="9911">
+              <caret line="80" column="54" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="options.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/modules/userAddress/options.php">
+      <file leaf-file-name="detail.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/news/detail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.384615" vertical-offset="330" max-vertical-offset="1241">
-              <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+            <state vertical-scroll-proportion="-32.692307" vertical-offset="102" max-vertical-offset="1054">
+              <caret line="56" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/promo/detail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="1054">
+              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbconn.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bitrix/php_interface/dbconn.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="663">
+              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".settings.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bitrix/.settings.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-22.615385" vertical-offset="194" max-vertical-offset="1190">
+              <caret line="46" column="61" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urlrewrite.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/urlrewrite.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="374">
+              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/news/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="442">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="20" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -150,35 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/local/modules/bannergrid/install/admin/bannerGridList.php" />
-        <option value="$PROJECT_DIR$/bitrix/admin/bannerGridList.php" />
-        <option value="$PROJECT_DIR$/local/modules/bannergrid/install/index.php" />
-        <option value="$PROJECT_DIR$/local/modules/bannergrid/classes/general/cBannerGrid.php" />
-        <option value="$PROJECT_DIR$/local/modules/bannergrid/admin/bannerGridList.php" />
-        <option value="$PROJECT_DIR$/local/modules/bannergrid/include.php" />
-        <option value="$PROJECT_DIR$/local/modules/bannergrid/install/admin/banner_grid_list.php" />
-        <option value="$PROJECT_DIR$/bitrix/admin/banner_grid_list.php" />
-        <option value="$PROJECT_DIR$/local/modules/bannergrid/admin/menu.php" />
-        <option value="$PROJECT_DIR$/bitrix/.settings.php" />
-        <option value="$PROJECT_DIR$/local/modules/bannerGrid/install/index.php" />
-        <option value="$PROJECT_DIR$/local/modules/bannerGrid/classes/mysql/cbannergridtable.php" />
-        <option value="$PROJECT_DIR$/local/modules/bannerGrid/lang/ru/admin/banner_grid_list.php" />
-        <option value="$PROJECT_DIR$/local/modules/bannerGrid/include.php" />
-        <option value="$PROJECT_DIR$/local/modules/bannerGrid/lib/modal_getlist.php" />
-        <option value="$PROJECT_DIR$/local/modules/bannerGrid/admin/banner_grid_list.php" />
-        <option value="$PROJECT_DIR$/local/modules/bannerGrid/lib/css/style.css" />
-        <option value="$PROJECT_DIR$/local/modules/bannerGrid/lang/ru/options.php" />
-        <option value="$PROJECT_DIR$/local/modules/bannerGrid/options.php" />
-        <option value="$PROJECT_DIR$/local/modules/bannerGrid/classes/general/cbannergrid.php" />
-        <option value="$PROJECT_DIR$/local/modules/userAddress/install/index.php" />
-        <option value="$PROJECT_DIR$/local/modules/userAddress/install/step.php" />
-        <option value="$PROJECT_DIR$/local/modules/userAddress/install/version.php" />
-        <option value="$PROJECT_DIR$/local/modules/userAddress/install/db/mysql/install.sql" />
-        <option value="$PROJECT_DIR$/local/modules/userAddress/install/admin/user_address_list.php" />
-        <option value="$PROJECT_DIR$/local/modules/userAddress/lang/ru/admin/menu.php" />
-        <option value="$PROJECT_DIR$/local/modules/userAddress/include.php" />
-        <option value="$PROJECT_DIR$/local/modules/userAddress/classess/general/cUserAddress.php" />
-        <option value="$PROJECT_DIR$/local/modules/userAddress/install/admin/user_address_edit.php" />
         <option value="$PROJECT_DIR$/bitrix/admin/user_address_edit.php" />
         <option value="$PROJECT_DIR$/local/modules/userAddress/lang/ru/admin/user_address_edit.php" />
         <option value="$PROJECT_DIR$/local/modules/userAddress/lang/ru/admin/user_address_list.php" />
@@ -189,7 +163,6 @@
         <option value="$PROJECT_DIR$/local/modules/userAddress/admin/user_address_add.php" />
         <option value="$PROJECT_DIR$/local/modules/userAddress/admin/user_address_edit.php" />
         <option value="$PROJECT_DIR$/local/modules/userAddress/install/admin/user_address_add.php" />
-        <option value="$PROJECT_DIR$/local/templates/zakrepi/header.php" />
         <option value="$PROJECT_DIR$/local/modules/userAddress/lang/ru/options.php" />
         <option value="$PROJECT_DIR$/local/modules/userAddress/options.php" />
         <option value="$PROJECT_DIR$/local/modules/userAddress/classes/general/cUserAddress.php" />
@@ -197,10 +170,40 @@
         <option value="$PROJECT_DIR$/local/modules/userAddress/lib/function/remove_address_user.php" />
         <option value="$PROJECT_DIR$/local/modules/zakrepiSettigs/lang/ru/options.php" />
         <option value="$PROJECT_DIR$/local/modules/zakrepiSettigs/options.php" />
-        <option value="$PROJECT_DIR$/local/templates/zakrepi/js/script.js" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/slider_home/template.php" />
         <option value="$PROJECT_DIR$/local/php_interface/include/settings.php" />
+        <option value="$PROJECT_DIR$/local/components/zakrepi/banner.grid/.description.php" />
+        <option value="$PROJECT_DIR$/local/modules/bannerGrid/classes/general/cbannergrid.php" />
+        <option value="$PROJECT_DIR$/local/components/zakrepi/banner.grid/.parameters.php" />
+        <option value="$PROJECT_DIR$/local/components/zakrepi/banner.grid/lang/ru/.description.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/local/components/zakrepi/banner.grid/component.php" />
+        <option value="$PROJECT_DIR$/local/components/zakrepi/banner.grid/templates/.default/template.php" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/promo/result_modifer.php" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/promo/result_modifier.php" />
+        <option value="$PROJECT_DIR$/local/php_interface/init.php" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/promo/lang/ru/template.php" />
+        <option value="$PROJECT_DIR$/promo/index.php" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/styles.css" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/js/script.js" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/footer.php" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/system.pagenavigation/pagen/template.php" />
+        <option value="$PROJECT_DIR$/includes/promo/list.php" />
+        <option value="$PROJECT_DIR$/local/php_interface/include/function.php" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/news/result_modifier.php" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/images/svg/loader.svg" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/template_styles.css" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/js/function.js" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/news/template.php" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/promo/template.php" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/header.php" />
+        <option value="$PROJECT_DIR$/news/index.php" />
+        <option value="$PROJECT_DIR$/urlrewrite.php" />
+        <option value="$PROJECT_DIR$/news/detail.php" />
+        <option value="$PROJECT_DIR$/includes/news/list.php" />
+        <option value="$PROJECT_DIR$/promo/detail.php" />
+        <option value="$PROJECT_DIR$/bitrix/php_interface/dbconn.php" />
+        <option value="$PROJECT_DIR$/bitrix/.settings.php" />
       </list>
     </option>
   </component>
@@ -253,6 +256,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -281,13 +285,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zakrepi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zakrepi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitrix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php_interface" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,9 +317,12 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/news" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Bitrix\www\b.zakrepi.dev\zakrepi\local\templates\zakrepi\components\bitrix\news.list\news" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Bitrix\www\b.zakrepi.dev\zakrepi\local\modules\userAddress\lib" />
       <recent name="C:\Bitrix\www\b.zakrepi.dev\zakrepi\local\modules\bannerGrid\lib" />
@@ -348,8 +372,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="false" />
+    <frame x="1912" y="-8" width="1936" height="1096" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -358,7 +382,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26812366" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27985075" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -413,429 +437,390 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bitrix/modules/currency/options.php">
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/slider_home/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9153675" vertical-offset="895" max-vertical-offset="3434">
-          <caret line="105" column="30" selection-start-line="105" selection-start-column="17" selection-end-line="105" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.37760702" vertical-offset="234" max-vertical-offset="1921">
+          <caret line="34" column="67" selection-start-line="34" selection-start-column="67" selection-end-line="34" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/modules/main/classes/general/option.php">
+    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/options.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33369923" vertical-offset="274" max-vertical-offset="2227">
-          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
-          <folding />
+        <state vertical-scroll-proportion="0.49615806" vertical-offset="330" max-vertical-offset="1241">
+          <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/bannerGrid/lang/ru/options.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.055982437" vertical-offset="0" max-vertical-offset="911">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/modules/main/classes/general/access.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.3929787" vertical-offset="5798" max-vertical-offset="6681">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/modules/main/classes/general/agent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.111964874" vertical-offset="408" max-vertical-offset="5576">
-          <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/modules/main/classes/general/admin_informer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09465479" vertical-offset="0" max-vertical-offset="4879">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/bannerGrid/lib/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70757735" vertical-offset="357" max-vertical-offset="11951">
-          <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/bannerGrid/options.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26953566" vertical-offset="204" max-vertical-offset="1649">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/install/step.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.037321623" vertical-offset="0" max-vertical-offset="911">
-          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/modules/iblock/install/db/mysql/install.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36414883" vertical-offset="2805" max-vertical-offset="6749">
-          <caret line="184" column="21" selection-start-line="183" selection-start-column="2" selection-end-line="184" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/install/version.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.055982437" vertical-offset="0" max-vertical-offset="911">
-          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/lang/ru/admin/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.037321623" vertical-offset="0" max-vertical-offset="911">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/bannerGrid/admin/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="374">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/install/unstep.php">
+    <entry file="file://$PROJECT_DIR$/local/components/zakrepi/banner.grid/templates/.default/.parameters.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="937">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/install/admin/user_address_list.php">
+    <entry file="file://$PROJECT_DIR$/bitrix/modules/iblock/classes/general/iblock.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="911">
-          <caret line="0" column="56" selection-start-line="0" selection-start-column="56" selection-end-line="0" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/bannerGrid/include.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1492865" vertical-offset="0" max-vertical-offset="911">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/install/db/mysql/install.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.076662906" vertical-offset="0" max-vertical-offset="887">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/modules/iblock/install/admin/iblock_element_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/modules/iblock/admin/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0532277" vertical-offset="1406" max-vertical-offset="9656">
-          <caret line="28" column="41" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/modules/iblock/admin/iblock_element_admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3975501" vertical-offset="2958" max-vertical-offset="60588">
-          <caret line="195" column="24" selection-start-line="195" selection-start-column="24" selection-end-line="195" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/include.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="238">
-          <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/admin/user_address_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="888">
-          <caret line="0" column="86" selection-start-line="0" selection-start-column="86" selection-end-line="0" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/admin/user_address_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102">
-          <caret line="0" column="96" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/lang/ru/admin/user_address_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+        <state vertical-scroll-proportion="-0.5608028" vertical-offset="3790" max-vertical-offset="64447">
+          <caret line="195" column="60" selection-start-line="195" selection-start-column="60" selection-end-line="195" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/lang/ru/admin/user_address_add.php">
+    <entry file="file://$PROJECT_DIR$/bitrix/modules/iblock/classes/general/iblock_element.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.038288288" vertical-offset="0" max-vertical-offset="888">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-          <folding />
+        <state vertical-scroll-proportion="0.298573" vertical-offset="0" max-vertical-offset="5287">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/bannerGrid/admin/banner_grid_list.php">
+    <entry file="file://$PROJECT_DIR$/bitrix/modules/iblock/classes/mysql/iblockelement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6891892" vertical-offset="3876" max-vertical-offset="5134">
-          <caret line="265" column="0" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="77" />
-          <folding />
+        <state vertical-scroll-proportion="0.46659243" vertical-offset="12246" max-vertical-offset="41803">
+          <caret line="745" column="25" selection-start-line="745" selection-start-column="25" selection-end-line="745" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/bannerGrid/lib/modal_getlist.php">
+    <entry file="file://$PROJECT_DIR$/bitrix/modules/iblock/classes/general/iblockresult.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="408">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="117" />
-          <folding />
+        <state vertical-scroll-proportion="0.37193763" vertical-offset="57" max-vertical-offset="7565">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/modules/main/classes/general/database.php">
+    <entry file="file://$PROJECT_DIR$/local/components/zakrepi/banner.grid/lang/ru/.description.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34285715" vertical-offset="12195" max-vertical-offset="22100">
-          <caret line="741" column="13" selection-start-line="741" selection-start-column="13" selection-end-line="741" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/lib/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52187836" vertical-offset="5189" max-vertical-offset="6409">
-          <caret line="334" column="4" selection-start-line="334" selection-start-column="4" selection-end-line="334" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/admin/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="408">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/lang/ru/admin/user_address_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="136">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/admin/user_address_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0" vertical-offset="136" max-vertical-offset="1734">
-          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="46" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/admin/user_address_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.076923" vertical-offset="177" max-vertical-offset="1751">
-          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-          <folding>
-            <element signature="e#230#246#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/install/admin/user_address_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/install/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.653847" vertical-offset="153" max-vertical-offset="1105">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/install/admin/user_address_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="888">
-          <caret line="0" column="88" selection-start-line="0" selection-start-column="88" selection-end-line="0" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/lang/ru/options.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="153">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/lib/function/remove_address_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.230769" vertical-offset="160" max-vertical-offset="1071">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/admin/user_address_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0" vertical-offset="2073" max-vertical-offset="3043">
-          <caret line="141" column="82" selection-start-line="141" selection-start-column="51" selection-end-line="141" selection-end-column="82" />
-          <folding>
-            <element signature="e#230#246#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.037321623" vertical-offset="0" max-vertical-offset="911">
+          <caret line="2" column="57" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local/modules/bannerGrid/classes/general/cbannergrid.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846" vertical-offset="34" max-vertical-offset="1836">
-          <caret line="16" column="81" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="81" />
+        <state vertical-scroll-proportion="0.6409966" vertical-offset="267" max-vertical-offset="1836">
+          <caret line="49" column="41" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/components/zakrepi/banner.grid/.description.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13476783" vertical-offset="0" max-vertical-offset="883">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/components/zakrepi/banner.grid/.parameters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="408">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/components/bitrix/news.list/templates/.default/.parameters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="937">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/modules/main/tools.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.923077" vertical-offset="47887" max-vertical-offset="110262">
+          <caret line="2860" column="27" selection-start-line="2860" selection-start-column="11" selection-end-line="2860" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/classes/general/cUserAddress.php">
+    <entry file="file://$PROJECT_DIR$/local/components/zakrepi/banner.grid/templates/.default/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.307692" vertical-offset="357" max-vertical-offset="1802">
-          <caret line="49" column="32" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="32" />
-          <folding>
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..b_user_address..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..b_user_address..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="UPDATE b_use..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="UPDATE b_use..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="UPDATE b_use..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="UPDATE b_use..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="UPDATE b_use..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="UPDATE b_use..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="UPDATE b_use..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="UPDATE b_use..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="UPDATE b_use..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="UPDATE b_use..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="UPDATE b_use..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="UPDATE b_use..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="UPDATE b_use..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1444990957732" expanded="true" signature="-1:-1" placeholder="UPDATE b_use..." />
-          </folding>
+        <state vertical-scroll-proportion="0.28716215" vertical-offset="0" max-vertical-offset="888">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/userAddress/options.php">
+    <entry file="file://$PROJECT_DIR$/local/components/zakrepi/banner.grid/component.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.384615" vertical-offset="330" max-vertical-offset="1241">
-          <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
-          <folding />
+        <state vertical-scroll-proportion="1.7904869" vertical-offset="0" max-vertical-offset="2108">
+          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/zakrepiSettigs/lang/ru/options.php">
+    <entry file="file://$PROJECT_DIR$/local/modules/bannerGrid/admin/banner_grid_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="221">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="30" />
-          <folding />
+        <state vertical-scroll-proportion="0.20838052" vertical-offset="3" max-vertical-offset="5151">
+          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/modules/main/admin/site_checker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3429844" vertical-offset="3279" max-vertical-offset="19669">
+          <caret line="216" column="21" selection-start-line="216" selection-start-column="21" selection-end-line="216" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/components/bitrix/news.list/templates/flat/result_modifier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6158068" vertical-offset="0" max-vertical-offset="3468">
+          <caret line="33" column="47" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/components/bitrix/news.list/templates/.default/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5868597" vertical-offset="0" max-vertical-offset="1564">
+          <caret line="31" column="74" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local/php_interface/init.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="153">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="31" />
-          <folding />
+        <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="238">
+          <caret line="5" column="142" selection-start-line="5" selection-start-column="142" selection-end-line="5" selection-end-column="142" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/modules/main/classes/general/main.php">
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3429844" vertical-offset="16097" max-vertical-offset="92497">
-          <caret line="975" column="13" selection-start-line="975" selection-start-column="13" selection-end-line="975" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="937">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/components/bitrix/news.list/component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48518112" vertical-offset="663" max-vertical-offset="8568">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/components/bitrix/news.list/.parameters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5211582" vertical-offset="2876" max-vertical-offset="3774">
+          <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/components/bitrix/news.list/.description.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="914">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/promo/lang/ru/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.037321623" vertical-offset="0" max-vertical-offset="911">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/block.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8772679" vertical-offset="657" max-vertical-offset="4301">
+          <caret line="87" column="16" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.192308" vertical-offset="313" max-vertical-offset="1241">
-          <caret line="60" column="56" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
-          <folding />
+        <state vertical-scroll-proportion="0.5894621" vertical-offset="993" max-vertical-offset="1904">
+          <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7025247" vertical-offset="1145" max-vertical-offset="2057">
+          <caret line="105" column="19" selection-start-line="105" selection-start-column="19" selection-end-line="105" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2397" max-vertical-offset="3757">
+        <state vertical-scroll-proportion="0.34543455" vertical-offset="4837" max-vertical-offset="8908">
+          <caret line="303" column="22" selection-start-line="303" selection-start-column="22" selection-end-line="303" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/components/bitrix/system.pagenavigation/templates/arrows/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.596882" vertical-offset="2422" max-vertical-offset="3774">
+          <caret line="174" column="62" selection-start-line="101" selection-start-column="4" selection-end-line="174" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/components/bitrix/system.pagenavigation/component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25356752" vertical-offset="24" max-vertical-offset="2312">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/system.pagenavigation/pagen/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6971047" vertical-offset="2094" max-vertical-offset="2992">
           <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/news/lang/en/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="937">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/promo/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="272">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/template_styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3247768" vertical-offset="32485" max-vertical-offset="93262">
+          <caret line="1928" column="17" selection-start-line="1928" selection-start-column="4" selection-end-line="1928" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/js/function.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14514408" vertical-offset="0" max-vertical-offset="937">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/images/svg/loader.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.01814301" vertical-offset="0" max-vertical-offset="937">
+          <caret line="1" column="98" selection-start-line="1" selection-start-column="98" selection-end-line="1" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/promo/result_modifier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1492865" vertical-offset="0" max-vertical-offset="911">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/news/result_modifier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22392975" vertical-offset="0" max-vertical-offset="911">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/php_interface/include/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3975501" vertical-offset="0" max-vertical-offset="898">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="442">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="20" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/urlrewrite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="374">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/promo/list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.597146" vertical-offset="0" max-vertical-offset="1122">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.462963" vertical-offset="0" max-vertical-offset="9826">
-          <caret line="65" column="41" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="41" />
+        <state vertical-scroll-proportion="-19.923077" vertical-offset="842" max-vertical-offset="9911">
+          <caret line="80" column="54" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/slider_home/template.php">
+    <entry file="file://$PROJECT_DIR$/news/detail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.230769" vertical-offset="234" max-vertical-offset="1921">
-          <caret line="34" column="67" selection-start-line="34" selection-start-column="67" selection-end-line="34" selection-end-column="67" />
+        <state vertical-scroll-proportion="-32.692307" vertical-offset="102" max-vertical-offset="1054">
+          <caret line="56" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/zakrepiSettigs/options.php">
+    <entry file="file://$PROJECT_DIR$/bitrix/php_interface/dbconn.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="1292">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="22" />
+        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="663">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/php_interface/include/settings.php">
+    <entry file="file://$PROJECT_DIR$/promo/detail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3172338" vertical-offset="0" max-vertical-offset="911">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="1054">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/.settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.615385" vertical-offset="194" max-vertical-offset="1190">
+          <caret line="46" column="61" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/promo/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.846153" vertical-offset="0" max-vertical-offset="884">
+          <caret line="38" column="86" selection-start-line="38" selection-start-column="86" selection-end-line="38" selection-end-column="86" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/news/list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-29.807692" vertical-offset="211" max-vertical-offset="1122">
+          <caret line="58" column="25" selection-start-line="57" selection-start-column="8" selection-end-line="58" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/news/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8017817" vertical-offset="181" max-vertical-offset="1105">
+          <caret line="53" column="56" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="75" />
           <folding />
         </state>
       </provider>

@@ -82,10 +82,10 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
             <!--social link-->
             <div class="soc-box">
                 <ul class="soc-list horizontal">
-                    <li class="soc-item"><a class="soc-link" href="#">fb</a></li>
-                    <li class="soc-item"><a class="soc-link" href="#">vk</a></li>
-                    <li class="soc-item"><a class="soc-link" href="#">ok</a></li>
-                    <li class="soc-item"><a class="soc-link" href="#">yt</a></li>
+                    <li class="soc-item"><a class="soc-link" href="#"><svg class="icon"><use xlink:href="#fb"/></svg></a></li>
+                    <li class="soc-item"><a class="soc-link" href="#"><svg class="icon"><use xlink:href="#vk"/></svg></a></li>
+                    <li class="soc-item"><a class="soc-link" href="#"><svg class="icon"><use xlink:href="#ok"/></svg></a></li>
+                    <li class="soc-item"><a class="soc-link" href="#"><svg class="icon"><use xlink:href="#youtube"/></svg></a></li>
                 </ul>
             </div>
             <!--end social link-->
@@ -95,12 +95,22 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         <div class="container row">
             <div class="col l6">© Крепыж, 2004 — <?=date('Y');?></div>
             <!--creator-->
-            <div class="col l6 right-align"><a href="http://legacystudio.ru" class="img-link" target="_blank"><img src="images/logo-legacy.png" /></a></div>
+            <div class="col l6 right-align"><a href="http://legacystudio.ru" class="img-link" target="_blank"><img src="/images/logo-legacy.png" /></a></div>
             <!--end creator-->
         </div>
     </div>
 </div>
 </div> <!-- /.page -->
 </div> <!-- /.layout -->
+
+<div class="tooltip" data-box="#minicard" data-position="bottom-right">
+    <div class="tooltip-tngl"></div>
+    <button class="btn btn-close btn-icon"><svg class="icon"><use xlink:href="#cross"/></svg></button>
+    <div class="tooltip-content">
+        <p>Товар успешно добавлен в корзину</p>
+        <p><a href="#">Перейти к оформлению</a></p>
+    </div>
+</div>
+
 	</body>
 </html>

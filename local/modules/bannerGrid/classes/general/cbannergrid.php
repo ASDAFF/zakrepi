@@ -37,7 +37,7 @@ class CBannerGrid{
     public static function getElementIblockBanner($id){
         CModule::IncludeModule('iblock');
         $IBLOCK_ID =  COption::GetOptionString(self::MODULE_ID, 'bgIblockId', 1);
-        $arSelect = Array("ID", "NAME", "PREVIEW_PICTURE");
+        $arSelect = Array("ID", "NAME", "PREVIEW_PICTURE","PROPERTY_link");
         $arFilter = array(
             "ID"=> $id,
             "IBLOCK_ID" => $IBLOCK_ID,
