@@ -1,1 +1,1 @@
-<?require($_SERVER["DOCUMENT_ROOT"]."/local/modules/userAddress/admin/user_address_list.php");?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/local/modules/useraddress/admin/user_address_list.php");?>

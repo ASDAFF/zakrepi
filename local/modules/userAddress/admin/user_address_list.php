@@ -2,7 +2,7 @@
 define("ADMIN_MODULE_NAME", "useraddress");
 
 require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_before.php");
-require_once($_SERVER["DOCUMENT_ROOT"]."/local/modules/userAddress/include.php");
+require_once($_SERVER["DOCUMENT_ROOT"]."/local/modules/useraddress/include.php");
 
 use Bitrix\Main;
 use Bitrix\Main\Localization\Loc;
@@ -140,7 +140,7 @@ $dbUsers = CUserAddress::getUsersId();
                                 </div>
                             <?endif?>
                             <div class="bg-reload" id="bg-reload-<?=$user['ID']?>">
-                                <img src="/local/modules/userAddress/lib/images/loader.png"/>
+                                <img src="/local/modules/useraddress/lib/images/loader.png"/>
                             </div>
                         </td>
                     </tr>
@@ -156,14 +156,14 @@ $dbUsers = CUserAddress::getUsersId();
         echo "[".$f_ID."] (".$f_LOGIN.") ".$f_NAME." ".$f_LAST_NAME."<br>";
     endwhile;
 ?>
-<script src="/local/modules/userAddress/lib/js/jquery-1.11.3.min.js"></script>
+<script src="/local/modules/useraddress/lib/js/jquery-1.11.3.min.js"></script>
 <script>
     function remove(id,user_id)
     {
         $('#bg-reload-'+user_id).show();
         $.ajax({
             type: "POST",
-            url: '/local/modules/userAddress/lib/function/remove_address_user.php',
+            url: '/local/modules/useraddress/lib/function/remove_address_user.php',
             data: "id=" + id +"&user_id="+user_id,
             success: function(msg){
                 $('#bg-reload-'+user_id).hide();

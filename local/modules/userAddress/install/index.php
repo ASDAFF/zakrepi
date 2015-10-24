@@ -27,13 +27,13 @@ Class useraddress extends CModule
     function InstallDB()
     {
         global $DB;
-        $DB->RunSQLBatch($_SERVER['DOCUMENT_ROOT']."/local/modules/userAddress/install/db/mysql/install.sql");
+        $DB->RunSQLBatch($_SERVER['DOCUMENT_ROOT']."/local/modules/useraddress/install/db/mysql/install.sql");
         return true;
     }
     /*Копирование дополнительных файлов*/
     function InstallFiles($arParams = array())
     {
-        CopyDirFiles($_SERVER["DOCUMENT_ROOT"]."/local/modules/userAddress/install/admin/", $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin");
+        CopyDirFiles($_SERVER["DOCUMENT_ROOT"]."/local/modules/useraddress/install/admin/", $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin");
         return true;
     }
 
@@ -45,7 +45,7 @@ Class useraddress extends CModule
         $this->InstallFiles();
        // RegisterModuleDependences("main","OnAfterIBlockElementUpdate","bannerGrid","cBannerGrid","onBeforeElementUpdateHandler");
         RegisterModule($this->MODULE_ID);
-        $APPLICATION->IncludeAdminFile("Установка модуля userAddress", $DOCUMENT_ROOT."/local/modules/userAddress/install/step.php");
+        $APPLICATION->IncludeAdminFile("Установка модуля userAddress", $DOCUMENT_ROOT."/local/modules/useraddress/install/step.php");
         return true;
     }
 
@@ -54,7 +54,7 @@ Class useraddress extends CModule
         global $DOCUMENT_ROOT, $APPLICATION;
         //UnRegisterModuleDependences("main","OnAfterIBlockElementUpdate","bannerGrid","cBannerGrid","onBeforeElementUpdateHandler");
         UnRegisterModule($this->MODULE_ID);
-        $APPLICATION->IncludeAdminFile("Удаление модуля userAddress", $DOCUMENT_ROOT."/local/modules/userAddress/install/unstep.php");
+        $APPLICATION->IncludeAdminFile("Удаление модуля userAddress", $DOCUMENT_ROOT."/local/modules/useraddress/install/unstep.php");
         return true;
     }
 }

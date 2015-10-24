@@ -54,5 +54,5 @@
     </div>
 <?endif?>
 <div class="bg-reload" id="bg-reload-<?=$user_id?>">
-    <img src="/local/modules/userAddress/lib/images/loader.png"/>
+    <img src="/local/modules/useraddress/lib/images/loader.png"/>
 </div>

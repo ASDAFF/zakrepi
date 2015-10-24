@@ -46,7 +46,7 @@ Class zakrepiSettigs extends CModule
         //$this->InstallFiles();
         RegisterModuleDependences("iblock","OnAfterIBlockElementUpdate","zakrepiSettings","cSettingsTemplates","onBeforeElementUpdateHandler");
         RegisterModule($this->MODULE_ID);
-        $APPLICATION->IncludeAdminFile("Установка модуля zakrepiSettings", $DOCUMENT_ROOT."/local/modules/zakrepiSettigs/install/step.php");
+        $APPLICATION->IncludeAdminFile("Установка модуля zakrepiSettings", $DOCUMENT_ROOT."/local/modules/zakrepisettigs/install/step.php");
         return true;
     }
 
@@ -55,7 +55,7 @@ Class zakrepiSettigs extends CModule
         global $DOCUMENT_ROOT, $APPLICATION;
         UnRegisterModuleDependences("iblock","OnAfterIBlockElementUpdate","zakrepiSettings","cSettingsTemplates","onBeforeElementUpdateHandler");
         UnRegisterModule($this->MODULE_ID);
-        $APPLICATION->IncludeAdminFile("Удаление модуля zakrepiSettings", $DOCUMENT_ROOT."/local/modules/zakrepiSettigs/install/unstep.php");
+        $APPLICATION->IncludeAdminFile("Удаление модуля zakrepiSettings", $DOCUMENT_ROOT."/local/modules/zakrepisettigs/install/unstep.php");
         return true;
     }
 }

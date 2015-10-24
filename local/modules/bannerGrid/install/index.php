@@ -27,13 +27,13 @@ Class bannergrid extends CModule
     function InstallDB()
     {
         global $DB;
-        $DB->RunSQLBatch($_SERVER['DOCUMENT_ROOT']."/local/modules/bannerGrid/install/db/mysql/install.sql");
+        $DB->RunSQLBatch($_SERVER['DOCUMENT_ROOT']."/local/modules/bannergrid/install/db/mysql/install.sql");
         return true;
     }
     /*Копирование дополнительных файлов*/
     function InstallFiles($arParams = array())
     {
-        CopyDirFiles($_SERVER["DOCUMENT_ROOT"]."/local/modules/bannerGrid/install/admin/", $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin");
+        CopyDirFiles($_SERVER["DOCUMENT_ROOT"]."/local/modules/bannergrid/install/admin/", $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin");
         return true;
     }
 
@@ -45,7 +45,7 @@ Class bannergrid extends CModule
         $this->InstallFiles();
        // RegisterModuleDependences("main","OnAfterIBlockElementUpdate","bannerGrid","cBannerGrid","onBeforeElementUpdateHandler");
         RegisterModule($this->MODULE_ID);
-        $APPLICATION->IncludeAdminFile("Установка модуля bannerGrid", $DOCUMENT_ROOT."/local/modules/bannerGrid/install/step.php");
+        $APPLICATION->IncludeAdminFile("Установка модуля bannerGrid", $DOCUMENT_ROOT."/local/modules/bannergrid/install/step.php");
         return true;
     }
 
@@ -54,7 +54,7 @@ Class bannergrid extends CModule
         global $DOCUMENT_ROOT, $APPLICATION;
         //UnRegisterModuleDependences("main","OnAfterIBlockElementUpdate","bannerGrid","cBannerGrid","onBeforeElementUpdateHandler");
         UnRegisterModule($this->MODULE_ID);
-        $APPLICATION->IncludeAdminFile("Удаление модуля bannerGrid", $DOCUMENT_ROOT."/local/modules/bannerGrid/install/unstep.php");
+        $APPLICATION->IncludeAdminFile("Удаление модуля bannerGrid", $DOCUMENT_ROOT."/local/modules/bannergrid/install/unstep.php");
         return true;
     }
 }

@@ -2,7 +2,7 @@
 define("ADMIN_MODULE_NAME", "useraddress");
 
 require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_before.php");
-require_once($_SERVER["DOCUMENT_ROOT"]."/local/modules/userAddress/include.php");
+require_once($_SERVER["DOCUMENT_ROOT"]."/local/modules/useraddress/include.php");
 
 use Bitrix\Main;
 use Bitrix\Main\Localization\Loc;
