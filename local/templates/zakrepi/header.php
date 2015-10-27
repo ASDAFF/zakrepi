@@ -69,9 +69,18 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         );*/?>
         <div id="svg-placeholder" class="hide"></div>
         <div class="layout">
-            <!-- для главной добавить класс home-page к page, для новостей и благотворительности - news-page,
-                для проектов - projects-page -->
-            <div class="page">
+        <!-- для главной добавить класс home-page к page, для сравнения .compare-page, оформление заказа .checkout-page, lk - .profile-page -->
+        <?
+        $uri = $APPLICATION->GetCurUri();
+        $pos = strrpos($uri, "personal/");
+        if($pos == 1){$class = 'profile-page';}
+        $pos = strrpos($uri, "compare/");
+        if($pos == 1) {$class = 'compare-page';}
+        $pos = strrpos($uri, "make/");
+        if($pos == 1) {$class = 'checkout-page';}
+        if ($APPLICATION->GetCurPage(false) === '/') $class = 'home-page';
+        ?>
+            <div class="page <?=$class?>">
                 <!-- если не 404 -->
                 <div class="header-wrapper">
                     <div class="topbar">
@@ -81,6 +90,12 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                             <div class="geo-box col l3">
                                 <svg class="icon"><use xlink:href="#location"/></svg>
                                 Петропавловск-Камчатский
+
+                                <?
+                                    CModule::IncludeModule("cityfranchise");
+                                    $result = CCityFranchise::getListCity();
+                                    //Получили список актуальных городов франшиз
+                                ?>
                             </div>
                             <!--end geo location-->
                             <!-- extra menu-->

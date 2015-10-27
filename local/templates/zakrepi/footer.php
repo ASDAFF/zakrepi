@@ -82,10 +82,10 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
             <!--social link-->
             <div class="soc-box">
                 <ul class="soc-list horizontal">
-                    <li class="soc-item"><a class="soc-link" href="#"><svg class="icon"><use xlink:href="#fb"/></svg></a></li>
-                    <li class="soc-item"><a class="soc-link" href="#"><svg class="icon"><use xlink:href="#vk"/></svg></a></li>
-                    <li class="soc-item"><a class="soc-link" href="#"><svg class="icon"><use xlink:href="#ok"/></svg></a></li>
-                    <li class="soc-item"><a class="soc-link" href="#"><svg class="icon"><use xlink:href="#youtube"/></svg></a></li>
+                    <?foreach($arZSettings['SOCIAL'] as $item):?>
+                        <li class="soc-item"><a class="soc-link" href="<?=$item['LINK']?>"><svg class="icon"><use xlink:href="<?=$item['ID_SVG']?>"/></svg></a></li>
+                    <?endforeach;?>
+
                 </ul>
             </div>
             <!--end social link-->

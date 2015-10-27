@@ -21,6 +21,27 @@
         $arZSettings['TIME_WORK'] = COption::GetOptionString($module_id, 'zTimeWork');
         $arZSettings['TIME_SLIDER'] = COption::GetOptionString($module_id, 'zTimeSlider',3000);
 
+        /*social*/
+        if(COption::GetOptionString($module_id, 'zSocFB','')!='')  {
+            $arZSettings['SOCIAL']['FB']['LINK'] = COption::GetOptionString($module_id, 'zSocFB','');
+            $arZSettings['SOCIAL']['FB']['ID_SVG'] = '#fb';
+        }
+        if(COption::GetOptionString($module_id, 'zSocVK','')!='')  {
+            $arZSettings['SOCIAL']['VK']['LINK'] = COption::GetOptionString($module_id, 'zSocVK','');
+            $arZSettings['SOCIAL']['VK']['ID_SVG'] = '#vk';
+        }
+        if(COption::GetOptionString($module_id, 'zSocOK','')!='')  {
+            $arZSettings['SOCIAL']['OK']['LINK'] = COption::GetOptionString($module_id, 'zSocOK','');
+            $arZSettings['SOCIAL']['OK']['ID_SVG'] = '#ok';
+        }
+        if(COption::GetOptionString($module_id, 'zSocYouTube','')!='')  {
+            $arZSettings['SOCIAL']['YOUTUBE']['LINK'] = COption::GetOptionString($module_id, 'zSocYouTube','');
+            $arZSettings['SOCIAL']['YOUTUBE']['ID_SVG'] = '#youtube';
+        }
+       /*end social*/
+
+
+
         $obCache->EndDataCache(array('arZSettings' => $arZSettings));
     }
 ?>

@@ -35,6 +35,17 @@ class CUserAddress{
         return $arResult;
     }
 
+    public static function getAddressDefault($user_id){
+        global $DB;
+        $sql = "SELECT * FROM b_user_address WHERE ID_USER = '".$user_id."' AND DEFAULT_ADDRESS = 'Y'";
+        $result = $DB->Query($sql);
+        $arResult = array();
+        while ($record = $result->fetch()) {
+            $arResult = $record;
+        }
+        return $arResult;
+    }
+
     public static function updateUserAddress($parametr){
         global $DB;
         $default = (isset($parametr['DEFAULT_ADDRESS'])) ? 'Y' : 'N';
