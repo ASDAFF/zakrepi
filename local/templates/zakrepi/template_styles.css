@@ -2374,50 +2374,78 @@ html, body {
     background: #efefef;
     color: #333333;
 }
+/* line 30, scss/_layout.scss */
+.topbar .geo-box,
+.topbar .auth-box,
+.topbar .menu-link {
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
 
-/* line 31, scss/_layout.scss */
+/* line 37, scss/_layout.scss */
 .main-menu {
     background: #363636;
     color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
-/* line 35, scss/_layout.scss */
+/* line 44, scss/_layout.scss */
 .phone-box {
     line-height: 1;
 }
-/* line 37, scss/_layout.scss */
+/* line 46, scss/_layout.scss */
 .phone-box .phone-link {
     display: inline-block;
     margin-bottom: 3px;
 }
 
-/* line 44, scss/_layout.scss */
+/* line 51, scss/_layout.scss */
+.header-wrapper {
+    height: 200px;
+}
+
+/* line 55, scss/_layout.scss */
 .header {
     padding-top: 20px;
     padding-bottom: 15px;
+    background: white;
+    z-index: 1;
+    -webkit-transition: z-index .3s ease, box-shadow .3s ease;
+    transition: z-index .3s ease, box-shadow .3s ease;
 }
-/* line 47, scss/_layout.scss */
+/* line 61, scss/_layout.scss */
 .header .phone-box {
     padding-top: 8px;
 }
 
-/* line 52, scss/_layout.scss */
+/* line 66, scss/_layout.scss */
+.header-wrapper.fixed .header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+/* line 76, scss/_layout.scss */
 .subscribe-box {
     padding-top: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid #f6f6f6;
 }
-/* line 56, scss/_layout.scss */
+/* line 80, scss/_layout.scss */
 .subscribe-box .sbscr-text {
     padding-top: 5px;
     padding-bottom: 10px;
 }
 
-/* line 65, scss/_layout.scss */
+/* line 89, scss/_layout.scss */
 .soc-list .soc-item {
     margin-right: 10px;
 }
-/* line 68, scss/_layout.scss */
+/* line 92, scss/_layout.scss */
 .soc-list .soc-link {
     display: block;
     width: 31px;
@@ -2430,39 +2458,39 @@ html, body {
     text-align: center;
     color: #939393;
 }
-/* line 79, scss/_layout.scss */
+/* line 103, scss/_layout.scss */
 .soc-list .soc-link .icon {
     fill: #939393;
 }
 
-/* line 85, scss/_layout.scss */
+/* line 109, scss/_layout.scss */
 .footer {
     padding: 30px 0 25px;
 }
-/* line 87, scss/_layout.scss */
+/* line 111, scss/_layout.scss */
 .footer .box-title {
     margin-top: 0;
     margin-bottom: 13.2px;
     font-weight: normal;
     color: #ce2127;
 }
-/* line 94, scss/_layout.scss */
+/* line 118, scss/_layout.scss */
 .footer .phone-box,
 .footer .schedule-box {
     margin-bottom: 20px;
 }
-/* line 98, scss/_layout.scss */
+/* line 122, scss/_layout.scss */
 .footer .phone-box .phone-link {
     font-size: 22px;
     margin: 1em 0 0;
     display: block;
 }
-/* line 103, scss/_layout.scss */
+/* line 127, scss/_layout.scss */
 .footer .schedule-box p {
     margin: 10px 0;
 }
 
-/* line 107, scss/_layout.scss */
+/* line 131, scss/_layout.scss */
 .bottombar {
     padding: 30px 0;
     border-top: 1px solid #f6f6f6;
@@ -2484,11 +2512,11 @@ html {
 }
 
 /* line 37, scss/elements/_global.scss */
-.clearfix, .table-row, .table {
+.clearfix, .table-row, .table, .table-field {
     clear: both;
 }
 /* line 39, scss/elements/_global.scss */
-.clearfix:before, .table-row:before, .table:before, .clearfix:after, .table-row:after, .table:after {
+.clearfix:before, .table-row:before, .table:before, .table-field:before, .clearfix:after, .table-row:after, .table:after, .table-field:after {
     content: '';
     display: block;
     width: 0;
@@ -2508,7 +2536,7 @@ html {
 }
 
 /* line 58, scss/elements/_global.scss */
-.z-depth-2, .dropdown-list, .tooltip {
+.z-depth-2, .header-wrapper.fixed .header, .dropdown-list, .tooltip {
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -3735,7 +3763,7 @@ a, .btn-link {
 /* line 88, scss/elements/_typography.scss */
 a.nostyle, .nostyle.btn-link, .menu .menu-link, .horizontal-multilevel-menu .submenu .menu-link,
 .menu .submenu-link,
-.horizontal-multilevel-menu .submenu .submenu-link, .auth-box .auth-link, .breadcrumbs .brdcmb-link, .product-card .item-name a, .product-card .item-name .btn-link {
+.horizontal-multilevel-menu .submenu .submenu-link, .breadcrumbs .brdcmb-link, .product-card .item-name a, .product-card .item-name .btn-link, .auth-box .auth-link {
     color: inherit;
 }
 /* line 91, scss/elements/_typography.scss */
@@ -4011,11 +4039,14 @@ input[type="radio"]:checked + .radio-lbl:before {
     margin: 1em 0;
 }
 /* line 141, scss/elements/_form.scss */
-.inline-field .label, .table-field .label, .promocode-field .label {
+.inline-field .label, .table-field .label, .promocode-field .label,
+.inline-field .first-field,
+.table-field .first-field,
+.promocode-field .first-field {
     display: inline-block;
     margin-right: 25px;
 }
-/* line 145, scss/elements/_form.scss */
+/* line 146, scss/elements/_form.scss */
 .inline-field > input:not(.dropdown-inp), .table-field > input:not(.dropdown-inp), .promocode-field > input:not(.dropdown-inp),
 .inline-field select,
 .table-field select,
@@ -4028,56 +4059,87 @@ input[type="radio"]:checked + .radio-lbl:before {
 .promocode-field .dropdown-box,
 .inline-field .field,
 .table-field .field,
-.promocode-field .field {
+.promocode-field .field,
+.inline-field .second-field,
+.table-field .second-field,
+.promocode-field .second-field {
     display: inline-block;
     width: auto;
 }
-/* line 153, scss/elements/_form.scss */
-.inline-field .field input, .table-field .field input, .promocode-field .field input {
+/* line 155, scss/elements/_form.scss */
+.inline-field .field input, .table-field .field input, .promocode-field .field input,
+.inline-field .second-field input,
+.table-field .second-field input,
+.promocode-field .second-field input {
     width: 100%;
 }
 
-/* line 159, scss/elements/_form.scss */
-.table-field .label {
+/* line 163, scss/elements/_form.scss */
+.table-field .label,
+.table-field .first-field {
     width: 31%;
     margin-right: 10px;
 }
-/* line 163, scss/elements/_form.scss */
+/* line 168, scss/elements/_form.scss */
 .table-field > input,
-.table-field .field {
+.table-field .field,
+.table-field .second-field {
     width: 66%;
     width: calc(69% - 15px);
     margin: 3px 0;
 }
-/* line 168, scss/elements/_form.scss */
+/* line 174, scss/elements/_form.scss */
 .table-field > input[type="tel"],
-.table-field .field[type="tel"] {
+.table-field .field[type="tel"],
+.table-field .second-field[type="tel"] {
     width: 33%;
 }
-/* line 171, scss/elements/_form.scss */
+/* line 177, scss/elements/_form.scss */
 .table-field > input [type="tel"],
-.table-field .field [type="tel"] {
+.table-field .field [type="tel"],
+.table-field .second-field [type="tel"] {
     width: 66%;
 }
-/* line 175, scss/elements/_form.scss */
+/* line 181, scss/elements/_form.scss */
+.table-field .second-field {
+    float: right;
+}
+/* line 184, scss/elements/_form.scss */
+.table-field.cols-2 > input, .table-field.cols-2 > .field {
+    width: calc((70% - 40px)/2);
+    margin: 3px 5px;
+}
+/* line 188, scss/elements/_form.scss */
+.table-field.cols-2 > input input, .table-field.cols-2 > .field input {
+    width: 100%;
+}
+/* line 191, scss/elements/_form.scss */
+.table-field.cols-2 > input:first-of-type, .table-field.cols-2 > .field:first-of-type {
+    margin-left: 0;
+}
+/* line 194, scss/elements/_form.scss */
+.table-field.cols-2 > input:last-of-type, .table-field.cols-2 > .field:last-of-type {
+    margin-right: 0;
+}
+/* line 198, scss/elements/_form.scss */
 .table-field.cols-3 > input, .table-field.cols-3 > .field {
     width: calc((70% - 60px)/3);
     margin: 3px 5px;
 }
-/* line 179, scss/elements/_form.scss */
+/* line 202, scss/elements/_form.scss */
 .table-field.cols-3 > input input, .table-field.cols-3 > .field input {
     width: 100%;
 }
-/* line 182, scss/elements/_form.scss */
+/* line 205, scss/elements/_form.scss */
 .table-field.cols-3 > input:first-of-type, .table-field.cols-3 > .field:first-of-type {
     margin-left: 0;
 }
-/* line 185, scss/elements/_form.scss */
+/* line 208, scss/elements/_form.scss */
 .table-field.cols-3 > input:last-of-type, .table-field.cols-3 > .field:last-of-type {
     margin-right: 0;
 }
 
-/* line 192, scss/elements/_form.scss */
+/* line 215, scss/elements/_form.scss */
 select {
     box-sizing: border-box;
     border: 1px solid #d7d7d7;
@@ -4089,18 +4151,18 @@ select {
     vertical-align: baseline;
     cursor: pointer;
 }
-/* line 202, scss/elements/_form.scss */
+/* line 225, scss/elements/_form.scss */
 select option {
     max-width: 100%;
     color: #434343;
 }
 
-/* line 207, scss/elements/_form.scss */
+/* line 230, scss/elements/_form.scss */
 .select-box select {
     width: 100%;
 }
 
-/* line 210, scss/elements/_form.scss */
+/* line 233, scss/elements/_form.scss */
 .triangle {
     position: absolute;
     top: 1px;
@@ -4111,7 +4173,7 @@ select option {
     font-size: 15px;
     border-radius: 3px;
 }
-/* line 219, scss/elements/_form.scss */
+/* line 242, scss/elements/_form.scss */
 .triangle:after {
     content: '>';
     display: block;
@@ -4125,11 +4187,11 @@ select option {
     transform: rotate(90deg) scale(1, 2);
 }
 
-/* line 232, scss/elements/_form.scss */
+/* line 255, scss/elements/_form.scss */
 .quantity-field {
     display: inline-block;
 }
-/* line 235, scss/elements/_form.scss */
+/* line 258, scss/elements/_form.scss */
 .quantity-field .quantity-value {
     display: inline-block;
     width: 3em;
@@ -4143,7 +4205,7 @@ select option {
     color: #242424;
     border-radius: 0;
 }
-/* line 248, scss/elements/_form.scss */
+/* line 271, scss/elements/_form.scss */
 .quantity-field .btn-up,
 .quantity-field .btn-down {
     width: 1em;
@@ -4153,7 +4215,7 @@ select option {
     background: #f33b42;
     border: 0;
 }
-/* line 256, scss/elements/_form.scss */
+/* line 279, scss/elements/_form.scss */
 .quantity-field .btn-up:after,
 .quantity-field .btn-down:after {
     content: '';
@@ -4168,44 +4230,44 @@ select option {
     border-left-color: transparent;
     border-style: solid;
 }
-/* line 269, scss/elements/_form.scss */
+/* line 292, scss/elements/_form.scss */
 .quantity-field .btn-up:hover,
 .quantity-field .btn-down:hover {
     background: #ce2127;
 }
-/* line 272, scss/elements/_form.scss */
+/* line 295, scss/elements/_form.scss */
 .quantity-field .btn-up:disabled,
 .quantity-field .btn-down:disabled {
     background: #decdcd;
 }
-/* line 276, scss/elements/_form.scss */
+/* line 299, scss/elements/_form.scss */
 .quantity-field .btn-up {
     top: 0;
 }
-/* line 278, scss/elements/_form.scss */
+/* line 301, scss/elements/_form.scss */
 .quantity-field .btn-up:after {
     border-width: 0 3px 6px 3px;
 }
-/* line 282, scss/elements/_form.scss */
+/* line 305, scss/elements/_form.scss */
 .quantity-field .btn-down {
     top: 1em;
 }
-/* line 284, scss/elements/_form.scss */
+/* line 307, scss/elements/_form.scss */
 .quantity-field .btn-down:after {
     border-width: 6px 3px 0 3px;
 }
 
-/* line 289, scss/elements/_form.scss */
+/* line 312, scss/elements/_form.scss */
 .promocode-field {
     margin-top: 10px;
 }
-/* line 292, scss/elements/_form.scss */
+/* line 315, scss/elements/_form.scss */
 .promocode-field input {
     width: auto;
     max-width: calc(100% - 80px);
     margin-right: 20px;
 }
-/* line 297, scss/elements/_form.scss */
+/* line 320, scss/elements/_form.scss */
 .promocode-field .btn {
     padding: 0 20px;
 }
@@ -4550,8 +4612,8 @@ select option {
 /* line 44, scss/elements/_dropdown.scss */
 .dropdown-box.open {
     /*.dropdown-value {
-        transform: translate(0,10px);
-    }*/
+  	transform: translate(0,10px);
+  }*/
 }
 /* line 48, scss/elements/_dropdown.scss */
 .dropdown-box.open .dropdown-list {
@@ -4598,7 +4660,7 @@ select option {
     padding: 20px 45px 25px 15px;
 }
 /* line 10, scss/elements/_tooltip.scss */
-.tooltip.show {
+.tooltip.show, .auth-box.loged-in:hover .lk-menu {
     opacity: 1;
     z-index: 999;
 }
@@ -4683,7 +4745,7 @@ select option {
 /* line 11, scss/components/_menu.scss */
 .horizontal-menu .menu-link {
     display: block;
-    padding: 16px 7px 10px;
+    padding: 13px 7px;
 }
 /* line 15, scss/components/_menu.scss */
 .horizontal-menu .menu-item:first-of-type .menu-link {
@@ -4859,12 +4921,7 @@ select option {
     background: white;
 }
 
-/* line 2, scss/components/_geo.scss */
-.geo-box {
-    padding-top: 16px;
-    padding-bottom: 10px;
-}
-/* line 5, scss/components/_geo.scss */
+/* line 3, scss/components/_geo.scss */
 .geo-box .icon {
     display: inline-block;
     width: 15px;
@@ -4872,36 +4929,6 @@ select option {
     margin-right: 3px;
     fill: #242424;
     vertical-align: top;
-}
-
-/* line 2, scss/components/_auth.scss */
-.auth-box {
-    padding-top: 16px;
-    padding-bottom: 10px;
-    text-align: right;
-}
-/* line 6, scss/components/_auth.scss */
-.auth-box .auth-link {
-    display: inline-block;
-    padding: 0 7px;
-    line-height: 1;
-    height: 1em;
-}
-/* line 13, scss/components/_auth.scss */
-.auth-box .auth-link.login {
-    border-right: 1px solid;
-    padding-right: 10px;
-}
-/* line 17, scss/components/_auth.scss */
-.auth-box .icon {
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    padding: 2px;
-    fill: #242424;
-    vertical-align: middle;
-    margin-right: 5px;
-    margin-top: -5px;
 }
 
 /* line 2, scss/components/_breadcrumbs.scss */
@@ -5869,36 +5896,38 @@ select option {
 .checkout-page .delivery-address .select-box,
 .checkout-page .delivery-address .dropdown-box,
 .checkout-page .delivery-address .addr-actions,
+.checkout-page .delivery-address .second-field,
 .checkout-page .table-field.delivery-address .select-box,
 .checkout-page .table-field.delivery-address .dropdown-box,
-.checkout-page .table-field.delivery-address .addr-actions {
+.checkout-page .table-field.delivery-address .addr-actions,
+.checkout-page .table-field.delivery-address .second-field {
     width: 66%;
     width: calc(70% - 20px);
 }
-/* line 58, scss/components/_basket.scss */
+/* line 59, scss/components/_basket.scss */
 .checkout-page .delivery-address .addr-actions,
 .checkout-page .table-field.delivery-address .addr-actions {
     margin-top: 8px;
 }
-/* line 60, scss/components/_basket.scss */
+/* line 61, scss/components/_basket.scss */
 .checkout-page .delivery-address .addr-actions a, .checkout-page .delivery-address .addr-actions .btn-link,
 .checkout-page .table-field.delivery-address .addr-actions a,
 .checkout-page .table-field.delivery-address .addr-actions .btn-link {
     margin-right: 12.5%;
 }
-/* line 65, scss/components/_basket.scss */
+/* line 66, scss/components/_basket.scss */
 .checkout-page .mrg {
     margin-top: 2em;
 }
-/* line 69, scss/components/_basket.scss */
+/* line 70, scss/components/_basket.scss */
 .checkout-page .total-sum-box .title {
     margin-bottom: 0;
 }
-/* line 72, scss/components/_basket.scss */
+/* line 73, scss/components/_basket.scss */
 .checkout-page .total-sum-box table {
     margin-bottom: 25px;
 }
-/* line 75, scss/components/_basket.scss */
+/* line 76, scss/components/_basket.scss */
 .checkout-page .total-sum-box table td {
     padding: 5px 0;
 }
@@ -6051,10 +6080,141 @@ select option {
     margin-top: 20px;
 }
 /* line 98, scss/pages/_lk.scss */
-.profile-page .address-form + .btn {
+.profile-page .address-form,
+.profile-page .ld-form,
+.profile-page .pas-form,
+.profile-page .subs-form {
+    margin-bottom: 30px;
+}
+/* line 106, scss/pages/_lk.scss */
+.profile-page .ld-form .card-content,
+.profile-page .pas-form .card-content {
+    padding: 10px 20px;
+}
+/* line 110, scss/pages/_lk.scss */
+.profile-page .subs-form .card-content {
+    padding-top: 10px;
+}
+/* line 113, scss/pages/_lk.scss */
+.profile-page .address-form + .btn,
+.profile-page .ld-form + .btn,
+.profile-page .pas-form + .btn,
+.profile-page .subs-form + .btn {
     margin-bottom: 200px;
 }
 
+/* line 2, scss/pages/_auth.scss */
+.auth-box {
+    text-align: right;
+}
+/* line 4, scss/pages/_auth.scss */
+.auth-box .auth-link {
+    display: inline-block;
+    padding: 0 7px;
+    line-height: 1;
+    height: 1em;
+}
+/* line 11, scss/pages/_auth.scss */
+.auth-box .auth-link.register {
+    border-left: 1px solid;
+    padding-left: 10px;
+}
+/* line 15, scss/pages/_auth.scss */
+.auth-box .icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    padding: 2px;
+    fill: #242424;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-top: -5px;
+}
+/* line 25, scss/pages/_auth.scss */
+.auth-box .lk-menu {
+    text-align: center;
+    padding: 13px 20px;
+    width: 100%;
+}
+/* line 29, scss/pages/_auth.scss */
+.auth-box .lk-menu .menu-link {
+    line-height: 1;
+    padding: 10px;
+    display: block;
+}
+/* line 33, scss/pages/_auth.scss */
+.auth-box .lk-menu .menu-link:hover {
+    color: #ce2127;
+}
+/* line 38, scss/pages/_auth.scss */
+.auth-box.loged-in .auth-link.login {
+    width: 100%;
+    text-align: left;
+}
+/* line 43, scss/pages/_auth.scss */
+.auth-box.loged-in:hover .auth-link.login {
+    color: #ce2127;
+}
+/* line 45, scss/pages/_auth.scss */
+.auth-box.loged-in:hover .auth-link.login .icon {
+    fill: #ce2127;
+}
+
+/* line 56, scss/pages/_auth.scss */
+.authorize-page .page-title {
+    margin-bottom: 25px;
+}
+/* line 59, scss/pages/_auth.scss */
+.authorize-page .register-form,
+.authorize-page .authorize-form {
+    margin-bottom: 30px;
+}
+/* line 64, scss/pages/_auth.scss */
+.authorize-page .register-form .card-content {
+    padding-top: 5px;
+}
+/* line 67, scss/pages/_auth.scss */
+.authorize-page .register-form + .btn {
+    margin-bottom: 290px;
+}
+/* line 72, scss/pages/_auth.scss */
+.authorize-page .authorize-form .card-content {
+    padding: 10px 20px;
+}
+/* line 75, scss/pages/_auth.scss */
+.authorize-page .authorize-form + .btn {
+    margin-bottom: 190px;
+}
+/* line 79, scss/pages/_auth.scss */
+.authorize-page .soc-login .soc-link {
+    width: 46px;
+    height: 46px;
+    padding: 12px;
+}
+/* line 84, scss/pages/_auth.scss */
+.authorize-page .recpass-form + .btn {
+    margin-bottom: 190px;
+}
+
+
+
+
 .btn.flat{
     width: 100%;
+}
+
+.address-loader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0px 0;
+}
+.btn.flat.address-loader{
+    background: rgba(255, 255, 255, 0.50);
+}
+.address-loader img{
+    border: 0;
+    height: 100%;
 }

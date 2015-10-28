@@ -104,9 +104,50 @@ class CUserAddress{
         $DB->Query($sql);
         return 'OK';
     }
-    public static function removeUserAddress($id){
+
+    public static function setUserAddressDefault($id,$user_id){
         global $DB;
-        $sql = "DELETE FROM b_user_address WHERE ID=".$id;
-        $DB->Query($sql);
+        $date = date('Y-m-d H:i:s');
+
+        $check = self::checkUserAddress($id,$user_id);
+        if($check == 'true') {
+            $sql = "UPDATE b_user_address SET
+                DEFAULT_ADDRESS= 'N',
+                DATE_UPDATE = '" . $date . "'
+                WHERE ID_USER=" . IntVal($user_id) . " AND DEFAULT_ADDRESS = 'Y'";
+            $DB->Query($sql);
+
+            $sql = "UPDATE b_user_address SET
+                DEFAULT_ADDRESS= 'Y',
+                DATE_UPDATE = '" . $date . "'
+                WHERE ID_USER=" . IntVal($user_id) . " AND ID = " . IntVal($id);
+            $DB->Query($sql);
+        }
     }
+
+    public static function removeUserAddress($id,$user_id){
+        global $DB;
+        $check = self::checkUserAddress($id,$user_id);
+        if($check == 'true') {
+            $sql = "DELETE FROM b_user_address WHERE ID=" . $id;
+            $DB->Query($sql);
+        }
+    }
+
+    /*Проверка на принадлежность пользователя к данному адресу*/
+    public static function checkUserAddress($id,$user_id){
+        global $DB;
+        $sql = "SELECT * FROM b_user_address WHERE ID_USER = '".$user_id."' AND ID =".$id;
+        $result = $DB->Query($sql);
+        $arResult = array();
+        while ($record = $result->fetch()) {
+            $arResult = $record;
+        }
+        if (!empty($arResult)){
+            return 'true';
+        }else{
+            return 'false';
+        }
+    }
+    /**/
 }

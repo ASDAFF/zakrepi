@@ -1,13 +1,13 @@
 <?php
     require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php");
-    CModule::IncludeModule('userAddress');
+    CModule::IncludeModule('useraddress');
     $id = $_POST['id'];
     $user_id = $_POST['user_id'];
 
     $module_id = "useraddress";
     $maxCountAddress =  COption::GetOptionString($module_id, 'zCount', 6);
 
-    $res = CUserAddress::removeUserAddress($id);
+    $res = CUserAddress::removeUserAddress($id,$user_id);
 
     $dbUserAddress = CUserAddress::getAddressUser($user_id)
 ?>

@@ -123,7 +123,7 @@ $dbUsers = CUserAddress::getUsersId();
                                             <td class="icon">
                                                 <a href="/bitrix/admin/user_address_edit.php?ID=<?=$address['ID']?>"><i class="icon-pencil"></i></a>
                                                 <?if($address['DEFAULT_ADDRESS'] != 'Y'):?>
-                                                    <span onclick="remove(<?=$address['ID']?>,<?=$user['ID']?>);"><i class="icon-remove"></i></span>                                                <?endif;?>
+                                                    <span onclick="removed(<?=$address['ID']?>,<?=$user['ID']?>);"><i class="icon-remove"></i></span>                                                <?endif;?>
                                                 <?if($address['DEFAULT_ADDRESS'] == 'Y'):?>
                                                     <span class="def">По умолчанию</span>
                                                 <?endif;?>
@@ -158,7 +158,7 @@ $dbUsers = CUserAddress::getUsersId();
 ?>
 <script src="/local/modules/useraddress/lib/js/jquery-1.11.3.min.js"></script>
 <script>
-    function remove(id,user_id)
+    function removed(id,user_id)
     {
         $('#bg-reload-'+user_id).show();
         $.ajax({
