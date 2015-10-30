@@ -1,6 +1,7 @@
 <?
 $MESS["CATALOG_BACK_LINK"] = "Вернуться в каталог";
 $MESS["COMPARE_TITLE"] = "Сравнение товаров";
+$MESS["COMPARE_EMPTY"] = "Список сравниваемых товаров пуст";
 $MESS["COMPARE_ALL_PARAMETERS"] = "Все параметры";
 $MESS["COMPARE_DIFFERENT_PARAMETERS"] = "Различия";
 $MESS["COMPARE_PRICE"] = "Средняя цена";
