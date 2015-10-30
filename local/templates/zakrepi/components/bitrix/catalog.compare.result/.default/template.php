@@ -26,7 +26,7 @@ $isAjax = ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["ajax_action"]) 
 			<button class="btn-link<? echo ($arResult["DIFFERENT"] ? ' active' : ''); ?>" onclick="location.href='<? echo $arResult['COMPARE_URL_TEMPLATE'].'DIFFERENT=Y'; ?>'"><?=GetMessage("COMPARE_DIFFERENT_PARAMETERS")?></button>
 		</div>
 		<div class="col compare-products" id="compareSliderProducts">
-			<div class="carousel">
+			<div class="compare-carousel">
 				<div class="carousel-inner clearfix">
 					<?foreach($arResult["ITEMS"] as $arItem):?>
 					<div class="item compare-item col l2">
@@ -51,7 +51,7 @@ $isAjax = ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["ajax_action"]) 
 	<div class="compare-body">
 		<div class="row param-line price">
 			<div class="col l3 param-name"><?=GetMessage("COMPARE_PRICE")?></div>
-			<div class="carousel col param-value">
+			<div class="compare-carousel col param-value">
 				<div class="carousel-inner">
 					<?
 					foreach ($arResult["ITEMS"] as &$arElement)
@@ -98,7 +98,7 @@ $isAjax = ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["ajax_action"]) 
 					?>
 					<div class="row param-line">
 						<div class="col l3 param-name"><?=GetMessage("IBLOCK_FIELD_".$code)?></div>
-						<div class="carousel col l8 product-params">
+						<div class="compare-carousel col l8 product-params">
 							<div class="carousel-inner">
 							<?
 							foreach($arResult["ITEMS"] as &$arElement)
@@ -141,7 +141,7 @@ $isAjax = ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["ajax_action"]) 
 				?>
 				<div class="row param-line">
 					<div class="col l3 param-name"><?=GetMessage("IBLOCK_OFFER_FIELD_".$code)?></div>
-					<div class="carousel col l8 product-params">
+					<div class="compare-carousel col l8 product-params">
 						<div class="carousel-inner">
 						<?foreach($arResult["ITEMS"] as &$arElement)
 						{
@@ -184,7 +184,7 @@ $isAjax = ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["ajax_action"]) 
 					?>
 					<div class="row param-line">
 						<div class="col l3 param-name"><?=$arProperty["NAME"]?></div>
-						<div class="carousel col l8 product-params">
+						<div class="compare-carousel col l8 product-params">
 							<div class="carousel-inner">
 								<?foreach($arResult["ITEMS"] as &$arElement)
 								{
@@ -226,7 +226,7 @@ $isAjax = ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["ajax_action"]) 
 				?>
 				<div class="row param-line">
 					<div class="col l3 param-name"><?=$arProperty["NAME"]?></div>
-					<div class="carousel col l8 product-params">
+					<div class="compare-carousel col l8 product-params">
 						<div class="carousel-inner">
 							<?foreach($arResult["ITEMS"] as &$arElement)
 							{

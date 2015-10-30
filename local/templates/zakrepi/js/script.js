@@ -198,7 +198,7 @@ $(document).ready(function(){
 
     // jcarousel
     // http://sorgalla.com/jcarousel/docs/
-    /*$('.carousel')
+    $('.carousel')
         .on('jcarousel:createend', function(){
             if($(this).attr('data-jcarouselautoscroll') == 'true'){
                 if($(this).attr('data-interval')){
@@ -274,7 +274,6 @@ $(document).ready(function(){
             });
         })
         .jcarouselControl();
-    */
 
 
     // anchor-link
