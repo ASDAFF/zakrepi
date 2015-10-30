@@ -27,6 +27,10 @@ $arUrlRewrite = array(
         "CONDITION" => "#^/personal/account/password/#",
         "PATH" => "/personal/account/update_password.php",
     ),
+    array(
+        "CONDITION" => "#^/personal/registration/?#",
+        "PATH" => "/personal/registration.php",
+    ),
     /*end personal*/
 
     /*address*/

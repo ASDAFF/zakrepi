@@ -6218,3 +6218,6 @@ select option {
     border: 0;
     height: 100%;
 }
+input.error{
+    border: 1px solid #DB0000;
+}

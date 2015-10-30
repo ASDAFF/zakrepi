@@ -3,12 +3,21 @@ $(document).ready(function(){
     $('#svg-placeholder').html(svg);
 
     $(window).scroll(function(){
-        if($(window).scrollTop() > 50) {
-            $('.header').addClass('fixed');
+        if($('.page').hasClass('compare-page')){
+            if($(window).scrollTop() > $('.compare').offset().top) {
+                $('.compare-header').addClass('fixed').css({'width':$('.compare').width() + 10});
+            } else {
+                $('.compare-header').removeClass('fixed');
+            }
         } else {
-            $('.header').removeClass('fixed');
+            if($(window).scrollTop() > 50) {
+                $('.header-wrapper').addClass('fixed');
+            } else {
+                $('.header-wrapper').removeClass('fixed');
+            }
         }
     });
+
 
     // modal
     $('.btn-modal').click(function(){
@@ -143,6 +152,15 @@ $(document).ready(function(){
      });*/
 
     // placeholder
+    // init
+    $('.inputtext, input:not([type="submit"])').each(function(){
+        if($(this).val().length > 0){
+            $(this).addClass('dirty');
+        } else {
+            $(this).removeClass('dirty');
+        }
+    });
+    // action
     $('.inputtext, input:not([type="submit"])').keyup(function(){
         $(this).change();
     });
@@ -274,6 +292,17 @@ $(document).ready(function(){
             });
         })
         .jcarouselControl();
+    $('.compare .carousel-controlls').jcarouselControl({
+        carousel: $('.compare .carousel')
+    });
+
+    // product-thumbs
+    $('.product-imgs .thumb-link').click(function(){
+        var fullImg = $(this).attr('href');
+        $(this).addClass('active').siblings('.thumb-link').removeClass('active');
+        $('.product-imgs .full-img img').attr({'src':fullImg});
+        return false;
+    });
 
 
     // anchor-link
@@ -284,46 +313,6 @@ $(document).ready(function(){
         return false;
         //e.preventDefault;
     });
-
-    // yandex.map
-    // https://tech.yandex.ru/maps/doc/jsapi/2.1/quick-start/tasks/quick-start-docpage/
- /*   ymaps.ready(init);
-    var shopsMap;
-
-    function init(){
-        shopsMap = new ymaps.Map("shops-map",{
-            center: [57.16565145867384,65.54499550000001], // Тюмень
-            zoom: 12,
-            controls: ['smallMapDefaultSet','routeEditor','trafficControl']
-        });
-        // тут бы еще сделать что-то с балунами, действия при клике на метку,
-        // связать со списком магазинов рядом с картой, например центрировать
-        // и увеличивать карут при клике на адрес магазина в списке....
-        // но я этого делать не буду, заебала меня эта карта
-        var coords = [
-            [57.15689047935417,65.45087498346709],	// Черепанова 29
-            [57.15370227137238,65.56400849999996],	// 50 лет Октября, 8/1
-            [57.194878271190895,65.5943265],		// Ветеранов Труда, 47
-            [57.13485277148095,65.60593249999998],	// Пермякова, 1а
-            [57.13079877143909,65.54357149999998],	// Молодежная, 72
-            [57.13420827141365,65.4935445],			// Московский тракт, 120/1
-        ];
-        shopsCollection = new ymaps.GeoObjectCollection({},{
-            iconLayout: 'default#image',
-            iconImageHref: 'images/map-marker.png',
-            iconImageSize: [30, 36],
-        });
-        for (var i=0;i<coords.length;i++){
-            shopsCollection.add(new ymaps.Placemark(coords[i]));
-        }
-        shopsMap.behaviors.disable('scrollZoom');
-        shopsMap.geoObjects.add(shopsCollection);
-        if($('#shops-map').parents('.tab-content-item')){
-            $('#shops-map').parents('.tab-content-item').on("tabshow", function(){
-                shopsMap.container.fitToViewport();
-            });
-        }
-    }*/
     $('.toggle-content-box').each(function(){
         if($(this).attr('data-state')){
             var state = $(this).attr('data-state');
@@ -428,7 +417,6 @@ $(document).ready(function(){
                     break;
                 case 'bottom-center':
                     posTop = box.offset().top + box.outerHeight() + off;
-                    console.log(box.offset().left+' - '+box.outerWidth()+' - '+tooltipW);
                     posLeft =  box.offset().left + ((box.outerWidth() - tooltipW)/2);
                     break;
                 case 'bottom-right':
@@ -466,6 +454,28 @@ $(document).ready(function(){
     $('.tooltip .btn-close').click(function(){
         $(this).parents('.tooltip').removeClass('show');
     });
+
+    // show/hide block
+    $('.btn-toggle-block').click(function(){
+        if($(this).attr('data-hide-block')){
+            $($(this).attr('data-hide-block')).addClass('hide');
+        }
+        if ($(this).attr('data-show-block')) {
+            $($(this).attr('data-show-block')).removeClass('hide');
+        }
+        if ($(this).attr('data-block')){
+            $($(this).attr('data-block')).toggleClass('hide');
+        }
+        if($(this).is('a')){
+            return false;
+        }
+    });
+
+    // delete address
+    $('.address-book .btn-delete-addr').click(function(){
+        $(this).parents('.address-item').detach();
+    });
+
 
 });
 

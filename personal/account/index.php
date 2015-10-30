@@ -54,8 +54,8 @@ endif;?>
                 </p>
             </div>
             <div class="link-box">
-                <p><a href="lk__address-book.php">Изменить адрес по умолчанию</a></p>
-                <p><a href="lk__address-book__new.php">Добавить новый адрес</a></p>
+                <p><a href="/personal/address/update/?id=<?=$default_address['ID']?>">Изменить адрес по умолчанию</a></p>
+                <p><a href="/personal/address/add/">Добавить новый адрес</a></p>
             </div>
         </div>
     </div>
