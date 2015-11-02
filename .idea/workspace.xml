@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9b94893a-e1d6-4c97-9d95-37d54e5f8c7a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/js/function.js" afterPath="$PROJECT_DIR$/local/templates/zakrepi/js/function.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/header.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal/index.php" afterPath="$PROJECT_DIR$/personal/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal/account/index.php" afterPath="$PROJECT_DIR$/personal/account/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/php_interface/init.php" afterPath="$PROJECT_DIR$/local/php_interface/init.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/js/script.js" afterPath="$PROJECT_DIR$/local/templates/zakrepi/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/main.register/registration/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/main.register/registration/template.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/template_styles.css" afterPath="$PROJECT_DIR$/local/templates/zakrepi/template_styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/urlrewrite.php" afterPath="$PROJECT_DIR$/urlrewrite.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zakrepi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,7 +32,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/personal/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="119" max-vertical-offset="969">
+            <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="969">
               <caret line="7" column="8" selection-start-line="4" selection-start-column="3" selection-end-line="7" selection-end-column="8" />
               <folding />
             </state>
@@ -58,8 +52,8 @@
       <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/main.register/registration/template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.444445" vertical-offset="1867" max-vertical-offset="3961">
-              <caret line="143" column="79" selection-start-line="143" selection-start-column="79" selection-end-line="143" selection-end-column="79" />
+            <state vertical-scroll-proportion="-26.76923" vertical-offset="3554" max-vertical-offset="6052">
+              <caret line="250" column="33" selection-start-line="250" selection-start-column="33" selection-end-line="250" selection-end-column="33" />
               <folding>
                 <element signature="e#3#100#0#PHP" expanded="true" />
               </folding>
@@ -67,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="function.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="function.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/js/function.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1630" max-vertical-offset="2669">
-              <caret line="146" column="24" selection-start-line="146" selection-start-column="9" selection-end-line="146" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.5442903" vertical-offset="0" max-vertical-offset="3145">
+              <caret line="30" column="57" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -82,8 +76,8 @@
       <file leaf-file-name="template_styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/template_styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-29.571428" vertical-offset="104929" max-vertical-offset="105876">
-              <caret line="6221" column="30" selection-start-line="6221" selection-start-column="30" selection-end-line="6221" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="104969" max-vertical-offset="105978">
+              <caret line="6227" column="17" selection-start-line="6227" selection-start-column="17" selection-end-line="6227" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -102,17 +96,70 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="7483" max-vertical-offset="9078">
-              <caret line="458" column="3" selection-start-line="458" selection-start-column="3" selection-end-line="472" selection-end-column="7" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="7466" max-vertical-offset="9061">
+              <caret line="457" column="3" selection-start-line="457" selection-start-column="3" selection-end-line="471" selection-end-column="7" />
+              <folding>
+                <marker date="1446208946583" expanded="true" signature="28:18524" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="11920:12124" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="12171:12521" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="12211:12274" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="12280:12323" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="12361:12421" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="12427:12463" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="12574:12762" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="12815:13003" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="13011:13055" placeholder="//..." />
+                <marker date="1446208946583" expanded="true" signature="13086:13374" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="13294:13368" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="13426:14185" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="13572:13683" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="13689:13831" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="13982:14120" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="14193:14216" placeholder="//..." />
+                <marker date="1446208946583" expanded="true" signature="14250:17490" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="14288:14350" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="14356:14397" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="14439:14503" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="14509:14554" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="14594:14669" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="14675:14712" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="14878:17434" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="14903:17369" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="17440:17484" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="17544:17637" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="17684:17753" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="17813:17877" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="17947:18378" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="17992:18068" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="18114:18193" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="18233:18307" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="18335:18372" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="18460:18518" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="18548:18650" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="18694:19770" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="18726:18758" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="18773:18804" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="18817:18841" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="18955:19065" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="19191:19301" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="19328:19496" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="19357:19410" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="19437:19490" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="19525:19768" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="19554:19644" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="19671:19762" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="19785:19811" placeholder="{...}" />
+                <marker date="1446208946583" expanded="true" signature="19813:19890" placeholder="//..." />
+                <marker date="1446208946583" expanded="true" signature="19891:19942" placeholder="/*...*/" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update_personal.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="update_personal.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/personal/account/update_personal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1492865" vertical-offset="0" max-vertical-offset="911">
+            <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="289">
               <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
               <folding />
             </state>
@@ -180,8 +227,8 @@
         <option value="$PROJECT_DIR$/local/php_interface/init.php" />
         <option value="$PROJECT_DIR$/personal/registration.php" />
         <option value="$PROJECT_DIR$/local/php_interface/include/users.php" />
-        <option value="$PROJECT_DIR$/local/templates/zakrepi/template_styles.css" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/js/function.js" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/template_styles.css" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/main.register/registration/template.php" />
       </list>
     </option>
@@ -293,15 +340,15 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -330,19 +377,19 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23134328" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23400854" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -362,9 +409,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31183368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -667,7 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1666">
           <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -675,7 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="901">
           <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -691,6 +736,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.77607024" vertical-offset="7470" max-vertical-offset="8381">
           <caret line="481" column="17" selection-start-line="481" selection-start-column="17" selection-end-line="481" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/php_interface/init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18660812" vertical-offset="0" max-vertical-offset="911">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personal/account/update_personal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="289">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -705,36 +764,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/main.register/registration/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.444445" vertical-offset="1867" max-vertical-offset="3961">
-          <caret line="143" column="79" selection-start-line="143" selection-start-column="79" selection-end-line="143" selection-end-column="79" />
+        <state vertical-scroll-proportion="-26.76923" vertical-offset="3554" max-vertical-offset="6052">
+          <caret line="250" column="33" selection-start-line="250" selection-start-column="33" selection-end-line="250" selection-end-column="33" />
           <folding>
             <element signature="e#3#100#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/js/function.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1630" max-vertical-offset="2669">
-          <caret line="146" column="24" selection-start-line="146" selection-start-column="9" selection-end-line="146" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/php_interface/init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18660812" vertical-offset="0" max-vertical-offset="911">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/template_styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-29.571428" vertical-offset="104929" max-vertical-offset="105876">
-          <caret line="6221" column="30" selection-start-line="6221" selection-start-column="30" selection-end-line="6221" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="104969" max-vertical-offset="105978">
+          <caret line="6227" column="17" selection-start-line="6227" selection-start-column="17" selection-end-line="6227" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -749,17 +790,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7483" max-vertical-offset="9078">
-          <caret line="458" column="3" selection-start-line="458" selection-start-column="3" selection-end-line="472" selection-end-column="7" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="7466" max-vertical-offset="9061">
+          <caret line="457" column="3" selection-start-line="457" selection-start-column="3" selection-end-line="471" selection-end-column="7" />
+          <folding>
+            <marker date="1446208946583" expanded="true" signature="28:18524" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="11920:12124" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="12171:12521" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="12211:12274" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="12280:12323" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="12361:12421" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="12427:12463" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="12574:12762" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="12815:13003" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="13011:13055" placeholder="//..." />
+            <marker date="1446208946583" expanded="true" signature="13086:13374" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="13294:13368" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="13426:14185" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="13572:13683" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="13689:13831" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="13982:14120" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="14193:14216" placeholder="//..." />
+            <marker date="1446208946583" expanded="true" signature="14250:17490" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="14288:14350" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="14356:14397" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="14439:14503" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="14509:14554" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="14594:14669" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="14675:14712" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="14878:17434" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="14903:17369" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="17440:17484" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="17544:17637" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="17684:17753" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="17813:17877" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="17947:18378" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="17992:18068" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="18114:18193" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="18233:18307" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="18335:18372" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="18460:18518" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="18548:18650" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="18694:19770" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="18726:18758" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="18773:18804" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="18817:18841" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="18955:19065" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="19191:19301" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="19328:19496" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="19357:19410" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="19437:19490" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="19525:19768" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="19554:19644" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="19671:19762" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="19785:19811" placeholder="{...}" />
+            <marker date="1446208946583" expanded="true" signature="19813:19890" placeholder="//..." />
+            <marker date="1446208946583" expanded="true" signature="19891:19942" placeholder="/*...*/" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personal/account/update_personal.php">
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/js/function.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1492865" vertical-offset="0" max-vertical-offset="911">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding />
+        <state vertical-scroll-proportion="0.5442903" vertical-offset="0" max-vertical-offset="3145">
+          <caret line="30" column="57" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

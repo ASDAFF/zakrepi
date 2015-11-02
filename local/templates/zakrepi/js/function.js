@@ -41,38 +41,48 @@ function isRussian(value){
 }
 
 function checkEmail(val, obj){
+    var error = false;
     if (val != null && val != "")
     {
         if (!isValidEmail(val))
         {
             obj.addClass("error");
+            error = true;
+            return error;
         }
         else
         {
             obj.removeClass("error");
+            return error;
         }
     }
     else
     {
         obj.removeClass("error");
+        return error;
     }
 }
 
 function checkNumbers(val, obj){
+    var error = false;
     if (val != null && val != "")
     {
         if(isNumeric(val))
         {
             obj.removeClass("error");
+            return error;
         }
         else
         {
             obj.addClass("error");
+            error = true;
+            return error;
         }
     }
     else
     {
         obj.removeClass("error");
+        return error;
     }
 }
 
@@ -96,51 +106,69 @@ function checkLatin(val, obj){
 }
 
 function checkPassword(val, obj){
+    var error = false;
     if (val != null && val != "")
     {
         if(isRussian(val))
         {
-            obj.closest('.row_form').removeClass("error_row").find('.inp_error').hide();
-            obj.closest('.row_form').addClass("error_row").find('.latin_field').show();
-            obj.closest('.row_form').removeClass("ok_row");
+            obj.addClass("error");
+            error = true;
+            return error;
         }
         else if(val.length < 6)
         {
-            obj.closest('.row_form').removeClass("error_row").find('.inp_error').hide();
-            obj.closest('.row_form').addClass("error_row").find('.length_field').show();
-            obj.closest('.row_form').removeClass("ok_row");
+            obj.addClass("error");
+            error = true;
+            return error;
         }
         else
         {
-            obj.closest('.row_form').removeClass("error_row").find('.inp_error').hide();
-            obj.closest('.row_form').addClass("ok_row");
-            //obj.closest('.row_form').find('.latin_field').show();
+            obj.removeClass("error");
+
+            return error;
         }
     }
     else
     {
-        obj.closest('.row_form').removeClass("error_row").find('.inp_error').hide();
+        obj.removeClass("error");
+        return error;
     }
 }
 function checkPassword_inp(val, obj){
+    var error = false;
     if (val != null && val != "")
     {
-        if(val != obj.parent().prev().children('.paswd').val())
+        if(val != $('.pass').val())
         {
-            obj.closest('.row_form').removeClass("error_row").find('.inp_error').hide();
-            obj.closest('.row_form').addClass("error_row").find('.pass_field').show();
-            obj.closest('.row_form').removeClass("ok_row");
+            obj.addClass("error");
+            error = true;
+            return error;
         }
         else
         {
-            obj.closest('.row_form').removeClass("error_row").find('.inp_error').hide();
-            obj.closest('.row_form').addClass("ok_row");
-            //obj.closest('.row_form').find('.latin_field').show();
+            obj.removeClass("error");
+            return error;
         }
     }
     else
     {
-        obj.closest('.row_form').removeClass("error_row").find('.inp_error').hide();
+        obj.removeClass("error");
+        return error;
+    }
+}
+
+function checkEmptiness(val, obj)
+{
+    var error = false;
+    if (val == null || val == "")
+    {
+        obj.addClass("error");
+        error = true;
+        return error;
+    }
+    else{
+        obj.removeClass("error");
+        return error;
     }
 }
 

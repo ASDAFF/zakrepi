@@ -6221,3 +6221,9 @@ select option {
 input.error{
     border: 1px solid #DB0000;
 }
+label.textarea{
+    vertical-align: top;
+}
+.table-field textarea{
+    resize: none;
+}

@@ -34,7 +34,9 @@ if (count($arResult["ERRORS"]) > 0):
 
 elseif($arResult["USE_EMAIL_CONFIRMATION"] === "Y"):
 ?>
-<p><?echo GetMessage("REGISTER_EMAIL_WILL_BE_SENT")?></p>
+    <?/*
+        <p><?echo GetMessage("REGISTER_EMAIL_WILL_BE_SENT")?></p>
+    */?>
 <?endif?>
 
 <form method="post" action="<?=POST_FORM_ACTION_URI?>" name="regform" enctype="multipart/form-data">
@@ -91,19 +93,19 @@ endif;
                 <?/*Номер телефона*/?>
                 <div class="table-field">
                     <label class="label">Номер телефона</label>
-                    <div class="field"><span class="tel-before">+7</span><input type="tel" class="required" name="REGISTER[WORK_PHONE]"/></div>
+                    <div class="field"><span class="tel-before">+7</span><input type="tel" class="required numbers" name="REGISTER[WORK_PHONE]"/></div>
                 </div>
                 <?/*Электронная почта и логин*/?>
                 <div class="table-field">
                     <label class="label">Электронная почта</label>
                     <div class="field">
                         <input type="hidden" name="REGISTER[LOGIN]" id="login-name"/>
-                        <input type="email" onchange="setLogin(this)" class="required" name="REGISTER[EMAIL]"/>
+                        <input type="email" onchange="setLogin(this)" class="required" id="emailregister" name="REGISTER[EMAIL]"/>
                     </div>
                 </div>
                 <?/*Юридический адрес*/?>
                 <div class="table-field ul-field hide">
-                    <label class="label">Юридический адрес</label>
+                    <label class="label textarea">Юридический адрес</label>
                     <div class="field">
                         <?/*<input type="text" />*/?>
                         <textarea name="REGISTER[UF_LEGAL_ADDRESS]"></textarea>
@@ -114,13 +116,13 @@ endif;
                     <p class="color-text text-light">Реквизиты организации</p>
                     <div class="table-field cols-2">
                         <span class="label">ИНН / КПП</span>
-                        <div class="field"><input type="text" id="ks" name="REGISTER[UF_INN]"/><label for="inn" class="textfield-placeholder">ИНН</label></div>/
-                        <div class="field"><input type="text" id="inn" name="REGISTER[UF_KPP]"/><label for="kpp" class="textfield-placeholder">КПП</label></div>
+                        <div class="field"><input type="text" id="inn" class="numbers" name="REGISTER[UF_INN]"/><label for="inn" class="textfield-placeholder">ИНН</label></div>/
+                        <div class="field"><input type="text" id="kpp" class="numbers" name="REGISTER[UF_KPP]"/><label for="kpp" class="textfield-placeholder">КПП</label></div>
                     </div>
                     <div class="table-field cols-2">
                         <span class="label">ОГРН / ОКПО</span>
-                        <div class="field"><input type="text" id="ogrn" name="REGISTER[UF_OGRN]"/><label for="ogrn" class="textfield-placeholder">ОГРН</label></div>/
-                        <div class="field"><input type="text" id="okpo" name="REGISTER[UF_OKPO]"/><label for="okpo" class="textfield-placeholder">ОКПО</label></div>
+                        <div class="field"><input type="text" id="ogrn" class="numbers" name="REGISTER[UF_OGRN]"/><label for="ogrn" class="textfield-placeholder">ОГРН</label></div>/
+                        <div class="field"><input type="text" id="okpo" class="numbers" name="REGISTER[UF_OKPO]"/><label for="okpo" class="textfield-placeholder">ОКПО</label></div>
                     </div>
                 </div>
                 <?/*Банковские реквизиты*/?>
@@ -129,12 +131,12 @@ endif;
                     <div class="table-field cols-2">
                         <span class="label">Банк / БИК банка</span>
                         <div class="field"><input type="text" id="bank" name="REGISTER[UF_NAME_BANK]"/><label for="bank" class="textfield-placeholder">Банк</label></div>/
-                        <div class="field"><input type="text" id="bik" name="REGISTER[UF_BIC_BANK]"/><label for="rs" class="textfield-placeholder">БИК банка</label></div>
+                        <div class="field"><input type="text" id="bik" maxlength="9" class="numbers" name="REGISTER[UF_BIC_BANK]"/><label for="bik" class="textfield-placeholder">БИК банка</label></div>
                     </div>
                     <div class="table-field cols-2">
                         <span class="label">Расчетный счет / Кор. счет</span>
-                        <div class="field"><input type="text" id="rs" name="REGISTER[UF_CHECKING_ACCOUNT]"/><label for="bank" class="textfield-placeholder">Расчетный счет</label></div>/
-                        <div class="field"><input type="text" id="ks" name="REGISTER[UF_CORR_ACCOUNT]"/><label for="rs" class="textfield-placeholder">Кор. счет</label></div>
+                        <div class="field"><input type="text" id="rs" maxlength="20" class="numbers" name="REGISTER[UF_CHECKING_ACCOUNT]"/><label for="rs" class="textfield-placeholder">Расчетный счет</label></div>/
+                        <div class="field"><input type="text" id="ks" maxlength="20" class="numbers" name="REGISTER[UF_CORR_ACCOUNT]"/><label for="ks" class="textfield-placeholder">Кор. счет</label></div>
                     </div>
                 </div>
                 <?/*Дополнительные параметры*/?>
@@ -151,11 +153,11 @@ endif;
                 </div>
                 <div class="table-field">
                     <label class="label">Ваш пароль</label>
-                    <div class="field"><input type="password" autocomplete="off" name="REGISTER[PASSWORD]"/></div>
+                    <div class="field"><input type="password" class="pass" autocomplete="off" name="REGISTER[PASSWORD]"/></div>
                 </div>
                 <div class="table-field">
                     <label class="label">Повторите пароль</label>
-                    <div class="field"><input type="password" autocomplete="off" name="REGISTER[CONFIRM_PASSWORD]"/></div>
+                    <div class="field"><input type="password" class="pass_inp" autocomplete="off" name="REGISTER[CONFIRM_PASSWORD]"/></div>
                 </div>
                 <p class="color-text text-light">Нажимая кнопку «Зарегистрироваться», я даю свое согласие на обработку персональных данных в соответствии с <a href="#" class="text-primary">Политикой конфеденциальности</a></p>
             </div>
@@ -191,10 +193,24 @@ endif;
                 "UF_CHECKING_ACCOUNT",
                 "UF_CORR_ACCOUNT"
             );
+            var ip = new Array(
+                "EMAIL",
+                "WORK_PHONE",
+                "WORK_COMPANY",
+
+                "UF_LEGAL_ADDRESS",
+                "UF_INN",
+                "UF_OGRN",
+
+                "UF_NAME_BANK",
+                "UF_BIC_BANK",
+                "UF_CHECKING_ACCOUNT",
+                "UF_CORR_ACCOUNT"
+            );
             // show/hide block
             $('.btn-toggle-block-register').click(function(){
                 $('input,textarea').removeClass('required');
-                $('.table-field input,.table-field textarea').each(function(){
+                $('.table-field input[type="text"],.table-field input[type="tel"],input[type="email"],input[type="password"],.table-field textarea').each(function(){
                     var val = $.trim($(this).val());
                     clearClassError(val,$(this));
                 });
@@ -218,10 +234,117 @@ endif;
                     $($(this).attr('data-show-block')).removeClass('hide');
                 }
             });
+            /*organization or ip*/
+            $('input[name*="UF_TYPE_ORGANIZATION"]').click(function(){
+                var val = $(this).val();
+                $('input,textarea').removeClass('required');
+                if(val == 4)
+                {
+                    $('.table-field input[type="text"],.table-field input[type="tel"],input[type="email"],input[type="password"],.table-field textarea').each(function(){
+                        var val = $.trim($(this).val());
+                        clearClassError(val,$(this));
+                    });
+                    ul.forEach(function(item){
+                        $('*[name*='+item+']').addClass('required');
+                    });
+                }
+                else if(val == 5)
+                {
+                    $('.table-field input[type="text"],.table-field input[type="tel"],input[type="email"],input[type="password"],.table-field textarea').each(function(){
+                        var val = $.trim($(this).val());
+                        clearClassError(val,$(this));
+                    });
+                    ip.forEach(function(item){
+                        $('*[name*='+item+']').addClass('required');
+                    });
+                }
+            });
+            var error = false;
+            var error_count = 0;
 
-            $('body').on('change', 'input[type="email"]', function(){
+            /*password*/
+            $('body').on('change', '.pass', function(){
                 var val = $.trim($(this).val());
-                checkEmail(val, $(this));
+                error = checkEmptiness(val, $(this));
+                if (error)
+                {
+                    error_count++;
+                }
+                else {
+                    error = checkPassword(val, $(this));
+                    if (error) {
+                        error_count++;
+                    }
+                }
+            });
+
+            $('body').on('change', '.pass_inp', function(){
+                var val = $.trim($(this).val());
+                error = checkEmptiness(val, $(this));
+                if (error)
+                {
+                    error_count++;
+                }
+                else {
+                    error = checkPassword_inp(val, $(this));
+                    if (error) {
+                        error_count++;
+                    }
+                }
+            });
+
+            /*login email*/
+            $('body').on('change', 'input[type="email"]#emailregister', function(){
+                var val = $.trim($(this).val());
+                error = checkEmptiness(val, $(this));
+                if (error)
+                {
+                    error_count++;
+                }
+                else {
+                    error = checkEmail(val, $(this));
+                    if (error) {
+                        error_count++;
+                    }
+                }
+            });
+            $('body').on('change', 'input[type="text"].required, input[type="tel"]', function(){
+                var val = $.trim($(this).val());
+
+                /*inn kpp rs ks ogrn */
+                if($(this).hasClass('numbers'))
+                {
+                    error = checkEmptiness(val, $(this));
+                    if (error) {
+                        error_count++;
+                    }
+                    else {
+                        error = checkNumbers(val, $(this));
+                        if (error) {
+                            error_count++;
+                        }
+                    }
+                }
+                else {
+                    error = checkEmptiness(val, $(this));
+                    if (error) {
+                        error_count++;
+                    }
+                }
+            });
+
+            /*submit*/
+            $('body').on('submit', 'form', function(){
+                error_count = 0;
+                $('input[type="email"], input[type="text"].required, input[type="text"].required.numbers, input[type="tel"],input[type="password"].pass,input[type="password"].pass_inp').change();
+                if (error_count>0)
+                {
+                    return false;
+                }
+                else
+                {
+                    //return false;
+                }
             });
         });
     </script>
