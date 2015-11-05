@@ -40,7 +40,9 @@ endif;?>
             </div>
             <div class="link-box">
                 <p><a href="/personal/account/update/">Изменить личные данные</a></p>
+                <?/*
                 <p><a href="/personal/account/password/">Изменить пароль</a></p>
+                */?>
             </div>
         </div>
     </div>
@@ -54,7 +56,7 @@ endif;?>
                 </p>
             </div>
             <div class="link-box">
-                <p><a href="/personal/address/update/?id=<?=$default_address['ID']?>">Изменить адрес по умолчанию</a></p>
+                <p><a href="/personal/address/">Изменить адрес по умолчанию</a></p>
                 <p><a href="/personal/address/add/">Добавить новый адрес</a></p>
             </div>
         </div>

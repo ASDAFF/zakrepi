@@ -46,19 +46,19 @@ function checkEmail(val, obj){
     {
         if (!isValidEmail(val))
         {
-            obj.addClass("error");
+            obj.addClass("invalid-pattern");
             error = true;
             return error;
         }
         else
         {
-            obj.removeClass("error");
+            obj.removeClass("invalid-pattern");
             return error;
         }
     }
     else
     {
-        obj.removeClass("error");
+        obj.removeClass("invalid-pattern");
         return error;
     }
 }
@@ -69,19 +69,19 @@ function checkNumbers(val, obj){
     {
         if(isNumeric(val))
         {
-            obj.removeClass("error");
+            obj.removeClass("invalid-pattern");
             return error;
         }
         else
         {
-            obj.addClass("error");
+            obj.addClass("invalid-pattern");
             error = true;
             return error;
         }
     }
     else
     {
-        obj.removeClass("error");
+        obj.removeClass("invalid-pattern");
         return error;
     }
 }
@@ -111,26 +111,26 @@ function checkPassword(val, obj){
     {
         if(isRussian(val))
         {
-            obj.addClass("error");
+            obj.addClass("invalid-pattern");
             error = true;
             return error;
         }
         else if(val.length < 6)
         {
-            obj.addClass("error");
+            obj.addClass("invalid-pattern");
             error = true;
             return error;
         }
         else
         {
-            obj.removeClass("error");
+            obj.removeClass("invalid-pattern");
 
             return error;
         }
     }
     else
     {
-        obj.removeClass("error");
+        obj.removeClass("invalid-pattern");
         return error;
     }
 }
@@ -140,19 +140,19 @@ function checkPassword_inp(val, obj){
     {
         if(val != $('.pass').val())
         {
-            obj.addClass("error");
+            obj.addClass("invalid-pattern");
             error = true;
             return error;
         }
         else
         {
-            obj.removeClass("error");
+            obj.removeClass("invalid-pattern");
             return error;
         }
     }
     else
     {
-        obj.removeClass("error");
+        obj.removeClass("invalid-pattern");
         return error;
     }
 }
@@ -162,18 +162,18 @@ function checkEmptiness(val, obj)
     var error = false;
     if (val == null || val == "")
     {
-        obj.addClass("error");
+        obj.addClass("invalid-pattern");
         error = true;
         return error;
     }
     else{
-        obj.removeClass("error");
+        obj.removeClass("invalid-pattern");
         return error;
     }
 }
 
 function clearClassError(val, obj)
 {
-    obj.removeClass('error');
+    obj.removeClass('invalid-pattern');
     obj.val('');
 }

@@ -6,9 +6,9 @@ $APPLICATION->SetTitle("");?>
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"IBLOCK_TYPE" => "1c_catalog",
-		"IBLOCK_ID" => "5",
-		"SECTION_ID" => $_REQUEST["SECTION_ID"],
-		"SECTION_CODE" => "",
+		"IBLOCK_ID" => $arZSettings['CATALOG_ID'],
+		"SECTION_ID" => "",//$_REQUEST["SECTION_ID"],
+		"SECTION_CODE" => $_REQUEST["code"],
 		"SECTION_USER_FIELDS" => array(
 			0 => "",
 			1 => "",
@@ -70,7 +70,7 @@ $APPLICATION->SetTitle("");?>
 		"SHOW_PRICE_COUNT" => "1",
 		"PRICE_VAT_INCLUDE" => "Y",
 		"CONVERT_CURRENCY" => "N",
-		"BASKET_URL" => "/personal/basket.php",
+		"BASKET_URL" => "/cart/index.php",
 		"USE_PRODUCT_QUANTITY" => "N",
 		"PRODUCT_QUANTITY_VARIABLE" => "",
 		"ADD_PROPERTIES_TO_BASKET" => "Y",
@@ -79,7 +79,7 @@ $APPLICATION->SetTitle("");?>
 		"PRODUCT_PROPERTIES" => array(
 		),
 		"ADD_TO_BASKET_ACTION" => "ADD",
-		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TEMPLATE" => "pagen",
 		"DISPLAY_TOP_PAGER" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"PAGER_TITLE" => "Товары",

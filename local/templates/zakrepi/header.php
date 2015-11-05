@@ -94,8 +94,8 @@ CUtil::InitJSCore(Array("ajax"));
                                 Петропавловск-Камчатский
 
                                 <?
-                                    CModule::IncludeModule("cityfranchise");
-                                    $result = CCityFranchise::getListCity();
+                                    /*CModule::IncludeModule("cityfranchise");
+                                    $result = CCityFranchise::getListCity();*/
                                     //Получили список актуальных городов франшиз
                                 ?>
                             </div>
@@ -111,10 +111,19 @@ CUtil::InitJSCore(Array("ajax"));
                             </div>
                             <!--end extra menu-->
                             <!--personal-->
-                            <div class="auth-box col l3">
-                                <a class="auth-link login" href="#"><svg class="icon"><use xlink:href="#profile"/></svg> Вход</a>
-                                <a class="auth-link register" href="#">Регистрация</a>
-                            </div>
+                            <?
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:main.include",
+                                "",
+                                Array(
+                                    "COMPONENT_TEMPLATE" => ".default",
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/includes/header/personal.php"
+                                )
+                            );?>
+
                             <!--end personal-->
                         </div>
                     </div>

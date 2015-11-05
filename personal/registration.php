@@ -3,8 +3,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle('Регистрация');
 ?>
 <?if($USER->IsAuthorized()):
-    //header("Location: /personal/account/");
-    //exit();
+    header("Location: /personal/account/");
+    exit();
 endif;?>
 <?
     $show_field = array(

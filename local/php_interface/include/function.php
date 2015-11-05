@@ -29,3 +29,22 @@ function dateActiveFrom($date)
 
     return $result;
 }
+/*вывод цены товара*/
+function priceShow($str)
+{
+    $str = (float) $str;
+    if(is_positive_int($str))
+    {
+        $result = number_format($str,0,'',' ').'&nbsp;<i class="rouble">i</i>';
+    }
+    else
+    {
+        $result = number_format($str,2,'.',' ').'&nbsp;<i class="rouble">i</i>';
+    }
+    return $result;
+}
+/*Проверка на целое число*/
+function is_positive_int($num){
+    $intNum = (int) $num;
+    return ($intNum == $num && is_int($intNum));
+}

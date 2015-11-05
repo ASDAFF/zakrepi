@@ -66,13 +66,19 @@ endif;
                 <?/*Фамилия*/?>
                 <div class="table-field fl-field">
                     <label class="label">Фамилия</label>
-                    <div class="field"><input type="text" class="required" name="REGISTER[LAST_NAME]"/></div>
+                    <div class="field">
+                        <input type="text" class="required" name="REGISTER[LAST_NAME]"/>
+                        <span class="error-text error-required error-pattern">Укажите Вашу фамилию</span>
+                    </div>
                 </div>
 
                 <?/*Имя*/?>
                 <div class="table-field fl-field">
                     <label class="label">Имя</label>
-                    <div class="field"><input type="text" class="required" name="REGISTER[NAME]"/></div>
+                    <div class="field">
+                        <input type="text" class="required" name="REGISTER[NAME]"/>
+                        <span class="error-text error-required error-pattern">Укажите Ваше имя</span>
+                    </div>
                 </div>
                 <?/*Наименование организации*/?>
                 <div class="table-field ul-field hide">
@@ -93,7 +99,10 @@ endif;
                 <?/*Номер телефона*/?>
                 <div class="table-field">
                     <label class="label">Номер телефона</label>
-                    <div class="field"><span class="tel-before">+7</span><input type="tel" class="required numbers" name="REGISTER[WORK_PHONE]"/></div>
+                    <div class="field"><span class="tel-before">+7</span>
+                        <input type="tel" class="required numbers" name="REGISTER[WORK_PHONE]"/>
+                        <span class="error-text error-required error-pattern">Укажите Ваш телефон</span>
+                    </div>
                 </div>
                 <?/*Электронная почта и логин*/?>
                 <div class="table-field">
@@ -101,6 +110,7 @@ endif;
                     <div class="field">
                         <input type="hidden" name="REGISTER[LOGIN]" id="login-name"/>
                         <input type="email" onchange="setLogin(this)" class="required" id="emailregister" name="REGISTER[EMAIL]"/>
+                        <span class="error-text error-required error-pattern">Укажите электронную почту в формате mymail@mail.ru</span>
                     </div>
                 </div>
                 <?/*Юридический адрес*/?>
@@ -153,11 +163,17 @@ endif;
                 </div>
                 <div class="table-field">
                     <label class="label">Ваш пароль</label>
-                    <div class="field"><input type="password" class="pass" autocomplete="off" name="REGISTER[PASSWORD]"/></div>
+                    <div class="field">
+                        <input type="password" class="pass" autocomplete="off" name="REGISTER[PASSWORD]"/>
+                        <span class="error-text error-required error-pattern">Пароль должен быть не менее 6 символов длиной, содержать латинские символы.</span>
+                    </div>
                 </div>
                 <div class="table-field">
                     <label class="label">Повторите пароль</label>
-                    <div class="field"><input type="password" class="pass_inp" autocomplete="off" name="REGISTER[CONFIRM_PASSWORD]"/></div>
+                    <div class="field">
+                        <input type="password" class="pass_inp" autocomplete="off" name="REGISTER[CONFIRM_PASSWORD]"/>
+                        <span class="error-text error-required error-pattern">Пароль не совпадает</span>
+                    </div>
                 </div>
                 <p class="color-text text-light">Нажимая кнопку «Зарегистрироваться», я даю свое согласие на обработку персональных данных в соответствии с <a href="#" class="text-primary">Политикой конфеденциальности</a></p>
             </div>
@@ -200,12 +216,12 @@ endif;
 
                 "UF_LEGAL_ADDRESS",
                 "UF_INN",
-                "UF_OGRN",
+                "UF_OGRN"/*,
 
                 "UF_NAME_BANK",
                 "UF_BIC_BANK",
                 "UF_CHECKING_ACCOUNT",
-                "UF_CORR_ACCOUNT"
+                "UF_CORR_ACCOUNT"*/
             );
             // show/hide block
             $('.btn-toggle-block-register').click(function(){

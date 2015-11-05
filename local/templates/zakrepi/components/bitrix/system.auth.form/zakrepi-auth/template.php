@@ -1,5 +1,7 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
+
+
 <form name="system_auth_form<?=$arResult["RND"]?>" method="post" target="_top" action="<?=$arResult["AUTH_URL"]?>">
     <?if($arResult["BACKURL"] <> ''):?>
         <input type="hidden" name="backurl" value="<?=$arResult["BACKURL"]?>" />
@@ -14,6 +16,12 @@
         <div class="col l7">
             <div class="base-card authorize-form">
                 <div class="title big-text">Войти, используя аккаунт</div>
+                <p>
+                    <?
+                    if ($arResult['SHOW_ERRORS'] == 'Y' && $arResult['ERROR'])
+                        ShowMessage($arResult['ERROR_MESSAGE']);
+                    ?>
+                </p>
                 <div class="card-content">
 
                     <div class="table-field">
@@ -53,13 +61,6 @@
                         array("HIDE_ICONS"=>"Y")
                     );
                     ?>
-                    <?/*
-                    <ul class="soc-list horizontal">
-                        <li class="soc-item"><a class="soc-link" href="#"><svg class="icon"><use xlink:href="#fb"/></svg></a></li>
-                        <li class="soc-item"><a class="soc-link" href="#"><svg class="icon"><use xlink:href="#vk"/></svg></a></li>
-                        <li class="soc-item"><a class="soc-link" href="#"><svg class="icon"><use xlink:href="#ok"/></svg></a></li>
-                    </ul>
-                    */?>
                 </div>
             </div>
         </div>

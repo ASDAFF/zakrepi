@@ -18,6 +18,7 @@ $arAllOptions = array(
     array("zPhoneSiteCallTo", GetMessage("ZAKREPI_PHONE_SITE_CALL_TO"), "+7 999 999 99 99", array("text", 30)),
     array("zTimeWork", GetMessage("ZAKREPI_TIME_WORK"), "", array("textarea", 10,50)),
     array("zTimeSlider", GetMessage("ZAKREPI_TIME_SLIDER"), "3000", array("text", 30)),
+    array("zCatalogId", GetMessage("ZAKREPI_CATALOG_ID"), "", array("text", 30)),
 
     array("zSocFB", GetMessage("ZAKREPI_SOC_FB"), "", array("text", 30)),
     array("zSocVK", GetMessage("ZAKREPI_SOC_VK"), "", array("text", 30)),

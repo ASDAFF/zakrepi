@@ -3,8 +3,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle('Моя учетная запись');
 ?>
     <?if($USER->IsAuthorized()):
-        //header("Location: /personal/account/");
-        //exit();
+        header("Location: /personal/account/");
+        exit();
 endif;?>
     <div class="workarea">
         <div class="page-title">Вход</div>

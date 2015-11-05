@@ -20,6 +20,7 @@
         $arZSettings['PHONE_CALLTO']=COption::GetOptionString($module_id, 'zPhoneSiteCallTo');
         $arZSettings['TIME_WORK'] = COption::GetOptionString($module_id, 'zTimeWork');
         $arZSettings['TIME_SLIDER'] = COption::GetOptionString($module_id, 'zTimeSlider',3000);
+        $arZSettings['CATALOG_ID'] = COption::GetOptionString($module_id, 'zCatalogId',6);
 
         /*social*/
         if(COption::GetOptionString($module_id, 'zSocFB','')!='')  {

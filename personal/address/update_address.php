@@ -22,9 +22,6 @@ $maxCountAddress =  COption::GetOptionString('useraddress', 'zCount', 6);
 $ok = (isset($dbAddress[0])) ? 'Y' : 'N';
 $CURRENT_PAGE = (CMain::IsHTTPS()) ? "https://" : "http://";
 
-/*echo '<pre>';
-print_r($_SERVER);
-echo '</pre>';*/
 $SERVER_PORT = $_SERVER['SERVER_PORT'];
 if($ok == 'N'):
     LocalRedirect("".$CURRENT_PAGE.$_SERVER['SERVER_NAME'].":".$SERVER_PORT."/personal/address/");
@@ -34,12 +31,11 @@ if($count >= IntVal($maxCountAddress) || $dbAddress[0]['ID_USER'] != $id_user):
     LocalRedirect("".$CURRENT_PAGE.$_SERVER['SERVER_NAME'].":".$SERVER_PORT."/personal/address/");
 endif;
 
-
 ?>
     <div class="breadcrumbs">
         <a href="/personal/address/">Вернуться в адресную книгу</a>
     </div>
-    <h1 class="page-title">Добавить новый адрес</h1>
+    <h1 class="page-title">Изменить адрес</h1>
     <div class="row address-book">
         <form method="POST" action="/personal/address/">
             <input type="hidden" name="ID" value="<?=$dbAddress[0]['ID']?>">
@@ -67,10 +63,16 @@ endif;
                     <?if($count == 1):?>
                         <input type="hidden" name="DEFAULT_ADDRESS" value="Y">
                     <?else:?>
-                        <p class="def-addr">
-                            <input type="checkbox" id="default-addr" name="DEFAULT_ADDRESS"/>
-                            <label class="checkbox-lbl" for="default-addr">Адрес по умолчанию</label>
-                        </p>
+                        <?if($dbAddress[0]['DEFAULT_ADDRESS']== 'Y'){?>
+                            <p class="def-addr">
+                            <p class="color-text text-light">Адрес по умолчанию</p>
+                            </p>
+                        <?}else{?>
+                            <p class="def-addr">
+                                <input type="checkbox"  id="default-addr" name="DEFAULT_ADDRESS"/>
+                                <label class="checkbox-lbl"  for="default-addr">Адрес по умолчанию</label>
+                            </p>
+                        <?}?>
                     <?endif;?>
                 </div>
                 <input type="submit" class="btn primary fullwidth big" name="UPDATE" value="Изменить адрес"/>
