@@ -586,13 +586,53 @@ if ($arResult['MODULES']['currency'])
 	}
 }
 
+/**/
+
 /*add options 5 element*/
 $arResult['DISPLAY_PROPERTIES']['OPTIONS_5_ELEMENT'];
-for($a=0;$a<5;$a++){
-    $arResult['DISPLAY_PROPERTIES']['OPTIONS_5_ELEMENT'][$a]['DESCRIPTION'] = $arResult['DISPLAY_PROPERTIES']['CML2_ATTRIBUTES']['DESCRIPTION'][$a];
-    $arResult['DISPLAY_PROPERTIES']['OPTIONS_5_ELEMENT'][$a]['VALUE'] = $arResult['DISPLAY_PROPERTIES']['CML2_ATTRIBUTES']['VALUE'][$a];
+$i = 0;
+foreach ($arResult['DISPLAY_PROPERTIES_ZAKREPI'] as $a=>$item)
+{
+    if($i >= 5) break; //Выводим только 5 первых свойств
+    $arResult['DISPLAY_PROPERTIES']['OPTIONS_5_ELEMENT'][$a]['DESCRIPTION'] = $item['NAME'];
+    if( $item['MULTIPLE'] == 'Y'){
+        $arResult['DISPLAY_PROPERTIES']['OPTIONS_5_ELEMENT'][$a]['VALUE'] = '';
+        foreach($item['~VALUE'] as $k=>$prop)
+        {
+            $arResult['DISPLAY_PROPERTIES']['OPTIONS_5_ELEMENT'][$a]['VALUE'] .=$prop;
+            if($k+1 < count($item['~VALUE'])) $arResult['DISPLAY_PROPERTIES']['OPTIONS_5_ELEMENT'][$a]['VALUE'] .=', ';
+        }
+    }
+    else{
+        $arResult['DISPLAY_PROPERTIES']['OPTIONS_5_ELEMENT'][$a]['VALUE'] = $item['~VALUE'];
+    }
+    $i++;
 }
 
+$arResult['DISPLAY_PROPERTIES']['OPTIONS_ALL_ELEMENT'];
+foreach ($arResult['DISPLAY_PROPERTIES_ZAKREPI'] as $a=>$item)
+{
+    $arResult['DISPLAY_PROPERTIES']['OPTIONS_ALL_ELEMENT'][$a]['DESCRIPTION'] = $item['NAME'];
+    if( $item['MULTIPLE'] == 'Y'){
+        $arResult['DISPLAY_PROPERTIES']['OPTIONS_ALL_ELEMENT'][$a]['VALUE'] = '';
+        foreach($item['~VALUE'] as $k=>$prop)
+        {
+            $arResult['DISPLAY_PROPERTIES']['OPTIONS_ALL_ELEMENT'][$a]['VALUE'] .=$prop;
+            if($k+1 < count($item['~VALUE'])) $arResult['DISPLAY_PROPERTIES']['OPTIONS_ALL_ELEMENT'][$a]['VALUE'] .=', ';
+        }
+    }
+    else{
+        $arResult['DISPLAY_PROPERTIES']['OPTIONS_ALL_ELEMENT'][$a]['VALUE'] = $item['~VALUE'];
+    }
+}
+/*foreach($arResult['DISPLAY_PROPERTIES']['CML2_ATTRIBUTES']['VALUE'] as $a=>$item)
+{
+    if($a >= 5) break; //Выводим только 5 первых свойств
+    $arResult['DISPLAY_PROPERTIES']['OPTIONS_5_ELEMENT'][$a]['DESCRIPTION'] = $arResult['DISPLAY_PROPERTIES']['CML2_ATTRIBUTES']['DESCRIPTION'][$a];
+    $arResult['DISPLAY_PROPERTIES']['OPTIONS_5_ELEMENT'][$a]['VALUE'] = $arResult['DISPLAY_PROPERTIES']['CML2_ATTRIBUTES']['VALUE'][$a];
+}*/
+
+/*description*/
 $rsElement = CIBlockElement::GetList(array(), array("ID"=>$arResult['ID'], "ACTIVE"=>"Y"), false);
 if($arElement = $rsElement->GetNext()) {
     $ipropValues = new Bitrix\Iblock\InheritedProperty\ElementValues($arElement["IBLOCK_ID"], $arElement["ID"]);

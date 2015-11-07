@@ -659,6 +659,21 @@ if($this->StartResultCache(false, ($arParams["CACHE_GROUPS"]==="N"? false: $USER
 					$arResult["DISPLAY_PROPERTIES"][$pid] = CIBlockFormatProperties::GetDisplayValue($arResult, $prop, "catalog_out");
 				}
 			}
+            $arResult["DISPLAY_PROPERTIES_ZAKREPI"] = array();
+            foreach($arResult["PROPERTIES"] as $pid)
+            {
+                if(!in_array($pid['CODE'],$arParams["NOT_PROPERTY_CODE"])) {
+                    $prop = &$pid;
+                    $boolArr = is_array($prop["VALUE"]);
+                    if (
+                        ($boolArr && !empty($prop["VALUE"]))
+                        || (!$boolArr && strlen($prop["VALUE"]) > 0)
+                    ) {
+                        $arResult["DISPLAY_PROPERTIES_ZAKREPI"][$pid['CODE']] = CIBlockFormatProperties::GetDisplayValue($arResult, $prop, "catalog_out");
+                    }
+                }
+            }
+
 
 			$arResult["PRODUCT_PROPERTIES"] = array();
 			$arResult['PRODUCT_PROPERTIES_FILL'] = array();

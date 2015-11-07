@@ -31,7 +31,18 @@ $APPLICATION->SetTitle("");?>
             "vote_sum",
             "CML2_ATTRIBUTES",
             "CML2_BAR_CODE",
-            ""),
+            "*"),
+        /*Параметры которые не выводить*/
+        "NOT_PROPERTY_CODE"=>array(
+            "CML2_ATTRIBUTES",
+            "CML2_ARTICLE",
+            "CML2_TAXES",
+            "CML2_BAR_CODE",
+            "CML2_TRAITS",
+            "vote_count",
+            "rating",
+            "vote_sum"
+        ),
         "OFFERS_LIMIT" => "0",
         "TEMPLATE_THEME" => "blue",
         "DISPLAY_NAME" => "Y",
@@ -100,7 +111,14 @@ $APPLICATION->SetTitle("");?>
         "LINK_ELEMENTS_URL" => "link.php?PARENT_ELEMENT_ID=#ELEMENT_ID#",
         "SET_STATUS_404" => "N",
         "SHOW_404" => "N",
-        "MESSAGE_404" => ""
+        "MESSAGE_404" => "",
+        /*ajax подгрузка дополнительного материала*/
+        /*технические характеристики*/
+        "ROUTE_TECH" => "tech",
+        "ROUTE_TECH_URL" => "/includes/product/tech.php",
+        /*отзывы о товаре*/
+        "ROUTE_REVIEWS" => "reviews",
+        "ROUTE_REVIEWS_URL" => "/includes/product/reviews.php",
     )
 );?>
 </div> <!-- /.workarea -->

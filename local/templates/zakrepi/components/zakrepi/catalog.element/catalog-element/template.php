@@ -328,14 +328,17 @@ $strAlt = (
             <li class="tab-header-item active">
                 <a class="tab-link" href="#desc">Обзор товара</a>
             </li>
+            <?/*Если больше 5 добавляем возможность посмотреть все характеристики*/?>
+            <?if(count($arResult['DISPLAY_PROPERTIES']['OPTIONS_ALL_ELEMENT'])>5):?>
             <li class="tab-header-item">
-                <a class="tab-link" href="#tech">Технические характеристики</a>
+                <a class="tab-link" href="#<?=$arParams['ROUTE_TECH']?>" onclick="ajax_more_information_product('<?=$arResult['ID']?>','<?=$arParams['ROUTE_TECH']?>','<?=$arParams['ROUTE_TECH_URL']?>')">Технические характеристики</a>
             </li>
+            <?endif;?>
             <li class="tab-header-item">
                 <a class="tab-link" href="#accs">Аксессуары</a>
             </li>
             <li class="tab-header-item">
-                <a class="tab-link" href="#reviews">Отзывы о товаре</a>
+                <a class="tab-link" href="#<?=$arParams['ROUTE_REVIEWS']?>" onclick="ajax_more_information_product('<?=$arResult['ID']?>','<?=$arParams['ROUTE_REVIEWS']?>','<?=$arParams['ROUTE_REVIEWS_URL']?>')">Отзывы о товаре</a>
             </li>
             <li class="tab-header-item">
                 <a class="tab-link" href="#shops">Наличие в магазинах</a>
@@ -368,6 +371,10 @@ $strAlt = (
             <?/*end detail text*/?>
 
             <?/*options 5 element*/?>
+            <?/*?><pre>
+                <?print_r($arResult['DISPLAY_PROPERTIES_ZAKREPI']);?>
+           </pre>
+<?*/?>
             <div class="table col l5 nofloat no-padding">
                 <?foreach($arResult['DISPLAY_PROPERTIES']['OPTIONS_5_ELEMENT'] as $item):?>
                     <div class="table-row no-padding col l12">
@@ -375,7 +382,11 @@ $strAlt = (
                         <div class="table-col col l5"><?=$item['VALUE']?></div>
                     </div>
                 <?endforeach;?>
-                <a class="tab-link" href="#tech">Посмотреть все характеристики</a>
+
+                <?/*Если больше 5 добавляем возможность посмотреть все характеристики*/?>
+                <?if(count($arResult['DISPLAY_PROPERTIES']['OPTIONS_ALL_ELEMENT'])>5):?>
+                    <a class="tab-link"  href="#<?=$arParams['ROUTE_TECH']?>" onclick="ajax_more_information_product('<?=$arResult['ID']?>','<?=$arParams['ROUTE_TECH']?>','<?=$arParams['ROUTE_TECH_URL']?>')">Посмотреть все характеристики</a>
+                <?endif;?>
             </div>
             <?/*end options 5 element*/?>
 
@@ -387,63 +398,30 @@ $strAlt = (
         </div>
     </div>
 </div>
-<div class="tab-content-item" id="tech">
+<?
+/*
+ * Если больше 5 добавляем возможность посмотреть все характеристики
+ * Выводим технические характеристики
+ * */
+?>
+<?if(count($arResult['DISPLAY_PROPERTIES']['OPTIONS_ALL_ELEMENT'])>5):?>
+<div class="tab-content-item" id="<?=$arParams['ROUTE_TECH']?>">
     <div class="container">
-        <?/*all options element?>
-        <div class="subtitle">Характеристики гайковерта Hitachi WR14VB-NA 420 Вт</div>
-        <div class="table col l7 nofloat no-padding">
-            <div class="table-row no-padding col l12">
-                <div class="table-col col l8">Максимальный крутящий момент</div>
-                <div class="table-col col l3">250 Нм</div>
-            </div>
-            <div class="table-row no-padding col l12">
-                <div class="table-col col l8">Мощность</div>
-                <div class="table-col col l3">420 Вт</div>
-            </div>
-            <div class="table-row no-padding col l12">
-                <div class="table-col col l8">Максимальные обороты</div>
-                <div class="table-col col l3">2300 об/мин</div>
-            </div>
-            <div class="table-row no-padding col l12">
-                <div class="table-col col l8">Диаметр патрона</div>
-                <div class="table-col col l3">12.7 мм</div>
-            </div>
-            <div class="table-row no-padding col l12">
-                <div class="table-col col l8">Тип патрона</div>
-                <div class="table-col col l3">внешний четырехгранник</div>
-            </div>
-            <div class="table-row no-padding col l12">
-                <div class="table-col col l8">Размер крепежа</div>
-                <div class="table-col col l3">М10-М18</div>
-            </div>
-            <div class="table-row no-padding col l12">
-                <div class="table-col col l8">Наличие удара</div>
-                <div class="table-col col l3">+</div>
-            </div>
-            <div class="table-row no-padding col l12">
-                <div class="table-col col l8">Реверс</div>
-                <div class="table-col col l3">+</div>
-            </div>
-            <div class="table-row no-padding col l12">
-                <div class="table-col col l8">Электронная регулировка оборотов</div>
-                <div class="table-col col l3">+</div>
-            </div>
-            <div class="table-row no-padding col l12">
-                <div class="table-col col l8">Вес брутто</div>
-                <div class="table-col col l3">3,2 кг</div>
-            </div>
-            <div class="table-row no-padding col l12">
-                <div class="table-col col l8">Вес нетто</div>
-                <div class="table-col col l3">2,2 кг</div>
-            </div>
-            <div class="table-row no-padding col l12">
-                <div class="table-col col l8">Гарантия</div>
-                <div class="table-col col l3">12 мес.</div>
-            </div>
-        </div>
+        <?=loader($arParams['ROUTE_TECH']);?>
+        <?
+        /*
+         * Технические характеристики берутся из файла по пути $arParams['ROUTE_TECH_URL']
+         * Там же строятся все параметры
+         */
+        ?>
+        <?/*all options element*/?>
+         <div id="route-<?=$arParams['ROUTE_TECH']?>"></div>
         <?/*end all options element*/?>
     </div>
 </div>
+<?endif;?>
+
+
 <div class="tab-content-item" id="accs">
     <div class="container">
         <div class="row">
@@ -490,8 +468,20 @@ $strAlt = (
         </div>
     </div>
 </div>
-<div class="tab-content-item" id="reviews">
+
+<div class="tab-content-item" id="<?=$arParams['ROUTE_REVIEWS']?>">
     <div class="container" id="reviews-res">
+        <?=loader($arParams['ROUTE_REVIEWS']);?>
+        <?
+        /*
+         * Технические характеристики берутся из файла по пути $arParams['ROUTE_TECH_URL']
+         * Там же строятся все параметры
+         */
+        ?>
+        <?/*comments*/?>
+        <div id="route-<?=$arParams['ROUTE_REVIEWS']?>"></div>
+        <?/*end comments*/?>
+
         <div class="subtitle">Отзывы о гайковерте Hitachi WR14VB-NA 420 Вт</div>
         <div class="row">
             <div class="sort-box col l6">
@@ -548,6 +538,7 @@ $strAlt = (
             </div>
         </div>
     </div>
+
     <div class="container hide" id="reviews-form">
         <div class="subtitle">Ваш отзыв о гайковерте Hitachi WR14VB-NA 420 Вт</div>
         <div class="row">

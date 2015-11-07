@@ -51,7 +51,7 @@ use Bitrix\Main\Localization\Loc;
             <span class="btn flat fullsize btn-more loader" style="display:none;">
                 <img src="/local/templates/zakrepi/images/svg/loader.svg" width="40"/>
             </span>
-            <a class="btn flat fullsize btn-more" href="javascript:void(0);" onclick="ajax('<?=$arParams['ROUTE']?>',<?echo $arResult['NAV_RESULT']->NavPageNomer + 1?>);return false;" >Показать еще</a>
+            <a class="btn flat fullsize btn-more" href="javascript:void(0);" onclick="ajax('<?=$arParams['ROUTE']?>','<?=$arParams['ROUTE_URL']?>',<?echo $arResult['NAV_RESULT']->NavPageNomer + 1?>);return false;" >Показать еще</a>
         <?}?>
         <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
             <br /><?=$arResult["NAV_STRING"]?>

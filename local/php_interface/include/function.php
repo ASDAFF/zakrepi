@@ -48,3 +48,10 @@ function is_positive_int($num){
     $intNum = (int) $num;
     return ($intNum == $num && is_int($intNum));
 }
+
+/*вывод preloader*/
+function loader($route)
+{
+    $result = '<div class="loader center-align loader-'.$route.'"><img src="/local/templates/zakrepi/images/svg/loader.svg" width="40"/></div>';
+    return $result;
+}

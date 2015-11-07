@@ -2,11 +2,14 @@
 * route - путь до компонента /include/promo/list.php
 * page_number - номер страницы для подгрузки материала
 * */
-function ajax(route,page_number)
+function ajax(route,route_url,page_number,route_param)
 {
-    var url = '/includes/'+route+'/list.php?PAGEN_1='+page_number;
+    if(route_param===undefined)
+        var url = route_url+'?PAGEN_1='+page_number;
+    else
+        var url = route_url+'?'+route_param+'&PAGEN_1='+page_number;
     $('.btn-more').hide();
-    $('.loader').show();
+    $('.btn-more.loader').show();
     $.ajax({
         url: url,
         success: function(data) {
@@ -17,6 +20,31 @@ function ajax(route,page_number)
 
 }
 
+/*
+*
+*   Загрузка дополнительной информации продукта (Технические характеристики, Аксессуары, Отзывы о товаре, Наличие в магазинах)
+*   id - ID продукта
+*   route - параметр к классу и id элемента для подгрузки
+*   route_url - путь к странице подгрузки дополнительных материалов
+*
+*/
+function ajax_more_information_product(id,route, route_url){
+
+    /*Проверяем загружали этот материал до этого*/
+    if(!$('#route-'+route).hasClass('upload')) {
+        var url = route_url + '?ID_PRODUCT=' + id;
+        //$('.btn-more').hide();
+        $('.loader-' + route).show();
+        $.ajax({
+            url: url,
+            success: function (data) {
+                $('.loader-' + route).hide();
+                $('#route-' + route).addClass('upload');
+                $('#route-' + route).html(data);
+            }
+        });
+    }
+}
 /*для регистрации*/
 function setLogin(event)
 {

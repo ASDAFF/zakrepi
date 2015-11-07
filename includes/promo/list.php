@@ -56,6 +56,7 @@
         "SHOW_404" => "N",
         "MESSAGE_404" => "",
         //Путь до подгрузки route компонента /include/PROMO/list.php
-        "ROUTE" => 'promo'
+        "ROUTE" => 'promo',
+        "ROUTE_URL" => '/includes/promo/list.php'
     )
 );?>
