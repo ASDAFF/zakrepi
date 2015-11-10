@@ -112,6 +112,7 @@ $APPLICATION->SetTitle("");?>
         "SET_STATUS_404" => "N",
         "SHOW_404" => "N",
         "MESSAGE_404" => "",
+
         /*ajax подгрузка дополнительного материала*/
         /*технические характеристики*/
         "ROUTE_TECH" => "tech",
@@ -119,6 +120,9 @@ $APPLICATION->SetTitle("");?>
         /*отзывы о товаре*/
         "ROUTE_REVIEWS" => "reviews",
         "ROUTE_REVIEWS_URL" => "/includes/product/reviews.php",
+        /*наличие товара в магазинах*/
+        "ROUTE_STORE" => "store",
+        "ROUTE_STORE_URL" => "/includes/product/store.php",
     )
 );?>
 </div> <!-- /.workarea -->

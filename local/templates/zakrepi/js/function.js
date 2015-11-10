@@ -45,6 +45,56 @@ function ajax_more_information_product(id,route, route_url){
         });
     }
 }
+/*
+*   Форма отрабатывается по ajax
+*   id_result = #id_result DOM
+*   id_form = #id_form DOM
+*   action = путь до php обработки
+*/
+function ajax_form_request(id_result,id_form,action){
+
+    error_count = 0;
+
+    $("#"+id_form+" .required").each(function(){
+        $(this).change();
+    });
+    //$('input[type="email"].required, input[type="text"].required, input[type="text"].required.numbers').change();
+    if (error_count>0)
+    {
+        return false;
+    }
+    else {
+        $("#"+id_form+" .loader-form").removeClass('hide');
+        $.ajax({
+            url: action,
+            type: "POST",
+            dataType: "html",
+            data: $("#" + id_form).serialize(),
+            success: function (data) {
+                $("#"+id_form).addClass('hide');
+                $("#" + id_result).html(data);
+                $("#" + id_result).removeClass('hide');
+            }
+        });
+    }
+}
+/*Показать скрытые блоки*/
+function data_block($this)
+{
+    if($($this).attr('data-hide-block')){
+        $($($this).attr('data-hide-block')).addClass('hide');
+    }
+    if ($($this).attr('data-show-block')) {
+        $($($this).attr('data-show-block')).removeClass('hide');
+    }
+    if ($($this).attr('data-block')){
+        $($($this).attr('data-block')).toggleClass('hide');
+    }
+    if($($this).is('a')){
+        return false;
+    }
+}
+
 /*для регистрации*/
 function setLogin(event)
 {

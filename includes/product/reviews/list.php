@@ -2,7 +2,7 @@
 <?
     if($_GET['PRODUCT_CODE']!='')
         $product_code = $_GET['PRODUCT_CODE'];
-    $arrFilter = array('SECTION_CODE'=>$product_code);
+    $arrFilter = array('SECTION_CODE'=>$product_code,"ACTIVE" => 'Y');
 ?>
 <?$APPLICATION->IncludeComponent(
     "bitrix:news.list",
@@ -18,7 +18,13 @@
         "SORT_ORDER2" => "ASC",
         "FILTER_NAME" => "arrFilter",
         "FIELD_CODE" => array("", ""),
-        "PROPERTY_CODE" => array("", ""),
+        "PROPERTY_CODE" => array(
+            "RATING",
+            "BENEFITS",
+            "DISADVANTAGES",
+            "COMMENT",
+            "NAME"
+        ),
         "CHECK_DATES" => "Y",
         "DETAIL_URL" => "",
         "AJAX_MODE" => "N",

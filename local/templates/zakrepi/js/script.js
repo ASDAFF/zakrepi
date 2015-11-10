@@ -214,86 +214,11 @@ $(document).ready(function(){
         box.removeClass('open');
     });
 
-    // jcarousel
-    // http://sorgalla.com/jcarousel/docs/
-    $('.carousel')
-        .on('jcarousel:createend', function(){
-            if($(this).attr('data-jcarouselautoscroll') == 'true'){
-                if($(this).attr('data-interval')){
-                    var $interval = $(this).attr('data-interval');
-                } else {
-                    var $interval = 3000;
-                }
-                if($(this).attr('data-target')){
-                    var $target = $(this).attr('data-target');
-                } else {
-                    var $target = '+=1';
-                }
-                $(this).jcarouselAutoscroll({
-                    interval: $interval,
-                    target: $target,
-                    autostart: true
-                });
-            }
-            if($(this).attr('data-wrap') == 'circular'){
-                $(this).jcarousel({
-                    wrap: 'circular',
-                });
-            }
-        })
-        .jcarousel({
-            list: '.carousel-inner'
-        });
-    $('.carousel-nav')
-        .jcarouselPagination({
-            item: function(page){
-                return '<li class="nav-item"><a class="nav-link" href="#'+page+'"></a></li>';
-            }
-        })
-        .on('jcarouselpagination:active', 'li', function(){ // - вот эта херня не работает почему-то
-            $(this).children('a').addClass('active');
-        })
-        .on('jcarouselpagination:inactive', 'li', function(){ // - и эта (а должна!)
-            $(this).children('a').removeClass('active');
-        });
-    $('.carousel-controlls .prev')
-        .on('jcarouselcontrol:active', function(){
-            $(this).addClass('active');
-        })
-        .on('jcarouselcontrol:inactive', function(){
-            $(this).removeClass('active');
-        })
-        .on('jcarouselcontrol:create', function(){
-            if($(this).attr('data-target')){
-                var $target = $(this).attr('data-target');
-            } else {
-                var $target = '-=1';
-            }
-            $(this).jcarouselControl({
-                target: $target,
-            });
-        })
-        .jcarouselControl();
-    $('.carousel-controlls .next')
-        .on('jcarouselcontrol:active', function(){
-            $(this).addClass('active');
-        })
-        .on('jcarouselcontrol:inactive', function(){
-            $(this).removeClass('active');
-        })
-        .on('jcarouselcontrol:create', function(){
-            if($(this).attr('data-target')){
-                var $target = $(this).attr('data-target');
-            } else {
-                var $target = '+=1';
-            }
-            $(this).jcarouselControl({
-                target: $target,
-            });
-        })
-        .jcarouselControl();
-    $('.compare .carousel-controlls').jcarouselControl({
-        carousel: $('.compare .carousel')
+    // rating
+    $('.rating-field .star').click(function(){
+        var value = $(this).index() + 1;
+        $(this).parents('.rating-field').children('.rating-value').val(value);
+        $(this).parents('.rating-field').children('.rating').removeClass('rate-1 rate-2 rate-3 rate-4 rate-5').addClass('rate-'+value);
     });
 
     // product-thumbs

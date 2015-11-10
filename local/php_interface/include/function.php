@@ -55,3 +55,18 @@ function loader($route)
     $result = '<div class="loader center-align loader-'.$route.'"><img src="/local/templates/zakrepi/images/svg/loader.svg" width="40"/></div>';
     return $result;
 }
+
+/*Список розничных магазинов где товар есть в наличии*/
+function listRetailStore($id_product){
+    CModule::IncludeModule('catalog');
+    $arFilter = array("PRODUCT_ID"=>$id_product, "ACTIVE" => "Y", ">PRODUCT_AMOUNT" => 0,"UF_RETAIL_STORE" => "1");
+    $arSelect = array("ID", "TITLE", "ADDRESS", "PHONE", "SCHEDULE", "PRODUCT_AMOUNT", "SHIPPING_CENTER","GPS_N","GPS_S","UF_RETAIL_STORE","UF_NAME");
+    $res = CCatalogStore::GetList(Array(),$arFilter,false,false,$arSelect);
+
+    $arStore = array();
+    while($ar_res = $res->GetNext())
+    {
+        $arStore[] = $ar_res;
+    }
+    return $arStore;
+}
