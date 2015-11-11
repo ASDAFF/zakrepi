@@ -459,8 +459,6 @@ function updateBasketTable(basketItemId, res)
 		}
 	}*/
 
-	console.log(res.BASKET_DATA);
-
 	// update product params after recalculation
 	if (!!res.BASKET_DATA)
 	{
@@ -513,8 +511,6 @@ function updateBasketTable(basketItemId, res)
 
 		BX('warning_message').innerHTML = warningText;
 	}
-
-	console.log(res.BASKET_DATA);
 
 	// update total basket values
 	if (!!res.BASKET_DATA)
@@ -1155,10 +1151,12 @@ function deleteBasketItem(itemID){
 				{
 					//очистка всей области корзины
 					clearBasketArea();
+					$('.dark-bg').hide();
 				}
 				else{
 					//удаление строки
 					$("#basket_items").find("#"+itemID).remove();
+					$('.dark-bg').hide();
 					//обновление корзины
 					recalcBasketAjax({});
 				}

@@ -95,7 +95,17 @@ if ($normalCount > 0):
 						<div class="col l3 sum">
 							<span id="current_price_<?=$arItem["ID"]?>"><?=priceShow($arItem["FULL_PRICE"])?></span>
 						</div>
-						<div class="col l1 delete"><button class="btn btn-icon btn-delete-from-card" onclick="deleteBasketItem(<?=$arItem["ID"]?>); return false;"><svg class="icon"><use xlink:href="#cross"/></svg></button></div>
+						<div class="col l1 delete">
+							<button class="btn btn-icon btn-delete-from-card btn-modal" onclick="return false;" data-modal="delete-from-card-box_product-<?=$arItem["ID"]?>"><svg class="icon"><use xlink:href="#cross"/></svg></button>
+
+							<div class="modal delete-from-card-box center-align" id="delete-from-card-box_product-<?=$arItem["ID"]?>">
+								<div class="item-text"><?=GetMessage("DELETE_ITEM_NOTE")?></div>
+								<div class="item-actions">
+									<button onclick="deleteBasketItem(<?=$arItem["ID"]?>); return false;" class="btn primary"><?=GetMessage("DELETE_ITEM_NOTE_YES")?></button>
+									<button class="btn standart-color btn-close-modal" onclick="return false;"><?=GetMessage("DELETE_ITEM_NOTE_CANCEL")?></button>
+								</div>
+							</div>
+						</div>
 					</div>
 				<?
 					endif;
