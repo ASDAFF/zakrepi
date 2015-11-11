@@ -35,6 +35,9 @@ CUtil::InitJSCore(Array("ajax"));
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/script.js");
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/function.js");
 
+        Asset::getInstance()->addJs("http://api-maps.yandex.ru/2.1/?lang=ru_RU");
+
+
         //Для работы ajax у формы неавторизованным пользователям AJAX_MODE=>Y
         /*
             Asset::getInstance()->addJs("/bitrix/js/main/core/core.min.js");
@@ -49,7 +52,10 @@ CUtil::InitJSCore(Array("ajax"));
             $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/script.js");
         */
         ?>
-		<title><?$APPLICATION->ShowTitle();?></title>
+       <?/*
+        <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		*/?>
+        <title><?$APPLICATION->ShowTitle();?></title>
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /> 	
 	</head>
 	<body>

@@ -483,7 +483,7 @@ $strAlt = (
         <?/*end comments*/?>
     </div>
     <?/*form*/?>
-        <?include($_SERVER['DOCUMENT_ROOT'].'includes/product/reviews/form.php');?>
+        <?include($_SERVER['DOCUMENT_ROOT'].'/includes/product/reviews/form.php');?>
     <?/*end form*/?>
 
 </div>

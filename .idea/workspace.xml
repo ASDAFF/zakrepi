@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b94893a-e1d6-4c97-9d95-37d54e5f8c7a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/detail.php" afterPath="$PROJECT_DIR$/catalog/detail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/js/function.js" afterPath="$PROJECT_DIR$/local/templates/zakrepi/js/function.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/php_interface/include/function.php" afterPath="$PROJECT_DIR$/local/php_interface/include/function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/php_interface/init.php" afterPath="$PROJECT_DIR$/local/php_interface/init.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/product/reviews/list.php" afterPath="$PROJECT_DIR$/includes/product/reviews/list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/header.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/product/reviews.php" afterPath="$PROJECT_DIR$/includes/product/reviews.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/js/script.js" afterPath="$PROJECT_DIR$/local/templates/zakrepi/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/reviews/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/reviews/template.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/product/store.php" afterPath="$PROJECT_DIR$/includes/product/store.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.element/catalog-element/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.element/catalog-element/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/template_styles.css" afterPath="$PROJECT_DIR$/local/templates/zakrepi/template_styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zakrepi.iws" />
@@ -40,8 +34,8 @@
       <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.element/catalog-element/template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.576923" vertical-offset="7908" max-vertical-offset="24055">
-              <caret line="489" column="59" selection-start-line="489" selection-start-column="59" selection-end-line="489" selection-end-column="59" />
+            <state vertical-scroll-proportion="-67.76923" vertical-offset="6602" max-vertical-offset="24055">
+              <caret line="492" column="21" selection-start-line="492" selection-start-column="21" selection-end-line="492" selection-end-column="21" />
               <folding>
                 <element signature="e#19591#19706#0#PHP" expanded="true" />
                 <element signature="e#23383#23529#0#PHP" expanded="true" />
@@ -50,51 +44,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="store.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="store.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/product/store.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7277717" vertical-offset="0" max-vertical-offset="911">
-              <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+            <state vertical-scroll-proportion="-24.846153" vertical-offset="544" max-vertical-offset="1632">
+              <caret line="70" column="96" selection-start-line="70" selection-start-column="96" selection-end-line="70" selection-end-column="96" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/detail.php">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-26.538462" vertical-offset="1367" max-vertical-offset="2278">
-              <caret line="121" column="58" selection-start-line="121" selection-start-column="58" selection-end-line="121" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.64365256" vertical-offset="374" max-vertical-offset="3570">
+              <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reviews.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/product/reviews.php">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="714">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tech.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/product/tech.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="1275">
-              <caret line="5" column="37" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="function.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/php_interface/include/function.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.73077" vertical-offset="411" max-vertical-offset="1326">
-              <caret line="62" column="147" selection-start-line="62" selection-start-column="147" selection-end-line="62" selection-end-column="147" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="6393" max-vertical-offset="7786">
+              <caret line="232" column="18" selection-start-line="232" selection-start-column="18" selection-end-line="232" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -123,7 +97,6 @@
         <option value="$PROJECT_DIR$/local/modules/useraddress/classes/general/cUserAddress.php" />
         <option value="$PROJECT_DIR$/local/modules/useraddress/lib/function/component/function_component.php" />
         <option value="$PROJECT_DIR$/personal/account/index.php" />
-        <option value="$PROJECT_DIR$/local/templates/zakrepi/header.php" />
         <option value="$PROJECT_DIR$/.top.menu_ext.php" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/menu/top-menu/template.php" />
         <option value="$PROJECT_DIR$/personal/registration.php" />
@@ -159,11 +132,12 @@
         <option value="$PROJECT_DIR$/includes/product/reviews/add_comment.php" />
         <option value="$PROJECT_DIR$/local/php_interface/init.php" />
         <option value="$PROJECT_DIR$/local/php_interface/include/function_bitrix.php" />
-        <option value="$PROJECT_DIR$/catalog/detail.php" />
+        <option value="$PROJECT_DIR$/local/php_interface/include/function.php" />
         <option value="$PROJECT_DIR$/includes/product/reviews.php" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.element/catalog-element/template.php" />
-        <option value="$PROJECT_DIR$/local/php_interface/include/function.php" />
+        <option value="$PROJECT_DIR$/catalog/detail.php" />
         <option value="$PROJECT_DIR$/includes/product/store.php" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/header.php" />
       </list>
     </option>
   </component>
@@ -279,19 +253,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog.element" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog-element" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -306,166 +268,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bitrix" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bitrix" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main.register" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php_interface" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php_interface" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="include" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -493,11 +295,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
+              <option name="myItemId" value="catalog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -540,15 +338,15 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -567,7 +365,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="7" />
+    <frame x="1912" y="-8" width="1936" height="1096" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -577,19 +375,19 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24840085" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2510661" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -675,7 +473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="3349">
           <caret line="5" column="72" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -742,13 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="3468">
-          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bitrix/modules/main/classes/general/main.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.17159091" vertical-offset="20092" max-vertical-offset="92497">
@@ -768,15 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.70113635" vertical-offset="5333" max-vertical-offset="6239">
           <caret line="355" column="16" selection-start-line="354" selection-start-column="16" selection-end-line="355" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3376" max-vertical-offset="7786">
-          <caret line="207" column="56" selection-start-line="207" selection-start-column="56" selection-end-line="207" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -792,11 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.3461537" vertical-offset="568" max-vertical-offset="1479">
           <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
-          <folding>
-            <marker date="1447135981206" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1447135981206" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1447135981206" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -804,7 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="4420">
           <caret line="72" column="38" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -812,7 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.03171008" vertical-offset="28" max-vertical-offset="1513">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -820,7 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.03171008" vertical-offset="28" max-vertical-offset="7072">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -828,14 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.03171008" vertical-offset="28" max-vertical-offset="5610">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1446552908196" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1446552908196" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1446552908196" expanded="true" signature="-1:-1" placeholder="SELECT BSprS..b_iblock_section..." />
-            <marker date="1446552908196" expanded="true" signature="-1:-1" placeholder="SELECT CVP.P..b_catalog_viewed_product..." />
-            <marker date="1446552908196" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..b_iblock_section_element..." />
-            <marker date="1446552908196" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -843,7 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33295584" vertical-offset="505" max-vertical-offset="1394">
           <caret line="48" column="18" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -851,7 +615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="937">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -859,7 +622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.6608123" vertical-offset="874" max-vertical-offset="1785">
           <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -867,7 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.55214053" vertical-offset="942" max-vertical-offset="1853">
           <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -875,7 +636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="937">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -883,16 +643,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.977728" vertical-offset="14739" max-vertical-offset="18037">
           <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
-          <folding>
-            <marker date="1446552948964" expanded="true" signature="-1:-1" placeholder="UPDATE b_vot..." />
-            <marker date="1446552948964" expanded="true" signature="-1:-1" placeholder="SELECT IMAGE..b_vote..." />
-            <marker date="1446552948964" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446552948964" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446552948964" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446552948964" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446552948964" expanded="true" signature="-1:-1" placeholder="SELECT max(C..b_vote..." />
-            <marker date="1446552948964" expanded="true" signature="-1:-1" placeholder="SELECT V.ID ..b_vote..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -900,7 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.003293" vertical-offset="5469" max-vertical-offset="6409">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,7 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.5424688" vertical-offset="5169" max-vertical-offset="6052">
           <caret line="173" column="44" selection-start-line="173" selection-start-column="44" selection-end-line="173" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,89 +664,73 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04597701" vertical-offset="1201" max-vertical-offset="114733">
           <caret line="75" column="9" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
-          <folding>
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT ID, W..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT WF_ST..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT EMAIL..b_user..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT U.ID,..b_user..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT U.EMA..b_workflow_move..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT U.EMA..b_workflow_status..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT U.EMA..b_workflow_status..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT SITE_..b_iblock_site..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT ID, W..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT ID, W..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT WF_PA..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..b_workflow_status..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT ID, W..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT ID, L..b_iblock_section..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="UPDATE b_ibl..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT IBLOC..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT P.ID ..b_iblock_property..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT ID ,I..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT ID,IB..b_iblock_property..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT IBLOC.._strTable WHERE..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="select IBLOC..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT IBLOC..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT PREVI..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT SE.IB..b_iblock_section_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..b_iblock_section_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="UPDATE b_ibl..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..b_iblock_section_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT S.ID,..b_iblock_section..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="select * fro..b_iblock_element_property..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="select * fro..b_iblock_element_prop_m..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="select * fro..b_iblock_element_prop_s..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT BEP.*.._element_sFrom&#10;&#9;&#9;&#9;&#9;&#9;INNER..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT BP.*,..b_iblock..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..b_iblock_element_prop_s..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="UPDATE b_ibl..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="select IBLOC..b_iblock_element..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="select * fro..b_iblock_element_property..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="select * fro..b_iblock_element_prop_m..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="select * fro..b_iblock_element_prop_s..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT :_ELE..b_iblock_property..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT :_ELE..b_iblock_property..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT PEN.I..b_iblock_property..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT :_ELE..b_iblock_property..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT :_ELE..b_iblock_property..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT S.ID ..b_iblock_property..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT :_ELE..b_iblock_property..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT IBLOC..b_iblock_group..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT ER.EL..b_iblock_element_right..." />
-            <marker date="1446552933404" expanded="true" signature="-1:-1" placeholder="SELECT ER.EL..b_iblock_element_right..." />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/php_interface/init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.298573" vertical-offset="0" max-vertical-offset="911">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/reviews/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73830736" vertical-offset="0" max-vertical-offset="1139">
+          <caret line="39" column="85" selection-start-line="39" selection-start-column="85" selection-end-line="39" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/product/reviews/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.83296216" vertical-offset="0" max-vertical-offset="1989">
+          <caret line="44" column="30" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/product/reviews/list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4665203" vertical-offset="0" max-vertical-offset="1343">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.element/ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.04500549" vertical-offset="58" max-vertical-offset="969">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.element/component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.868277" vertical-offset="20951" max-vertical-offset="21862">
+          <caret line="654" column="56" selection-start-line="654" selection-start-column="56" selection-end-line="654" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/product/reviews.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6815145" vertical-offset="0" max-vertical-offset="898">
+          <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/product/tech.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="1275">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/php_interface/include/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.71603566" vertical-offset="411" max-vertical-offset="1326">
+          <caret line="62" column="147" selection-start-line="62" selection-start-column="147" selection-end-line="62" selection-end-column="147" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,84 +742,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/php_interface/init.php">
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.298573" vertical-offset="0" max-vertical-offset="911">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/reviews/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73830736" vertical-offset="0" max-vertical-offset="1139">
-          <caret line="39" column="85" selection-start-line="39" selection-start-column="85" selection-end-line="39" selection-end-column="85" />
-          <folding>
-            <marker date="1447076771632" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/product/reviews/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83296216" vertical-offset="0" max-vertical-offset="1989">
-          <caret line="44" column="30" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/product/reviews/list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4665203" vertical-offset="0" max-vertical-offset="1343">
-          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.element/ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.04500549" vertical-offset="58" max-vertical-offset="969">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.element/component.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.868277" vertical-offset="20951" max-vertical-offset="21862">
-          <caret line="654" column="56" selection-start-line="654" selection-start-column="56" selection-end-line="654" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/product/reviews.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="714">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="6393" max-vertical-offset="7786">
+          <caret line="232" column="18" selection-start-line="232" selection-start-column="18" selection-end-line="232" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/detail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.538462" vertical-offset="1367" max-vertical-offset="2278">
-          <caret line="121" column="58" selection-start-line="121" selection-start-column="58" selection-end-line="121" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.9626784" vertical-offset="1282" max-vertical-offset="2278">
+          <caret line="127" column="26" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/product/tech.php">
+    <entry file="file://$PROJECT_DIR$/includes/product/store.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="1275">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="37" />
+        <state vertical-scroll-proportion="-24.846153" vertical-offset="544" max-vertical-offset="1632">
+          <caret line="70" column="96" selection-start-line="70" selection-start-column="96" selection-end-line="70" selection-end-column="96" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.element/catalog-element/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.576923" vertical-offset="7908" max-vertical-offset="24055">
-          <caret line="489" column="59" selection-start-line="489" selection-start-column="59" selection-end-line="489" selection-end-column="59" />
+        <state vertical-scroll-proportion="-67.76923" vertical-offset="6602" max-vertical-offset="24055">
+          <caret line="492" column="21" selection-start-line="492" selection-start-column="21" selection-end-line="492" selection-end-column="21" />
           <folding>
             <element signature="e#19591#19706#0#PHP" expanded="true" />
             <element signature="e#23383#23529#0#PHP" expanded="true" />
@@ -1095,18 +777,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/php_interface/include/function.php">
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.73077" vertical-offset="411" max-vertical-offset="1326">
-          <caret line="62" column="147" selection-start-line="62" selection-start-column="147" selection-end-line="62" selection-end-column="147" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/product/store.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7277717" vertical-offset="0" max-vertical-offset="911">
-          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.64365256" vertical-offset="374" max-vertical-offset="3570">
+          <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
           <folding />
         </state>
       </provider>

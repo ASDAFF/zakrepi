@@ -33,5 +33,5 @@
 </div>
 <div class="reviews-list" id="reviews-list">
 
-    <?include($_SERVER['DOCUMENT_ROOT'].'includes/product/reviews/list.php');?>
+    <?include($_SERVER['DOCUMENT_ROOT'].'/includes/product/reviews/list.php');?>
 </div>
