@@ -101,8 +101,44 @@ function setLogin(event)
     $('input#login-name').val($(event).val());
 }
 
+/*Выбор свойства у товара*/
+function select_prop(sel_id,id_elem,detail)
+{
 
+    var id_product = $('#'+sel_id).val();
+    var price_product = $('#'+sel_id+' option:selected')/*.attr('data-price')*/;
+    /*if(detail == 'Y')
+    {
+        $('.shop_yes').hide();
+        var shops = $('#'+sel_id+' option:selected').attr('data-list-store');
+        var shopsList = shops.split(',');
+        for (var item in shopsList) {
+            $('#id_store_'+shopsList[item]).show();
+        }
+    }*/
+    $('#price_'+id_elem).text(priceShow(price_product));
+    var onclick = "add_basket("+id_product+")";
+    $('#'+id_elem).attr('onclick',onclick);
+}
 
+/*Аналог php функции function priceShow($str)*/
+function priceShow(price)
+{
+    var result = '';
+    if(isInteger(price))
+    {
+        result = price.toFixed(0) + '&nbsp;<i class="rouble">i</i>';
+    }
+    else
+    {
+        result = price.toFixed(2) + '&nbsp;<i class="rouble">i</i>';
+    }
+    return result;
+}
+/*Проверка является ли число целым*/
+function isInteger(num) {
+    return (num ^ 0) === num;
+}
 /*Валидация форм*/
 function isValidEmail (email, strict)
 {

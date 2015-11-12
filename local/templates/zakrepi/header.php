@@ -52,9 +52,6 @@ CUtil::InitJSCore(Array("ajax"));
             $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/script.js");
         */
         ?>
-       <?/*
-        <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-		*/?>
         <title><?$APPLICATION->ShowTitle();?></title>
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /> 	
 	</head>

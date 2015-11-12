@@ -119,62 +119,19 @@ $strAlt = (
 
             <?/*images*/?>
             <div class="product-imgs row">
+                    <?/*small carousel images*/?>
+                        <div class="thumbs carousel-box vertical col">
 
-                <?/*small carousel images*/?>
-                <div class="thumbs carousel-box vertical col">
 
-
-                    <?
-                    if ($arResult['SHOW_SLIDER'])
-                    {
-                        if (!isset($arResult['OFFERS']) || empty($arResult['OFFERS']))
-                        {
-                            if (5 < $arResult['MORE_PHOTO_COUNT'])
-                            {
-                                $strOneWidth = (100/$arResult['MORE_PHOTO_COUNT']).'%';
-                                $strWidth = (20*$arResult['MORE_PHOTO_COUNT']).'%';
-                            }
-                            else
-                            {
-                                $strOneWidth = '20%';
-                                $strWidth = '100%';
-                            }
-                            ?>
-                            <div class="carousel">
-                                <div class="carousel-inner">
-                                    <?
-
-                                    foreach ($arResult['MORE_PHOTO'] as $i => &$arOnePhoto)
-                                    {
-                                     ?>
-                                        <a class="item thumb-link img-link center-align <?if($i == 0):?>active<?endif;?>" href="<? echo $arOnePhoto['SRC']; ?>">
-                                            <img class="thumb-img" src="<? echo $arOnePhoto['SRC']; ?>"/>
-                                        </a>
-                                    <?
-                                    }
-                                    unset($arOnePhoto);
-                                    ?>
-                                </div>
-                            </div>
-
-                            <?if(count($arResult['MORE_PHOTO'])>3):?>
-                            <div class="carousel-controlls">
-                                <button class="prev"><svg class="icon"><use xlink:href="#arrow"/></svg></button>
-                                <button class="next"><svg class="icon"><use xlink:href="#arrow"/></svg></button>
-                            </div>
-                            <?endif;?>
                         <?
-                        }
-                        else
+                        if ($arResult['SHOW_SLIDER'])
                         {
-                            foreach ($arResult['OFFERS'] as $key => $arOneOffer)
+                            if (!isset($arResult['OFFERS']) || empty($arResult['OFFERS']))
                             {
-                                if (!isset($arOneOffer['MORE_PHOTO_COUNT']) || 0 >= $arOneOffer['MORE_PHOTO_COUNT'])
-                                    continue;
-                                if (5 < $arOneOffer['MORE_PHOTO_COUNT'])
+                                if (5 < $arResult['MORE_PHOTO_COUNT'])
                                 {
-                                    $strOneWidth = (100/$arOneOffer['MORE_PHOTO_COUNT']).'%';
-                                    $strWidth = (20*$arOneOffer['MORE_PHOTO_COUNT']).'%';
+                                    $strOneWidth = (100/$arResult['MORE_PHOTO_COUNT']).'%';
+                                    $strWidth = (20*$arResult['MORE_PHOTO_COUNT']).'%';
                                 }
                                 else
                                 {
@@ -185,33 +142,81 @@ $strAlt = (
                                 <div class="carousel">
                                     <div class="carousel-inner">
                                         <?
-                                        foreach ($arOneOffer['MORE_PHOTO'] as $i => &$arOnePhoto)
-                                        {
-                                            ?>
-                                            <a class="item thumb-link img-link center-align <?if($i == 0):?>active<?endif;?>" href="<? echo $arOnePhoto['SRC']; ?>">
-                                                <img class="thumb-img" src="<? echo $arOnePhoto['SRC']; ?>"/>
-                                            </a>
+                                        if(count($arResult['MORE_PHOTO'])>1) {
+                                            foreach ($arResult['MORE_PHOTO'] as $i => &$arOnePhoto) {
+                                                ?>
+                                                <a class="item thumb-link img-link center-align <? if ($i == 0): ?>active<? endif; ?>"
+                                                   href="<? echo $arOnePhoto['SRC']; ?>">
+                                                    <img class="thumb-img" src="<? echo $arOnePhoto['SRC']; ?>"/>
+                                                </a>
                                             <?
+                                            }
+                                            unset($arOnePhoto);
                                         }
-                                        unset($arOnePhoto);
                                         ?>
                                     </div>
                                 </div>
+
                                 <?if(count($arResult['MORE_PHOTO'])>3):?>
-                                    <div class="carousel-controlls">
-                                        <button class="prev"><svg class="icon"><use xlink:href="#arrow"/></svg></button>
-                                        <button class="next"><svg class="icon"><use xlink:href="#arrow"/></svg></button>
-                                    </div>
+                                <div class="carousel-controlls">
+                                    <button class="prev"><svg class="icon"><use xlink:href="#arrow"/></svg></button>
+                                    <button class="next"><svg class="icon"><use xlink:href="#arrow"/></svg></button>
+                                </div>
                                 <?endif;?>
                             <?
                             }
+                            else
+                            {
+                                foreach ($arResult['OFFERS'] as $key => $arOneOffer)
+                                {
+                                    if (!isset($arOneOffer['MORE_PHOTO_COUNT']) || 0 >= $arOneOffer['MORE_PHOTO_COUNT'])
+                                        continue;
+                                    if (5 < $arOneOffer['MORE_PHOTO_COUNT'])
+                                    {
+                                        $strOneWidth = (100/$arOneOffer['MORE_PHOTO_COUNT']).'%';
+                                        $strWidth = (20*$arOneOffer['MORE_PHOTO_COUNT']).'%';
+                                    }
+                                    else
+                                    {
+                                        $strOneWidth = '20%';
+                                        $strWidth = '100%';
+                                    }
+                                    ?>
+                                    <div class="carousel">
+                                        <div class="carousel-inner">
+                                            <?
+                                            if(count($arResult['MORE_PHOTO'])>1) {
+                                                foreach ($arOneOffer['MORE_PHOTO'] as $i => &$arOnePhoto) {
+                                                    ?>
+                                                    <a class="item thumb-link img-link center-align <? if ($i == 0): ?>active<? endif; ?>"
+                                                       href="<? echo $arOnePhoto['SRC']; ?>">
+                                                        <img class="thumb-img" src="<? echo $arOnePhoto['SRC']; ?>"/>
+                                                    </a>
+                                                <?
+                                                }
+                                                unset($arOnePhoto);
+                                            }
+                                            ?>
+                                        </div>
+                                    </div>
+                                    <?if(count($arResult['MORE_PHOTO'])>3):?>
+                                        <div class="carousel-controlls">
+                                            <button class="prev"><svg class="icon"><use xlink:href="#arrow"/></svg></button>
+                                            <button class="next"><svg class="icon"><use xlink:href="#arrow"/></svg></button>
+                                        </div>
+                                    <?endif;?>
+                                <?
+                                }
+                            }
                         }
-                    }
-                    ?>
-                </div>
-                <?/*end small carousel images*/?>
-
+                        ?>
+                    </div>
+                    <?/*end small carousel images*/?>
                 <?/*big image*/?>
+                <?
+                    reset($arResult['MORE_PHOTO']);
+                    $arFirstPhoto = current($arResult['MORE_PHOTO']);
+                ?>
                 <div class="full-img col"><img id="<? echo $arItemIDs['PICT']; ?>" src="<? echo $arFirstPhoto['SRC']; ?>" alt="<? echo $strAlt; ?>" title="<? echo $strTitle; ?>"></div>
                 <?/*end big image*/?>
             </div>
@@ -231,22 +236,36 @@ $strAlt = (
                     <?if($boolDiscountShow):?>
                         <div class="old-price"><?=priceShow($minPrice['VALUE']);?></div>
                     <?endif;?>
-                    <div class="price"><?=priceShow($minPrice['DISCOUNT_VALUE']);?></div>
+                    <div class="price" id="price_<?=$arItemIDs['ADD_BASKET_LINK']?>"><?=priceShow($minPrice['DISCOUNT_VALUE']);?></div>
                 </div>
                 <?/*end price*/?>
 
                 <?/*options product*/?>
+                <?if(!empty($arResult['OFFERS'])):?>
+
+                    <?
+                    $offers = array();
+                    foreach($arResult['OFFERS'] as $i=>$itemOffer):
+                        $minPrice = (isset($itemOffer['RATIO_PRICE']) ? $itemOffer['RATIO_PRICE'] : $itemOffer['MIN_PRICE']);
+                        $option = '';
+                        foreach($itemOffer['PROPERTIES']['CML2_ATTRIBUTES']['VALUE'] as $a=>$item):
+                            if($a==0){ $option .= $item;}
+                            else{$option .= ' '.$item;}
+                        endforeach;
+                        $offers[$i]['ID'] = $itemOffer['ID'];
+                        $offers[$i]['PRICE'] = $minPrice['VALUE'];
+                        $offers[$i]['OPTION'] = $option;
+                    endforeach;?>
+
                 <!-- если есть -->
-                <div class="product-options">
+                    <div class="product-options">
                     <div class="inline-field clearfix">
                         <span class="label">Размер</span>
                         <div class="select-box hide-on-large-only">
-                            <select id="prod-size" name="prod-size-sel">
-                                <option value="v1" selected>44-46  170-176</option>
-                                <option value="v2">48-50  170-176</option>
-                                <option value="v3">52-54  170-176</option>
-                                <option value="v4">56-58  170-176</option>
-                                <option value="v5">60-62  170-176</option>
+                            <select id="prod-size" name="prod-size-sel" id="select_<?=$arItemIDs['ADD_BASKET_LINK']?>" onchange="select_prop('select_<?=$arItemIDs['ADD_BASKET_LINK']?>','<?=$arItemIDs['ADD_BASKET_LINK']?>','Y');" >
+                                <?foreach($offers as $i=>$itemOffer):?>
+                                    <option value="<?=$itemOffer['ID']?>" data-price="<?=$itemOffer['PRICE']?>" <?if($i==0):?>selected<?endif;?>><?=$itemOffer['OPTION'];?></option>
+                                <?endforeach;?>
                             </select>
                             <div class="triangle"></div>
                         </div>
@@ -256,46 +275,28 @@ $strAlt = (
                                 <div class="triangle"></div>
                             </div>
                             <ul class="dropdown-list select-synh hide-on-med-and-down" data-select="prod-size">
-                                <li class="dropdown-item" data-active="active">
-                                    <input type="radio" class="dropdown-inp" name="prod-size" value="v1" id="prod-size-rad-v1" checked="checked" data-value-text="44-46  170-176"/>
-                                    <label class="dropdown-title" for="prod-size-rad-v1">
-                                        <div class="item-text">44-46  170-176</div>
+                                <?foreach($offers as $i=>$itemOffer):?>
+                                <li class="dropdown-item"  <?if($i==0):?>data-active="active"<?endif;?>>
+                                    <input type="radio" class="dropdown-inp" name="prod-size" value="<?=$itemOffer['ID']?>" id="prod-size-rad-v<?=$i?>" <?if($i==0):?>checked="checked"<?endif;?> data-value-text="<?=$itemOffer['OPTION'];?>"/>
+                                    <label class="dropdown-title" for="prod-size-rad-v<?=$i?>">
+                                        <div class="item-text"><?=$itemOffer['OPTION'];?></div>
                                     </label>
                                 </li>
-                                <li class="dropdown-item">
-                                    <input type="radio" class="dropdown-inp" name="prod-size" value="v2" id="prod-size-rad-v2" data-value-text="48-50  170-176"/>
-                                    <label class="dropdown-title" for="prod-size-rad-v2">
-                                        <div class="item-text">48-50  170-176</div>
-                                    </label>
-                                </li>
-                                <li class="dropdown-item">
-                                    <input type="radio" class="dropdown-inp" name="prod-size" value="v3" id="prod-size-rad-v3" data-value-text="52-54  170-176"/>
-                                    <label class="dropdown-title" for="prod-size-rad-v3">
-                                        <div class="item-text">52-54  170-176</div>
-                                    </label>
-                                </li>
-                                <li class="dropdown-item">
-                                    <input type="radio" class="dropdown-inp" name="prod-size" value="v4" id="prod-size-rad-v4" data-value-text="56-58  170-176"/>
-                                    <label class="dropdown-title" for="prod-size-rad-v4">
-                                        <div class="item-text">56-58  170-176</div>
-                                    </label>
-                                </li>
-                                <li class="dropdown-item">
-                                    <input type="radio" class="dropdown-inp" name="prod-size" value="v5" id="prod-size-rad-v5" data-value-text="60-62  170-176"/>
-                                    <label class="dropdown-title" for="prod-size-rad-v5">
-                                        <div class="item-text">60-62  170-176</div>
-                                    </label>
-                                </li>
+                                <?endforeach;?>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <?/*end options product*/?>
-
+                <?endif;?>
                 <?/*add basket*/?>
                 <div class="action-buttons">
-                    <a class="btn primary center fullwidth" href="#">В корзину</a>
-                    <a class="btn standart-color center fullwidth" href="#">Купить в 1 клик</a>
+                    <?
+                        $addBasket = '';
+                        if(!empty($arResult['OFFERS'])){$addBasket = 'add_basket(\''.$offers[0]['ID'].'\')';}else{$addBasket = 'add_basket(\''.$arResult['ID'].'\')';}
+                    ?>
+                    <a class="btn primary center fullwidth" href="javascript:void(0);" id="<? echo $arItemIDs['ADD_BASKET_LINK']; ?>" onclick="<?=$addBasket?>">В корзину</a>
+                    <a class="btn standart-color center fullwidth" href="javascript:void(0);">Купить в 1 клик</a>
                 </div>
                 <?/*end add basket*/?>
 

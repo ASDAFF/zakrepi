@@ -46,7 +46,6 @@ $arStore = listRetailStore($id_product);
         <script type="text/javascript">
                 ymaps.ready(init);
                 var shopsMap;
-
                 function init() {
                     shopsMap = new ymaps.Map("shops-map", {
                         center: [57.16565145867384, 65.54499550000001], // Тюмень
