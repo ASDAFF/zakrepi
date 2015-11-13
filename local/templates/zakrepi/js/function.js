@@ -106,7 +106,11 @@ function select_prop(sel_id,id_elem,detail)
 {
 
     var id_product = $('#'+sel_id).val();
-    var price_product = $('#'+sel_id+' option:selected')/*.attr('data-price')*/;
+    var price_product = $('#'+sel_id+' option:selected').attr('data-price');
+    /*Пересчет параметров для favorites*/
+    var favorite = "favorite_product('"+id_product+"')";
+
+    $('#favorite-'+id_elem).attr('onclick',favorite);
     /*if(detail == 'Y')
     {
         $('.shop_yes').hide();
@@ -116,8 +120,8 @@ function select_prop(sel_id,id_elem,detail)
             $('#id_store_'+shopsList[item]).show();
         }
     }*/
-    $('#price_'+id_elem).text(priceShow(price_product));
-    var onclick = "add_basket("+id_product+")";
+    $('#price_'+id_elem).html(priceShow(price_product));
+    var onclick = "add_basket('"+id_product+"','"+id_elem+"')";
     $('#'+id_elem).attr('onclick',onclick);
 }
 
@@ -139,6 +143,138 @@ function priceShow(price)
 function isInteger(num) {
     return (num ^ 0) === num;
 }
+/*Добавление в корзину товара*/
+function add_basket(id_product,id_elem)
+{
+    $('#'+id_elem).hide();
+    $('#loader-'+id_elem).show();
+    $('.loader-small-basket').show();
+    $.ajax({
+        type: "POST",
+        url: "/includes/basket/add-to-basket.php",
+        data: "id_product="+id_product,
+        success: function(msg){
+            /*BX.onCustomEvent('basket_update');
+            $('.modal .name-products').html(msg);
+            $('#add_basket_ok,.eclipse').show();*/
+            //$('.loader-small-basket').show();
+            uploadSmallBasket(id_elem);
+        }
+    });
+}
+/*Обновление малой корзины*/
+function uploadSmallBasket(id_elem)
+{
+    $.ajax({
+        type: "POST",
+        url: "/includes/header/small-basket.php",
+        success: function(msg){
+
+            $('#'+id_elem).show();
+            $('#loader-'+id_elem).hide();
+            $('#minicard-popup').addClass('show');
+
+            $('#small-basket-ajax').html(msg);
+        }
+    });
+}
+
+/*Добавление в сравниение товара*/
+function compare_product(id_product,url_compare)
+{
+    if($('#compare_today_'+id_product).prop('checked')) {
+        $.ajax({
+            type: "POST",
+            url: '' + url_compare + '',
+            data: {id: id_product, action: "ADD_TO_COMPARE_LIST"},
+            success: function (msg) {
+                //alert(msg);
+                /*BX.onCustomEvent('basket_update');
+                 $('.modal .name-products').html(msg);
+                 $('#add_basket_ok,.eclipse').show();*/
+                //$('.loader-small-basket').show();
+            }
+        });
+    }else{
+        $.ajax({
+            type: "POST",
+            url: '' + url_compare + '',
+            data: {ID: id_product, action: "DELETE_FROM_COMPARE_RESULT"},
+            success: function (msg) {
+                //alert(msg);
+                /*BX.onCustomEvent('basket_update');
+                 $('.modal .name-products').html(msg);
+                 $('#add_basket_ok,.eclipse').show();*/
+                //$('.loader-small-basket').show();
+            }
+        });
+    }
+}
+
+/*Добавление в избранное*/
+function favorite_product(id_product){
+    $.ajax({
+        type: "POST",
+        url: "/includes/basket/add-to-basket.php",
+        data: "id_product="+id_product+'&delay=Y',
+        success: function(html){
+            $('#favcnt').html(html);
+        }
+    });
+};
+/*Удаление из избранного*/
+function remove_favorite(id)
+{
+    $('#loader-favorite-'+id).removeClass('hide');
+    $.ajax({
+        type: "POST",
+        url: "/personal/favorites/",
+        data: "action=delete&"+"id=" + id,
+        success: function(html){
+            //$(th).addClass('favactive');
+            $('#favorite-'+id).remove();
+        }
+    });
+}
+/*Добавление товара в корзину из избранного*/
+function add_basket_in_favorite(id)
+{
+    $('#loader-favorite-'+id).removeClass('hide');
+    $('.loader-small-basket').show();
+    $.ajax({
+        type: "POST",
+        url: "/personal/favorites/",
+        data: "action=add&id="+id,
+        success: function(msg){
+            uploadSmallBasket_in_favorite(id);
+        }
+    });
+}
+function uploadSmallBasket_in_favorite(id){
+    $.ajax({
+        type: "POST",
+        url: "/includes/header/small-basket.php",
+        success: function(msg){
+
+            $('#favorite-'+id).remove();
+            $('#minicard-popup').addClass('show');
+            $('#small-basket-ajax').html(msg);
+        }
+    });
+}
+/*Показать окно о том что нужно авторизоваться*/
+function showPopupAuthorized(){
+    alert("Только авторизованный пользователь может добавить товар в избранное");
+}
+/*Показать окно о заказе товара в 1 клик*/
+function buyInOneClick(id)
+{
+    $('input[name="PRODUCT_ID"]').val(id);
+    $('.dark-bg').show();
+    $('#one-click-form_product-id').show();
+}
+
+
 /*Валидация форм*/
 function isValidEmail (email, strict)
 {

@@ -10,7 +10,7 @@
                 <img src="/local/templates/zakrepi/images/svg/loader.svg" width="40"/>
             </div>
         </div>
-        <div class="subtitle">Ваш отзыв о гайковерте Hitachi WR14VB-NA 420 Вт</div>
+        <div class="subtitle">Ваш отзыв о <?=$arResult['NAME']?></div>
         <input type="hidden" name="CODE_PRODUCT" value="<?=$arResult['CODE']?>"/>
         <input type="hidden" name="NAME_PRODUCT" value="<?=$arResult['NAME']?>"/>
         <div class="row">
@@ -85,8 +85,6 @@
             });
             $('body').on('change', 'input[type="text"].required, input[type="tel"]', function(){
                 var val = $.trim($(this).val());
-
-
                 if($(this).hasClass('numbers'))
                 {
                     error = checkEmptiness(val, $(this));

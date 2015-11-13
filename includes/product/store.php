@@ -5,11 +5,11 @@ $id_product = $_GET['ID_PRODUCT'];
 
 $arStore = listRetailStore($id_product);
 ?>
-<?/*
+<?/*?>
 <pre>
     <?print_r($arStore);?>
 </pre>
-*/?>
+<?*/?>
 <div class="subtitle">Наличие товара в розничных магазинах «Крепыж»</div>
 <div class="row">
     <div class="col l3 shops-list">

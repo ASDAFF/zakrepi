@@ -58,15 +58,82 @@ function loader($route)
 
 /*Список розничных магазинов где товар есть в наличии*/
 function listRetailStore($id_product){
-    CModule::IncludeModule('catalog');
-    $arFilter = array("PRODUCT_ID"=>$id_product, "ACTIVE" => "Y", ">PRODUCT_AMOUNT" => 0,"UF_RETAIL_STORE" => "1");
-    $arSelect = array("ID", "TITLE", "ADDRESS", "PHONE", "SCHEDULE", "PRODUCT_AMOUNT", "SHIPPING_CENTER","GPS_N","GPS_S","UF_RETAIL_STORE","UF_NAME");
-    $res = CCatalogStore::GetList(Array(),$arFilter,false,false,$arSelect);
 
-    $arStore = array();
+    /*Определяем является ли товар с торговым предложением*/
+    $arOffers = listTradeOffer($id_product);
+    CModule::IncludeModule('catalog');
+    if(empty($arOffers)) {
+        $arFilter = array("PRODUCT_ID" => $id_product, "ACTIVE" => "Y", ">PRODUCT_AMOUNT" => 0, "UF_RETAIL_STORE" => "1");
+        $arSelect = array("ID", "TITLE", "ADDRESS", "PHONE", "SCHEDULE", "PRODUCT_AMOUNT", "SHIPPING_CENTER", "GPS_N", "GPS_S", "UF_RETAIL_STORE", "UF_NAME");
+        $res = CCatalogStore::GetList(Array(), $arFilter, false, false, $arSelect);
+
+        $arStore = array();
+        while ($ar_res = $res->GetNext()) {
+            $arStore[] = $ar_res;
+        }
+        return $arStore;
+    }else{
+
+        $arStore = array();
+        foreach($arOffers as $offer)
+        {
+            $arFilter = array("PRODUCT_ID" => $offer['ID'], "ACTIVE" => "Y", ">PRODUCT_AMOUNT" => 0, "UF_RETAIL_STORE" => "1");
+            $arSelect = array("ID", "TITLE", "ADDRESS", "PHONE", "SCHEDULE", "PRODUCT_AMOUNT", "SHIPPING_CENTER", "GPS_N", "GPS_S", "UF_RETAIL_STORE", "UF_NAME");
+            $res = CCatalogStore::GetList(Array(), $arFilter, false, false, $arSelect);
+
+            while ($ar_res = $res->GetNext()) {
+                $key = array_search($ar_res['ID'], array_column($arStore, 'ID'));
+                if(strlen($key) == 0 )
+                {
+                    //Если нет то добавляем данное значение
+                    array_push($arStore,$ar_res);
+                }
+            }
+        }
+        return $arStore;
+    }
+}
+/*Определяем является ли товар с торговым предложением*/
+function listTradeOffer($id_product)
+{
+    CModule::IncludeModule('iblock');
+    $arFilter = array("PROPERTY_CML2_LINK"=>$id_product, "ACTIVE" => "Y");
+    $arSelect = array("ID", "NAME");
+    $res = CIBlockElement::GetList(Array(),$arFilter,false,false,$arSelect);
+    $arOffers = array();
     while($ar_res = $res->GetNext())
     {
-        $arStore[] = $ar_res;
+        $arOffers[] = $ar_res;
     }
-    return $arStore;
+    return $arOffers;
+}
+
+/*Аналог array_column в php 5.5*/
+function array_column ($input, $columnKey, $indexKey = null) {
+    if (!is_array($input)) {
+        return false;
+    }
+    if ($indexKey === null) {
+        foreach ($input as $i => &$in) {
+            if (is_array($in) && isset($in[$columnKey])) {
+                $in    = $in[$columnKey];
+            } else {
+                unset($input[$i]);
+            }
+        }
+    } else {
+        $result    = array();
+        foreach ($input as $i => $in) {
+            if (is_array($in) && isset($in[$columnKey])) {
+                if (isset($in[$indexKey])) {
+                    $result[$in[$indexKey]]    = $in[$columnKey];
+                } else {
+                    $result[]    = $in[$columnKey];
+                }
+                unset($input[$i]);
+            }
+        }
+        $input    = &$result;
+    }
+    return $input;
 }

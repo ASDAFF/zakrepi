@@ -1,12 +1,5 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("");?>
-    <div class="breadcrumbs">
-        <a class="brdcmb-link" href="#">Главная</a> /
-        <a class="brdcmb-link" href="#">Строительство и ремонт</a> /
-        <a class="brdcmb-link" href="#">Инструменты</a> /
-        <a class="brdcmb-link" href="#">Электроинструменты</a> /
-        <a class="brdcmb-link" href="#">Гайковерты</a>
-    </div>
 <div class="workarea">
 <?$APPLICATION->IncludeComponent(
     "zakrepi:catalog.element",
@@ -91,7 +84,7 @@ $APPLICATION->SetTitle("");?>
         "PRODUCT_ID_VARIABLE" => "id",
         "DISPLAY_COMPARE" => "Y",
         "COMPARE_PATH" => "/compare/",
-        "PRICE_CODE" => array(0 => "Розничная",),
+        "PRICE_CODE" => array(0 => "Розничная",1 => "Оптовая",),
         "USE_PRICE_COUNT" => "N",
         "SHOW_PRICE_COUNT" => "1",
         "PRICE_VAT_INCLUDE" => "Y",

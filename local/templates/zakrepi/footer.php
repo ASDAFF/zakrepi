@@ -15,7 +15,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                     <label for="sbscr-field" class="textfield-placeholder">Введите свой email</label>
                 </div>
                 <div class="col l2">
-                    <input type="submit" class="btn primary fullsize" value="Подписаться"/>
+                    <input type="submit" class="btn primary fullwidth" value="Подписаться"/>
                 </div>
             </div>
         </div>
@@ -103,14 +103,15 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 </div> <!-- /.page -->
 </div> <!-- /.layout -->
 
-<div class="tooltip" data-box="#minicard" data-position="bottom-right">
+<div class="tooltip" data-box="#minicard" id="minicard-popup" data-position="bottom-right">
     <div class="tooltip-tngl"></div>
     <button class="btn btn-close btn-icon"><svg class="icon"><use xlink:href="#cross"/></svg></button>
     <div class="tooltip-content">
         <p>Товар успешно добавлен в корзину</p>
-        <p><a href="#">Перейти к оформлению</a></p>
+        <p><a href="/cart/">Перейти к оформлению</a></p>
     </div>
 </div>
+<div class="dark-bg"></div>
 
 	</body>
 </html>

@@ -7,7 +7,7 @@ $APPLICATION->SetTitle("");?>
 		"COMPONENT_TEMPLATE" => ".default",
 		"NAME" => "CATALOG_COMPARE_LIST",
 		"IBLOCK_TYPE" => "1c_catalog",
-		"IBLOCK_ID" => "5",
+		"IBLOCK_ID" => $arZSettings['CATALOG_ID'],
 		"FIELD_CODE" => array(
 			0 => "NAME",
 			1 => "PREVIEW_PICTURE",

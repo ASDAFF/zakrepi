@@ -76,14 +76,15 @@ CUtil::InitJSCore(Array("ajax"));
         <div class="layout">
         <!-- для главной добавить класс home-page к page, для сравнения .compare-page, оформление заказа .checkout-page, lk - .profile-page -->
         <?
+        $bread = 'Y';
         $uri = $APPLICATION->GetCurUri();
         $pos = strrpos($uri, "personal/");
-        if($pos == 1){$class = 'profile-page';}
+        if($pos == 1){$class = 'profile-page'; $bread = 'N';}
         $pos = strrpos($uri, "compare/");
         if($pos == 1) {$class = 'compare-page';}
         $pos = strrpos($uri, "make/");
         if($pos == 1) {$class = 'checkout-page';}
-        if ($APPLICATION->GetCurPage(false) === '/') $class = 'home-page';
+        if ($APPLICATION->GetCurPage(false) === '/') {$class = 'home-page';$bread = 'N';}
         ?>
             <div class="page <?=$class?>">
                 <!-- если не 404 -->
@@ -155,15 +156,9 @@ CUtil::InitJSCore(Array("ajax"));
                             <!--cart and like-->
                             <div class="shopping-card-box col l3">
                                 <a href="#" class="btn btn-favorite btn-icon col"><svg class="icon"><use xlink:href="#heart"/></svg></a>
-                                <?$APPLICATION->IncludeComponent("bitrix:sale.basket.basket.small", "cart", Array(
-                                	"PATH_TO_BASKET" => "/cart/",	// Страница корзины
-                                		"PATH_TO_ORDER" => "/personal/order/make/",	// Страница оформления заказа
-                                		"SHOW_DELAY" => "N",	// Показывать отложенные товары
-                                		"SHOW_NOTAVAIL" => "N",	// Показывать товары, недоступные для покупки
-                                		"SHOW_SUBSCRIBE" => "N",	// Показывать товары, на которые подписан покупатель
-                                	),
-                                	false
-                                );?>
+                                <span id="small-basket-ajax">
+                                    <?include($_SERVER['DOCUMENT_ROOT'].'/includes/header/small-basket.php');?>
+                                </span>
                             </div>
                             <!--end cart and like-->
                         </div>
@@ -190,18 +185,27 @@ CUtil::InitJSCore(Array("ajax"));
                 </div>
                 <!-- /если не 404 -->
                 <div class="workarea-wrapper container">
-                    <?/*
+                    <?
+                        if ($bread== 'Y'):
+                    ?>
+
                     <!-- если не главная -->
                     <!--breadcrumbs-->
                     <div class="breadcrumbs">
-                        <a class="brdcmb-link" href="#">Главная</a> /
-                        <a class="brdcmb-link" href="#">Строительство и ремонт</a> /
-                        <a class="brdcmb-link" href="#">Инструменты</a> /
-                        <span class="brdcmb-curpage">Электроинструменты</span>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:breadcrumb",
+                            "bread",
+                            Array(
+                                "START_FROM" => "0",
+                                "PATH" => "",
+                                "SITE_ID" => "s1"
+                            )
+                        );?>
                     </div>
                     <!--end breadcrumbs-->
                     <!-- /если не главная -->
-                    */?>
+
+                    <?endif;?>
                     <!--div class="workarea"-->
 	
 						
