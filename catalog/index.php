@@ -1,116 +1,58 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("");?>
-<?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section", 
-	".default", 
-	array(
-		"COMPONENT_TEMPLATE" => ".default",
-		"IBLOCK_TYPE" => "1c_catalog",
-		"IBLOCK_ID" => $arZSettings['CATALOG_ID'],
-		"SECTION_ID" => "",//$_REQUEST["SECTION_ID"],
-		"SECTION_CODE" => $_REQUEST["code"],
-		"SECTION_USER_FIELDS" => array(
-			0 => "",
-			1 => "",
-		),
-		"ELEMENT_SORT_FIELD" => "sort",
-		"ELEMENT_SORT_ORDER" => "asc",
-		"ELEMENT_SORT_FIELD2" => "id",
-		"ELEMENT_SORT_ORDER2" => "desc",
-		"FILTER_NAME" => "arrFilter",
-		"INCLUDE_SUBSECTIONS" => "Y",
-		"SHOW_ALL_WO_SECTION" => "Y",
-		"HIDE_NOT_AVAILABLE" => "N",
-		"PAGE_ELEMENT_COUNT" => "30",
-		"LINE_ELEMENT_COUNT" => "3",
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"OFFERS_LIMIT" => "5",
-		"TEMPLATE_THEME" => "blue",
-		"PRODUCT_SUBSCRIPTION" => "N",
-		"SHOW_DISCOUNT_PERCENT" => "N",
-		"SHOW_OLD_PRICE" => "N",
-		"SHOW_CLOSE_POPUP" => "N",
-		"MESS_BTN_BUY" => "Купить",
-		"MESS_BTN_ADD_TO_BASKET" => "В корзину",
-		"MESS_BTN_SUBSCRIBE" => "Подписаться",
-		"MESS_BTN_DETAIL" => "Подробнее",
-		"MESS_NOT_AVAILABLE" => "Нет в наличии",
-		"SECTION_URL" => "",
-		"DETAIL_URL" => "",
-		"SECTION_ID_VARIABLE" => "SECTION_ID",
-		"SEF_MODE" => "N",
-		"AJAX_MODE" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"CACHE_TYPE" => "A",
-		"CACHE_TIME" => "36000000",
-		"CACHE_GROUPS" => "Y",
-		"SET_TITLE" => "Y",
-		"SET_BROWSER_TITLE" => "Y",
-		"BROWSER_TITLE" => "-",
-		"SET_META_KEYWORDS" => "Y",
-		"META_KEYWORDS" => "-",
-		"SET_META_DESCRIPTION" => "Y",
-		"META_DESCRIPTION" => "-",
-		"SET_LAST_MODIFIED" => "N",
-		"USE_MAIN_ELEMENT_SECTION" => "N",
-		"ADD_SECTIONS_CHAIN" => "N",
-		"CACHE_FILTER" => "N",
-		"ACTION_VARIABLE" => "action",
-		"PRODUCT_ID_VARIABLE" => "id",
-		"PRICE_CODE" => array(
-			0 => "Розничная",
-		),
-		"USE_PRICE_COUNT" => "N",
-		"SHOW_PRICE_COUNT" => "1",
-		"PRICE_VAT_INCLUDE" => "Y",
-		"CONVERT_CURRENCY" => "N",
-		"BASKET_URL" => "/cart/index.php",
-		"USE_PRODUCT_QUANTITY" => "N",
-		"PRODUCT_QUANTITY_VARIABLE" => "",
-		"ADD_PROPERTIES_TO_BASKET" => "Y",
-		"PRODUCT_PROPS_VARIABLE" => "prop",
-		"PARTIAL_PRODUCT_PROPERTIES" => "N",
-		"PRODUCT_PROPERTIES" => array(
-		),
-		"ADD_TO_BASKET_ACTION" => "ADD",
-		"PAGER_TEMPLATE" => "pagen",
-		"DISPLAY_TOP_PAGER" => "N",
-		"DISPLAY_BOTTOM_PAGER" => "Y",
-		"PAGER_TITLE" => "Товары",
-		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_DESC_NUMBERING" => "N",
-		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-		"PAGER_SHOW_ALL" => "N",
-		"PAGER_BASE_LINK_ENABLE" => "N",
-		"SET_STATUS_404" => "N",
-		"SHOW_404" => "N",
-		"MESSAGE_404" => "",
-		"OFFERS_FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"OFFERS_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"OFFERS_SORT_FIELD" => "sort",
-		"OFFERS_SORT_ORDER" => "asc",
-		"OFFERS_SORT_FIELD2" => "id",
-		"OFFERS_SORT_ORDER2" => "desc",
-		"OFFERS_CART_PROPERTIES" => array(
-		),
-		"PRODUCT_DISPLAY_MODE" => "N",
-		"ADD_PICT_PROP" => "-",
-		"LABEL_PROP" => "-",
-		"DISPLAY_COMPARE" => "Y",
-		"COMPARE_PATH" => "/compare/"
-	),
-	false
-);?>
+<div class="workarea">
+    <h1 class="page-title">Гайковерты</h1>
+
+    <div class="row">
+        <div class="filter-box col l3">
+            <?include($_SERVER['DOCUMENT_ROOT'].'/includes/catalog/filter.php')?>
+        </div>
+
+        <div class="catalog col l9 no-padding">
+            <div class="product-list clearfix">
+
+                <?include($_SERVER['DOCUMENT_ROOT'].'/includes/catalog/catalog.php')?>
+                <div class="item col l3" ng-repeat="product in products | orderBy:sort:true">
+                    <div class="product-card">
+                        <div class="product-info">
+                            <a class="item-img" href="product__single.php" style="background-image:url({{product.image}});"></a>
+                            <div class="item-name"><a href="product__single.php">{{product.name}}</a></div>
+                            <div ng-class="'rating rate-'+product.rating">
+                                <svg class="star"><use xlink:href="#star"/></svg>
+                                <svg class="star"><use xlink:href="#star"/></svg>
+                                <svg class="star"><use xlink:href="#star"/></svg>
+                                <svg class="star"><use xlink:href="#star"/></svg>
+                                <svg class="star"><use xlink:href="#star"/></svg>
+                            </div>
+                            <div class="product-price">
+                                <div class="old-price" ng-if="product.oldprice">{{product.oldprice}} <i class="rouble">i</i></div>
+                                <!-- в цене тысячи отделить неразрывным пробелом &nbsp; -->
+                                <div class="price">{{product.price}} <i class="rouble">i</i></div>
+                            </div>
+                            <a href="#" class="shopping-card btn btn-icon primary">
+                                <svg class="icon"><use xlink:href="#cart"/></svg>
+                            </a>
+                        </div>
+                        <div class="compare">
+                            <input type="checkbox" id="compare_today_{{product.id}}" />
+                            <label class="checkbox-lbl" for="compare_today_{{product.id}}">Cравнить</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a class="btn flat fullwidth big btn-more" href="#">Показать еще</a>
+                    Навигация
+                </div>
+            </div>
+            <div class="col l12">
+                <div class="text-box">
+                    <p>Гайковертом называется инструмент, предназначенный для сборки/разборки различных резьбовых соединений. Его используют в случаях, когда невозможно обойтись простым гаечным ключом: к примеру, когда необходимо разобрать труднодоступные соединения, заржавевший металл, прикипевшие гайки и т.п. </p>
+                    <p>В отличие от ручного инструмента, электрический гайковёрт позволяет существенно снизить затрачиваемые усилия и сократить время выполнения работ. Еще одним неоспоримым преимуществом является контролируемый момент при затяжке или отворачивании резьбовых соединений. Это позволяет обеспечить максимальную точность выполняемых работ.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- /.workarea -->
+
+
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
