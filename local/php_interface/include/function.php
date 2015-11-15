@@ -32,7 +32,8 @@ function dateActiveFrom($date)
 /*вывод цены товара*/
 function priceShow($str)
 {
-    $str = (float) $str;
+    $str = floatVal($str).'.00'; //Незнаю зачем эти два ноля но без них не определяет что число целое
+
     if(is_positive_int($str))
     {
         $result = number_format($str,0,'',' ').'&nbsp;<i class="rouble">i</i>';
@@ -45,8 +46,10 @@ function priceShow($str)
 }
 /*Проверка на целое число*/
 function is_positive_int($num){
-    $intNum = (int) $num;
-    return ($intNum == $num && is_int($intNum));
+    $intNum = floor($num);
+    $result = floatVal($num - $intNum);
+    if($result == 0) return true;
+    else return false;
 }
 
 /*вывод preloader*/
@@ -109,6 +112,7 @@ function listTradeOffer($id_product)
 }
 
 /*Аналог array_column в php 5.5*/
+
 function array_column ($input, $columnKey, $indexKey = null) {
     if (!is_array($input)) {
         return false;

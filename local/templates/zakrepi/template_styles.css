@@ -5472,7 +5472,8 @@ select option {
 /* line 26, scss/components/_product-card.scss */
 .product-card .item-name {
     margin: 23px 0 8px;
-    min-height: 3em;
+   /* min-height: 3em; невходит наименование в 3 строки*/
+    min-height: 6em;
 }
 /* line 34, scss/components/_product-card.scss */
 .product-card .product-price {

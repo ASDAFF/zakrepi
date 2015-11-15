@@ -26,7 +26,21 @@ $arDefaultParams = array(
 	'MESS_BTN_COMPARE' => ''
 );
 $arParams = array_merge($arDefaultParams, $arParams);
+foreach ($arResult['ITEMS'] as $key => $arItem) {
 
+    //$arResult['ITEMS'][$key]['OFFERS_a']='123123';
+    $offers = CCatalogSKU::getExistOffers(
+        $arItem['ID']
+    );
+    if(!empty($offers[$arItem['ID']]))
+    {
+        
+        $arResult['ITEMS'][$key]['OFFERS'] = 'Y';
+    }
+       // $arResult['ITEMS'][$key]['OFFERS'] = 'Y';
+}
+
+/*
 if (!isset($arParams['LINE_ELEMENT_COUNT']))
 	$arParams['LINE_ELEMENT_COUNT'] = 3;
 $arParams['LINE_ELEMENT_COUNT'] = intval($arParams['LINE_ELEMENT_COUNT']);
@@ -462,5 +476,5 @@ if (!empty($arResult['ITEMS']))
 			unset($currencyFormat, $currency, $currencyIterator);
 		}
 	}
-}
+}*/
 ?>

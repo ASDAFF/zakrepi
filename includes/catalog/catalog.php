@@ -2,6 +2,7 @@
 <?$APPLICATION->IncludeComponent(
     "zakrepi:catalog.section",
     "catalog-section",
+    //"",
     array(
         "COMPONENT_TEMPLATE" => ".default",
         "IBLOCK_TYPE" => "1c_catalog",
@@ -25,7 +26,7 @@
         "PROPERTY_CODE" => array(
             "rating"
         ),
-        "OFFERS_LIMIT" => "5",
+        "OFFERS_LIMIT" => "0",
         "TEMPLATE_THEME" => "blue",
         "PRODUCT_SUBSCRIPTION" => "N",
         "SHOW_DISCOUNT_PERCENT" => "N",
@@ -42,7 +43,7 @@
         "SEF_MODE" => "N",
         "AJAX_MODE" => "N",
         "AJAX_OPTION_JUMP" => "N",
-        "AJAX_OPTION_STYLE" => "Y",
+        "AJAX_OPTION_STYLE" => "N",
         "AJAX_OPTION_HISTORY" => "N",
         "AJAX_OPTION_ADDITIONAL" => "",
         "CACHE_TYPE" => "A",
@@ -63,6 +64,7 @@
         "PRODUCT_ID_VARIABLE" => "id",
         "PRICE_CODE" => array(
             0 => "Розничная",
+            1 => "Оптовая",
         ),
         "USE_PRICE_COUNT" => "N",
         "SHOW_PRICE_COUNT" => "1",
@@ -107,7 +109,12 @@
         "ADD_PICT_PROP" => "-",
         "LABEL_PROP" => "-",
         "DISPLAY_COMPARE" => "Y",
-        "COMPARE_PATH" => "/compare/"
+        "COMPARE_PATH" => "/compare/",
+
+        /*id инфоблока торговова предложения*/
+        "ID_IBLOCK_OFFERS" => 9,
+
+
     ),
     false
 );?>
