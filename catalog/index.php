@@ -31,13 +31,17 @@ $APPLICATION->SetTitle("");?>
         </div>
 
         <div class="catalog col l9 no-padding">
-            <div class="product-list clearfix">
+            <div class="product-list clearfix" id="catalog-list">
 
                 <?include($_SERVER['DOCUMENT_ROOT'].'/includes/catalog/catalog.php')?>
                <?/* <div>
                     <a class="btn flat fullwidth big btn-more" href="#">Показать еще</a>
                 </div>
                 */?>
+            </div>
+            <div class="modal notification compare-full" id="compare-full-notification">
+                <button class="btn btn-icon btn-close btn-close-modal"><svg class="icon"><use xlink:href="#cross"/></svg></button>
+                <div class="item-text medium-text">Вы можете добавить к сравнению не более 5 товаров.</div>
             </div>
             <div class="col l12">
                 <div class="text-box">

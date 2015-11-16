@@ -165,7 +165,7 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
                     </div>
                     <?
                         $addBasket = '';
-                        if(!empty($arItem['OFFERS_LIST'])){$addBasket = 'add_basket(\''.$offers[0]['ID'].'\',\''.$arItemIDs['ADD_BASKET_LINK'].'\')';}else{$addBasket = 'add_basket(\''.$arResult['ID'].'\',\''.$arItemIDs['ADD_BASKET_LINK'].'\')';}
+                        if(!empty($arItem['OFFERS_LIST'])){$addBasket = 'add_basket(\''.$offers[0]['ID'].'\',\''.$arItemIDs['ADD_BASKET_LINK'].'\')';}else{$addBasket = 'add_basket(\''.$arItem['ID'].'\',\''.$arItemIDs['ADD_BASKET_LINK'].'\')';}
                     ?>
 
                     <span class="btn center  shopping-card btn-icon loader" id="loader-<? echo $arItemIDs['ADD_BASKET_LINK']; ?>" style="display:none;">
@@ -194,8 +194,8 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
             $countCompare = count($arCompare);
             ?>
             <div class="compare">
-                <input type="checkbox" class="compare-input <?if(strlen($key) > 0 ){?>checked<?}else{?>no-check<?}?>" id="compare_today_<?=$arItem['ID'];?>" onclick="compare_product(<?=$arItem['ID'];?>,'<?=$arParams['COMPARE_PATH']?>');" <?if(strlen($key) > 0 ):?>checked<?endif?> <?if($countCompare>=5):?><?if(strlen($key) > 0 ){?>checked<?}else{?>disabled<?}?><?endif;?>/>
-                <label class="checkbox-lbl" for="compare_today_<?=$arItem['ID'];?>">Cравнить</label>
+                <input type="checkbox" class="compare-input <?if(strlen($key) > 0 ){?>checked<?}else{?>no-check<?}?>" id="compare_today_<?=$arItem['ID'];?>" onclick="compare_product(<?=$arItem['ID'];?>,'<?=$arParams['COMPARE_PATH']?>');" <?if(strlen($key) > 0 ):?>checked<?endif?> <?if($countCompare>=5):?><?if(strlen($key) > 0 ){?><?}else{?>disabled<?}?><?endif;?>/>
+                <label class="checkbox-lbl" for="compare_today_<?=$arItem['ID'];?>" onclick="compare_product_check(this)">Cравнить</label>
             </div>
         </div>
     </div>
@@ -209,30 +209,18 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
     <div class="bx-section-desc <? echo $templateData['TEMPLATE_CLASS']; ?>">
         <p class="bx-section-desc-post"><?=$arResult["DESCRIPTION"]?></p>
     </div>
-    <?/*
-<script type="text/javascript">
-BX.message({
-	BTN_MESSAGE_BASKET_REDIRECT: '<? echo GetMessageJS('CT_BCS_CATALOG_BTN_MESSAGE_BASKET_REDIRECT'); ?>',
-	BASKET_URL: '<? echo $arParams["BASKET_URL"]; ?>',
-	ADD_TO_BASKET_OK: '<? echo GetMessageJS('ADD_TO_BASKET_OK'); ?>',
-	TITLE_ERROR: '<? echo GetMessageJS('CT_BCS_CATALOG_TITLE_ERROR') ?>',
-	TITLE_BASKET_PROPS: '<? echo GetMessageJS('CT_BCS_CATALOG_TITLE_BASKET_PROPS') ?>',
-	TITLE_SUCCESSFUL: '<? echo GetMessageJS('ADD_TO_BASKET_OK'); ?>',
-	BASKET_UNKNOWN_ERROR: '<? echo GetMessageJS('CT_BCS_CATALOG_BASKET_UNKNOWN_ERROR') ?>',
-	BTN_MESSAGE_SEND_PROPS: '<? echo GetMessageJS('CT_BCS_CATALOG_BTN_MESSAGE_SEND_PROPS'); ?>',
-	BTN_MESSAGE_CLOSE: '<? echo GetMessageJS('CT_BCS_CATALOG_BTN_MESSAGE_CLOSE') ?>',
-	BTN_MESSAGE_CLOSE_POPUP: '<? echo GetMessageJS('CT_BCS_CATALOG_BTN_MESSAGE_CLOSE_POPUP'); ?>',
-	COMPARE_MESSAGE_OK: '<? echo GetMessageJS('CT_BCS_CATALOG_MESS_COMPARE_OK') ?>',
-	COMPARE_UNKNOWN_ERROR: '<? echo GetMessageJS('CT_BCS_CATALOG_MESS_COMPARE_UNKNOWN_ERROR') ?>',
-	COMPARE_TITLE: '<? echo GetMessageJS('CT_BCS_CATALOG_MESS_COMPARE_TITLE') ?>',
-	BTN_MESSAGE_COMPARE_REDIRECT: '<? echo GetMessageJS('CT_BCS_CATALOG_BTN_MESSAGE_COMPARE_REDIRECT') ?>',
-	SITE_ID: '<? echo SITE_ID; ?>'
-});
-</script>
-*/?>
+    <!--pagination-->
+    <div class="pagination-<?=$arParams['ROUTE']?>">
+        <?/*if($arResult['NAV_RESULT']->NavPageCount != $arResult['NAV_RESULT']->NavPageNomer){?>
+            <span class="btn flat fullsize btn-more loader" style="display:none;">
+                    <img src="/local/templates/zakrepi/images/svg/loader.svg" width="40"/>
+                </span>
+            <a class="btn flat fullsize btn-more" href="javascript:void(0);" onclick="ajax('<?=$arParams['ROUTE']?>','<?=$arParams['ROUTE_URL']?>',<?echo $arResult['NAV_RESULT']->NavPageNomer + 1?>,'<?=$arParams['ROUTE_PARAM']?>');return false;" >Показать еще</a>
+        <?}*/?>
+        <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
+            <br /><?=$arResult["NAV_STRING"]?>
+        <?endif;?>
+    </div>
+    <!--end pagination-->
 <?
-	if ($arParams["DISPLAY_BOTTOM_PAGER"])
-	{
-		?><? echo $arResult["NAV_STRING"]; ?><?
-	}
 }

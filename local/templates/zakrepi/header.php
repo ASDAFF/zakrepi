@@ -159,6 +159,14 @@ CUtil::InitJSCore(Array("ajax"));
                                 <span id="small-basket-ajax">
                                     <?include($_SERVER['DOCUMENT_ROOT'].'/includes/header/small-basket.php');?>
                                 </span>
+                                <div class="tooltip minicard-notification noaction" data-box="#minicard" id="minicard-popup" data-position="bottom-right">
+                                    <div class="tooltip-tngl"></div>
+                                    <button class="btn btn-close btn-icon"><svg class="icon"><use xlink:href="#cross"/></svg></button>
+                                    <div class="tooltip-content">
+                                        <p>Товар успешно добавлен в корзину</p>
+                                        <p><a href="/cart/">Перейти к оформлению</a></p>
+                                    </div>
+                                </div>
                             </div>
                             <!--end cart and like-->
                         </div>

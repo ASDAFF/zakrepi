@@ -113,6 +113,11 @@
 
         /*id инфоблока торговова предложения*/
         //"ID_IBLOCK_OFFERS" => 9,
+
+        //Путь до подгрузки route компонента /include/PROMO/list.php
+        "ROUTE" => 'catalog',
+        "ROUTE_URL" => '/includes/catalog/catalog.php',
+        "ROUTE_PARAM" =>   "code=".$_REQUEST["code"]
     ),
     false
 );?>

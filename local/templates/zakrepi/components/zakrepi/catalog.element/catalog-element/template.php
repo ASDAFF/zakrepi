@@ -337,10 +337,15 @@ $strAlt = (
                      */
                     $arCompare = $_SESSION["CATALOG_COMPARE_LIST"][$arResult['IBLOCK_ID']]["ITEMS"];
                     $key = array_search($arResult['ID'], array_column($arCompare, 'ID'));
+                    $countCompare = count($arCompare);
                 ?>
                 <div class="compare">
-                    <input type="checkbox" id="compare_today_<?=$arResult['ID'];?>" onclick="compare_product(<?=$arResult['ID'];?>,'<?=$arParams['COMPARE_PATH']?>');" <?if(strlen($key) > 0 ):?>checked<?endif?>/>
-                    <label class="checkbox-lbl" for="compare_today_<?=$arResult['ID'];?>">Cравнить</label>
+                    <input type="checkbox" class="compare-input <?if(strlen($key) > 0 ){?>checked<?}else{?>no-check<?}?>" id="compare_today_<?=$arResult['ID'];?>" onclick="compare_product(<?=$arResult['ID'];?>,'<?=$arParams['COMPARE_PATH']?>');" <?if(strlen($key) > 0 ):?>checked<?endif?> <?if($countCompare>=5):?><?if(strlen($key) > 0 ){?><?}else{?>disabled<?}?><?endif;?>/>
+                    <label class="checkbox-lbl" for="compare_today_<?=$arResult['ID'];?>" onclick="compare_product_check(this)">Cравнить</label>
+                </div>
+                <div class="modal notification compare-full" id="compare-full-notification">
+                    <button class="btn btn-icon btn-close btn-close-modal"><svg class="icon"><use xlink:href="#cross"/></svg></button>
+                    <div class="item-text medium-text">Вы можете добавить к сравнению не более 5 товаров.</div>
                 </div>
                 <?/*end add compare*/?>
             </div>

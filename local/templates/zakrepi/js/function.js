@@ -1,6 +1,7 @@
 /*
 * route - путь до компонента /include/promo/list.php
 * page_number - номер страницы для подгрузки материала
+* route_param - параметры которые необходимо передать для подгрузки нужного контента является не обязательным параметром
 * */
 function ajax(route,route_url,page_number,route_param)
 {
@@ -209,6 +210,15 @@ function compare_product(id_product,url_compare)
                 }
             });
         }
+}
+/*Проверка на возможность добавить в сравнение*/
+function compare_product_check(id)
+{
+    if($('#'+$(id).attr('for')).prop('disabled') == true){
+        $('#compare-full-notification').css('top',$(id).offset().top - 500);
+        $('.dark-bg, #compare-full-notification').fadeIn(500);
+        return false;
+    }
 }
 /*обновить малую иконку сравнения*/
 function updateCompareMin()

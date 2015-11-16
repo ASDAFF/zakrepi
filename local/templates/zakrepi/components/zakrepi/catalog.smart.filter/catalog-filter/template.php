@@ -12,19 +12,278 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-$templateData = array(
+/*$templateData = array(
 	'TEMPLATE_THEME' => $this->GetFolder().'/themes/'.$arParams['TEMPLATE_THEME'].'/colors.css',
 	'TEMPLATE_CLASS' => 'bx-'.$arParams['TEMPLATE_THEME']
 );
-
-if (isset($templateData['TEMPLATE_THEME']))
+*/
+/*if (isset($templateData['TEMPLATE_THEME']))
 {
 	$this->addExternalCss($templateData['TEMPLATE_THEME']);
-}
+}*/
 /*$this->addExternalCss("/bitrix/css/main/bootstrap.css");
 $this->addExternalCss("/bitrix/css/main/font-awesome.css");*/
 
 ?>
+<pre><?print_r($_REQUEST);?></pre>
+<pre><?print_r($arResult);?></pre>
+<div class="filter">
+    <form name="<?echo $arResult["FILTER_NAME"]."_form"?>" action="<?echo $arResult["FORM_ACTION"]?>" method="get" class="smartfilter">
+        <?foreach($arResult["HIDDEN"] as $arItem):?>
+            <input type="hidden" name="<?echo $arItem["CONTROL_NAME"]?>" id="<?echo $arItem["CONTROL_ID"]?>" value="<?echo $arItem["HTML_VALUE"]?>" />
+        <?endforeach;?>
+        <?foreach($arResult["ITEMS"] as $key=>$arItem)//prices
+        {
+            $key = $arItem["ENCODED_ID"];
+            if(isset($arItem["PRICE"])):
+                if ($arItem["VALUES"]["MAX"]["VALUE"] - $arItem["VALUES"]["MIN"]["VALUE"] <= 0)
+                    continue;
+
+                $precision = 2;
+                if (Bitrix\Main\Loader::includeModule("currency"))
+                {
+                    $res = CCurrencyLang::GetFormatDescription($arItem["VALUES"]["MIN"]["CURRENCY"]);
+                    $precision = $res['DECIMALS'];
+                }
+                ?>
+                <div class="<?if ($arParams["FILTER_VIEW_MODE"] == "HORIZONTAL"):?>col-sm-6 col-md-4<?else:?>col-lg-12<?endif?> bx-filter-parameters-box bx-active">
+                    <span class="bx_filter_container_modef"></span>
+                    <div class="bx-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)"><span><?=$arItem["NAME"]?> <i data-role="prop_angle" class="fa fa-angle-<?if ($arItem["DISPLAY_EXPANDED"]== "Y"):?>up<?else:?>down<?endif?>"></i></span></div>
+                    <div class="bx-filter-block" data-role="bx_filter_block">
+                        <div class="row bx-filter-parameters-box-container">
+                            <div class="col-xs-6 bx-filter-parameters-box-container-block bx-left">
+                                <i class="bx-ft-sub"><?=GetMessage("CT_BCSF_FILTER_FROM")?></i>
+                                <div class="bx-filter-input-container">
+                                    <input
+                                        class="min-price"
+                                        type="text"
+                                        name="<?echo $arItem["VALUES"]["MIN"]["CONTROL_NAME"]?>"
+                                        id="<?echo $arItem["VALUES"]["MIN"]["CONTROL_ID"]?>"
+                                        value="<?echo $arItem["VALUES"]["MIN"]["HTML_VALUE"]?>"
+                                        size="5"
+                                        onkeyup="smartFilter.keyup(this)"
+                                        />
+                                </div>
+                            </div>
+                            <div class="col-xs-6 bx-filter-parameters-box-container-block bx-right">
+                                <i class="bx-ft-sub"><?=GetMessage("CT_BCSF_FILTER_TO")?></i>
+                                <div class="bx-filter-input-container">
+                                    <input
+                                        class="max-price"
+                                        type="text"
+                                        name="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>"
+                                        id="<?echo $arItem["VALUES"]["MAX"]["CONTROL_ID"]?>"
+                                        value="<?echo $arItem["VALUES"]["MAX"]["HTML_VALUE"]?>"
+                                        size="5"
+                                        onkeyup="smartFilter.keyup(this)"
+                                        />
+                                </div>
+                            </div>
+
+                            <div class="col-xs-10 col-xs-offset-1 bx-ui-slider-track-container">
+                                <div class="bx-ui-slider-track" id="drag_track_<?=$key?>">
+                                    <?
+                                    $precision = $arItem["DECIMALS"]? $arItem["DECIMALS"]: 0;
+                                    $step = ($arItem["VALUES"]["MAX"]["VALUE"] - $arItem["VALUES"]["MIN"]["VALUE"]) / 4;
+                                    $price1 = number_format($arItem["VALUES"]["MIN"]["VALUE"], $precision, ".", "");
+                                    $price2 = number_format($arItem["VALUES"]["MIN"]["VALUE"] + $step, $precision, ".", "");
+                                    $price3 = number_format($arItem["VALUES"]["MIN"]["VALUE"] + $step * 2, $precision, ".", "");
+                                    $price4 = number_format($arItem["VALUES"]["MIN"]["VALUE"] + $step * 3, $precision, ".", "");
+                                    $price5 = number_format($arItem["VALUES"]["MAX"]["VALUE"], $precision, ".", "");
+                                    ?>
+                                    <div class="bx-ui-slider-part p1"><span><?=$price1?></span></div>
+                                    <div class="bx-ui-slider-part p2"><span><?=$price2?></span></div>
+                                    <div class="bx-ui-slider-part p3"><span><?=$price3?></span></div>
+                                    <div class="bx-ui-slider-part p4"><span><?=$price4?></span></div>
+                                    <div class="bx-ui-slider-part p5"><span><?=$price5?></span></div>
+
+                                    <div class="bx-ui-slider-pricebar-vd" style="left: 0;right: 0;" id="colorUnavailableActive_<?=$key?>"></div>
+                                    <div class="bx-ui-slider-pricebar-vn" style="left: 0;right: 0;" id="colorAvailableInactive_<?=$key?>"></div>
+                                    <div class="bx-ui-slider-pricebar-v"  style="left: 0;right: 0;" id="colorAvailableActive_<?=$key?>"></div>
+                                    <div class="bx-ui-slider-range" id="drag_tracker_<?=$key?>"  style="left: 0%; right: 0%;">
+                                        <a class="bx-ui-slider-handle left"  style="left:0;" href="javascript:void(0)" id="left_slider_<?=$key?>"></a>
+                                        <a class="bx-ui-slider-handle right" style="right:0;" href="javascript:void(0)" id="right_slider_<?=$key?>"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?
+            $arJsParams = array(
+                "leftSlider" => 'left_slider_'.$key,
+                "rightSlider" => 'right_slider_'.$key,
+                "tracker" => "drag_tracker_".$key,
+                "trackerWrap" => "drag_track_".$key,
+                "minInputId" => $arItem["VALUES"]["MIN"]["CONTROL_ID"],
+                "maxInputId" => $arItem["VALUES"]["MAX"]["CONTROL_ID"],
+                "minPrice" => $arItem["VALUES"]["MIN"]["VALUE"],
+                "maxPrice" => $arItem["VALUES"]["MAX"]["VALUE"],
+                "curMinPrice" => $arItem["VALUES"]["MIN"]["HTML_VALUE"],
+                "curMaxPrice" => $arItem["VALUES"]["MAX"]["HTML_VALUE"],
+                "fltMinPrice" => intval($arItem["VALUES"]["MIN"]["FILTERED_VALUE"]) ? $arItem["VALUES"]["MIN"]["FILTERED_VALUE"] : $arItem["VALUES"]["MIN"]["VALUE"] ,
+                "fltMaxPrice" => intval($arItem["VALUES"]["MAX"]["FILTERED_VALUE"]) ? $arItem["VALUES"]["MAX"]["FILTERED_VALUE"] : $arItem["VALUES"]["MAX"]["VALUE"],
+                "precision" => $precision,
+                "colorUnavailableActive" => 'colorUnavailableActive_'.$key,
+                "colorAvailableActive" => 'colorAvailableActive_'.$key,
+                "colorAvailableInactive" => 'colorAvailableInactive_'.$key,
+            );
+            ?>
+                <script type="text/javascript">
+                    BX.ready(function(){
+                        window['trackBar<?=$key?>'] = new BX.Iblock.SmartFilter(<?=CUtil::PhpToJSObject($arJsParams)?>);
+                    });
+                </script>
+            <?endif;
+        }?>
+
+    </form>
+
+    <?/*
+    <ul class="filters-list collapsible" data-collapsible="expandable">
+        <li>
+            <div class="collapsible-header active">Тип</div>
+            <div class="collapsible-body">
+                <div class="collapsible-body-content">
+                    <p class="range-field">
+                        <input type="checkbox" id="type-1" class="custom" />
+                        <label class="checkbox-lbl" for="type-1">Сетевые (20)</label>
+                    </p>
+                    <p class="range-field">
+                        <input type="checkbox" id="type-2" class="custom" />
+                        <label class="checkbox-lbl" for="type-2">Аккумуляторные (30)</label>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <!-- .active - по умолчанию развернуто -->
+            <div class="collapsible-header active">Бренд</div>
+            <div class="collapsible-body">
+                <!-- если больше, чем data-show - .toggle-content-box, data-show - нужное количество, чтоб можно было настраивать в настройках компонента/фильтра, data-state - состояние по умолчанию (less/more) -->
+                <div class="collapsible-body-content toggle-content-box" data-show="5" data-state="less">
+                    <p class="range-field">
+                        <input type="checkbox" id="brend-1" class="custom" />
+                        <label class="checkbox-lbl" for="brend-1">Bosch (10)</label>
+                    </p>
+                    <p class="range-field">
+                        <input type="checkbox" id="brend-2" class="custom" />
+                        <label class="checkbox-lbl" for="brend-2">Makita (4)</label>
+                    </p>
+                    <p class="range-field">
+                        <input type="checkbox" id="brend-3" class="custom" />
+                        <label class="checkbox-lbl" for="brend-3">Зубр (3)</label>
+                    </p>
+                    <p class="range-field">
+                        <input type="checkbox" id="brend-4" class="custom" />
+                        <label class="checkbox-lbl" for="brend-4">AEG (4)</label>
+                    </p>
+                    <p class="range-field">
+                        <input type="checkbox" id="brend-4" class="custom" />
+                        <label class="checkbox-lbl" for="brend-4">Hitachi (4)</label>
+                    </p>
+                    <p class="range-field">
+                        <input type="checkbox" id="brend-4" class="custom" />
+                        <label class="checkbox-lbl" for="brend-4">Интерскол (5)</label>
+                    </p>
+                    <p class="range-field">
+                        <input type="checkbox" id="brend-4" class="custom" />
+                        <label class="checkbox-lbl" for="brend-4">FEIN (2)</label>
+                    </p>
+                    <!-- если больше, чем data-show -->
+                    <div class="show-buttons">
+                        <button class="btn-link show-more">Показать все</button>
+                        <button class="btn-link show-less">Свернуть</button>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header active">Тип патрона</div>
+            <div class="collapsible-body">
+                <div class="collapsible-body-content">
+                    <p class="range-field">
+                        <input type="checkbox" id="diagonal-1" class="custom" />
+                        <label class="checkbox-lbl" for="diagonal-1">Быстрозажимной (4)</label>
+                    </p>
+                    <p class="range-field">
+                        <input type="checkbox" id="diagonal-2" class="custom" />
+                        <label class="checkbox-lbl" for="diagonal-2">Квадрат 1’’ (6)</label>
+                    </p>
+                    <p class="range-field">
+                        <input type="checkbox" id="diagonal-3" class="custom" />
+                        <label class="checkbox-lbl" for="diagonal-3">Квадрат 1/2’’ (3)</label>
+                    </p>
+                    <p class="range-field">
+                        <input type="checkbox" id="check-4" class="custom" />
+                        <label class="checkbox-lbl" for="diagonal-4">Ключевой (4)</label>
+                    </p>
+                    <p class="range-field">
+                        <input type="checkbox" id="check-4" class="custom" />
+                        <label class="checkbox-lbl" for="diagonal-4">Под биты (3)</label>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">Диаметр патрона</div>
+            <div class="collapsible-body">
+                <div class="collapsible-body-content">
+                    <p class="range-field">
+                        <input type="checkbox" id="check-1" class="custom" />
+                        <label class="checkbox-lbl" for="check-1">Да (3)</label>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">Мощность</div>
+            <div class="collapsible-body">
+                <div class="collapsible-body-content">
+                    <p class="range-field">
+                        <input type="checkbox" id="check-1" class="custom" />
+                        <label class="checkbox-lbl" for="check-1">Да (3)</label>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">Макс. крутящий момент</div>
+            <div class="collapsible-body">
+                <div class="collapsible-body-content">
+                    <p class="range-field">
+                        <input type="checkbox" id="check-1" class="custom" />
+                        <label class="checkbox-lbl" for="check-1">Да (3)</label>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">Цена</div>
+            <div class="collapsible-body">
+                <div class="collapsible-body-content">
+                    <div class="range-field price">
+                        <div class="price-min">
+                            <input class="min-value inputtext-small" type="text" name="arrFilter_P1_MIN" id="arrFilter_P1_MIN">
+                            <label class="textfield-placeholder" for="arrFilter_P1_MIN">6 060</label>
+                            <span class="lbl-text">от</span>
+                        </div>
+                        <div class="price-max">
+                            <input class="max-value inputtext-small" type="text" name="arrFilter_P1_MAX" id="arrFilter_P1_MAX">
+                            <label class="textfield-placeholder" for="arrFilter_P1_MAX">19 060</label>
+                            <span class="lbl-text">до</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="actions">
+        <button class="btn standart-color mediumsize center">Сбросить</button>
+    </div>
+    */?>
+</div>
+
 <div class="bx-filter <?=$templateData["TEMPLATE_CLASS"]?> <?if ($arParams["FILTER_VIEW_MODE"] == "HORIZONTAL") echo "bx-filter-horizontal"?>">
 	<div class="bx-filter-section container-fluid">
 		<div class="row"><div class="<?if ($arParams["FILTER_VIEW_MODE"] == "HORIZONTAL"):?>col-sm-6 col-md-4<?else:?>col-lg-12<?endif?> bx-filter-title"><?echo GetMessage("CT_BCSF_FILTER_TITLE")?></div></div>

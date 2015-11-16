@@ -365,7 +365,9 @@ $(document).ready(function(){
 
     // tooltips
     // init
-    $('.tooltip').each(function(){
+    // tooltips
+    // init
+    $('.tooltip:not(.noaction)').each(function(){
         if($(this).attr('data-box')){
             var box = $($(this).attr('data-box'));
         } else {
@@ -447,9 +449,11 @@ $(document).ready(function(){
         var tooltip = $(this).attr('data-tooltip');
         tooltip.addClass('show');
     });
-    $('.btn.shopping-card').click(function(){
-        $('.tooltip[data-box="#minicard"]').addClass('show');
-    });
+
+   // $('.btn.shopping-card').click(function(){
+   //    $('.tooltip[data-box="#minicard"]').addClass('show');
+   //});
+
     // hide
     $('.tooltip .btn-close').click(function(){
         $(this).parents('.tooltip').removeClass('show');
