@@ -110,6 +110,19 @@ function listTradeOffer($id_product)
     }
     return $arOffers;
 }
+/*Получить наименование раздела*/
+function titleCatalog($code,$iblock_id)
+{
+    CModule::IncludeModule('iblock');
+    $arFilter = Array('IBLOCK_ID'=>$iblock_id, 'CODE'=>$code);
+    $db_list = CIBlockSection::GetList(Array(), $arFilter, true);
+    while($ar_result = $db_list->GetNext())
+    {
+        $result = $ar_result['NAME'];
+    }
+
+    return $result;
+}
 
 /*Аналог array_column в php 5.5*/
 
@@ -140,4 +153,13 @@ function array_column ($input, $columnKey, $indexKey = null) {
         $input    = &$result;
     }
     return $input;
+}
+
+/*для вывода слов в нужном падеже. Например, 1 товар, 2 товара, 5 товаров*/
+function wordForm($n, $form1, $form2, $form5){
+    $n = abs($n) % 100;
+    $n1 = $n % 10;
+    if ($n > 10 && $n < 20) return $form5;
+    if ($n1 > 1 && $n1 < 5) return $form2;
+    if ($n1 == 1) return $form1;return $form5;
 }

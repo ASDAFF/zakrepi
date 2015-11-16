@@ -58,7 +58,7 @@
         "META_DESCRIPTION" => "-",
         "SET_LAST_MODIFIED" => "N",
         "USE_MAIN_ELEMENT_SECTION" => "N",
-        "ADD_SECTIONS_CHAIN" => "N",
+        "ADD_SECTIONS_CHAIN" => "Y",
         "CACHE_FILTER" => "N",
         "ACTION_VARIABLE" => "action",
         "PRODUCT_ID_VARIABLE" => "id",
@@ -112,9 +112,7 @@
         "COMPARE_PATH" => "/compare/",
 
         /*id инфоблока торговова предложения*/
-        "ID_IBLOCK_OFFERS" => 9,
-
-
+        //"ID_IBLOCK_OFFERS" => 9,
     ),
     false
 );?>

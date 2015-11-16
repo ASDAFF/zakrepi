@@ -2615,12 +2615,12 @@ html {
 }
 
 /* line 55, scss/elements/_global.scss */
-.z-depth-1, .base-card, .compare-page .compare, .modal, .sidebar-menu, .filter, .product-card, .product-page .main-info {
+.z-depth-1, .base-card, .balloon, .compare-page .compare, .modal, .sidebar-menu, .filter, .product-card, .product-page .main-info {
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* line 58, scss/elements/_global.scss */
-.z-depth-2, .header-wrapper.fixed .header, .dropdown-list, .tooltip {
+.z-depth-2, .header-wrapper.fixed .header, .dropdown-list, .tooltip, .balloon {
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -2640,7 +2640,7 @@ html {
 }
 
 /* line 70, scss/elements/_global.scss */
-.base-card, .compare-page .compare, .modal {
+.base-card, .balloon, .compare-page .compare, .modal {
     background: white;
     border-radius: 6px;
     padding: 20px;
@@ -2648,27 +2648,27 @@ html {
     margin-bottom: 20px;
 }
 /* line 77, scss/elements/_global.scss */
-.base-card .title, .compare-page .compare .title, .modal .title {
+.base-card .title, .balloon .title, .compare-page .compare .title, .modal .title {
     margin-bottom: 10px;
 }
 /* line 80, scss/elements/_global.scss */
-.base-card .card-content, .compare-page .compare .card-content, .modal .card-content {
+.base-card .card-content, .balloon .card-content, .compare-page .compare .card-content, .modal .card-content {
     padding: 20px;
 }
 /* line 82, scss/elements/_global.scss */
-.base-card .card-content > *:first-child, .compare-page .compare .card-content > *:first-child, .modal .card-content > *:first-child {
+.base-card .card-content > *:first-child, .balloon .card-content > *:first-child, .compare-page .compare .card-content > *:first-child, .modal .card-content > *:first-child {
     margin-top: 0;
 }
 /* line 85, scss/elements/_global.scss */
-.base-card .card-content > *:last-child, .compare-page .compare .card-content > *:last-child, .modal .card-content > *:last-child {
+.base-card .card-content > *:last-child, .balloon .card-content > *:last-child, .compare-page .compare .card-content > *:last-child, .modal .card-content > *:last-child {
     margin-bottom: 0;
 }
 /* line 88, scss/elements/_global.scss */
-.base-card .card-content.big-g-padding, .compare-page .compare .card-content.big-g-padding, .modal .card-content.big-g-padding {
+.base-card .card-content.big-g-padding, .balloon .card-content.big-g-padding, .compare-page .compare .card-content.big-g-padding, .modal .card-content.big-g-padding {
     padding: 20px 60px;
 }
 /* line 92, scss/elements/_global.scss */
-.base-card.v-center, .compare-page .v-center.compare, .v-center.modal {
+.base-card.v-center, .v-center.balloon, .compare-page .v-center.compare, .v-center.modal {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -4184,8 +4184,15 @@ input[type="checkbox"] + .checkbox-lbl {
     line-height: 17px;
     vertical-align: middle;
     cursor: pointer;
+    will-change: color;
+    -webkit-transition: color .3s ease;
+    transition: color .3s ease;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-/* line 111, scss/elements/_form.scss */
+/* line 114, scss/elements/_form.scss */
 input[type="checkbox"] + .checkbox-lbl:before {
     content: '';
     display: inline-block;
@@ -4197,24 +4204,33 @@ input[type="checkbox"] + .checkbox-lbl:before {
     background-color: white;
     vertical-align: bottom;
 }
-/* line 123, scss/elements/_form.scss */
+/* line 126, scss/elements/_form.scss */
 input[type="checkbox"]:checked + .checkbox-lbl:before {
     background: white url("images/tick.png") center no-repeat;
 }
-
 /* line 129, scss/elements/_form.scss */
+input[type="checkbox"]:disabled + .checkbox-lbl {
+    color: #b9b9b9;
+    cursor: default;
+}
+
+/* line 136, scss/elements/_form.scss */
 input[type="radio"] {
     display: none;
 }
-/* line 131, scss/elements/_form.scss */
+/* line 138, scss/elements/_form.scss */
 input[type="radio"] + .radio-lbl {
     display: inline-block;
     margin: 3px 0;
     line-height: 19px;
     vertical-align: middle;
     cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-/* line 137, scss/elements/_form.scss */
+/* line 145, scss/elements/_form.scss */
 input[type="radio"] + .radio-lbl:before {
     content: '';
     display: inline-block;
@@ -4229,17 +4245,17 @@ input[type="radio"] + .radio-lbl:before {
     background-clip: content-box;
     vertical-align: top;
 }
-/* line 152, scss/elements/_form.scss */
+/* line 160, scss/elements/_form.scss */
 input[type="radio"]:checked + .radio-lbl:before {
     background-color: #ce2127;
 }
 
-/* line 157, scss/elements/_form.scss */
+/* line 165, scss/elements/_form.scss */
 .inline-field, .table-field, .promocode-field {
     vertical-align: baseline;
     margin: 1em 0;
 }
-/* line 160, scss/elements/_form.scss */
+/* line 168, scss/elements/_form.scss */
 .inline-field .label, .table-field .label, .promocode-field .label,
 .inline-field .first-field,
 .table-field .first-field,
@@ -4247,7 +4263,7 @@ input[type="radio"]:checked + .radio-lbl:before {
     display: inline-block;
     margin-right: 25px;
 }
-/* line 165, scss/elements/_form.scss */
+/* line 173, scss/elements/_form.scss */
 .inline-field > input:not(.dropdown-inp), .table-field > input:not(.dropdown-inp), .promocode-field > input:not(.dropdown-inp),
 .inline-field select,
 .table-field select,
@@ -4267,7 +4283,7 @@ input[type="radio"]:checked + .radio-lbl:before {
     display: inline-block;
     width: auto;
 }
-/* line 174, scss/elements/_form.scss */
+/* line 182, scss/elements/_form.scss */
 .inline-field .field input, .table-field .field input, .promocode-field .field input,
 .inline-field .second-field input,
 .table-field .second-field input,
@@ -4275,7 +4291,7 @@ input[type="radio"]:checked + .radio-lbl:before {
     width: 100%;
 }
 
-/* line 179, scss/elements/_form.scss */
+/* line 187, scss/elements/_form.scss */
 .table-field {
     display: -webkit-box;
     display: -webkit-flex;
@@ -4291,13 +4307,13 @@ input[type="radio"]:checked + .radio-lbl:before {
     -ms-flex-align: center;
     align-items: center;
 }
-/* line 185, scss/elements/_form.scss */
+/* line 193, scss/elements/_form.scss */
 .table-field .label,
 .table-field .first-field {
     width: 31%;
     margin-right: 10px;
 }
-/* line 190, scss/elements/_form.scss */
+/* line 198, scss/elements/_form.scss */
 .table-field > input,
 .table-field .field,
 .table-field .first-field + .second-field {
@@ -4305,51 +4321,51 @@ input[type="radio"]:checked + .radio-lbl:before {
     width: calc(69% - 15px);
     margin: 3px 0;
 }
-/* line 197, scss/elements/_form.scss */
+/* line 205, scss/elements/_form.scss */
 .table-field .second-field {
     float: right;
     width: 66%;
     width: calc(69% - 10px);
 }
-/* line 202, scss/elements/_form.scss */
+/* line 210, scss/elements/_form.scss */
 .table-field.cols-2 > input, .table-field.cols-2 > .field,
 .table-field .cols-2 .btn {
     width: calc((70% - 40px)/2);
     margin: 3px 7px;
 }
-/* line 207, scss/elements/_form.scss */
+/* line 215, scss/elements/_form.scss */
 .table-field.cols-2 > input input, .table-field.cols-2 > .field input,
 .table-field .cols-2 .btn input {
     width: 100%;
 }
-/* line 210, scss/elements/_form.scss */
+/* line 218, scss/elements/_form.scss */
 .table-field.cols-2 > input:first-of-type, .table-field.cols-2 > .field:first-of-type,
 .table-field .cols-2 .btn:first-of-type {
     margin-left: 0;
 }
-/* line 213, scss/elements/_form.scss */
+/* line 221, scss/elements/_form.scss */
 .table-field.cols-2 > input:last-of-type, .table-field.cols-2 > .field:last-of-type,
 .table-field .cols-2 .btn:last-of-type {
     margin-right: 0;
 }
-/* line 217, scss/elements/_form.scss */
+/* line 225, scss/elements/_form.scss */
 .table-field.cols-3 > input, .table-field.cols-3 > .field {
     width: calc((70% - 60px)/3);
     margin: 3px 5px;
 }
-/* line 221, scss/elements/_form.scss */
+/* line 229, scss/elements/_form.scss */
 .table-field.cols-3 > input input, .table-field.cols-3 > .field input {
     width: 100%;
 }
-/* line 224, scss/elements/_form.scss */
+/* line 232, scss/elements/_form.scss */
 .table-field.cols-3 > input:first-of-type, .table-field.cols-3 > .field:first-of-type {
     margin-left: 0;
 }
-/* line 227, scss/elements/_form.scss */
+/* line 235, scss/elements/_form.scss */
 .table-field.cols-3 > input:last-of-type, .table-field.cols-3 > .field:last-of-type {
     margin-right: 0;
 }
-/* line 231, scss/elements/_form.scss */
+/* line 239, scss/elements/_form.scss */
 .table-field.top-tf {
     display: -webkit-box;
     display: -webkit-flex;
@@ -4360,19 +4376,19 @@ input[type="radio"]:checked + .radio-lbl:before {
     -ms-flex-align: start;
     align-items: flex-start;
 }
-/* line 234, scss/elements/_form.scss */
+/* line 242, scss/elements/_form.scss */
 .table-field.top-tf .label,
 .table-field.top-tf .first-field {
     margin-top: 13px;
 }
-/* line 238, scss/elements/_form.scss */
+/* line 246, scss/elements/_form.scss */
 .table-field.top-tf > input,
 .table-field.top-tf .field,
 .table-field.top-tf .second-field {
     width: 66%;
     width: calc(69% - 10px);
 }
-/* line 245, scss/elements/_form.scss */
+/* line 253, scss/elements/_form.scss */
 .table-field.action-box {
     margin-top: 10px;
     -webkit-box-pack: end;
@@ -4380,17 +4396,17 @@ input[type="radio"]:checked + .radio-lbl:before {
     -ms-flex-pack: end;
     justify-content: flex-end;
 }
-/* line 249, scss/elements/_form.scss */
+/* line 257, scss/elements/_form.scss */
 .table-field.action-box .cols-2 .btn {
     width: calc((100% - 40px)/2);
     margin: 0;
 }
-/* line 252, scss/elements/_form.scss */
+/* line 260, scss/elements/_form.scss */
 .table-field.action-box .cols-2 .btn:first-child {
     margin-right: 35px;
 }
 
-/* line 259, scss/elements/_form.scss */
+/* line 267, scss/elements/_form.scss */
 select {
     box-sizing: border-box;
     border: 1px solid #d7d7d7;
@@ -4402,18 +4418,18 @@ select {
     vertical-align: baseline;
     cursor: pointer;
 }
-/* line 269, scss/elements/_form.scss */
+/* line 277, scss/elements/_form.scss */
 select option {
     max-width: 100%;
     color: #434343;
 }
 
-/* line 274, scss/elements/_form.scss */
+/* line 282, scss/elements/_form.scss */
 .select-box select {
     width: 100%;
 }
 
-/* line 277, scss/elements/_form.scss */
+/* line 285, scss/elements/_form.scss */
 .triangle {
     position: absolute;
     top: 1px;
@@ -4424,7 +4440,7 @@ select option {
     font-size: 15px;
     border-radius: 3px;
 }
-/* line 286, scss/elements/_form.scss */
+/* line 294, scss/elements/_form.scss */
 .triangle:after {
     content: '>';
     display: block;
@@ -4438,11 +4454,11 @@ select option {
     transform: rotate(90deg) scale(1, 2);
 }
 
-/* line 299, scss/elements/_form.scss */
+/* line 307, scss/elements/_form.scss */
 .quantity-field {
     display: inline-block;
 }
-/* line 302, scss/elements/_form.scss */
+/* line 310, scss/elements/_form.scss */
 .quantity-field .quantity-value {
     display: inline-block;
     width: 3em;
@@ -4456,7 +4472,7 @@ select option {
     color: #242424;
     border-radius: 0;
 }
-/* line 315, scss/elements/_form.scss */
+/* line 323, scss/elements/_form.scss */
 .quantity-field .btn-up,
 .quantity-field .btn-down {
     width: 1em;
@@ -4466,7 +4482,7 @@ select option {
     background: #f33b42;
     border: 0;
 }
-/* line 323, scss/elements/_form.scss */
+/* line 331, scss/elements/_form.scss */
 .quantity-field .btn-up:after,
 .quantity-field .btn-down:after {
     content: '';
@@ -4481,55 +4497,55 @@ select option {
     border-left-color: transparent;
     border-style: solid;
 }
-/* line 336, scss/elements/_form.scss */
+/* line 344, scss/elements/_form.scss */
 .quantity-field .btn-up:hover,
 .quantity-field .btn-down:hover {
     background: #ce2127;
 }
-/* line 339, scss/elements/_form.scss */
+/* line 347, scss/elements/_form.scss */
 .quantity-field .btn-up:disabled,
 .quantity-field .btn-down:disabled {
     background: #decdcd;
 }
-/* line 343, scss/elements/_form.scss */
+/* line 351, scss/elements/_form.scss */
 .quantity-field .btn-up {
     top: 0;
 }
-/* line 345, scss/elements/_form.scss */
+/* line 353, scss/elements/_form.scss */
 .quantity-field .btn-up:after {
     border-width: 0 3px 6px 3px;
 }
-/* line 349, scss/elements/_form.scss */
+/* line 357, scss/elements/_form.scss */
 .quantity-field .btn-down {
     top: 1em;
 }
-/* line 351, scss/elements/_form.scss */
+/* line 359, scss/elements/_form.scss */
 .quantity-field .btn-down:after {
     border-width: 6px 3px 0 3px;
 }
 
-/* line 356, scss/elements/_form.scss */
+/* line 364, scss/elements/_form.scss */
 .promocode-field {
     margin-top: 10px;
 }
-/* line 359, scss/elements/_form.scss */
+/* line 367, scss/elements/_form.scss */
 .promocode-field input {
     width: auto;
     max-width: calc(100% - 80px);
     margin-right: 20px;
 }
-/* line 364, scss/elements/_form.scss */
+/* line 372, scss/elements/_form.scss */
 .promocode-field .btn {
     padding: 0 20px;
 }
 
-/* line 370, scss/elements/_form.scss */
+/* line 378, scss/elements/_form.scss */
 .inputfile-box,
 .field.inputfile-box {
     margin: 10px 0;
 }
 
-/* line 375, scss/elements/_form.scss */
+/* line 383, scss/elements/_form.scss */
 .inputfile-box input[type="file"] {
     position: absolute;
     top: 0;
@@ -4540,7 +4556,7 @@ select option {
     opacity: 0;
     cursor: pointer;
 }
-/* line 385, scss/elements/_form.scss */
+/* line 393, scss/elements/_form.scss */
 .inputfile-box .inputfile {
     display: inline-block;
     margin-bottom: 20px;
@@ -4549,7 +4565,7 @@ select option {
     vertical-align: middle;
     max-width: 100%;
 }
-/* line 393, scss/elements/_form.scss */
+/* line 401, scss/elements/_form.scss */
 .inputfile-box .inputfile-value {
     display: none;
     height: 100%;
@@ -4564,11 +4580,11 @@ select option {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-/* line 406, scss/elements/_form.scss */
+/* line 414, scss/elements/_form.scss */
 .inputfile-box .inputfile-value.shown {
     display: inline-block;
 }
-/* line 410, scss/elements/_form.scss */
+/* line 418, scss/elements/_form.scss */
 .inputfile-box .btn-delete {
     position: absolute;
     top: 13px;
@@ -4581,21 +4597,21 @@ select option {
     -webkit-transition: -webkit-transform .3s ease;
     transition: transform .3s ease;
 }
-/* line 420, scss/elements/_form.scss */
+/* line 428, scss/elements/_form.scss */
 .inputfile-box .btn-delete .icon {
     fill: #ce2127;
 }
-/* line 423, scss/elements/_form.scss */
+/* line 431, scss/elements/_form.scss */
 .inputfile-box .btn-delete:hover {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
-/* line 427, scss/elements/_form.scss */
+/* line 435, scss/elements/_form.scss */
 .inputfile-box .btn-inputfile {
     padding: 0 2em;
 }
-/* line 430, scss/elements/_form.scss */
+/* line 438, scss/elements/_form.scss */
 .inputfile-box .note-text {
     display: block;
     vertical-align: middle;
@@ -4903,8 +4919,9 @@ select option {
 }
 
 /* line 75, scss/elements/_collapsible.scss */
-.base-card .collapsible-type-2:first-child li:first-child .collapsible-header, .compare-page .compare .collapsible-type-2:first-child li:first-child .collapsible-header, .modal .collapsible-type-2:first-child li:first-child .collapsible-header,
+.base-card .collapsible-type-2:first-child li:first-child .collapsible-header, .balloon .collapsible-type-2:first-child li:first-child .collapsible-header, .compare-page .compare .collapsible-type-2:first-child li:first-child .collapsible-header, .modal .collapsible-type-2:first-child li:first-child .collapsible-header,
 .base-card .card-content .collapsible-type-2:first-child li:first-child .collapsible-header,
+.balloon .card-content .collapsible-type-2:first-child li:first-child .collapsible-header,
 .compare-page .compare .card-content .collapsible-type-2:first-child li:first-child .collapsible-header,
 .modal .card-content .collapsible-type-2:first-child li:first-child .collapsible-header {
     border: 0;
@@ -5117,6 +5134,66 @@ select option {
 /* line 68, scss/elements/_tooltip.scss */
 .tooltip .tooltip-content p {
     margin: 0.5em 0;
+}
+
+/* line 72, scss/elements/_tooltip.scss */
+.tooltip.minicard-notification {
+    top: 65px;
+    right: 0;
+    width: 320px;
+    max-width: 100vw;
+}
+
+/* line 2, scss/elements/_balloon.scss */
+.balloon {
+    box-sizing: border-box;
+    width: 340px;
+    max-width: 96vw;
+    line-height: 1.5;
+}
+/* line 9, scss/elements/_balloon.scss */
+.balloon ymaps {
+    width: 100%;
+}
+/* line 12, scss/elements/_balloon.scss */
+.balloon .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+/* line 17, scss/elements/_balloon.scss */
+.balloon .balloon-header,
+.balloon .balloon-content {
+    width: 100%;
+    padding: 15px 0;
+}
+/* line 22, scss/elements/_balloon.scss */
+.balloon .balloon-header {
+    border-bottom: 1px solid #d7d7d7;
+}
+/* line 25, scss/elements/_balloon.scss */
+.balloon .title {
+    margin: 0 0 1em;
+}
+/* line 28, scss/elements/_balloon.scss */
+.balloon .phone {
+    margin-top: 5px;
+}
+/* line 31, scss/elements/_balloon.scss */
+.balloon .address {
+    margin-bottom: 10px;
+}
+/* line 34, scss/elements/_balloon.scss */
+.balloon .balloon-tngl {
+    width: 25px;
+    height: 16px;
+    position: absolute;
+    background: url("images/tooltip-tngl.png") center no-repeat;
+    bottom: -16px;
+    left: 30px;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 /* line 11, scss/components/_menu.scss */
@@ -5339,9 +5416,7 @@ select option {
     margin: 26px 0 10px;
 }
 /* line 7, scss/components/_breadcrumbs.scss */
-.breadcrumbs .brdcmb-curpage,
-.breadcrumbs .brdcmb-link:hover
-{
+.breadcrumbs .brdcmb-curpage {
     color: #ce2127;
 }
 
@@ -5472,8 +5547,7 @@ select option {
 /* line 26, scss/components/_product-card.scss */
 .product-card .item-name {
     margin: 23px 0 8px;
-   /* min-height: 3em; невходит наименование в 3 строки*/
-    min-height: 6em;
+    min-height: 3em;
 }
 /* line 34, scss/components/_product-card.scss */
 .product-card .product-price {
@@ -6352,7 +6426,7 @@ select option {
 .delete-from-card-box {
     top: -20px;
     right: 35px;
-    width: 445px;
+    width: 444px;
     max-width: 96vw;
     padding: 30px;
 }
@@ -6365,56 +6439,62 @@ select option {
     padding: 0 30px;
     margin: 10px;
 }
+/* line 30, scss/components/_basket.scss */
+.delete-from-card-box.delete-all {
+    top: 100px;
+    left: 50%;
+    margin-left: -222px;
+}
 
-/* line 31, scss/components/_basket.scss */
+/* line 36, scss/components/_basket.scss */
 .basket-table .sum,
 .total-sum-box .sum {
     font-size: 22px;
 }
 
-/* line 35, scss/components/_basket.scss */
+/* line 40, scss/components/_basket.scss */
 .page-title-basket {
     margin-top: 10px;
     margin-bottom: 15px;
 }
-/* line 38, scss/components/_basket.scss */
+/* line 43, scss/components/_basket.scss */
 .page-title-basket .btn-clear-basket {
     margin-top: 45px;
 }
 
-/* line 44, scss/components/_basket.scss */
+/* line 49, scss/components/_basket.scss */
 .btn-checkout {
     margin-bottom: 90px;
 }
 
-/* line 48, scss/components/_basket.scss */
+/* line 53, scss/components/_basket.scss */
 .checkout-page .page-title {
     margin-top: 25px;
     margin-bottom: 10px;
 }
-/* line 52, scss/components/_basket.scss */
+/* line 57, scss/components/_basket.scss */
 .checkout-page .page-note-text {
     margin-top: 0;
     margin-bottom: 30px;
 }
-/* line 56, scss/components/_basket.scss */
-.checkout-page .base-card, .checkout-page .compare-page .compare, .compare-page .checkout-page .compare, .checkout-page .modal {
+/* line 61, scss/components/_basket.scss */
+.checkout-page .base-card, .checkout-page .balloon, .checkout-page .compare-page .compare, .compare-page .checkout-page .compare, .checkout-page .modal {
     margin-bottom: 38px;
 }
-/* line 59, scss/components/_basket.scss */
+/* line 64, scss/components/_basket.scss */
 .checkout-page .delivery-address,
 .checkout-page .table-field.delivery-address {
     margin-top: 20px;
     margin-bottom: 0;
     display: block;
 }
-/* line 64, scss/components/_basket.scss */
+/* line 69, scss/components/_basket.scss */
 .checkout-page .delivery-address .label,
 .checkout-page .table-field.delivery-address .label {
     vertical-align: top;
     margin-top: 7px;
 }
-/* line 68, scss/components/_basket.scss */
+/* line 73, scss/components/_basket.scss */
 .checkout-page .delivery-address .select-box,
 .checkout-page .delivery-address .dropdown-box,
 .checkout-page .delivery-address .addr-actions,
@@ -6426,30 +6506,30 @@ select option {
     width: 66%;
     width: calc(70% - 20px);
 }
-/* line 75, scss/components/_basket.scss */
+/* line 80, scss/components/_basket.scss */
 .checkout-page .delivery-address .addr-actions,
 .checkout-page .table-field.delivery-address .addr-actions {
     margin-top: 8px;
 }
-/* line 77, scss/components/_basket.scss */
+/* line 82, scss/components/_basket.scss */
 .checkout-page .delivery-address .addr-actions a, .checkout-page .delivery-address .addr-actions .btn-link,
 .checkout-page .table-field.delivery-address .addr-actions a,
 .checkout-page .table-field.delivery-address .addr-actions .btn-link {
     margin-right: 12.5%;
 }
-/* line 82, scss/components/_basket.scss */
+/* line 87, scss/components/_basket.scss */
 .checkout-page .mrg {
     margin-top: 2em;
 }
-/* line 86, scss/components/_basket.scss */
+/* line 91, scss/components/_basket.scss */
 .checkout-page .total-sum-box .title {
     margin-bottom: 0;
 }
-/* line 89, scss/components/_basket.scss */
+/* line 94, scss/components/_basket.scss */
 .checkout-page .total-sum-box table {
     margin-bottom: 25px;
 }
-/* line 92, scss/components/_basket.scss */
+/* line 97, scss/components/_basket.scss */
 .checkout-page .total-sum-box table td {
     padding: 5px 0;
 }
@@ -6533,8 +6613,14 @@ select option {
     display: none;
     z-index: 9999;
 }
+/* line 17, scss/components/_modal.scss */
+.modal .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
 
-/* line 18, scss/components/_modal.scss */
+/* line 23, scss/components/_modal.scss */
 .modal.one-click-form-box {
     top: 235px;
     left: 50%;
@@ -6542,12 +6628,6 @@ select option {
     max-width: 100%;
     margin-left: -250px;
     padding: 40px;
-}
-/* line 25, scss/components/_modal.scss */
-.modal.one-click-form-box .btn-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
 }
 /* line 30, scss/components/_modal.scss */
 .modal.one-click-form-box .title {
@@ -6592,6 +6672,19 @@ select option {
 /* line 61, scss/components/_modal.scss */
 .modal.one-click-form-box .table-field.time-field .field {
     width: 53%;
+}
+
+/* line 69, scss/components/_modal.scss */
+.modal.notification {
+    padding: 40px;
+}
+/* line 71, scss/components/_modal.scss */
+.modal.notification.compare-full {
+    top: 100px;
+    left: 50%;
+    width: 354px;
+    max-width: 96vw;
+    margin-left: -177px;
 }
 
 /* line 2, scss/pages/_catalog.scss */
@@ -6673,11 +6766,11 @@ select option {
     margin-bottom: 120px;
 }
 /* line 32, scss/pages/_lk.scss */
-.profile-page .lk-boxes .base-card, .profile-page .lk-boxes .compare-page .compare, .compare-page .profile-page .lk-boxes .compare, .profile-page .lk-boxes .modal {
+.profile-page .lk-boxes .base-card, .profile-page .lk-boxes .balloon, .profile-page .lk-boxes .compare-page .compare, .compare-page .profile-page .lk-boxes .compare, .profile-page .lk-boxes .modal {
     padding-bottom: 95px;
 }
 /* line 34, scss/pages/_lk.scss */
-.profile-page .lk-boxes .base-card p, .profile-page .lk-boxes .compare-page .compare p, .compare-page .profile-page .lk-boxes .compare p, .profile-page .lk-boxes .modal p {
+.profile-page .lk-boxes .base-card p, .profile-page .lk-boxes .balloon p, .profile-page .lk-boxes .compare-page .compare p, .compare-page .profile-page .lk-boxes .compare p, .profile-page .lk-boxes .modal p {
     min-height: 1.5em;
 }
 /* line 38, scss/pages/_lk.scss */
@@ -6963,6 +7056,7 @@ select option {
 
 
 
+
 .btn.flat{
     width: 100%;
 }
@@ -7036,4 +7130,17 @@ div.loader-favorite{
     position: absolute;
     background: rgba(255, 255, 255, 0.5);
     z-index: 1;
+}
+.btn.loader{
+    padding: 0;
+}
+.btn.primary.gray{
+    background: #D4D4D4  !important;
+    border-color: #D4D4D4  !important;
+}
+/*Уменьшил что бы 2 строки было максимум в наименовании товара*/
+.product-card .item-name a{
+    max-height: 3em;
+    overflow: hidden;
+    display: block;
 }

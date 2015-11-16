@@ -34,8 +34,71 @@ foreach ($arResult['ITEMS'] as $key => $arItem) {
     );
     if(!empty($offers[$arItem['ID']]))
     {
+        $mxResult = CCatalogSKU::GetInfoByProductIBlock($arParams['IBLOCK_ID']);
         
         $arResult['ITEMS'][$key]['OFFERS'] = 'Y';
+        $offer = array();
+
+        $rsOffers = CIBlockElement::GetList(
+            array("PRICE"=>"ASC"),
+            array(
+                'IBLOCK_ID' => $mxResult['IBLOCK_ID'],
+                'PROPERTY_'.$mxResult['SKU_PROPERTY_ID'] => $arItem["ID"]
+            ),
+            false,
+            false,
+            array("ID","NAME","*")
+        );
+        $arrOffer = array();
+        $arrProp = array();
+        while ($arOffer = $rsOffers->GetNextElement()){
+            $arrOffer = $arOffer->GetFields();
+            $arrProp = $arOffer->GetProperties();
+            $arrOffer['PROPERTIES']['CML2_ATTRIBUTES'] = $arrProp['CML2_ATTRIBUTES'];
+
+            $price = CPrice::GetList(
+                array(),
+                array(
+                    "PRODUCT_ID" => $arrOffer['ID'],
+                    "CATALOG_GROUP_ID" => $arResult['PRICES_ALLOW'][0]
+                )
+            );
+            if ($ar_res = $price->Fetch())
+            {
+                $arrOffer['PRICE'] = $ar_res;
+            }
+            array_push($offer,$arrOffer);
+        }
+        $arResult['ITEMS'][$key]['OFFERS_LIST'] = $offer;
+        /*
+        $res = CCatalogSKU::getOffersList(
+            $arItem['ID'], // массив ID товаров
+            $iblockID = $arResult['IBLOCK_ID'], // указываете ID инфоблока только в том случае, когда ВЕСЬ массив товаров из одного инфоблока и он известен
+            $skuFilter = array(), // дополнительный фильтр предложений. по умолчанию пуст.
+            $fields = array('*'),  // массив полей предложений. даже если пуст - вернет ID и IBLOCK_ID
+            $propertyFilter = array('CML2_ATTRIBUTES')
+        );
+        $offer = array();
+        foreach($res[$arItem['ID']] as $item){
+
+            $price = CPrice::GetList(
+                array(),
+                array(
+                    "PRODUCT_ID" => $item['ID'],
+                    "CATALOG_GROUP_ID" => $arResult['PRICES_ALLOW'][0]
+                )
+            );
+            if ($ar_res = $price->Fetch())
+            {
+                $item['PRICE'] = $ar_res;
+            }
+
+            array_push($offer,$item);
+        }
+        //while($ob=$res->GetNext())
+       // {
+            $arResult['ITEMS'][$key]['OFFERS_LIST'] = $offer;
+       // }*/
     }
        // $arResult['ITEMS'][$key]['OFFERS'] = 'Y';
 }

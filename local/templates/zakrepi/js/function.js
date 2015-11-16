@@ -182,33 +182,56 @@ function uploadSmallBasket(id_elem)
 /*Добавление в сравниение товара*/
 function compare_product(id_product,url_compare)
 {
-    if($('#compare_today_'+id_product).prop('checked')) {
-        $.ajax({
-            type: "POST",
-            url: '' + url_compare + '',
-            data: {id: id_product, action: "ADD_TO_COMPARE_LIST"},
-            success: function (msg) {
-                //alert(msg);
-                /*BX.onCustomEvent('basket_update');
-                 $('.modal .name-products').html(msg);
-                 $('#add_basket_ok,.eclipse').show();*/
-                //$('.loader-small-basket').show();
-            }
-        });
-    }else{
-        $.ajax({
-            type: "POST",
-            url: '' + url_compare + '',
-            data: {ID: id_product, action: "DELETE_FROM_COMPARE_RESULT"},
-            success: function (msg) {
-                //alert(msg);
-                /*BX.onCustomEvent('basket_update');
-                 $('.modal .name-products').html(msg);
-                 $('#add_basket_ok,.eclipse').show();*/
-                //$('.loader-small-basket').show();
-            }
-        });
-    }
+    /*Проверка на превышение сравниваемых товаров*/
+        if ($('#compare_today_' + id_product).prop('checked')) {
+             $.ajax({
+                    type: "POST",
+                    url: '' + url_compare + '',
+                    data: {id: id_product, action: "ADD_TO_COMPARE_LIST"},
+                    success: function (msg) {
+                        $('#compare_today_' + id_product).removeClass('no-check');
+                        $('#compare_today_' + id_product).addClass('checked');
+                        checkCompare();
+                        updateCompareMin();
+                    }
+                });
+
+        } else {
+            $.ajax({
+                type: "POST",
+                url: '' + url_compare + '',
+                data: {ID: id_product, action: "DELETE_FROM_COMPARE_RESULT"},
+                success: function (msg) {
+                    $('#compare_today_' + id_product).addClass('no-check');
+                    $('#compare_today_' + id_product).removeClass('checked');
+                    checkCompare();
+                    updateCompareMin();
+                }
+            });
+        }
+}
+/*обновить малую иконку сравнения*/
+function updateCompareMin()
+{
+    $.ajax({
+        type: "POST",
+        url: "/includes/catalog/compare-min.php",
+        success: function(msg){
+            $('#compare-small').html(msg);
+        }
+    });
+}
+/*Проверка на превышение сравниваемых товаров*/
+function checkCompare(){
+    $.ajax({
+        type: "POST",
+        url: '/includes/catalog/compare-min.php',
+        data: {checkCompare: "Y"},
+        success: function (msg) {
+            if(msg == 'Y') $('.compare-input.no-check').attr('disabled','disabled');
+            else  $('.compare-input.no-check').removeAttr('disabled');
+        }
+    });
 }
 
 /*Добавление в избранное*/

@@ -1,7 +1,29 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("");?>
 <div class="workarea">
-    <h1 class="page-title">Гайковерты</h1>
+    <?
+        $title = titleCatalog($_REQUEST['code'],$arZSettings['CATALOG_ID']);
+    ?>
+    <h1 class="page-title"><?=$title?></h1>
+
+    <div class="row">
+        <div class="sort-box col l9">
+            <span class="sort-text">Сортировать по:</span>
+            <input type="radio" class="hide sort-ctrl" name="sort" id="sort-reviews" ng-model="sort" value="reviews" ng-init="sort = 'reviews'"/>
+            <label class="sort-item" for="sort-reviews">популярности</label>
+            <input type="radio" class="hide sort-ctrl" name="sort" id="sort-price" ng-model="sort" value="price"/>
+            <label class="sort-item" for="sort-price">цене</label>
+            <input type="radio" class="hide sort-ctrl" name="sort" id="sort-id" ng-model="sort" value="id"/>
+            <label class="sort-item" for="sort-id">новизне</label>
+            <input type="radio" class="hide sort-ctrl" name="sort" id="sort-rating" ng-model="sort" value="rating"/>
+            <label class="sort-item" for="sort-rating">рейтингу</label>
+        </div>
+
+        <div class="compare-box col l3" id="compare-small">
+            <?include($_SERVER['DOCUMENT_ROOT'].'/includes/catalog/compare-min.php')?>
+
+        </div>
+    </div>
 
     <div class="row">
         <div class="filter-box col l3">
@@ -12,37 +34,10 @@ $APPLICATION->SetTitle("");?>
             <div class="product-list clearfix">
 
                 <?include($_SERVER['DOCUMENT_ROOT'].'/includes/catalog/catalog.php')?>
-                <div class="item col l3" ng-repeat="product in products | orderBy:sort:true">
-                    <div class="product-card">
-                        <div class="product-info">
-                            <a class="item-img" href="product__single.php" style="background-image:url({{product.image}});"></a>
-                            <div class="item-name"><a href="product__single.php">{{product.name}}</a></div>
-                            <div ng-class="'rating rate-'+product.rating">
-                                <svg class="star"><use xlink:href="#star"/></svg>
-                                <svg class="star"><use xlink:href="#star"/></svg>
-                                <svg class="star"><use xlink:href="#star"/></svg>
-                                <svg class="star"><use xlink:href="#star"/></svg>
-                                <svg class="star"><use xlink:href="#star"/></svg>
-                            </div>
-                            <div class="product-price">
-                                <div class="old-price" ng-if="product.oldprice">{{product.oldprice}} <i class="rouble">i</i></div>
-                                <!-- в цене тысячи отделить неразрывным пробелом &nbsp; -->
-                                <div class="price">{{product.price}} <i class="rouble">i</i></div>
-                            </div>
-                            <a href="#" class="shopping-card btn btn-icon primary">
-                                <svg class="icon"><use xlink:href="#cart"/></svg>
-                            </a>
-                        </div>
-                        <div class="compare">
-                            <input type="checkbox" id="compare_today_{{product.id}}" />
-                            <label class="checkbox-lbl" for="compare_today_{{product.id}}">Cравнить</label>
-                        </div>
-                    </div>
-                </div>
-                <div>
+               <?/* <div>
                     <a class="btn flat fullwidth big btn-more" href="#">Показать еще</a>
-                    Навигация
                 </div>
+                */?>
             </div>
             <div class="col l12">
                 <div class="text-box">

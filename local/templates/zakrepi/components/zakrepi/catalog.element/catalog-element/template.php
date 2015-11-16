@@ -276,34 +276,34 @@ $strAlt = (
 
                 <!-- если есть -->
                     <div class="product-options">
-                    <div class="inline-field clearfix">
-                        <span class="label">Размер</span>
-                        <div class="select-box hide-on-large-only">
-                            <select name="prod-size-sel" id="select_<?=$arItemIDs['ADD_BASKET_LINK']?>" onchange="select_prop('select_<?=$arItemIDs['ADD_BASKET_LINK']?>','<?=$arItemIDs['ADD_BASKET_LINK']?>','Y');" >
-                                <?foreach($offers as $i=>$itemOffer):?>
-                                    <option value="<?=$itemOffer['ID']?>" data-price="<?=$itemOffer['PRICE']?>" <?if($i==0):?>selected<?endif;?>><?=$itemOffer['OPTION'];?></option>
-                                <?endforeach;?>
-                            </select>
-                            <div class="triangle"></div>
-                        </div>
-                        <div class="dropdown-box hide-on-med-and-down right">
-                            <div class="dropdown-value">
-                                <div class="item-text"></div>
+                        <div class="inline-field clearfix">
+                            <span class="label">Размер</span>
+                            <div class="select-box hide-on-large-only">
+                                <select name="prod-size-sel" id="select_<?=$arItemIDs['ADD_BASKET_LINK']?>" onchange="select_prop('select_<?=$arItemIDs['ADD_BASKET_LINK']?>','<?=$arItemIDs['ADD_BASKET_LINK']?>','Y');" >
+                                    <?foreach($offers as $i=>$itemOffer):?>
+                                        <option value="<?=$itemOffer['ID']?>" data-price="<?=$itemOffer['PRICE']?>" <?if($i==0):?>selected<?endif;?>><?=$itemOffer['OPTION'];?></option>
+                                    <?endforeach;?>
+                                </select>
                                 <div class="triangle"></div>
                             </div>
-                            <ul class="dropdown-list select-synh hide-on-med-and-down" data-select="select_<?=$arItemIDs['ADD_BASKET_LINK']?>">
-                                <?foreach($offers as $i=>$itemOffer):?>
-                                <li class="dropdown-item"  <?if($i==0):?>data-active="active"<?endif;?>>
-                                    <input type="radio" class="dropdown-inp" name="prod-size" value="<?=$itemOffer['ID']?>" id="prod-size-rad-v<?=$i?>" <?if($i==0):?>checked="checked"<?endif;?> data-value-text="<?=$itemOffer['OPTION'];?>"/>
-                                    <label class="dropdown-title" for="prod-size-rad-v<?=$i?>">
-                                        <div class="item-text"><?=$itemOffer['OPTION'];?></div>
-                                    </label>
-                                </li>
-                                <?endforeach;?>
-                            </ul>
+                            <div class="dropdown-box hide-on-med-and-down right">
+                                <div class="dropdown-value">
+                                    <div class="item-text"></div>
+                                    <div class="triangle"></div>
+                                </div>
+                                <ul class="dropdown-list select-synh hide-on-med-and-down" data-select="select_<?=$arItemIDs['ADD_BASKET_LINK']?>">
+                                    <?foreach($offers as $i=>$itemOffer):?>
+                                    <li class="dropdown-item"  <?if($i==0):?>data-active="active"<?endif;?>>
+                                        <input type="radio" class="dropdown-inp" name="prod-size" value="<?=$itemOffer['ID']?>" id="prod-size-rad-v<?=$i?>" <?if($i==0):?>checked="checked"<?endif;?> data-value-text="<?=$itemOffer['OPTION'];?>"/>
+                                        <label class="dropdown-title" for="prod-size-rad-v<?=$i?>">
+                                            <div class="item-text"><?=$itemOffer['OPTION'];?></div>
+                                        </label>
+                                    </li>
+                                    <?endforeach;?>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
                 <?/*end options product*/?>
                 <?endif;?>
                 <?/*add basket*/?>
@@ -339,7 +339,7 @@ $strAlt = (
                     $key = array_search($arResult['ID'], array_column($arCompare, 'ID'));
                 ?>
                 <div class="compare">
-                    <input type="checkbox" id="compare_today_<?=$arResult['ID'];?>" onchange="compare_product(<?=$arResult['ID'];?>,'<?=$arParams['COMPARE_PATH']?>');" <?if(strlen($key) > 0 ):?>checked<?endif?>/>
+                    <input type="checkbox" id="compare_today_<?=$arResult['ID'];?>" onclick="compare_product(<?=$arResult['ID'];?>,'<?=$arParams['COMPARE_PATH']?>');" <?if(strlen($key) > 0 ):?>checked<?endif?>/>
                     <label class="checkbox-lbl" for="compare_today_<?=$arResult['ID'];?>">Cравнить</label>
                 </div>
                 <?/*end add compare*/?>

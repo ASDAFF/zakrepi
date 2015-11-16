@@ -16,7 +16,6 @@ $this->setFrameMode(true);
 if (!empty($arResult['ITEMS']))
 {
 ?>
-    <pre><?print_r($arResult['ITEMS']);?></pre>
 <div class="bx_catalog_list_home col<? echo $arParams['LINE_ELEMENT_COUNT']; ?> <? echo $templateData['TEMPLATE_CLASS']; ?>">
     <?
 foreach ($arResult['ITEMS'] as $key => $arItem)
@@ -40,6 +39,8 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 		'NOT_AVAILABLE_MESS' => $strMainID.'_not_avail',
 		'SUBSCRIBE_LINK' => $strMainID.'_subscribe',
 		'COMPARE_LINK' => $strMainID.'_compare_link',
+
+        'ADD_BASKET_LINK' => 'add_basket_'.$strMainID,
 
 		'PRICE' => $strMainID.'_price',
 		'DSC_PERC' => $strMainID.'_dsc_perc',
@@ -66,7 +67,7 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
 	$minPrice = false;
 	if (isset($arItem['MIN_PRICE']) || isset($arItem['RATIO_PRICE']))
 		$minPrice = (isset($arItem['RATIO_PRICE']) ? $arItem['RATIO_PRICE'] : $arItem['MIN_PRICE']);
-
+    $price = 0;
 	?>
     <?
     /*Получаем изоброажение товара*/
@@ -74,6 +75,10 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
     ?>
     <div class="item col l3">
         <div class="product-card">
+            <?/*
+            <pre><?print_r($arItem['OFFERS']);?></pre>
+            <pre><?print_r($arItem['OFFERS_LIST']);?></pre>
+            */?>
             <div class="product-info">
                 <a class="item-img center-align" href="<? echo $arItem['DETAIL_PAGE_URL']; ?>">
                     <img src="<? echo $file['src']; ?>"/>
@@ -90,53 +95,107 @@ foreach ($arResult['ITEMS'] as $key => $arItem)
                     <svg class="star"><use xlink:href="#star"/></svg>
                     <svg class="star"><use xlink:href="#star"/></svg>
                 </div>
-                <div class="product-price">
-                    <?/*?>
-                    <div class="old-price" ><i class="rouble">i</i></div>
-                    <?*/?>
-                    <!-- в цене тысячи отделить неразрывным пробелом &nbsp; -->
+
+                <?
+                $offers = array();
+                foreach($arItem['OFFERS_LIST'] as $i=>$itemOffer):
+                   // $minPrice = (isset($itemOffer['RATIO_PRICE']) ? $itemOffer['RATIO_PRICE'] : $itemOffer['MIN_PRICE']);
+                    $option = '';
+                    foreach($itemOffer['PROPERTIES']['CML2_ATTRIBUTES']['VALUE'] as $a=>$item):
+                        if($a==0){ $option .= $item;}
+                        else{$option .= ' '.$item;}
+                    endforeach;
+                    $offers[$i]['ID'] = $itemOffer['ID'];
+                    $offers[$i]['PRICE'] = $itemOffer['PRICE']['PRICE'];
+                    $offers[$i]['OPTION'] = $option;
+                    $offers[$i]['NAME'] = $itemOffer['NAME'];
+                endforeach;?>
+                <? if($arItem['OFFERS'] == 'Y'):?>
+                    <!-- если есть -->
+                    <div class="product-options">
+                        <div class="inline-field clearfix">
+                            <span class="label">Размер</span>
+                            <div class="select-box hide-on-large-only">
+                                <select name="prod-size-sel" id="select_<?=$arItemIDs['ADD_BASKET_LINK']?>" onchange="select_prop('select_<?=$arItemIDs['ADD_BASKET_LINK']?>','<?=$arItemIDs['ADD_BASKET_LINK']?>','Y');" >
+                                    <?foreach($offers as $i=>$itemOffer):?>
+                                        <option value="<?=$itemOffer['ID']?>" data-price="<?=$itemOffer['PRICE']?>" <?if($i==0):?>selected<?endif;?>><?=$itemOffer['OPTION'];?></option>
+                                    <?endforeach;?>
+                                </select>
+                                <div class="triangle"></div>
+                            </div>
+                            <div class="dropdown-box hide-on-med-and-down right">
+                                <div class="dropdown-value">
+                                    <div class="item-text"></div>
+                                    <div class="triangle"></div>
+                                </div>
+                                <ul class="dropdown-list select-synh hide-on-med-and-down" data-select="select_<?=$arItemIDs['ADD_BASKET_LINK']?>">
+                                    <?foreach($offers as $i=>$itemOffer):?>
+                                        <li class="dropdown-item"  <?if($i==0):?>data-active="active"<?endif;?>>
+                                            <input type="radio" class="dropdown-inp" name="prod-size" value="<?=$itemOffer['ID']?>" id="prod-size-rad-<?=$arItemIDs['ADD_BASKET_LINK']?>-<?=$i?>" <?if($i==0):?>checked="checked"<?endif;?> data-value-text="<?=$itemOffer['OPTION'];?>"/>
+                                            <label class="dropdown-title" for="prod-size-rad-<?=$arItemIDs['ADD_BASKET_LINK']?>-<?=$i?>">
+                                                <div class="item-text"><?=$itemOffer['OPTION'];?></div>
+                                            </label>
+                                        </li>
+                                    <?endforeach;?>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <?endif;?>
+                <?
+                if (!empty($minPrice))
+                {
+                    $price = $minPrice['DISCOUNT_VALUE'];
+                }
+                if($arItem['OFFERS'] == 'Y')
+                {
+                    $price = $arItem['OFFERS_LIST'][0]['PRICE']['PRICE'];
+                }
+                unset($minPrice);
+                ?>
+                <?if($price != 0){?>
+
+                    <div class="product-price">
+                        <?/*?>
+                        <div class="old-price" ><i class="rouble">i</i></div>
+                        <?*/?>
+                        <!-- в цене тысячи отделить неразрывным пробелом &nbsp; -->
+
+                        <div class="price" id="price_<?=$arItemIDs['ADD_BASKET_LINK']?>" ><?=priceShow($price);?></div>
+                    </div>
                     <?
-                    if (!empty($minPrice))
-                    {
-                        if ('N' == $arParams['PRODUCT_DISPLAY_MODE'] && isset($arItem['OFFERS']) && !empty($arItem['OFFERS']))
-                        {
-                            echo GetMessage(
-                                'CT_BCS_TPL_MESS_PRICE_SIMPLE_MODE',
-                                array(
-                                    '#PRICE#' => $minPrice['PRINT_DISCOUNT_VALUE'],
-                                    '#MEASURE#' => GetMessage(
-                                        'CT_BCS_TPL_MESS_MEASURE_SIMPLE_MODE',
-                                        array(
-                                            '#VALUE#' => $minPrice['CATALOG_MEASURE_RATIO'],
-                                            '#UNIT#' => $minPrice['CATALOG_MEASURE_NAME']
-                                        )
-                                    )
-                                )
-                            );
-                        }
-                        else
-                        {
-                           // echo $minPrice['PRINT_DISCOUNT_VALUE'];
-                            $price = $minPrice['DISCOUNT_VALUE'];
-                        }
-                        if ('Y' == $arParams['SHOW_OLD_PRICE'] && $minPrice['DISCOUNT_VALUE'] < $minPrice['VALUE'])
-                        {
-                            $price = $minPrice['DISCOUNT_VALUE'];
-
-                        }
-                    }
-
-                    unset($minPrice);
+                        $addBasket = '';
+                        if(!empty($arItem['OFFERS_LIST'])){$addBasket = 'add_basket(\''.$offers[0]['ID'].'\',\''.$arItemIDs['ADD_BASKET_LINK'].'\')';}else{$addBasket = 'add_basket(\''.$arResult['ID'].'\',\''.$arItemIDs['ADD_BASKET_LINK'].'\')';}
                     ?>
-                    <div class="price"><?=priceShow($price);?></div>
-                </div>
-                <a href="#" class="shopping-card btn btn-icon primary">
-                    <svg class="icon"><use xlink:href="#cart"/></svg>
-                </a>
+
+                    <span class="btn center  shopping-card btn-icon loader" id="loader-<? echo $arItemIDs['ADD_BASKET_LINK']; ?>" style="display:none;">
+                            <img src="/local/templates/zakrepi/images/svg/loader.svg" width="40"/>
+                    </span>
+                    <a href="javascript:void(0);" onclick="<?=$addBasket?>" class="shopping-card btn btn-icon primary" id="<?=$arItemIDs['ADD_BASKET_LINK']?>">
+                        <svg class="icon"><use xlink:href="#cart"/></svg>
+                    </a>
+                <?}else{?>
+                    <div class="product-price">
+                        <?/*?>
+                        <div class="old-price" ><i class="rouble">i</i></div>
+                        <?*/?>
+                        <!-- в цене тысячи отделить неразрывным пробелом &nbsp; -->
+
+                        <div class="price" id="price_<?=$arItemIDs['ADD_BASKET_LINK']?>" ></div>
+                    </div>
+                    <a href="javascript:void(0);"  class="shopping-card btn btn-icon primary gray" id="<?=$arItemIDs['ADD_BASKET_LINK']?>">
+                        <svg class="icon"><use xlink:href="#cart"/></svg>
+                    </a>
+                <?}?>
             </div>
+            <?
+            $arCompare = $_SESSION["CATALOG_COMPARE_LIST"][$arResult['IBLOCK_ID']]["ITEMS"];
+            $key = array_search($arItem['ID'], array_column($arCompare, 'ID'));
+            $countCompare = count($arCompare);
+            ?>
             <div class="compare">
-                <input type="checkbox" id="compare_today_{{product.id}}" />
-                <label class="checkbox-lbl" for="compare_today_{{product.id}}">Cравнить</label>
+                <input type="checkbox" class="compare-input <?if(strlen($key) > 0 ){?>checked<?}else{?>no-check<?}?>" id="compare_today_<?=$arItem['ID'];?>" onclick="compare_product(<?=$arItem['ID'];?>,'<?=$arParams['COMPARE_PATH']?>');" <?if(strlen($key) > 0 ):?>checked<?endif?> <?if($countCompare>=5):?><?if(strlen($key) > 0 ){?>checked<?}else{?>disabled<?}?><?endif;?>/>
+                <label class="checkbox-lbl" for="compare_today_<?=$arItem['ID'];?>">Cравнить</label>
             </div>
         </div>
     </div>
