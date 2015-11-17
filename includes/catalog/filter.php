@@ -5,7 +5,9 @@ elseif(in_array(5,CUser::GetUserGroup(CUser::GetID()))) $type_price = "Розн�
 else $type_price = "Розничная";//Розничная
 $APPLICATION->IncludeComponent(
     "zakrepi:catalog.smart.filter",
-    "catalog-filter",
+    //"catalog-filter",
+    "catalog-filter-ajax",
+    //"visual_vertical",
     //"",
     Array(
         "COMPONENT_TEMPLATE" => ".default",
@@ -26,7 +28,7 @@ $APPLICATION->IncludeComponent(
         "CACHE_TIME" => "36000000",
         "CACHE_GROUPS" => "Y",
         "SAVE_IN_SESSION" => "N",
-        "INSTANT_RELOAD" => "N",
+        "INSTANT_RELOAD" => "Y",
         "PAGER_PARAMS_NAME" => "arrPager",
         "CONVERT_CURRENCY" => "N",
         "XML_EXPORT" => "N",
