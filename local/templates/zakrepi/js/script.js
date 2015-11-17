@@ -313,6 +313,7 @@ $(document).ready(function(){
         return false;
         //e.preventDefault;
     });
+
     $('.toggle-content-box').each(function(){
         if($(this).attr('data-state')){
             var state = $(this).attr('data-state');
@@ -326,6 +327,7 @@ $(document).ready(function(){
         }
         toggleContent($(this), 'init', state, num);
     });
+
     $('.show-buttons .show-more').click(function(){
         toggleContent($(this).parents('.toggle-content-box'), 'toggle', 'more', $(this).parents('.toggle-content-box').attr('data-show'));
         $(this).hide().siblings().show();
@@ -363,8 +365,6 @@ $(document).ready(function(){
         return false;
     });
 
-    // tooltips
-    // init
     // tooltips
     // init
     $('.tooltip:not(.noaction)').each(function(){
@@ -496,7 +496,7 @@ function position() {
 }
 function toggleContent(el,action,state,num){
     // default
-    if(!action){
+    /*if(!action){
         action = 'init';
     }
     if(!state){
@@ -525,7 +525,7 @@ function toggleContent(el,action,state,num){
         } else if (state == 'more') {
             el.animate({'height': moreHeight},300).attr('data-state', 'less');;
         }
-    }
+    }*/
 }
 function tab(){
     console.log('ok');
