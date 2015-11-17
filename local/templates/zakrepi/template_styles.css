@@ -4863,7 +4863,7 @@ select option {
 /* line 17, scss/elements/_collapsible.scss */
 .collapsible.sidebar-menu > .menu-item > .menu-link,
 .collapsible .collapsible-header {
-    padding: 18px 20px 16px;
+    padding: 18px 40px 16px 20px;
     line-height: 1;
     cursor: pointer;
     min-height: 50px;

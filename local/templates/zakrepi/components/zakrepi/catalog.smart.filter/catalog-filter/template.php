@@ -123,8 +123,7 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");*/
             <div class="bx-filter-block" data-role="bx_filter_block">
             <div class="bx-filter-parameters-box-container">
             <?*/?>
-            <li>
-            <div class="collapsible-header"><?=$arItem['NAME']?></div>
+
             <?
             $arCur = current($arItem["VALUES"]);
             switch ($arItem["DISPLAY_TYPE"])
@@ -135,6 +134,8 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");*/
                     $value_min = number_format($arItem["VALUES"]["MIN"]["VALUE"], $precision, ".", "");
                     $value_max = number_format($arItem["VALUES"]["MAX"]["VALUE"], $precision, ".", "");
                     ?>
+                    <li>
+                    <div class="collapsible-header"><?=$arItem['NAME']?></div>
                     <div class="collapsible-body">
                         <div class="collapsible-body-content">
                             <div class="range-field price">
@@ -166,10 +167,13 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");*/
                             </div>
                         </div>
                     </div>
+                    </li>
                     <?
                     break;
                 case "B"://NUMBERS
                     ?>
+                    <li>
+                    <div class="collapsible-header"><?=$arItem['NAME']?></div>
                     <div class="collapsible-body">
                         <div class="collapsible-body-content">
                             <div class="range-field price">
@@ -201,6 +205,7 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");*/
                             </div>
                         </div>
                     </div>
+                    </li>
                     <?
                     break;
                 case "G"://CHECKBOXES_WITH_PICTURES
@@ -412,6 +417,8 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");*/
                     break;
                 case "K"://RADIO_BUTTONS
                     ?>
+                    <li>
+                    <div class="collapsible-header"><?=$arItem['NAME']?></div>
                     <div class="radio">
                         <label class="bx_filter_param_label" for="<? echo "all_".$arCur["CONTROL_ID"] ?>">
 											<span class="bx_filter_input_checkbox">
@@ -445,6 +452,7 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");*/
 												</span>
                         </label>
                     </div>
+                    </li>
                 <?endforeach;?>
                     <?
                     break;
@@ -489,6 +497,12 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");*/
                 default://CHECKBOXES
                     ?>
                         <?$data_show = 5;?>
+                    <?
+                        /*Поиск checked элментов*/
+                        $key = array_search(1, array_column($arItem["VALUES"], 'CHECKED'));
+                    ?>
+                        <li>
+                        <div class="collapsible-header <?if(strlen($key) > 0 ){?>active<?}?>"><?=$arItem['NAME']?></div>
                         <div class="collapsible-body">
                             <!-- если больше, чем data-show - .toggle-content-box, data-show - нужное количество, чтоб можно было настраивать в настройках компонента/фильтра, data-state - состояние по умолчанию (less/more) -->
                             <div class="collapsible-body-content toggle-content-box" data-show="<?=$data_show?>" data-state="less">
@@ -513,6 +527,7 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");*/
                                 <?endif;?>
                             </div>
                         </div>
+                    </li>
                     <?/*foreach($arItem["VALUES"] as $val => $ar):?>
                         <div class="checkbox">
                             <label data-role="label_<?=$ar["CONTROL_ID"]?>" class="bx_filter_param_label <? echo $ar["DISABLED"] ? 'disabled': '' ?>" for="<? echo $ar["CONTROL_ID"] ?>">
@@ -536,7 +551,6 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");*/
                     <?
             }
             ?>
-            </li>
             <?/*</div>
             <div style="clear: both"></div>
             </div>

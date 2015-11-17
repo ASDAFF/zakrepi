@@ -1,5 +1,9 @@
 <?require($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');?>
-<?$APPLICATION->IncludeComponent(
+<?
+if(in_array(6,CUser::GetUserGroup(CUser::GetID()))) $type_price = "Оптовая";//Оптовая
+elseif(in_array(5,CUser::GetUserGroup(CUser::GetID()))) $type_price = "Розничная";//Розничная
+else $type_price = "Розничная";//Розничная
+$APPLICATION->IncludeComponent(
     "zakrepi:catalog.smart.filter",
     "catalog-filter",
     //"",
@@ -10,7 +14,7 @@
         "SECTION_ID" => "",//$_REQUEST["SECTION_ID"],
         "SECTION_CODE" => $_REQUEST["code"],
 
-        "PRICE_CODE" =>  array("Оптовая", "Розничная"),
+        "PRICE_CODE" =>  array($type_price),
 
         "FILTER_NAME" => "arrFilter",
         "HIDE_NOT_AVAILABLE" => "N",

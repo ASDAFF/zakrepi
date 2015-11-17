@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9b94893a-e1d6-4c97-9d95-37d54e5f8c7a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/catalog/filter.php" afterPath="$PROJECT_DIR$/includes/catalog/filter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/js/script.js" afterPath="$PROJECT_DIR$/local/templates/zakrepi/js/script.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/template.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/template_styles.css" afterPath="$PROJECT_DIR$/local/templates/zakrepi/template_styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zakrepi.iws" />
@@ -30,21 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="catalog.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/catalog/catalog.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="1224" max-vertical-offset="2176">
-              <caret line="72" column="10" selection-start-line="64" selection-start-column="24" selection-end-line="67" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="template.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8076925" vertical-offset="8365" max-vertical-offset="22814">
-              <caret line="504" column="233" selection-start-line="504" selection-start-column="233" selection-end-line="504" selection-end-column="233" />
+            <state vertical-scroll-proportion="0.4457143" vertical-offset="8195" max-vertical-offset="23052">
+              <caret line="505" column="54" selection-start-line="505" selection-start-column="54" selection-end-line="505" selection-end-column="54" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
@@ -53,23 +43,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cCityFranchise.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/modules/cityfranchise/classes/cCityFranchise.php">
+      <file leaf-file-name="function.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local/php_interface/include/function.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="442">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1446748010781" expanded="true" signature="511:541" placeholder="SELECT * FRO..b_franchise_city..." />
-              </folding>
+            <state vertical-scroll-proportion="-11.769231" vertical-offset="1887" max-vertical-offset="2890">
+              <caret line="129" column="28" selection-start-line="129" selection-start-column="28" selection-end-line="129" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.element/catalog-element/template.php">
+        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.section/catalog-section/template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.192308" vertical-offset="4508" max-vertical-offset="10812">
-              <caret line="293" column="146" selection-start-line="293" selection-start-column="91" selection-end-line="293" selection-end-column="146" />
+            <state vertical-scroll-proportion="-11.769231" vertical-offset="3026" max-vertical-offset="3927">
+              <caret line="196" column="83" selection-start-line="196" selection-start-column="60" selection-end-line="196" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -98,8 +86,28 @@
       <file leaf-file-name="filter.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/catalog/filter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.037037" vertical-offset="0" max-vertical-offset="629">
-              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+            <state vertical-scroll-proportion="-11.018518" vertical-offset="0" max-vertical-offset="697">
+              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compare/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="1088">
+              <caret line="19" column="20" selection-start-line="16" selection-start-column="12" selection-end-line="19" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template_styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/template_styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.0" vertical-offset="82397" max-vertical-offset="121567">
+              <caret line="4865" column="32" selection-start-line="4865" selection-start-column="32" selection-end-line="4865" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -108,18 +116,8 @@
       <file leaf-file-name="result_modifier.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.section/catalog-section/result_modifier.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-130.61539" vertical-offset="650" max-vertical-offset="9299">
-              <caret line="239" column="5" selection-start-line="239" selection-start-column="5" selection-end-line="239" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="component.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.section/component.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33255813" vertical-offset="4236" max-vertical-offset="23494">
-              <caret line="269" column="71" selection-start-line="269" selection-start-column="54" selection-end-line="269" selection-end-column="71" />
+            <state vertical-scroll-proportion="-47.73077" vertical-offset="0" max-vertical-offset="9299">
+              <caret line="74" column="47" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -129,7 +127,7 @@
         <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/js/function.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="8721">
-              <caret line="105" column="20" selection-start-line="105" selection-start-column="9" selection-end-line="105" selection-end-column="20" />
+              <caret line="113" column="53" selection-start-line="113" selection-start-column="53" selection-end-line="113" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -188,7 +186,6 @@
         <option value="$PROJECT_DIR$/compare/.section.php" />
         <option value="$PROJECT_DIR$/local/php_interface/include/function.php" />
         <option value="$PROJECT_DIR$/includes/catalog/compare-min.php" />
-        <option value="$PROJECT_DIR$/local/templates/zakrepi/template_styles.css" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.element/catalog-element/template.php" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/footer.php" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/header.php" />
@@ -197,8 +194,9 @@
         <option value="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.section/catalog-section/template.php" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/js/function.js" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/js/script.js" />
-        <option value="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/template.php" />
         <option value="$PROJECT_DIR$/includes/catalog/filter.php" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/template_styles.css" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/template.php" />
       </list>
     </option>
   </component>
@@ -305,18 +303,12 @@
               <option name="myItemId" value="local" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
+              <option name="myItemId" value="zakrepi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -339,6 +331,14 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zakrepi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -353,6 +353,10 @@
               <option name="myItemId" value="catalog.section" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog-section" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -364,7 +368,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
+              <option name="myItemId" value="local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zakrepi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zakrepi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zakrepi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zakrepi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zakrepi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compare" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -434,7 +478,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -489,13 +533,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.smart.filter/.parameters.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4478595" vertical-offset="2346" max-vertical-offset="4080">
-          <caret line="163" column="29" selection-start-line="163" selection-start-column="29" selection-end-line="163" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.smart.filter/class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="17578">
@@ -528,6 +565,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32189348" vertical-offset="0" max-vertical-offset="845">
           <caret line="16" column="32" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -612,6 +650,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -619,22 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.60505164" vertical-offset="0" max-vertical-offset="1088">
           <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/php_interface/include/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2788" max-vertical-offset="2890">
-          <caret line="164" column="1" selection-start-line="164" selection-start-column="1" selection-end-line="164" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/template_styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="121465" max-vertical-offset="121567">
-          <caret line="7145" column="0" selection-start-line="7145" selection-start-column="0" selection-end-line="7145" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -701,13 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.section/catalog-section/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.734375" vertical-offset="3095" max-vertical-offset="3927">
-          <caret line="218" column="13" selection-start-line="218" selection-start-column="13" selection-end-line="218" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/script.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="858">
@@ -767,22 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/result_modifier.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="731">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/js/function.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="8721">
-          <caret line="105" column="20" selection-start-line="105" selection-start-column="9" selection-end-line="105" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.element/catalog-element/template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.192308" vertical-offset="4508" max-vertical-offset="10812">
@@ -804,7 +804,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="914">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1446748010781" expanded="true" signature="511:541" placeholder="SELECT * FRO..b_franchise_city..." />
+            <marker date="1446748010781" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..b_franchise_city..." />
           </folding>
         </state>
       </provider>
@@ -817,14 +817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-132.32143" vertical-offset="4880" max-vertical-offset="9248">
-          <caret line="505" column="16" selection-start-line="505" selection-start-column="16" selection-end-line="505" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/catalog/catalog.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="2176">
@@ -833,38 +825,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/template.php">
+    <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.section/component.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8076925" vertical-offset="8365" max-vertical-offset="22814">
-          <caret line="504" column="233" selection-start-line="504" selection-start-column="233" selection-end-line="504" selection-end-column="233" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.37209302" vertical-offset="4236" max-vertical-offset="23494">
+          <caret line="271" column="47" selection-start-line="271" selection-start-column="47" selection-end-line="271" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/js/function.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="8721">
+          <caret line="113" column="53" selection-start-line="113" selection-start-column="53" selection-end-line="113" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/catalog/filter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.037037" vertical-offset="0" max-vertical-offset="629">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        <state vertical-scroll-proportion="-11.018518" vertical-offset="0" max-vertical-offset="697">
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compare/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="1088">
+          <caret line="19" column="20" selection-start-line="16" selection-start-column="12" selection-end-line="19" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/template_styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.0" vertical-offset="82397" max-vertical-offset="121567">
+          <caret line="4865" column="32" selection-start-line="4865" selection-start-column="32" selection-end-line="4865" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-132.32143" vertical-offset="4880" max-vertical-offset="9248">
+          <caret line="505" column="16" selection-start-line="505" selection-start-column="16" selection-end-line="505" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/result_modifier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="731">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/php_interface/include/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231" vertical-offset="1887" max-vertical-offset="2890">
+          <caret line="129" column="28" selection-start-line="129" selection-start-column="28" selection-end-line="129" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.section/catalog-section/result_modifier.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-130.61539" vertical-offset="650" max-vertical-offset="9299">
-          <caret line="239" column="5" selection-start-line="239" selection-start-column="5" selection-end-line="239" selection-end-column="5" />
+        <state vertical-scroll-proportion="-47.73077" vertical-offset="0" max-vertical-offset="9299">
+          <caret line="74" column="47" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.section/component.php">
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.section/catalog-section/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33255813" vertical-offset="4236" max-vertical-offset="23494">
-          <caret line="269" column="71" selection-start-line="269" selection-start-column="54" selection-end-line="269" selection-end-column="71" />
+        <state vertical-scroll-proportion="-11.769231" vertical-offset="3026" max-vertical-offset="3927">
+          <caret line="196" column="83" selection-start-line="196" selection-start-column="60" selection-end-line="196" selection-end-column="83" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4457143" vertical-offset="8195" max-vertical-offset="23052">
+          <caret line="505" column="54" selection-start-line="505" selection-start-column="54" selection-end-line="505" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
