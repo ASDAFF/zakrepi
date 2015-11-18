@@ -12,32 +12,39 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-/*$templateData = array(
-	'TEMPLATE_THEME' => $this->GetFolder().'/themes/'.$arParams['TEMPLATE_THEME'].'/colors.css',
-	'TEMPLATE_CLASS' => 'bx_'.$arParams['TEMPLATE_THEME']
-);*/
 ?>
-<div class="filter">
+<div class="bx_filter filter">
     <form name="<?echo $arResult["FILTER_NAME"]."_form"?>" action="<?echo $arResult["FORM_ACTION"]?>" method="get" class="smartfilter">
         <?foreach($arResult["HIDDEN"] as $arItem):?>
             <input type="hidden" name="<?echo $arItem["CONTROL_NAME"]?>" id="<?echo $arItem["CONTROL_ID"]?>" value="<?echo $arItem["HTML_VALUE"]?>" />
         <?endforeach;?>
+        <?
+            $active_elements = 5;
+            $countActive = 0;
+        ?>
         <ul class="filters-list collapsible" data-collapsible="expandable">
         <?
         //prices
         foreach($arResult["ITEMS"] as $key=>$arItem)
         {
         $key = $arItem["ENCODED_ID"];
-        if(isset($arItem["PRICE"])):
-        if ($arItem["VALUES"]["MAX"]["VALUE"] - $arItem["VALUES"]["MIN"]["VALUE"] <= 0)
-        continue;
+            if(isset($arItem["PRICE"])):
+                if ($arItem["VALUES"]["MAX"]["VALUE"] - $arItem["VALUES"]["MIN"]["VALUE"] <= 0)
+                continue;
         ?>
             <?
-                $price_min = $arItem["VALUES"]["MIN"]["VALUE"];
-                $price_max = $arItem["VALUES"]["MAX"]["VALUE"];
+                if(is_positive_int($arItem["VALUES"]["MIN"]["VALUE"]))
+                    $price_min = number_format($arItem["VALUES"]["MIN"]["VALUE"],0,'',' ');
+                else
+                    $price_min = number_format($arItem["VALUES"]["MIN"]["VALUE"],2,'',' ');
+
+                if(is_positive_int($arItem["VALUES"]["MIN"]["VALUE"]))
+                    $price_max = number_format($arItem["VALUES"]["MAX"]["VALUE"],0,'',' ');
+                else
+                    $price_max = number_format($arItem["VALUES"]["MAX"]["VALUE"],2,'',' ');
             ?>
             <li>
-                <div class="collapsible-header active">Цена</div>
+                <div class="collapsible-header <?if($countActive <= $active_elements):?>active<?$countActive++; endif;?>">Цена</div>
                 <div class="collapsible-body">
                     <div class="collapsible-body-content">
                         <div class="range-field price">
@@ -50,7 +57,7 @@ $this->setFrameMode(true);
                                     value="<?echo $arItem["VALUES"]["MIN"]["HTML_VALUE"]?>"
                                     onkeyup="smartFilter.keyup(this)"
                                     />
-                                <label class="textfield-placeholder" for="<?echo $arItem["VALUES"]["MIN"]["CONTROL_NAME"]?>"><?=$price_min?></label>
+                                <label class="textfield-placeholder" for="<?echo $arItem["VALUES"]["MIN"]["CONTROL_ID"]?>"><?=$price_min?></label>
                                 <span class="lbl-text">от</span>
                             </div>
                             <div class="price-max">
@@ -63,15 +70,15 @@ $this->setFrameMode(true);
                                     size="5"
                                     onkeyup="smartFilter.keyup(this)"
                                     />
-                                <label class="textfield-placeholder" for="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>"><?=$price_max?></label>
+                                <label class="textfield-placeholder" for="<?echo $arItem["VALUES"]["MAX"]["CONTROL_ID"]?>"><?=$price_max?></label>
                                 <span class="lbl-text">до</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </li>
-    <?endif;
-    }
+        <?endif;
+        }
         //not prices
         foreach($arResult["ITEMS"] as $key=>$arItem)
         {
@@ -98,7 +105,7 @@ $this->setFrameMode(true);
                     $value_max = $arItem["VALUES"]["MAX"]["VALUE"];
                     ?>
                     <li>
-                        <div class="collapsible-header"><?=$arItem['NAME']?></div>
+                        <div class="collapsible-header <?if($countActive <= $active_elements):?>active<?$countActive++; endif;?>"><?=$arItem['NAME']?></div>
                         <div class="collapsible-body">
                             <div class="collapsible-body-content">
                                 <div class="range-field price">
@@ -111,7 +118,7 @@ $this->setFrameMode(true);
                                             value="<?echo $arItem["VALUES"]["MIN"]["HTML_VALUE"]?>"
                                             onkeyup="smartFilter.keyup(this)"
                                             />
-                                        <label class="textfield-placeholder" for="<?echo $arItem["VALUES"]["MIN"]["CONTROL_NAME"]?>"><?=$value_min?></label>
+                                        <label class="textfield-placeholder" for="<?echo $arItem["VALUES"]["MIN"]["CONTROL_ID"]?>"><?=$value_min?></label>
                                         <span class="lbl-text">от</span>
                                     </div>
                                     <div class="price-max">
@@ -124,7 +131,7 @@ $this->setFrameMode(true);
                                             size="5"
                                             onkeyup="smartFilter.keyup(this)"
                                             />
-                                        <label class="textfield-placeholder" for="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>"><?=$value_max?></label>
+                                        <label class="textfield-placeholder" for="<?echo $arItem["VALUES"]["MAX"]["CONTROL_ID"]?>"><?=$value_max?></label>
                                         <span class="lbl-text">до</span>
                                     </div>
                                 </div>
@@ -136,7 +143,7 @@ $this->setFrameMode(true);
                 case "B"://NUMBERS
                     ?>
                     <li>
-                        <div class="collapsible-header"><?=$arItem['NAME']?></div>
+                        <div class="collapsible-header <?if($countActive <= $active_elements):?>active<?$countActive++; endif;?>"><?=$arItem['NAME']?></div>
                         <div class="collapsible-body">
                             <div class="collapsible-body-content">
                                 <div class="range-field price">
@@ -149,7 +156,7 @@ $this->setFrameMode(true);
                                             value="<?echo $arItem["VALUES"]["MIN"]["HTML_VALUE"]?>"
                                             onkeyup="smartFilter.keyup(this)"
                                             />
-                                        <label class="textfield-placeholder" for="<?echo $arItem["VALUES"]["MIN"]["CONTROL_NAME"]?>"><?=$value_min?></label>
+                                        <label class="textfield-placeholder" for="<?echo $arItem["VALUES"]["MIN"]["CONTROL_ID"]?>"><?=$value_min?></label>
                                         <span class="lbl-text">от</span>
                                     </div>
                                     <div class="price-max">
@@ -162,7 +169,7 @@ $this->setFrameMode(true);
                                             size="5"
                                             onkeyup="smartFilter.keyup(this)"
                                             />
-                                        <label class="textfield-placeholder" for="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>"><?=$value_max?></label>
+                                        <label class="textfield-placeholder" for="<?echo $arItem["VALUES"]["MAX"]["CONTROL_ID"]?>"><?=$value_max?></label>
                                         <span class="lbl-text">до</span>
                                     </div>
                                 </div>
@@ -378,7 +385,7 @@ $this->setFrameMode(true);
                     ?>
 
                     <li>
-                    <div class="collapsible-header"><?=$arItem['NAME']?></div>
+                    <div class="collapsible-header <?if($countActive <= $active_elements):?>active<?$countActive++; endif;?>"><?=$arItem['NAME']?></div>
                     <div class="radio">
                         <label class="bx_filter_param_label" for="<? echo "all_".$arCur["CONTROL_ID"] ?>">
 											<span class="bx_filter_input_checkbox">
@@ -457,12 +464,8 @@ $this->setFrameMode(true);
                 default://CHECKBOXES
                     ?>
                     <?$data_show = 5;?>
-                    <?
-                    /*Поиск checked элментов*/
-                    $key = array_search(1, array_column($arItem["VALUES"], 'CHECKED'));
-                    ?>
                         <li>
-                            <div class="collapsible-header <?if(strlen($key) > 0 ){?>active<?}?>"><?=$arItem['NAME']?></div>
+                            <div class="collapsible-header  <?if($countActive <= $active_elements):?>active<?$countActive++; endif;?> <?if($arItem["DISPLAY_EXPANDED"]):?>active<?endif?>"><?=$arItem['NAME']?></div>
                             <div class="collapsible-body">
                                 <!-- если больше, чем data-show - .toggle-content-box, data-show - нужное количество, чтоб можно было настраивать в настройках компонента/фильтра, data-state - состояние по умолчанию (less/more) -->
                                 <div class="collapsible-body-content toggle-content-box" data-show="<?=$data_show?>" data-state="less">
@@ -478,7 +481,7 @@ $this->setFrameMode(true);
                                                 <? echo $ar["DISABLED"] ? 'disabled="disabled"': '' ?>
                                                 onclick="smartFilter.click(this)"
                                                 />
-                                            <label class="checkbox-lbl" for="<? echo $ar["CONTROL_ID"] ?>"><?=$ar["VALUE"];?> <? if ($arParams["DISPLAY_ELEMENT_COUNT"] !== "N" && isset($ar["ELEMENT_COUNT"])): echo '('.$ar["ELEMENT_COUNT"].')'; endif;?></label>
+                                            <label class="checkbox-lbl" data-role="label_<?=$ar["CONTROL_ID"]?>" for="<? echo $ar["CONTROL_ID"] ?>"><?=$ar["VALUE"];?> <? if ($arParams["DISPLAY_ELEMENT_COUNT"] !== "N" && isset($ar["ELEMENT_COUNT"])): echo '('.$ar["ELEMENT_COUNT"].')'; endif;?></label>
                                         </p>
                                     <?endforeach;?>
                                     <?if(count($arItem["VALUES"]) > $data_show):?>
@@ -524,6 +527,13 @@ $this->setFrameMode(true);
             </div>
     </form>
 </div>
+<?/*?>
 <script>
-	var smartFilter = new JCSmartFilter('<?echo CUtil::JSEscape($arResult["FORM_ACTION"])?>', 'vertical');
+    var smartFilter = new JCSmartFilter('<?echo CUtil::JSEscape($arResult["FORM_ACTION"])?>', '<?=CUtil::JSEscape($arParams["FILTER_VIEW_MODE"])?>', <?=CUtil::PhpToJSObject($arResult["JS_FILTER_PARAMS"])?>);
 </script>
+<?*/?>
+<??>
+<script>
+	var smartFilter = new JCSmartFilter('<?echo CUtil::JSEscape($arResult["FORM_ACTION"])?>', '');
+</script>
+<??>

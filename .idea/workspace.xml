@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b94893a-e1d6-4c97-9d95-37d54e5f8c7a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/catalog/filter.php" afterPath="$PROJECT_DIR$/includes/catalog/filter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/script.js" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/script.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/template.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/template.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zakrepi.iws" />
@@ -29,72 +30,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/template.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.076923" vertical-offset="4720" max-vertical-offset="5984">
-              <caret line="316" column="8" selection-start-line="316" selection-start-column="8" selection-end-line="316" selection-end-column="13" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/template.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.962963" vertical-offset="7705" max-vertical-offset="9078">
-              <caret line="469" column="61" selection-start-line="469" selection-start-column="50" selection-end-line="469" selection-end-column="61" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#0;n#label#0;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#0;n#label#1;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#0;n#div#1;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#1;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#label#0;n#li#1;n#ul#0;n#div#2;n#div#0;n#div#1;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4341637" vertical-offset="1623" max-vertical-offset="13583">
-              <caret line="117" column="70" selection-start-line="117" selection-start-column="70" selection-end-line="117" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="filter.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/catalog/filter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.4629629" vertical-offset="0" max-vertical-offset="731">
-              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+            <state vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="731">
+              <caret line="23" column="39" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.smart.filter/templates/visual_vertical/template.php">
+      <file leaf-file-name="template.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-196.53847" vertical-offset="4274" max-vertical-offset="10030">
-              <caret line="552" column="47" selection-start-line="552" selection-start-column="47" selection-end-line="552" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.456" vertical-offset="332" max-vertical-offset="9248">
+              <caret line="43" column="91" selection-start-line="43" selection-start-column="91" selection-end-line="43" selection-end-column="91" />
+              <folding>
+                <element signature="e#10100#10121#0#HTML" expanded="true" />
+                <element signature="e#11273#11329#0#HTML" expanded="true" />
+                <element signature="e#11775#11796#0#HTML" expanded="true" />
+                <element signature="e#12813#12869#0#HTML" expanded="true" />
+                <element signature="e#14715#14736#0#HTML" expanded="true" />
+                <element signature="e#15156#15177#0#HTML" expanded="true" />
+                <element signature="e#15701#15723#0#HTML" expanded="true" />
+                <element signature="e#18177#18233#0#HTML" expanded="true" />
+                <element signature="e#19107#19128#0#HTML" expanded="true" />
+                <element signature="e#19548#19569#0#HTML" expanded="true" />
+                <element signature="e#20087#20108#0#HTML" expanded="true" />
+                <element signature="e#20187#20267#0#HTML" expanded="true" />
+                <element signature="e#21776#21832#0#HTML" expanded="true" />
+                <element signature="e#30395#30441#0#HTML" expanded="true" />
+                <element signature="e#30798#30818#0#HTML" expanded="true" />
+                <element signature="e#31348#31378#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="init.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local/php_interface/init.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="391">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="function.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local/php_interface/include/function.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.153846" vertical-offset="434" max-vertical-offset="2890">
+              <caret line="38" column="46" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -110,11 +97,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="xml.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/xml.php">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.269231" vertical-offset="309" max-vertical-offset="1564">
-              <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+            <state vertical-scroll-proportion="-13.25" vertical-offset="2995" max-vertical-offset="13685">
+              <caret line="198" column="17" selection-start-line="198" selection-start-column="17" selection-end-line="198" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.smart.filter/templates/.default/template.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.3703704" vertical-offset="152" max-vertical-offset="11067">
+              <caret line="26" column="92" selection-start-line="26" selection-start-column="76" selection-end-line="26" selection-end-column="92" />
               <folding />
             </state>
           </provider>
@@ -125,6 +122,29 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-2.6153846" vertical-offset="663" max-vertical-offset="2176">
               <caret line="43" column="25" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.smart.filter/templates/visual_vertical/template.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.189874" vertical-offset="9185" max-vertical-offset="10030">
+              <caret line="583" column="103" selection-start-line="583" selection-start-column="95" selection-end-line="583" selection-end-column="103" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/ajax.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="187">
+              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -192,17 +212,17 @@
         <option value="$PROJECT_DIR$/local/components/zakrepi/catalog.smart.filter/templates/.default/template.php" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/template.php" />
         <option value="$PROJECT_DIR$/includes/catalog/filter.php" />
-        <option value="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/template.php" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/script.js" />
+        <option value="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/template.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -246,7 +266,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -278,12 +297,22 @@
               <option name="myItemId" value="local" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="zakrepi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="zakrepi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php_interface" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -301,131 +330,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="php_interface" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog.smart.filter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog-filter-ajax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog.smart.filter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
+              <option name="myItemId" value="include" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -445,6 +354,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -482,15 +392,15 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -509,7 +419,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -519,19 +429,19 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27238807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2750533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -557,27 +467,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.section/catalog-section/.parameters.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4369">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/modules/catalog/general/catalog_sku.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9009434" vertical-offset="5358" max-vertical-offset="10421">
-          <caret line="414" column="37" selection-start-line="414" selection-start-column="22" selection-end-line="414" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/system.pagenavigation/pagen/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-34.5" vertical-offset="89" max-vertical-offset="2992">
-          <caret line="58" column="69" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.top.menu_ext.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="527">
@@ -733,13 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33260393" vertical-offset="17291" max-vertical-offset="76500">
-          <caret line="1035" column="0" selection-start-line="1035" selection-start-column="0" selection-end-line="1035" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.section/component.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37209302" vertical-offset="4236" max-vertical-offset="23494">
@@ -751,404 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="82397" max-vertical-offset="121567">
           <caret line="4865" column="28" selection-start-line="4865" selection-start-column="28" selection-end-line="4865" selection-end-column="28" />
-          <folding>
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447781510677" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/php_interface/include/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37824476" vertical-offset="1887" max-vertical-offset="2890">
-          <caret line="129" column="28" selection-start-line="129" selection-start-column="28" selection-end-line="129" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1157,7 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37824476" vertical-offset="3026" max-vertical-offset="3927">
           <caret line="196" column="83" selection-start-line="196" selection-start-column="60" selection-end-line="196" selection-end-column="83" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1165,7 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="4.2537313" vertical-offset="4880" max-vertical-offset="9248">
           <caret line="505" column="16" selection-start-line="505" selection-start-column="16" selection-end-line="505" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1181,7 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="9299">
           <caret line="74" column="47" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1189,6 +670,131 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31228474" vertical-offset="1581" max-vertical-offset="8721">
           <caret line="113" column="53" selection-start-line="113" selection-start-column="53" selection-end-line="113" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08047337" vertical-offset="0" max-vertical-offset="845">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/component_epilog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="187">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/.parameters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.46863905" vertical-offset="396" max-vertical-offset="1343">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/script.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/script.map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="858">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="14535">
+          <caret line="30" column="49" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30289534" vertical-offset="255" max-vertical-offset="23103">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/js/main/core/core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3325301" vertical-offset="22436" max-vertical-offset="93211">
+          <caret line="1336" column="1" selection-start-line="1336" selection-start-column="0" selection-end-line="1336" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/xml.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4131403" vertical-offset="309" max-vertical-offset="1564">
+          <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3329776" vertical-offset="19782" max-vertical-offset="76500">
+          <caret line="1182" column="17" selection-start-line="1182" selection-start-column="17" selection-end-line="1182" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/modules/main/tools.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96213806" vertical-offset="80294" max-vertical-offset="110262">
+          <caret line="4779" column="26" selection-start-line="4779" selection-start-column="26" selection-end-line="4779" selection-end-column="26" />
+          <folding>
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1446552906156" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="187">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.smart.filter/templates/visual_vertical/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.05940594" vertical-offset="1720" max-vertical-offset="13515">
+          <caret line="98" column="27" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1201,86 +807,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/modules/main/tools.php">
+    <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.smart.filter/templates/visual_vertical/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.37139422" vertical-offset="79121" max-vertical-offset="110330">
-          <caret line="4641" column="5" selection-start-line="4641" selection-start-column="5" selection-end-line="4641" selection-end-column="5" />
+        <state vertical-scroll-proportion="-9.189874" vertical-offset="9185" max-vertical-offset="10030">
+          <caret line="583" column="103" selection-start-line="583" selection-start-column="95" selection-end-line="583" selection-end-column="103" />
           <folding>
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1447584728459" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08047337" vertical-offset="0" max-vertical-offset="845">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/component_epilog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="187">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/.parameters.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.46863905" vertical-offset="396" max-vertical-offset="1343">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/script.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/script.map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="858">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/xml.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.269231" vertical-offset="309" max-vertical-offset="1564">
-          <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1294,86 +828,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.smart.filter/templates/.default/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="13.442786" vertical-offset="72" max-vertical-offset="11067">
-          <caret line="640" column="12" selection-start-line="640" selection-start-column="12" selection-end-line="640" selection-end-column="12" />
+        <state vertical-scroll-proportion="-5.3703704" vertical-offset="152" max-vertical-offset="11067">
+          <caret line="26" column="92" selection-start-line="26" selection-start-column="76" selection-end-line="26" selection-end-column="92" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="14535">
-          <caret line="30" column="49" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.smart.filter/templates/visual_vertical/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-196.53847" vertical-offset="4274" max-vertical-offset="10030">
-          <caret line="552" column="47" selection-start-line="552" selection-start-column="47" selection-end-line="552" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.076923" vertical-offset="4720" max-vertical-offset="5984">
-          <caret line="316" column="8" selection-start-line="316" selection-start-column="8" selection-end-line="316" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/catalog/filter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4629629" vertical-offset="0" max-vertical-offset="731">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.962963" vertical-offset="7705" max-vertical-offset="9078">
-          <caret line="469" column="61" selection-start-line="469" selection-start-column="50" selection-end-line="469" selection-end-column="61" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#label#0;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#label#1;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#div#1;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#1;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#label#0;n#li#1;n#ul#0;n#div#2;n#div#0;n#div#1;n#ul#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/js/main/core/core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3325301" vertical-offset="22436" max-vertical-offset="93211">
-          <caret line="1336" column="1" selection-start-line="1336" selection-start-column="0" selection-end-line="1336" selection-end-column="1" />
+        <state vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="731">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4341637" vertical-offset="1623" max-vertical-offset="13583">
-          <caret line="117" column="70" selection-start-line="117" selection-start-column="70" selection-end-line="117" selection-end-column="70" />
+        <state vertical-scroll-proportion="-13.25" vertical-offset="2995" max-vertical-offset="13685">
+          <caret line="198" column="17" selection-start-line="198" selection-start-column="17" selection-end-line="198" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/php_interface/init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="937">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/php_interface/include/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.153846" vertical-offset="434" max-vertical-offset="2890">
+          <caret line="38" column="46" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.456" vertical-offset="332" max-vertical-offset="9248">
+          <caret line="43" column="91" selection-start-line="43" selection-start-column="91" selection-end-line="43" selection-end-column="91" />
+          <folding>
+            <element signature="e#10100#10121#0#HTML" expanded="true" />
+            <element signature="e#11273#11329#0#HTML" expanded="true" />
+            <element signature="e#11775#11796#0#HTML" expanded="true" />
+            <element signature="e#12813#12869#0#HTML" expanded="true" />
+            <element signature="e#14715#14736#0#HTML" expanded="true" />
+            <element signature="e#15156#15177#0#HTML" expanded="true" />
+            <element signature="e#15701#15723#0#HTML" expanded="true" />
+            <element signature="e#18177#18233#0#HTML" expanded="true" />
+            <element signature="e#19107#19128#0#HTML" expanded="true" />
+            <element signature="e#19548#19569#0#HTML" expanded="true" />
+            <element signature="e#20087#20108#0#HTML" expanded="true" />
+            <element signature="e#20187#20267#0#HTML" expanded="true" />
+            <element signature="e#21776#21832#0#HTML" expanded="true" />
+            <element signature="e#30395#30441#0#HTML" expanded="true" />
+            <element signature="e#30798#30818#0#HTML" expanded="true" />
+            <element signature="e#31348#31378#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

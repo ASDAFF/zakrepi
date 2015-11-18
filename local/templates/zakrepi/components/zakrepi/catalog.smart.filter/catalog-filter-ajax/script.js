@@ -110,21 +110,27 @@ JCSmartFilter.prototype.updateItem = function (PID, arItem)
 					var label = document.querySelector('[data-role="label_'+value.CONTROL_ID+'"]');
 					if (value.DISABLED)
 					{
-						if (label)
-							BX.addClass(label, 'disabled');
-						else
-                            //BX.addClass(control.parentNode, 'disabled');
-                            $('#'+control.id).attr('disabled','disabled');
-                            //BX.attr(control.parentNode, 'disabled');
+						if (label) {
+                            BX.addClass(label, 'disabled');
+                            $('#' + control.id).attr('disabled', 'disabled');
+                        }
+						else {
+                                //BX.addClass(control.parentNode, 'disabled');
+                                $('#' + control.id).attr('disabled', 'disabled');
+                                //BX.attr(control.parentNode, 'disabled');
+                            }
 					}
 					else
 					{
-						if (label)
-							BX.removeClass(label, 'disabled');
-						else
-							//BX.removeClass(control.parentNode, 'disabled');
-                            $('#'+control.id).removeAttr('disabled');
+						if (label) {
+                            BX.removeClass(label, 'disabled');
+                            $('#' + control.id).removeAttr('disabled');
+                        }
+						else {
+                            //BX.removeClass(control.parentNode, 'disabled');
+                            $('#' + control.id).removeAttr('disabled');
                             //BX.removeAttr(control.parentNode, 'disabled');
+                        }
 					}
 
 					if (value.hasOwnProperty('ELEMENT_COUNT'))
