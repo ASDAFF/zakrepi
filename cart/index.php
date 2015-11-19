@@ -8,7 +8,7 @@
 		"COMPONENT_TEMPLATE" => "basket",
 		"COUNT_DISCOUNT_4_ALL_QUANTITY" => "N",
 		"HIDE_COUPON" => "N",
-		"PATH_TO_ORDER" => "/personal/order.php",
+		"PATH_TO_ORDER" => "/checkout/",
 		"PRICE_VAT_SHOW_VALUE" => "Y",
 		"QUANTITY_FLOAT" => "N",
 		"SET_TITLE" => "Y",

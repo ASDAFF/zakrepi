@@ -481,7 +481,10 @@ $this->setFrameMode(true);
                                                 <? echo $ar["DISABLED"] ? 'disabled="disabled"': '' ?>
                                                 onclick="smartFilter.click(this)"
                                                 />
-                                            <label class="checkbox-lbl" data-role="label_<?=$ar["CONTROL_ID"]?>" for="<? echo $ar["CONTROL_ID"] ?>"><?=$ar["VALUE"];?> <? if ($arParams["DISPLAY_ELEMENT_COUNT"] !== "N" && isset($ar["ELEMENT_COUNT"])): echo '('.$ar["ELEMENT_COUNT"].')'; endif;?></label>
+                                            <label class="checkbox-lbl" data-role="label_<?=$ar["CONTROL_ID"]?>" for="<? echo $ar["CONTROL_ID"] ?>">
+                                                <?=$ar["VALUE"];?>
+                                                <? if ($arParams["DISPLAY_ELEMENT_COUNT"] !== "N" && isset($ar["ELEMENT_COUNT"])):?> <span data-role="count_<?=$ar["CONTROL_ID"]?>">(<?echo $ar["ELEMENT_COUNT"]?>)</span><? endif;?>
+                                            </label>
                                         </p>
                                     <?endforeach;?>
                                     <?if(count($arItem["VALUES"]) > $data_show):?>

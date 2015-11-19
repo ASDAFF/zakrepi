@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $update = (isset($_POST['UPDATE'])) ? 'Y' : 'N';
     if($update == 'Y'){
         $res = CUserAddress::updateUserAddress($_POST);
-        if($res == 'OK')
+        if($res != '')
         {
         ?>
         <div class="adm-info-message-wrap adm-info-message-green">
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $add = (isset($_POST['ADD'])) ? 'Y' : 'N';
     if($add == 'Y'){
             $res = CUserAddress::setUserAddress($_POST);
-            if($res == 'OK')
+            if($res != '')
             {
                 ?>
                 <div class="adm-info-message-wrap adm-info-message-green">

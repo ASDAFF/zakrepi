@@ -30,7 +30,7 @@
         $idElement = addElementReview($arResult,$ID_SECTION,$IBLOCK_ID);
     }
     echo '<div class="page-empty">
-		  	<div class="title large-text color-text text-light light center-align">Вы оставили отзыв. После модерации Ваш отзыв будет опубликрван.
+		  	<div class="title large-text color-text text-light light center-align">Вы оставили отзыв. После модерации Ваш отзыв будет опубликован.
 		  	<div><button class="btn standart-color btn-toggle-block" onclick="data_block(this);" data-block="#reviews-form,#reviews-res">Вернутся к отзывам</button></div>
 		  	</div>
 		</div>';
