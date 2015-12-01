@@ -77,7 +77,10 @@ $strAlt = (
 	: $arResult['NAME']
 );
 ?>
-
+<?
+    /*Запишим имя товара в куки для передачи его в форму заказ в 1 клик*/
+    $_COOKIE['PRODUCT_NAME'] = $arResult["NAME"];
+?>
 <div class="product-page row">
 <div class="col l12">
     <div class="main-info clearfix">
@@ -226,6 +229,7 @@ $strAlt = (
                     </div>
                     <?/*end small carousel images*/?>
                 <?/*big image*/?>
+                <?/*PROPERTIES FILES*/?>
                 <?
                     reset($arResult['MORE_PHOTO']);
                     $arFirstPhoto = current($arResult['MORE_PHOTO']);
@@ -238,12 +242,47 @@ $strAlt = (
         </div>
         <div class="col l3 no-padding">
             <div class="action-panel">
+                <?if(!empty($arResult['OFFERS'])):
 
-                <?/*price*/?>
-                <div class="product-price center-align">
-                    <?
+                        $offers = array();
+                        $quentity_product = 0;
+                        $num=0;
+                        foreach($arResult['OFFERS'] as $i=>$itemOffer):
+                            $minPrice = (isset($itemOffer['RATIO_PRICE']) ? $itemOffer['RATIO_PRICE'] : $itemOffer['MIN_PRICE']);
+                            $option = '';
+                            foreach($itemOffer['PROPERTIES']['CML2_ATTRIBUTES']['VALUE'] as $a=>$item):
+                                if($a==0){ $option .= $item;}
+                                else{$option .= ' '.$item;}
+                            endforeach;
+
+                            $quentity = CCatalogProduct::GetByID($itemOffer['ID']);
+                            $itemOffer['CATALOG_QUANTITY'] = $quentity['QUANTITY'];
+
+                            $quentity_product += $itemOffer['CATALOG_QUANTITY'];
+
+                            if($itemOffer['CATALOG_QUANTITY']!=0 ):
+
+                                $offers[$num]['ID'] = $itemOffer['ID'];
+                                $offers[$num]['PRICE'] = $minPrice['VALUE'];
+                                $offers[$num]['OPTION'] = $option;
+                                $offers[$num]['NAME'] = $itemOffer['NAME'];
+                                $offers[$num]['CATALOG_PRICE_1'] = $itemOffer['CATALOG_PRICE_1'];
+                                $offers[$num]['CATALOG_PRICE_ID_1'] = $itemOffer['CATALOG_PRICE_ID_1'];
+
+                                $num++;
+                            endif;
+                        endforeach;
+
+                        $arResult['CATALOG_QUANTITY'] = $quentity_product;
+                else:
                         $minPrice = (isset($arResult['RATIO_PRICE']) ? $arResult['RATIO_PRICE'] : $arResult['MIN_PRICE']);
                         $boolDiscountShow = (0 < $minPrice['DISCOUNT_DIFF']);
+                endif;
+
+                /*price*/?>
+                <div class="product-price center-align">
+                    <?
+                        
                     ?>
                     <!-- если скидки нет, .old-price не выводить -->
                     <?if($boolDiscountShow):?>
@@ -254,26 +293,7 @@ $strAlt = (
                 <?/*end price*/?>
 
                 <?/*options product*/?>
-                <?if(!empty($arResult['OFFERS'])):?>
-
-                    <?
-                    $offers = array();
-                    foreach($arResult['OFFERS'] as $i=>$itemOffer):
-                        $minPrice = (isset($itemOffer['RATIO_PRICE']) ? $itemOffer['RATIO_PRICE'] : $itemOffer['MIN_PRICE']);
-                        $option = '';
-                        foreach($itemOffer['PROPERTIES']['CML2_ATTRIBUTES']['VALUE'] as $a=>$item):
-                            if($a==0){ $option .= $item;}
-                            else{$option .= ' '.$item;}
-                        endforeach;
-                        $offers[$i]['ID'] = $itemOffer['ID'];
-                        $offers[$i]['PRICE'] = $minPrice['VALUE'];
-                        $offers[$i]['OPTION'] = $option;
-
-                        $offers[$i]['CATALOG_PRICE_1'] = $itemOffer['CATALOG_PRICE_1'];
-                        $offers[$i]['CATALOG_PRICE_ID_1'] = $itemOffer['CATALOG_PRICE_ID_1'];
-                        $offers[$i]['NAME'] = $itemOffer['NAME'];
-                    endforeach;?>
-
+                <?if(!empty($arResult['OFFERS']) && $arResult['CATALOG_QUANTITY'] > 0):?>
                 <!-- если есть -->
                     <div class="product-options">
                         <div class="inline-field clearfix">
@@ -315,17 +335,27 @@ $strAlt = (
                     <span class="btn center fullwidth loader" id="loader-<? echo $arItemIDs['ADD_BASKET_LINK']; ?>" style="display:none;">
                         <img src="/local/templates/zakrepi/images/svg/loader.svg" width="40"/>
                     </span>
-                    <a class="btn primary center fullwidth" href="javascript:void(0);" id="<? echo $arItemIDs['ADD_BASKET_LINK']; ?>" onclick="<?=$addBasket?>">В корзину</a>
-                    <a class="btn standart-color center fullwidth" href="javascript:void(0);" onclick="buyInOneClick(<?=$arResult['ID']?>);">Купить в 1 клик</a>
+					<?if($arResult['CATALOG_QUANTITY'] != 0){?>
+						<a class="btn primary center fullwidth" href="javascript:void(0);" id="<? echo $arItemIDs['ADD_BASKET_LINK']; ?>" onclick="<?=$addBasket?>">В корзину</a>
+                    <?}else{?>
+						<a class="btn primary center fullwidth gray" href="javascript:void(0);" id="<? echo $arItemIDs['ADD_BASKET_LINK']; ?>">В корзину</a>
+					<?}?>
+					<a class="btn standart-color center fullwidth" href="javascript:void(0);" onclick="buyInOneClick(<?=$arResult['ID']?>);">Купить в 1 клик</a>
                 </div>
                 <?/*end add basket*/?>
 
                 <?/*delevery*/?>
                 <div class="delivery-text">
+                    
                     <table>
-                        <tr><td>Самовывоз:</td><td>Сегодня, Бесплатно</td></tr>
-                        <tr><td>Доставим:</td><td>5 сентября, 8 699<i class="rouble">i</i></td></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <?/*?>
+                            <tr><td>Самовывоз:</td><td>Сегодня, Бесплатно</td></tr>
+                            <tr><td>Доставим:</td><td>5 сентября, 8 699<i class="rouble">i</i></td></tr>
+                        <?*/?>
                     </table>
+                    
                 </div>
                 <?/*end delevery*/?>
 
@@ -585,31 +615,10 @@ $strAlt = (
 
 
     <div class="one-click-form-box modal" id="one-click-form_product-id">
+		
         <button class="btn-close-modal btn btn-icon btn-close"><svg class="icon"><use xlink:href="#cross"/></svg></button>
-        <div class="modal-content">
-            <input type="hidden" name="PRODUCT_ID" value=""/>
-            <div class="title">Купить в 1 клик</div>
-            <p class="note-text">Укажите Ваши данные, и наш менеджер свяжется с Вами для оформления заказа.</p>
-            <div class="table-field">
-                <span class="label">Имя</span>
-                <div class="field"><input type="text" name="NAME"/></div>
-            </div>
-            <div class="table-field">
-                <span class="label">Телефон</span>
-                <div class="field"><input type="tel" name="phone"/></div>
-            </div>
-            <div class="table-field time-field">
-                <span class="label">Удобное время для звонка:</span>
-                <div class="first-field">
-                    <input type="radio" name="time" value="v1" id="time-v1"/>
-                    <label class="radio-lbl" for="time-v1">8:00 - 12:00</label>
-                </div>
-                <div class="field">
-                    <input type="radio" checked name="time" value="v2" id="time-v2"/>
-                    <label class="radio-lbl" for="time-v2">12:00 - 18:00</label>
-                </div>
-            </div>
-            <button class="btn primary big bigsize center">Купить</button>
+        <div class="modal-content" id="form_one_click">
+			 <?include($_SERVER['DOCUMENT_ROOT'].'/includes/forms/form_one_click.php');?>
         </div>
     </div>
 

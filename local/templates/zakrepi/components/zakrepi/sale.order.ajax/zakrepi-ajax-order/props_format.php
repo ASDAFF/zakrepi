@@ -58,8 +58,12 @@ if (!function_exists("PrintPropsForm"))
 		{
 			foreach ($arSource as $arProperties)
 			{
+				/*echo '<pre>';
+				print_r($arContactGroup);
+				echo '</pre>';
+				echo $arProperties["PROPS_GROUP_ID"];
 				if (count($arContactGroup) > 0 && !in_array($arProperties["PROPS_GROUP_ID"], $arContactGroup))
-					continue;
+					continue;*/
 				?>
 				<div class="table-field" data-property-id-row="<?=intval(intval($arProperties["ID"]))?>">
 
@@ -107,9 +111,18 @@ if (!function_exists("PrintPropsForm"))
 					}
 
 					?>
+					<?/*<pre><?print_r($arProperties)?></pre>*/?>
 					<label class="label"><?=$arProperties["NAME"]?></label>
 					<div class="field">
-						<input type="<?=$type?>" maxlength="250" size="<?=$arProperties["SIZE1"]?>" <?if ($checkEmail):?>onchange="checkUserEmail(this);"<?endif;?> value="<?=$arProperties["VALUE"]?>" name="<?=$arProperties["FIELD_NAME"]?>" class="PROP_INPUT_<?=$arProperties["CODE"]?> <?if($type == 'tel'):?>numbers<?endif;?>" id="<?=$arProperties["FIELD_NAME"]?>" <?/*if ($arProperties["REQUIED"] == "Y"):?>required<?endif;*/?> />
+						<input type="<?=$type?>" 
+							maxlength="250" 
+							size="<?=$arProperties["SIZE1"]?>" 
+							<?if ($checkEmail):?>onchange="checkUserEmail(this);"<?endif;?> 
+							value="<?=$arProperties["VALUE"]?>" 
+							name="<?=$arProperties["FIELD_NAME"]?>" 
+							class="PROP_INPUT_<?=$arProperties["CODE"]?> <?if($type == 'tel'):?>numbers<?endif;?> <?if ($arProperties["REQUIED"] == "Y"):?>required<?endif;?>" 
+							id="<?=$arProperties["FIELD_NAME"]?>" <?/*if ($arProperties["REQUIED"] == "Y"):?>required<?endif;*/?> 
+						/>
                     <?if ($checkEmail):?>
                         <span class="input-loader" style="display:none;">
                             <div>
@@ -222,6 +235,7 @@ if (!function_exists("PrintPropsForm"))
 				elseif ($arProperties["TYPE"] == "LOCATION")
 				{
 					?>
+					<div style="display:none">
 					<input type="hidden" name="location_prop_id" value="<?=$arProperties["ID"]?>" />
 
 					<div class="bx_block r1x3 pt8">
@@ -310,6 +324,7 @@ if (!function_exists("PrintPropsForm"))
 
 					</div>
 					<div style="clear: both;"></div>
+					</div>
 					<?
 				}
 				elseif ($arProperties["TYPE"] == "RADIO")

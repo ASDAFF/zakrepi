@@ -1,6 +1,6 @@
 <?
     use Bitrix\Main\Localization\Loc;
-    $module_id = "zakrepiSettigs";
+    $module_id = "zakrepisettigs";
 
     /*Установка прав на запись*/
     $MODULE_RIGHT = $APPLICATION->GetGroupRight($module_id);
@@ -18,12 +18,19 @@ $arAllOptions = array(
     array("zPhoneSiteCallTo", GetMessage("ZAKREPI_PHONE_SITE_CALL_TO"), "+7 999 999 99 99", array("text", 30)),
     array("zTimeWork", GetMessage("ZAKREPI_TIME_WORK"), "", array("textarea", 10,50)),
     array("zTimeSlider", GetMessage("ZAKREPI_TIME_SLIDER"), "3000", array("text", 30)),
-    array("zCatalogId", GetMessage("ZAKREPI_CATALOG_ID"), "", array("text", 30)),
-
+    
     array("zSocFB", GetMessage("ZAKREPI_SOC_FB"), "", array("text", 30)),
     array("zSocVK", GetMessage("ZAKREPI_SOC_VK"), "", array("text", 30)),
     array("zSocOK", GetMessage("ZAKREPI_SOC_OK"), "", array("text", 30)),
     array("zSocYouTube", GetMessage("ZAKREPI_SOC_YOUTUBE"), "", array("text", 30)),
+
+    array("zCatalogId", GetMessage("ZAKREPI_CATALOG_ID"), "", array("text", 30)),
+    array("zOrderMinSumm", GetMessage("ZAKREPI_ORDER_MIN_SUMM"), "1000", array("text", 30)),
+    array("zFreeDeliverySumm", GetMessage("ZAKREPI_FREE_DELIVERY_SUMM"), "10000", array("text", 30)),
+
+    array("zYandexMetrik", GetMessage("ZAKREPI_YANDEX_METRIKA"), "", array("textarea", 10,50)),
+    array("zGoogleAnalytics", GetMessage("ZAKREPI_GOOGLE_ANALYTICS"), "", array("textarea", 10,50)),
+
 );
 /**/
 

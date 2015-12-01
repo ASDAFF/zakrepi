@@ -1,14 +1,14 @@
 <?
-Class zakrepiSettigs extends CModule
+Class zakrepisettigs extends CModule
 {
-    var $MODULE_ID = "zakrepiSettigs";
+    var $MODULE_ID = "zakrepisettigs";
     var $MODULE_VERSION;
     var $MODULE_VERSION_DATE;
     var $MODULE_NAME;
     var $MODULE_DESCRIPTION;
     var $MODULE_CSS;
 
-    function zakrepiSettigs()
+    function zakrepisettigs()
     {
         $arModuleVersion = array();
 
@@ -23,28 +23,10 @@ Class zakrepiSettigs extends CModule
         $this->MODULE_NAME = "Настройка свойств сайта";
         $this->MODULE_DESCRIPTION = "Модуль позволяет настроить основные настройки сайта(телефон,время работы и пр.)";
     }
-    /*Установка таблицы*/
-    /*function InstallDB()
-    {
-        global $DB;
-        $DB->RunSQLBatch($_SERVER['DOCUMENT_ROOT']."/local/modules/zakrepi.settings/install/db/mysql/install.sql");
-        return true;
-    }*/
-    /*Копирование дополнительных файлов*/
-    /*function InstallFiles($arParams = array())
-    {
-        CopyDirFiles($_SERVER["DOCUMENT_ROOT"]."/local/modules/zakrepi.settigs/install/admin/", $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin");
-        //CopyDirFiles($_SERVER["DOCUMENT_ROOT"]."/local/modules/cradobaners/install/panel/", $_SERVER["DOCUMENT_ROOT"]."/bitrix/themes/.default", true, true);
-        return true;
-    }*/
-
     function DoInstall()
     {
         global $DOCUMENT_ROOT, $APPLICATION;
-        // Install events
-        //$this->InstallDB();
-        //$this->InstallFiles();
-        RegisterModuleDependences("iblock","OnAfterIBlockElementUpdate","zakrepiSettings","cSettingsTemplates","onBeforeElementUpdateHandler");
+        RegisterModuleDependences("iblock","OnAfterIBlockElementUpdate","zakrepisettigs","cSettingsTemplates","onBeforeElementUpdateHandler");
         RegisterModule($this->MODULE_ID);
         $APPLICATION->IncludeAdminFile("Установка модуля zakrepiSettings", $DOCUMENT_ROOT."/local/modules/zakrepisettigs/install/step.php");
         return true;
@@ -53,7 +35,7 @@ Class zakrepiSettigs extends CModule
     function DoUninstall()
     {
         global $DOCUMENT_ROOT, $APPLICATION;
-        UnRegisterModuleDependences("iblock","OnAfterIBlockElementUpdate","zakrepiSettings","cSettingsTemplates","onBeforeElementUpdateHandler");
+        UnRegisterModuleDependences("iblock","OnAfterIBlockElementUpdate","zakrepisettigs","cSettingsTemplates","onBeforeElementUpdateHandler");
         UnRegisterModule($this->MODULE_ID);
         $APPLICATION->IncludeAdminFile("Удаление модуля zakrepiSettings", $DOCUMENT_ROOT."/local/modules/zakrepisettigs/install/unstep.php");
         return true;

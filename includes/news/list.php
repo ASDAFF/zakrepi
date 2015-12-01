@@ -6,7 +6,7 @@
         "COMPONENT_TEMPLATE" => ".default",
         "IBLOCK_TYPE" => "",
         "IBLOCK_ID" => 4,
-        "NEWS_COUNT" => "2",
+        "NEWS_COUNT" => "8",
         "SORT_BY1" => "ACTIVE_FROM",
         "SORT_ORDER1" => "DESC",
         "SORT_BY2" => "SORT",

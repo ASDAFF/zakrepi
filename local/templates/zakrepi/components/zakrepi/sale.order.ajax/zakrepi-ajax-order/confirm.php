@@ -15,7 +15,11 @@ if (!empty($arResult["ORDER"]))
 						</div>
 						<div class="order-info-item">
 							<span class="medium item-title"><?=GetMessage("SOA_TEMPL_ORDER_PERSON")?></span>
-							<div class="item-value"><?=$arResult["ORDER_INFO"]["ORDER_PROPS"]["NAME"]?> <?=$arResult["ORDER_INFO"]["ORDER_PROPS"]["LASTNAME"]?> <br/><?=$arResult["ORDER_INFO"]["ORDER_PROPS"]["PHONE"]?></div>
+							<div class="item-value">
+							<?=$arResult["ORDER_INFO"]["ORDER_PROPS"]["NAME"]?> <?=$arResult["ORDER_INFO"]["ORDER_PROPS"]["LASTNAME"]?> 
+							<br/><?=$arResult["ORDER_INFO"]["ORDER_PROPS"]["PHONE"]?>
+							<br/><?=$arResult["ORDER_INFO"]["ORDER_PROPS"]["EMAIL"]?>
+							</div>
 						</div>
 					</div>
 					<div class="col l4">
@@ -68,13 +72,28 @@ if (!empty($arResult["ORDER"]))
 							</span>
 						</div>
 						<div class="order-info-item">
+							<span class="medium item-title">Способ доставки:</span>
+							<div class="item-value">
+								<?=$arResult["ORDER_INFO"]["DELIVERY"]['NAME']?>
+							</div>
+						</div>
+						<?if($arResult["DELIVERY_ID"] == 1){//Самовывоз?>
+							<div class="order-info-item">
+								<span class="medium item-title">Адрес точки выдачи: </span>
+								<div class="item-value">
+									<?=$arResult["DELIVERY"]["DESCRIPTION"]?>
+								</div>
+							</div>
+						<?}else{?>
+						<div class="order-info-item">
 							<span class="medium item-title"><?=GetMessage("SOA_TEMPL_ORDER_DELIVERY")?></span>
-							<div class="item-value"><?=$arResult["ORDER_INFO"]["DELIVERY"]["NAME"]?>, г. <?=$arResult["ORDER_INFO"]["ORDER_PROPS"]["LOCATION"]?>,<br/>
+							<div class="item-value">г. <?=$arResult["ORDER_INFO"]["ORDER_PROPS"]["LOCATION"]?>,<br/>
 								<?if (!empty($arResult["ORDER_INFO"]["ORDER_PROPS"]["STREET"])):?>ул. <?=$arResult["ORDER_INFO"]["ORDER_PROPS"]["STREET"]?> <?=$arResult["ORDER_INFO"]["ORDER_PROPS"]["HOUSE"]?><?endif;?>
 								<?if (!empty($arResult["ORDER_INFO"]["ORDER_PROPS"]["KORPUS"])):?>, корп.<?=$arResult["ORDER_INFO"]["ORDER_PROPS"]["KORPUS"]?><?endif;?>
 								<?if (!empty($arResult["ORDER_INFO"]["ORDER_PROPS"]["FLAT"])):?>, кв. <?=$arResult["ORDER_INFO"]["ORDER_PROPS"]["FLAT"]?><?endif;?>
 							</div>
 						</div>
+						<?}?>
 					</div>
 				</div>
 			</div>
@@ -84,7 +103,7 @@ if (!empty($arResult["ORDER"]))
 					<?foreach($arResult["ORDER_INFO"]["ITEMS"] as $arItem):?>
 					<div class="prod-item row">
 						<p class="col l4"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></p>
-						<p class="col l1 center-align"><?=intval($arItem["QUANTITY"])?> <?=$arItem["MEASURE"]?>.</p>
+						<p class="col l1 center-align"><?=intval($arItem["QUANTITY"])?> <?if($arItem["MEASURE"] != ''){echo $arItem["MEASURE"];}else{echo "шт";}?>.</p>
 						<p class="col l3 center-align"><?=priceShow($arItem["PRICE"])?></p>
 					</div>
 					<?endforeach;?>

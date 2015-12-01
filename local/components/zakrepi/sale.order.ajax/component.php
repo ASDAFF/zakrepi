@@ -732,10 +732,12 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
 		$isPersonTypeChanged = (isset($_POST["PERSON_TYPE_OLD"]) && IntVal($_POST["PERSON_TYPE"]) != IntVal($_POST["PERSON_TYPE_OLD"]));
 
 
+		if($_POST["IS_ADDRESS_SAVE"] == 'Y') $arResult['IS_ADDRESS_SAVE'] = 'Y';
+		
 		if ($USER->IsAuthorized() && CModule::IncludeModule("useraddress")){
 			
 			//работа с адресной книгой
-			if (($_POST["IS_ADDRESS_CHANGE"] == "Y" || $_POST["IS_ADDRESS_NEW"] == "Y")){
+			if (($_POST["IS_ADDRESS_CHANGE"] == "Y" || $_POST["IS_ADDRESS_NEW"] == "Y") && $_POST["IS_ADDRESS_SAVE"] == 'Y' && $_POST["confirmorder"] != "Y"){
 
 				$arPropCode = Array();
 				$dbProperties = CSaleOrderProps::GetList(
@@ -756,13 +758,15 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
 					'STREET' => htmlspecialcharsbx($_POST["ORDER_PROP_".$arPropCode["STREET"]]),
 					'HOME' => htmlspecialcharsbx($_POST["ORDER_PROP_".$arPropCode["HOUSE"]]),
 					'HOUSING' => htmlspecialcharsbx($_POST["ORDER_PROP_".$arPropCode["KORPUS"]]),
-					'FLAT' => htmlspecialcharsbx($_POST["ORDER_PROP_".$arPropCode["FLAT"]])
+					'FLAT' => htmlspecialcharsbx($_POST["ORDER_PROP_".$arPropCode["FLAT"]]),
+                    'DEFAULT_ADDRESS' => 'Y'
 				);
 
 				if ($_POST["IS_ADDRESS_CHANGE"] == "Y" && $_POST["del-addr-sel"] > 0){
 					$parametr['ID'] = intval($_POST["del-addr-sel"]);
 					CUserAddress::updateUserAddress($parametr);
 				}
+                //$arResult['PARAMETR'] = $parametr;
 
 				if ($_POST["IS_ADDRESS_NEW"] == "Y"){
 					$parametr['DEFAULT_ADDRESS'] = "Y";
@@ -772,13 +776,40 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
 
 			getJsUserAddress($arResult, $USER->GetID());
 		}
-
+        if($_POST["IS_ADDRESS_CHANGE"] == 'Y') $arResult['IS_ADDRESS_CHANGE'] = 'Y';
+        if($_POST["IS_ADDRESS_NEW"] == 'Y') $arResult['IS_ADDRESS_NEW'] = 'Y';
+        
+        if($_POST["ID_CITY"] != '') $arResult['ID_CITY'] = $_POST["ID_CITY"];
+        if($_POST["NAME_CITY"] != '') $arResult['NAME_CITY'] = $_POST["NAME_CITY"];
 		// when order is placed
 		if($isOrderPlaced || $isPersonTypeChanged)
 		{
 			//$arResult["post_data"] = $_POST;
-
-			if (isset($_POST["del-addr-sel"]) && $_POST["del-addr-sel"] > 0){
+            if($_POST["IS_ADDRESS_CHANGE"] == 'Y' || $_POST["IS_ADDRESS_NEW"] == 'Y') $arResult['SHOW_ADDRESS_FORM'] = 'Y';
+			if (isset($_POST["ORDER_PROP_19"]) && $_POST["NAME_CITY"] != '' && $_POST["IS_ADDRESS_CHANGE"] != "Y" && $_POST["IS_ADDRESS_NEW"] == "Y"){
+				$new_location_id = getLocationFromAddress(intval($_REQUEST["ORDER_PROP_19"]));
+	
+				if ($new_location_id > 0)
+					$LOCATION_ID = $new_location_id;
+				
+				if (isset($_POST["ORDER_PROP_19"]) && $_POST["ORDER_PROP_19"] !='')
+				{
+					$new_location_id = getLocationFromNameCity($_REQUEST["ORDER_PROP_19"]);
+					if ($new_location_id > 0)
+					   $LOCATION_ID = $new_location_id;
+				}
+				
+				if(isset($_POST["ID_CITY"]) && $_POST["ID_CITY"] != '')
+					$LOCATION_ID = $_POST["ID_CITY"];
+				
+				$_POST["ORDER_PROP_".$location_prop_id] = $LOCATION_ID;
+				$arResult["SELECTED_USER_ADDRESS"] = intval($_POST["addrr-city-name"]);
+			}
+			elseif($_POST["IS_ADDRESS_NEW"] == "Y" && $_POST["IS_ADDRESS_SAVE"] == 'Y')
+			{
+				$arResult["SELECTED_USER_ADDRESS"] = 'last';
+			}
+			elseif (isset($_POST["del-addr-sel"]) && $_POST["del-addr-sel"] > 0){
 				$new_location_id = getLocationFromAddress(intval($_REQUEST["del-addr-sel"]));
 
 				if ($new_location_id > 0)
@@ -787,6 +818,13 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
 				$_POST["ORDER_PROP_".$location_prop_id] = $LOCATION_ID;
 				$arResult["SELECTED_USER_ADDRESS"] = intval($_POST["del-addr-sel"]);
 			}
+            
+            
+            
+			/*Установка значения для доставки */
+			if(isset($_POST["DELIVERY_CLICK"]) && $_POST["DELIVERY_CLICK"] != '')
+				$arResult['DELIVERY_CLICK'] = $_POST["DELIVERY_CLICK"];
+			
 
 			if(IntVal($_POST["PERSON_TYPE"]) > 0)
 				$arUserResult["PERSON_TYPE_ID"] = IntVal($_POST["PERSON_TYPE"]);
@@ -1441,7 +1479,7 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
 			}
 
 			uasort($arResult["DELIVERY"], array('CSaleBasketHelper', 'cmpBySort')); // resort delivery arrays according to SORT value
-
+            
 			if(!$bSelected && !empty($arResult["DELIVERY"]))
 			{
 				$bf = true;
@@ -1451,21 +1489,65 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
 					{
 						if(IntVal($k) > 0)
 						{
-							$arResult["DELIVERY"][$k]["CHECKED"] = "Y";
+							/*Установка значения для доставки */
+							if($_POST['DELIVERY_CLICK'] >= 1)
+							{
+								//$arResult["DELIVERY"]['dpd']['PROFILES']['dpd']["CHECKED"] = "Y";
+                                //$arResult["DELIVERY_CLICK"] = $k;
+								$bf = true;
+							}
+                            else{
+                                if($_POST['DELIVERY_CLICK'] == 'dpd:dpd')
+                                {
+                                    if($k>1)
+                                    {
+                                        $arResult["DELIVERY"][$k]["CHECKED"] = "Y";
+                                        $arResult["DELIVERY_CLICK"] = $k;
+                                        $bf = false;
+                                    }
+                                }
+                                else
+                                {
+                                    $arResult["DELIVERY"][$k]["CHECKED"] = "Y";
+                                    $arResult["DELIVERY_CLICK"] = $k;
+                                    $bf = false;
+                                }
+                            }
+                            /*elseif(isset($_POST['DELIVERY_CLICK']) && $_POST['DELIVERY_CLICK'] == 'dpd:dpd')
+							{
+								$arResult["DELIVERY"][$k]["CHECKED"] = "Y";
+                                $arResult["DELIVERY_CLICK"] = $k;
+								$bf = true;
+							}
+							else
+							{
+								$arResult["DELIVERY"][$k]["CHECKED"] = "Y";
+                                $arResult["DELIVERY_CLICK"] = $k;
+								$bf = false;
+							}
+							*/
+							
 							$arUserResult["DELIVERY_ID"] = $k;
-							$bf = false;
-
+                            
 							$arResult["DELIVERY_PRICE"] = roundEx(CCurrencyRates::ConvertCurrency($arResult["DELIVERY"][$k]["PRICE"], $arResult["DELIVERY"][$k]["CURRENCY"], $arResult["BASE_LANG_CURRENCY"]), SALE_VALUE_PRECISION);
 						}
 						else
 						{
+							
 							foreach($v["PROFILES"] as $kk => $vv)
 							{
 								if($bf)
 								{
-									$arResult["DELIVERY"][$k]["PROFILES"][$kk]["CHECKED"] = "Y";
-									$arUserResult["DELIVERY_ID"] = $k.":".$kk;
-									$bf = false;
+                                    $arUserResult["DELIVERY_ID"] = $k.":".$kk;
+                                    
+                                    if($_POST['DELIVERY_CLICK'] == $k.":".$kk){
+                                        $bf = true;
+                                    }
+                                    else{
+                                        $arResult["DELIVERY_CLICK"] = $k.":".$kk;
+                                        $arResult["DELIVERY"][$k]["PROFILES"][$kk]["CHECKED"] = "Y";
+    									$bf = false;
+                                    }
 
 									$arOrderTmpDel = array(
 										"PRICE" => $arResult["ORDER_PRICE"],
@@ -1866,15 +1948,16 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
 				{
 					$NEW_LOGIN = $arUserResult["USER_EMAIL"];
 					$NEW_EMAIL = $arUserResult["USER_EMAIL"];
-					$NEW_NAME = "";
-					$NEW_LAST_NAME = "";
-
-					if(strlen($arUserResult["PAYER_NAME"]) > 0)
+					$NEW_NAME = $_POST['ORDER_PROP_2'];
+					$NEW_LAST_NAME = $_POST['ORDER_PROP_1'];
+					$WORK_PHONE = $_POST['ORDER_PROP_3'];
+					
+					/*if(strlen($arUserResult["PAYER_NAME"]) > 0)
 					{
 						$arNames = explode(" ", $arUserResult["PAYER_NAME"]);
 						$NEW_NAME = $arNames[1];
 						$NEW_LAST_NAME = $arNames[0];
-					}
+					}*/
 
 					/*$pos = strpos($NEW_LOGIN, "@");
 					if ($pos !== false)
@@ -1955,8 +2038,16 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
 						"GROUP_ID" => $GROUP_ID,
 						"ACTIVE" => "Y",
 						"LID" => SITE_ID,
+						"WORK_PHONE" => $WORK_PHONE
 						)
-						);
+					);
+					$arEventFields = array(
+						"LOGIN"	=> $NEW_LOGIN,
+						"NAME"	=> $NEW_NAME,
+						"LAST_NAME"	=> $NEW_LAST_NAME,
+						"PASSWORD"	=> $NEW_PASSWORD,
+					);
+					CEvent::Send("ADD_NEW_USER_ORDER", SITE_ID, $arEventFields);
 
 					if (IntVal($arAuthResult) <= 0)
 					{
@@ -1967,10 +2058,11 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
 						$USER->Authorize($arAuthResult);
 						if ($USER->IsAuthorized())
 						{
-							if($arParams["SEND_NEW_USER_NOTIFY"] == "Y")
-								CUser::SendUserInfo($USER->GetID(), SITE_ID, GetMessage("INFO_REQ"), true);
+							//Отсылает почтовое сообщение с параметрами пользователя по шаблону типа USER_INFO.
+							/*if($arParams["SEND_NEW_USER_NOTIFY"] == "Y")
+								CUser::SendUserInfo($USER->GetID(), SITE_ID, GetMessage("INFO_REQ"), true);*/
 
-							if ($_POST["IS_ADDRESS_NEW"] == "Y" && CModule::IncludeModule("useraddress"))
+							if ($_POST["IS_ADDRESS_NEW"] == "Y" && CModule::IncludeModule("useraddress") && $_POST['DELIVERY_CLICK'] != 1 && $_POST['IS_ADDRESS_SAVE'] != 'Y')
 							{
 								
 								$arPropCode = Array();
@@ -2049,6 +2141,39 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
 				}
 				else
 					$arFields["AFFILIATE_ID"] = false;
+
+
+
+				$comment = '';
+                
+                $comment .= 'Фамилия: '.$_REQUEST["ORDER_PROP_1"];
+                $comment .= ' Имя: '.$_REQUEST['ORDER_PROP_2'];
+                $comment .= ' Телефон: '.$_REQUEST['ORDER_PROP_3'];
+                $comment .= ' Email: '.$_REQUEST['ORDER_PROP_4'];
+                
+                if($_REQUEST['DELIVERY_ID'] == 1)
+                {
+                    
+                    
+                    $store = CCatalogStore::GetList(
+                        array(),
+                        array('ID'=>$_REQUEST['BUYER_STORE']),
+                        false,
+                        false,
+                        array("ADDRESS")
+                    );
+                    $aStore = $store->Fetch();
+                    
+                    $comment .= ' Самовывоз из: '.$aStore['ADDRESS'];
+                }
+                else
+                {
+                    $comment .=' Адрес доставки: '.$_REQUEST['ORDER_PROP_6'];
+                }
+                //$comment .= 'ÔÈÎ: '.$_REQUEST['ORDER_PROP_1'];
+                //AddMessage2Log('$aStore = '.print_r($comment, true),'');
+                $arFields["USER_DESCRIPTION"] = $comment;
+
 
 				$arResult["ORDER_ID"] = (int)CSaleOrder::DoSaveOrder($arOrderDat, $arFields, 0, $arResult["ERROR"]);
 
@@ -2214,6 +2339,34 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
 					{
 						if($arUserResult["CONFIRM_ORDER"] == "Y" || $arResult["NEED_REDIRECT"] == "Y")
 						{
+							/*Создание нового адреса пользователя при оформление заказа*/
+							if ($_POST["IS_ADDRESS_NEW"] == "Y" && CModule::IncludeModule("useraddress") && $_POST['DELIVERY_CLICK'] != 1 && $_POST['IS_ADDRESS_SAVE'] != 'Y')
+							{
+											
+											$arPropCode = Array();
+											$dbProperties = CSaleOrderProps::GetList(
+												array(),
+												array("PERSON_TYPE_ID" => IntVal($_POST["PERSON_TYPE"]), "ACTIVE" => "Y", "UTIL" => "N", "RELATED" => true),
+												false,
+												false,
+												array("ID", "CODE")
+											);
+											while ($arProperties = $dbProperties->GetNext())
+											{
+												$arPropCode[$arProperties["CODE"]] = $arProperties["ID"];
+											}
+
+											$parametr = Array(
+												'ID_USER' => $USER->GetID(),
+												'CITY' => htmlspecialcharsbx($_POST["ORDER_PROP_".$arPropCode["CITY"]]),
+												'STREET' => htmlspecialcharsbx($_POST["ORDER_PROP_".$arPropCode["STREET"]]),
+												'HOME' => htmlspecialcharsbx($_POST["ORDER_PROP_".$arPropCode["HOUSE"]]),
+												'HOUSING' => htmlspecialcharsbx($_POST["ORDER_PROP_".$arPropCode["KORPUS"]]),
+												'FLAT' => htmlspecialcharsbx($_POST["ORDER_PROP_".$arPropCode["FLAT"]]),
+												'DEFAULT_ADDRESS' => "Y",
+											);
+											CUserAddress::setUserAddress($parametr);
+							}
 							$APPLICATION->RestartBuffer();
 							echo json_encode(array("success" => "Y", "redirect" => $arResult["REDIRECT_URL"]));
 							die();
@@ -2281,7 +2434,7 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
 			$dbBasketItems = CSaleBasket::GetList(
 			        array(),
 			        array(
-			                "FUSER_ID" => CSaleBasket::GetBasketUserID(),
+			                //"FUSER_ID" => CSaleBasket::GetBasketUserID(),//$USER->GetID(),//CSaleBasket::GetBasketUserID(),
 			                "LID" => SITE_ID,
 			                "ORDER_ID" => $ID
 			            ),
@@ -2399,9 +2552,10 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
 				$arDeliv = CSaleDelivery::GetByID($arResult["ORDER"]["DELIVERY_ID"]);
 				$arResult["ORDER_INFO"]["DELIVERY"] = $arDeliv;
 
-				if (count($arResult["ORDER_INFO"]["DELIVERY"]) == 0)
+				if (count($arResult["ORDER_INFO"]["DELIVERY"]) == 0 || is_string($arResult["ORDER"]["DELIVERY_ID"]))
 				{
-					$dbDeliv = CSaleDeliveryHandler::GetBySID($arResult["ORDER"]["DELIVERY_ID"]);
+					$sid = explode(":", $arResult["ORDER"]["DELIVERY_ID"]);
+					$dbDeliv = CSaleDeliveryHandler::GetBySID($sid[0]);
 					if ($arDeliv = $dbDeliv->GetNext())
 					{
 						$arResult["ORDER_INFO"]["DELIVERY"] = $arDeliv;

@@ -6,6 +6,11 @@
     $MESS["ZAKREPI_TIME_WORK"] = "Время работы интернет-магазина";
     $MESS["ZAKREPI_TIME_SLIDER"] = "Время прокрутки слайдера";
     $MESS["ZAKREPI_CATALOG_ID"] = "ID основного каталога";
+    $MESS["ZAKREPI_ORDER_MIN_SUMM"] = "Минимальная сумма заказа";
+    $MESS["ZAKREPI_FREE_DELIVERY_SUMM"] = "Сумма заказа для бесплатной доставки";
+
+    $MESS["ZAKREPI_YANDEX_METRIKA"] = "код ЯндексМетрики";
+    $MESS["ZAKREPI_GOOGLE_ANALYTICS"] = "код GoogleAnalytics";
 
     $MESS["ZAKREPI_SOC_FB"] = "facebook";
     $MESS["ZAKREPI_SOC_VK"] = "vkontakte";

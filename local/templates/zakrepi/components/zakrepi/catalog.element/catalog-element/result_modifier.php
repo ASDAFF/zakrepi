@@ -217,17 +217,33 @@ if (!isset($arResult['CATALOG_SUBSCRIPTION']) || 'Y' != $arResult['CATALOG_SUBSC
 
 CIBlockPriceTools::getLabel($arResult, $arParams['LABEL_PROP']);
 
+
 $productSlider = CIBlockPriceTools::getSliderForItem($arResult, $arParams['ADD_PICT_PROP'], 'Y' == $arParams['ADD_DETAIL_TO_SLIDER']);
+if(!empty($arResult['PROPERTIES']['FILES']['VALUE'])){
+	$productSlider1 = CIBlockPriceTools::getSliderForItem($arResult, 'FILES', 'Y' == $arParams['ADD_DETAIL_TO_SLIDER']);
+
+	if (!empty($productSlider1))
+	{
+		foreach($productSlider1 as $img)
+		{
+			if(strpos($img['SRC'], '.jpg') > 0 || strpos($img['SRC'], '.png') > 0 || strpos($img['SRC'], '.jpeg') > 0)
+			{
+				$productSlider[] = $img;
+			}
+		}
+	}
+}
 if (empty($productSlider))
 {
 	$productSlider = array(
 		0 => $arEmptyPreview
 	);
 }
-$productSliderCount = count($productSlider);
+$productSliderCount = count($productSlider) + count($productSlider1);
 $arResult['SHOW_SLIDER'] = true;
 $arResult['MORE_PHOTO'] = $productSlider;
-$arResult['MORE_PHOTO_COUNT'] = count($productSlider);
+$arResult['MORE_PHOTO_COUNT'] = count($productSlider) + count($productSlider1);
+
 
 if ($arResult['MODULES']['catalog'])
 {

@@ -130,10 +130,11 @@ if ($existShow || $existDelete)
 foreach($arResult["ITEMS"] as $index=>$arItem)
 {
 	$arFile = Array();
-	if (is_array($arItem["PREVIEW_PICTURE"]))
-		$arFile = $arItem["PREVIEW_PICTURE"];
-	else if (is_array($arItem["DETAIL_PICTURE"]))
+	
+	if (is_array($arItem["DETAIL_PICTURE"]))
 		$arFile = $arItem["DETAIL_PICTURE"];
+	else if (is_array($arItem["PREVIEW_PICTURE"]))
+		$arFile = $arItem["PREVIEW_PICTURE"];
 
 	if (count($arFile) > 0 && $arFile["HEIGHT"] > 130){
 		$width = ($arFile["WIDTH"] / $arFile["HEIGHT"]) * 130;

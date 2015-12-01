@@ -1,4 +1,5 @@
 <?require($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');?>
+
 <?$APPLICATION->IncludeComponent(
     "zakrepi:catalog.section",
     "catalog-section",
@@ -15,8 +16,8 @@
         ),
         "ELEMENT_SORT_FIELD" => "sort",
         "ELEMENT_SORT_ORDER" => "asc",
-        "ELEMENT_SORT_FIELD2" => "id",
-        "ELEMENT_SORT_ORDER2" => "desc",
+        "ELEMENT_SORT_FIELD2" => $_COOKIE['CATALOG_SORT_TYPE'],
+        "ELEMENT_SORT_ORDER2" => $_COOKIE['CATALOG_SORT'],
         "FILTER_NAME" => "arrFilter",
         "INCLUDE_SUBSECTIONS" => "Y",
         "SHOW_ALL_WO_SECTION" => "Y",
@@ -24,7 +25,9 @@
         "PAGE_ELEMENT_COUNT" => "30",
         "LINE_ELEMENT_COUNT" => "3",
         "PROPERTY_CODE" => array(
-            "rating"
+            "rating",
+            "MORE_PHOTO",
+            "FILES"
         ),
         "OFFERS_LIMIT" => "0",
         "TEMPLATE_THEME" => "blue",

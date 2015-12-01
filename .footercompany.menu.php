@@ -1,0 +1,60 @@
+<?
+$aMenuLinks = Array(
+	/*Array(
+		"История компании", 
+		"/history/", 
+		Array(), 
+		Array(), 
+		"" 
+	),*/
+	Array(
+		"Структура компании", 
+		"/structura/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Новости", 
+		"/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Статьи", 
+		"/articles/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Вакансии", 
+		"/vacancy/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Франшиза", 
+		"http://old.zakrepi.ru/franchise/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Наши магазины", 
+		"/shops/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/shops/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

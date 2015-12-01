@@ -72,14 +72,17 @@ var compareSlider = {
     slideRight: function(){
     	if (Math.abs(this.x - this.itemWidth) <= (this.sliderWidth - this.itemWidth * this.visible)){
     		this.x = this.x - this.itemWidth;
-    		$(this.sliderBox).css({'left': this.x});
+    		$(this.sliderBox).animate({'left': this.x}, "slow");
+
+    		//.css({'left': this.x});
     	}
     	compareSlider.checkArrows();
     },
     slideLeft: function(){
     	if (Math.abs(this.x + this.itemWidth) >= 0){
     		this.x = this.x + this.itemWidth;
-    		$(this.sliderBox).css({'left': this.x});
+    		$(this.sliderBox).animate({'left': this.x}, "slow");
+    		//.css({'left': this.x});
     	}
     	compareSlider.checkArrows();
     },

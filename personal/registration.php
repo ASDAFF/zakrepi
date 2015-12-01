@@ -6,6 +6,7 @@ $APPLICATION->SetTitle('Регистрация');
     header("Location: /personal/account/");
     exit();
 endif;?>
+
 <?
     $show_field = array(
         "LAST_NAME",
@@ -31,19 +32,21 @@ endif;?>
     <?$APPLICATION->IncludeComponent(
         "bitrix:main.register",
         "registration",
+		//"",
         Array(
-            "COMPONENT_TEMPLATE" => ".default",
+            //"COMPONENT_TEMPLATE" => "",
             "SHOW_FIELDS" => $show_field,
             "REQUIRED_FIELDS" => array(),
             "AUTH" => "Y",
-            "USE_BACKURL" => "Y",
-            "SUCCESS_PAGE" => "",
+            "USE_BACKURL" => "N",
+            "SUCCESS_PAGE" => "/personal/?registration=yes",
             "SET_TITLE" => "Y",
             "USER_PROPERTY" => array(),
             "USER_PROPERTY_NAME" => ""
         )
     );?>
 </div>
+
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
 ?>

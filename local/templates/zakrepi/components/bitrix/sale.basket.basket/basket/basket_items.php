@@ -37,14 +37,32 @@ if ($normalCount > 0):
 					if ($arItem["DELAY"] == "N" && $arItem["CAN_BUY"] == "Y"):?>
 					<div class="table-row product-item basket-item" id="<?=$arItem["ID"]?>">
 						<div class="col l2 product-img">
-							<?
+						<?
+							
+							$arSelect = Array("ID", "IBLOCK_ID", "NAME", "DATE_ACTIVE_FROM","PROPERTY_FILES","PROPERTY_MORE_PHOTO");//IBLOCK_ID и ID обязательно должны быть указаны, см. описание arSelectFields выше
+							$arFilter = Array("ID"=>IntVal($arItem['PRODUCT_ID']), "ACTIVE_DATE"=>"Y", "ACTIVE"=>"Y");
+							$res = CIBlockElement::GetList(Array(), $arFilter, false, Array("nPageSize"=>50), $arSelect);
+							while($ob = $res->GetNextElement()){ 
+								 $arFields = $ob->GetFields();  
+							}
+
 							if (strlen($arItem["PREVIEW_PICTURE_SRC"]) > 0):
 								$url = $arItem["PREVIEW_PICTURE_SRC"];
 							elseif (strlen($arItem["DETAIL_PICTURE_SRC"]) > 0):
 								$url = $arItem["DETAIL_PICTURE_SRC"];
+							elseif (strlen($arFields['PROPERTY_MORE_PHOTO_VALUE']) > 0):
+							
+								 $file = CFile::ResizeImageGet($arFields['PROPERTY_MORE_PHOTO_VALUE'], array('width'=>240, 'height'=>200), BX_RESIZE_IMAGE_PROPORTIONAL, true);
+								 $url = $file['src'];
+							
+							elseif(strlen($arFields['PROPERTY_FILES_VALUE']) > 0):
+							
+								 $file = CFile::ResizeImageGet($arFields['PROPERTY_FILES_VALUE'], array('width'=>240, 'height'=>200), BX_RESIZE_IMAGE_PROPORTIONAL, true);
+								 $url = $file['src'];
+							
 							else:
 								//$url = $templateFolder."/images/no_photo.png";
-								$url = "";
+								$url = "/local/templates/zakrepi/components/zakrepi/catalog.element/catalog-element/images/no_photo.png";
 							endif;
 							?>
 							<?if (strlen($url) > 0):?>

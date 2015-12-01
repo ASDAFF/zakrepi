@@ -9,6 +9,9 @@ $MESS["SALE_QUANTITY"] = "Количество";
 $MESS["SALE_SUM"] = "Сумма";
 $MESS["SALE_DELETE"] = "Удалить";
 $MESS["SALE_DELAY"] = "Отложить";
+
+$MESS["SALE_NO_FAVORITE"] = "Вы ещё ничего не добавили в избранное.";
+
 $MESS["SALE_ADD_TO_BASKET"] = "Добавить к заказу";
 $MESS["SALE_WEIGHT"] = "Вес";
 $MESS["SALE_TOTAL_WEIGHT"] = "Общий вес:";

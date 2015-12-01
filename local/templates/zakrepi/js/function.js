@@ -79,6 +79,15 @@ function ajax_form_request(id_result,id_form,action){
         });
     }
 }
+
+/*
+* route - путь до компонента /include/promo/list.php
+* route_param - параметры которые необходимо передать для подгрузки нужного контента является не обязательным параметром
+* */
+function ajax_FormResultNew(route,route_url,obj)
+{
+  
+}
 /*Показать скрытые блоки*/
 function data_block($this)
 {
@@ -252,6 +261,7 @@ function favorite_product(id_product){
         data: "id_product="+id_product+'&delay=Y',
         success: function(html){
             $('#favcnt').html(html);
+			uploadSmallFavorite();
         }
     });
 };
@@ -266,6 +276,23 @@ function remove_favorite(id)
         success: function(html){
             //$(th).addClass('favactive');
             $('#favorite-'+id).remove();
+			uploadSmallFavorite();
+        }
+    });
+}
+/*Обновление значка Избранного*/
+function uploadSmallFavorite()
+{
+	 $.ajax({
+        type: "POST",
+        url: "/includes/header/small-favorite.php",
+        success: function(msg){
+
+            /*$('#'+id_elem).show();
+            $('#loader-'+id_elem).hide();
+            $('#minicard-popup').addClass('show');*/
+
+            $('#small-favorite-ajax').html(msg);
         }
     });
 }
@@ -306,6 +333,7 @@ function buyInOneClick(id)
     $('.dark-bg').show();
     $('#one-click-form_product-id').show();
 }
+
 
 
 /*Валидация форм*/

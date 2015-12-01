@@ -5,6 +5,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 <!--/div> <!-- /.workarea -->
 </div><!-- /.workarea-wrapper -->
 <div class="footer-wrapper">
+   <?/*?>
     <!--subscribe-->
     <div class="subscribe-box">
         <div class="container row">
@@ -21,45 +22,72 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         </div>
     </div>
     <!--end subscribe-->
+    <?*/?>
     <div class="footer container row">
         <!--footer company menu-->
         <div class="footer-menu col l3">
             <div class="menu-title box-title">Компания</div>
-            <ul class="menu vertical-menu">
-                <li class="menu-item"><a class="menu-link" href="#">История компании</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Структура компании</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Новости компании</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Вакансии</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Франшиза</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Наши магазины</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Контакты</a></li>
-            </ul>
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:menu",
+                "vertical-menu",
+                Array(
+                    "COMPONENT_TEMPLATE" => ".default",
+                    "ROOT_MENU_TYPE" => "footercompany",
+                    "MENU_CACHE_TYPE" => "Y",
+                    "MENU_CACHE_TIME" => "3600",
+                    "MENU_CACHE_USE_GROUPS" => "Y",
+                    "MENU_CACHE_GET_VARS" => array(""),
+                    "MAX_LEVEL" => "1",
+                    "CHILD_MENU_TYPE" => "top",
+                    "USE_EXT" => "Y",
+                    "DELAY" => "N",
+                    "ALLOW_MULTI_SELECT" => "N"
+                    )
+                );?>
         </div>
         <!--end footer company menu-->
         <!--footer buyer menu-->
         <div class="footer-menu col l3">
             <div class="menu-title box-title">Покупателю</div>
-            <ul class="menu vertical-menu">
-                <li class="menu-item"><a class="menu-link" href="#">Акции</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Помощь в выборе товара</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Тест-драйв</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Сервисный центр</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Бренды</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Крепыж-бонус</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Подарочные сертификаты</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Центр поддержки пенсионеров-садоводов</a></li>
-            </ul>
+             <?$APPLICATION->IncludeComponent(
+                "bitrix:menu",
+                "vertical-menu",
+                Array(
+                    "COMPONENT_TEMPLATE" => ".default",
+                    "ROOT_MENU_TYPE" => "footerbuyer",
+                    "MENU_CACHE_TYPE" => "Y",
+                    "MENU_CACHE_TIME" => "3600",
+                    "MENU_CACHE_USE_GROUPS" => "Y",
+                    "MENU_CACHE_GET_VARS" => array(""),
+                    "MAX_LEVEL" => "1",
+                    "CHILD_MENU_TYPE" => "top",
+                    "USE_EXT" => "Y",
+                    "DELAY" => "N",
+                    "ALLOW_MULTI_SELECT" => "N"
+                    )
+                );?>
         </div>
         <!--end footer buyer menu-->
         <!--footer information menu-->
         <div class="footer-menu col l3">
             <div class="menu-title box-title">Информация</div>
-            <ul class="menu vertical-menu">
-                <li class="menu-item"><a class="menu-link" href="#">Оплата и доставка</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Гарантия и возврат</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Политика конфиденциальности</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Договор-оферта</a></li>
-            </ul>
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:menu",
+                "vertical-menu",
+                Array(
+                    "COMPONENT_TEMPLATE" => ".default",
+                    "ROOT_MENU_TYPE" => "footerinform",
+                    "MENU_CACHE_TYPE" => "Y",
+                    "MENU_CACHE_TIME" => "3600",
+                    "MENU_CACHE_USE_GROUPS" => "Y",
+                    "MENU_CACHE_GET_VARS" => array(""),
+                    "MAX_LEVEL" => "1",
+                    "CHILD_MENU_TYPE" => "top",
+                    "USE_EXT" => "Y",
+                    "DELAY" => "N",
+                    "ALLOW_MULTI_SELECT" => "N"
+                    )
+                );?>
         </div>
         <!--end footer information menu-->
         <div class="contact-box col l3">
@@ -73,9 +101,6 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
             <!--mode-->
             <div class="schedule-box">
                 <div class="box-title">Режим работы</div>
-                <?/*<p>Будние дни: с 8:00 до 20:00</p>
-                <p>Суббота: с 8:00 до 20:00</p>
-                <p>Воскресенье: с 9:00 до 19:00</p>*/?>
                 <?=$arZSettings['TIME_WORK'];?>
             </div>
             <!--end mode-->
@@ -83,7 +108,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
             <div class="soc-box">
                 <ul class="soc-list horizontal">
                     <?foreach($arZSettings['SOCIAL'] as $item):?>
-                        <li class="soc-item"><a class="soc-link" href="<?=$item['LINK']?>"><svg class="icon"><use xlink:href="<?=$item['ID_SVG']?>"/></svg></a></li>
+                        <li class="soc-item"><a class="soc-link <?=$item['CLASS']?>" href="<?=$item['LINK']?>" target="_blank"><svg class="icon"><use xlink:href="<?=$item['ID_SVG']?>"/></svg></a></li>
                     <?endforeach;?>
 
                 </ul>
@@ -92,10 +117,26 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         </div>
     </div>
     <div class="bottombar">
-        <div class="container row">
-            <div class="col l6">© Крепыж, 2004 — <?=date('Y');?></div>
+        <div class="container row" style="display: flex;">
+            <div class="col l2" style="margin: auto;">© Крепыж, 2004 — <?=date('Y');?></div>
+            
+            <div class="col l8" style="margin: auto;">
+            <?
+                //настройки сайта
+                $APPLICATION->IncludeComponent(
+                    "bitrix:main.include",
+                    "",
+                    Array(
+                        "COMPONENT_TEMPLATE" => ".default",
+                        "AREA_FILE_SHOW" => "file",
+                        "AREA_FILE_SUFFIX" => "inc",
+                        "EDIT_TEMPLATE" => "",
+                        "PATH" => "/includes/footer/pay_system.php"
+                    )
+                );?>
+            </div>
             <!--creator-->
-            <div class="col l6 right-align"><a href="http://legacystudio.ru" class="img-link" target="_blank"><img src="/images/logo-legacy.png" /></a></div>
+            <div class="col l2 right-align" style="margin: auto;"><a href="http://legacystudio.ru" class="img-link" target="_blank"><img src="/images/logo-legacy.png" /></a></div>
             <!--end creator-->
         </div>
     </div>

@@ -18,6 +18,19 @@ $arUrlRewrite = array(
         "ID" => "bitrix:news.detail",
         "PATH" => "/brand/detail.php",
     ),
+     array(
+        "CONDITION" => "#^/vacancy/([a-zA-Z0-9_-]+)(/)(?:\\\\?.*)?#",
+        "RULE" => "code=\$1",
+        "ID" => "bitrix:news.detail",
+        "PATH" => "/vacancy/detail.php",
+    ),
+    
+    array(
+        "CONDITION" => "#^/articles/post/([a-zA-Z0-9_-]+)(/)(?:\\\\?.*)?#",
+        "RULE" => "code=\$1",
+        "ID" => "bitrix:news.detail",
+        "PATH" => "/articles/detail.php",
+    ),
     /*personal*/
     array(
         "CONDITION" => "#^/personal/account/update/#",
@@ -61,7 +74,76 @@ $arUrlRewrite = array(
         "ID" => "bitrix:catalog.section",
         "PATH" => "/catalog/detail.php",
     ),
+
     /*end catalog*/
+
+    /*static page*/
+    array(
+        "CONDITION" => "#^/delivery/#",
+        "PATH" => "/static_page/delivery.php",
+    ),
+     array(
+        "CONDITION" => "#^/warranty-and-returns/#",
+        "PATH" => "/static_page/warranty-and-returns.php",
+    ),
+      array(
+        "CONDITION" => "#^/organization/#",
+        "PATH" => "/static_page/organization.php",
+    ),
+       array(
+        "CONDITION" => "#^/shops/#",
+        "PATH" => "/static_page/shops.php",
+    ),
+
+    array(
+        "CONDITION" => "#^/history/#",
+        "PATH" => "/static_page/history.php",
+    ),
+     array(
+        "CONDITION" => "#^/structura/#",
+        "PATH" => "/static_page/structura.php",
+    ),
+     array(
+        "CONDITION" => "#^/contacts/#",
+        "PATH" => "/static_page/contacts.php",
+    ),
+
+    /*
+      array(
+        "CONDITION" => "#^/history/#",
+        "PATH" => "/content/history.php",
+    ),
+       array(
+        "CONDITION" => "#^/history/#",
+        "PATH" => "/content/history.php",
+    ),
+        array(
+        "CONDITION" => "#^/history/#",
+        "PATH" => "/content/history.php",
+    ),
+         array(
+        "CONDITION" => "#^/history/#",
+        "PATH" => "/content/history.php",
+    ),
+          array(
+        "CONDITION" => "#^/history/#",
+        "PATH" => "/content/history.php",
+    ),
+           array(
+        "CONDITION" => "#^/history/#",
+        "PATH" => "/content/history.php",
+    ),
+            array(
+        "CONDITION" => "#^/history/#",
+        "PATH" => "/content/history.php",
+    ),
+    /*array(
+        "CONDITION" => "#^/item/([a-zA-Z0-9_-]+)(/)(?:\\\\?.*)?#",
+        "RULE" => "code=\$1",
+        "ID" => "bitrix:catalog.section",
+        "PATH" => "/catalog/detail.php",
+    ),*/
+    /*end static page*/
 );
 
 ?>

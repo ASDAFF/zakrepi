@@ -646,6 +646,25 @@ function getLocationFromAddress($addressID){
 	}
 	return $arRes["LOCATION_ID"];
 }
+function getLocationFromNameCity($name_city){
+	$arRes = Array();
+	if($name_city != '' && CModule::IncludeModule("useraddress") && CModule::IncludeModule("sale"))
+	{
+		//поиск LOCATION по названию города
+		$db_vars = CSaleLocation::GetList(
+			array(),
+			array("LID" => LANGUAGE_ID, "CITY_NAME" => trim($name_city)),
+			false,
+			false,
+			array("ID")
+		);
+		while ($vars = $db_vars->Fetch()):
+			$arRes["LOCATION_ID"] = $vars["ID"];
+		endwhile;
+	}
+	return $arRes["LOCATION_ID"];
+}
+
 
 function getJsUserAddress(&$arResult, $USER_ID){
 

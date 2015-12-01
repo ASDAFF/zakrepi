@@ -17,7 +17,7 @@ $APPLICATION->SetTitle('Главная');
             "SORT_ORDER2" => "ASC",
             "FILTER_NAME" => "",
             "FIELD_CODE" => array("", ""),
-            "PROPERTY_CODE" => array("", ""),
+            "PROPERTY_CODE" => array("link", ""),
             "CHECK_DATES" => "Y",
             "DETAIL_URL" => "",
             "AJAX_MODE" => "N",
@@ -131,6 +131,14 @@ $APPLICATION->SetTitle('Главная');
         Array()
     );?>
     <?/*end bannergrid*/?>
+	
+	<?/*hits*/?>
+		 <?include($_SERVER['DOCUMENT_ROOT'].'/includes/home/hits.php')?>
+	<?/*end hits*/?>
+	
+	<?/*new-product*/?>
+		 <?include($_SERVER['DOCUMENT_ROOT'].'/includes/home/new_product.php')?>
+	<?/*end new-product*/?>
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
 ?>

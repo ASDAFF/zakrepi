@@ -12,8 +12,14 @@ $(document).ready(function(){
         } else {
             if($(window).scrollTop() > 50) {
                 $('.header-wrapper').addClass('fixed');
+                $('.title-search-result').css('position','fixed');
+                $('.title-search-result').css('top','80px');
+               
             } else {
                 $('.header-wrapper').removeClass('fixed');
+                $('.title-search-result').css('position','absolute');
+                var otstup = $('.header-wrapper').offset().top + 119;
+                $('.title-search-result').css('top',otstup+'px');
             }
         }
     });
@@ -250,10 +256,10 @@ $(document).ready(function(){
                 return '<li class="nav-item"><a class="nav-link" href="#'+page+'"></a></li>';
             }
         })
-        .on('jcarouselpagination:active', 'li', function(){ // - вот эта херня не работает почему-то
+        .on('jcarouselpagination:active', 'li', function(){
             $(this).children('a').addClass('active');
         })
-        .on('jcarouselpagination:inactive', 'li', function(){ // - и эта (а должна!)
+        .on('jcarouselpagination:inactive', 'li', function(){ 
             $(this).children('a').removeClass('active');
         });
     $('.carousel-controlls .prev')
@@ -314,28 +320,7 @@ $(document).ready(function(){
         //e.preventDefault;
     });
 
-    $('.toggle-content-box').each(function(){
-        if($(this).attr('data-state')){
-            var state = $(this).attr('data-state');
-        } else {
-            var state = 'less';
-        }
-        if($(this).attr('data-show')){
-            var num = $(this).attr('data-show');
-        } else {
-            var num = 5;
-        }
-        toggleContent($(this), 'init', state, num);
-    });
-
-    $('.show-buttons .show-more').click(function(){
-        toggleContent($(this).parents('.toggle-content-box'), 'toggle', 'more', $(this).parents('.toggle-content-box').attr('data-show'));
-        $(this).hide().siblings().show();
-    });
-    $('.show-buttons .show-less').click(function(){
-        toggleContent($(this).parents('.toggle-content-box'), 'toggle', 'less', $(this).parents('.toggle-content-box').attr('data-show'));
-        $(this).hide().siblings().show();
-    });
+    
 
     // tabs
     //$('.tabs').tabs();
@@ -496,7 +481,7 @@ function position() {
 }
 function toggleContent(el,action,state,num){
     // default
-    /*if(!action){
+    if(!action){
         action = 'init';
     }
     if(!state){
@@ -525,7 +510,7 @@ function toggleContent(el,action,state,num){
         } else if (state == 'more') {
             el.animate({'height': moreHeight},300).attr('data-state', 'less');;
         }
-    }*/
+    }
 }
 function tab(){
     console.log('ok');

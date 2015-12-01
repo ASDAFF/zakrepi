@@ -36,7 +36,7 @@
             <td class="icon">
                 <a href="/bitrix/admin/user_address_edit.php?ID=<?=$address['ID']?>"><i class="icon-pencil"></i></a>
                 <?if($address['DEFAULT_ADDRESS'] != 'Y'):?>
-                    <span onclick="remove(<?=$address['ID']?>,<?=$user_id?>);"><i class="icon-remove"></i></span>
+                    <span onclick="removed(<?=$address['ID']?>,<?=$user_id?>);"><i class="icon-remove"></i></span>
                 <?endif;?>
                 <?if($address['DEFAULT_ADDRESS'] == 'Y'):?>
                     <span class="def">По умолчанию</span>

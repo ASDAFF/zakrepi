@@ -14,7 +14,7 @@ $APPLICATION->SetTitle('Новости');
         </div>
     </div>
     <div class="row news-list" id="news-list">
-        <?include($_SERVER['DOCUMENT_ROOT'].'/includes/news/list.php')?>
+        <?include($_SERVER['DOCUMENT_ROOT'].'/includes/news/list.php');?>
     </div>
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');

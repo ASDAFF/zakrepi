@@ -62,6 +62,31 @@ $arUrlRewrite = array(
         "PATH" => "/catalog/detail.php",
     ),
     /*end catalog*/
+
+    /*static page*/
+    array(
+        "CONDITION" => "#^/delivery/#",
+        "PATH" => "/content/delivery.php",
+    ),
+     array(
+        "CONDITION" => "#^/warranty-and-returns/#",
+        "PATH" => "/content/warranty-and-returns.php",
+    ),
+      array(
+        "CONDITION" => "#^/organization/#",
+        "PATH" => "/content/organization.php",
+    ),
+       array(
+        "CONDITION" => "#^/shops/#",
+        "PATH" => "/content/shops.php",
+    ),
+    /*array(
+        "CONDITION" => "#^/item/([a-zA-Z0-9_-]+)(/)(?:\\\\?.*)?#",
+        "RULE" => "code=\$1",
+        "ID" => "bitrix:catalog.section",
+        "PATH" => "/catalog/detail.php",
+    ),*/
+    /*end static page*/
 );
 
 ?>

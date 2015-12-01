@@ -17,7 +17,7 @@ $this->setFrameMode(true);
     <div class="carousel-inner clearfix">
         <?foreach($arResult["ITEMS"] as $arItem):?>
             <div class="item col l12">
-                <a href="<?=$arItem['link']['VALUE']?>" class="item-link img-link"><img class="item-img" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" /></a>
+                <a href="<?=$arItem['PROPERTIES']['link']['VALUE']?>" class="item-link img-link"><img class="item-img" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" /></a>
             </div>
         <?endforeach;?>
     </div>

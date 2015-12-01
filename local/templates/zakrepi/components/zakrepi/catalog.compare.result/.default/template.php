@@ -36,7 +36,11 @@ $isAjax = ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["ajax_action"]) 
 						<?foreach($arResult["ITEMS"] as $arItem):?>
 						<div class="item compare-item col l2">
 							<?if (strlen($arItem["DISPLAY_IMG_SRC"]) > 0):?>
-							<div class="prod-img"><img src="<?=$arItem["DISPLAY_IMG_SRC"]?>"/></div>
+							<div class="prod-img table-head">
+								<div class="table-item vm">
+									<img src="<?=$arItem["DISPLAY_IMG_SRC"]?>"/>
+								</div>
+							</div>
 							<?endif;?>
 							<div class="prod-name">
 								<a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a>

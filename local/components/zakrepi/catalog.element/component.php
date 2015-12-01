@@ -692,6 +692,9 @@ if($this->StartResultCache(false, ($arParams["CACHE_GROUPS"]==="N"? false: $USER
 			}
 
 			$arResult["MORE_PHOTO"] = array();
+
+
+
 			if(isset($arResult["PROPERTIES"]["MORE_PHOTO"]["VALUE"]) && is_array($arResult["PROPERTIES"]["MORE_PHOTO"]["VALUE"]))
 			{
 				foreach($arResult["PROPERTIES"]["MORE_PHOTO"]["VALUE"] as $FILE)
@@ -701,7 +704,18 @@ if($this->StartResultCache(false, ($arParams["CACHE_GROUPS"]==="N"? false: $USER
 						$arResult["MORE_PHOTO"][]=$FILE;
 				}
 			}
-
+			/*Некоторые картинки попали в свойство FILES*/
+			/*$arResult["MORE_PHOTO_FILES"] = array();
+			
+			if(isset($arResult["PROPERTIES"]["FILES"]["VALUE"]) && is_array($arResult["PROPERTIES"]["FILES"]["VALUE"]))
+			{
+				foreach($arResult["PROPERTIES"]["FILES"]["VALUE"] as $FILE)
+				{
+					$FILE = CFile::GetFileArray($FILE);
+					if(is_array($FILE))
+						$arResult["MORE_PHOTO_FILES"][]=$FILE;
+				}
+			}*/
 			$arResult["LINKED_ELEMENTS"] = array();
 			if(strlen($arParams["LINK_PROPERTY_SID"])>0 && strlen($arParams["LINK_IBLOCK_TYPE"])>0 && $arParams["LINK_IBLOCK_ID"]>0)
 			{

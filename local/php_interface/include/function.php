@@ -96,6 +96,21 @@ function listRetailStore($id_product){
         return $arStore;
     }
 }
+/*Список розничных магазинов */
+function listShops(){
+
+    CModule::IncludeModule('catalog');
+    
+    $arFilter = array("ACTIVE" => "Y", "UF_RETAIL_STORE" => "1");
+    $arSelect = array("ID", "TITLE", "ADDRESS", "PHONE", "SCHEDULE", "PRODUCT_AMOUNT", "SHIPPING_CENTER", "GPS_N", "GPS_S", "UF_RETAIL_STORE", "UF_NAME");
+    $res = CCatalogStore::GetList(Array(), $arFilter, false, false, $arSelect);
+
+    $arStore = array();
+    while ($ar_res = $res->GetNext()) {
+            $arStore[] = $ar_res;
+    }
+    return $arStore;
+}
 /*Определяем является ли товар с торговым предложением*/
 function listTradeOffer($id_product)
 {
@@ -163,3 +178,17 @@ function wordForm($n, $form1, $form2, $form5){
     if ($n1 > 1 && $n1 < 5) return $form2;
     if ($n1 == 1) return $form1;return $form5;
 }
+
+/*Замена GET параметров в url*/
+function deleteGET($url, $name, $amp = true) {
+    $url = str_replace("&amp;", "&", $url); // Заменяем сущности на амперсанд, если требуется
+    list($url_part, $qs_part) = array_pad(explode("?", $url), 2, ""); // Разбиваем URL на 2 части: до знака ? и после
+    parse_str($qs_part, $qs_vars); // Разбиваем строку с запросом на массив с параметрами и их значениями
+    unset($qs_vars[$name]); // Удаляем необходимый параметр
+    if (count($qs_vars) > 0) { // Если есть параметры
+      $url = $url_part."?".http_build_query($qs_vars); // Собираем URL обратно
+      if ($amp) $url = str_replace("&", "&amp;", $url); // Заменяем амперсанды обратно на сущности, если требуется
+    }
+    else $url = $url_part; // Если параметров не осталось, то просто берём всё, что идёт до знака ?
+    return $url; // Возвращаем итоговый URL
+  }

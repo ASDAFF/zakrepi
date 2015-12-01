@@ -107,6 +107,10 @@ if (strlen($arResult["ERROR_MESSAGE"]) <= 0)
 }
 else
 {
-	ShowError($arResult["ERROR_MESSAGE"]);
+    ?>
+    <div class="page-empty">
+        <div class="title large-text color-text text-light light center-align"><?= GetMessage("SALE_NO_FAVORITE")?></div>
+    </div>
+    <?
 }
 ?>

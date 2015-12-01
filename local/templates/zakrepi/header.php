@@ -53,41 +53,61 @@ CUtil::InitJSCore(Array("ajax"));
         */
         ?>
         <title><?$APPLICATION->ShowTitle();?></title>
-		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /> 	
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /> 
+        <meta name="viewport" content="width=1200">
+        <?=$arZSettings['GOOGLE_ANALYTICS']?>	
 	</head>
 	<body>
+        <?=$arZSettings['YANDEX_METRIKA']?>
 		<div id="panel">
 			<?$APPLICATION->ShowPanel();?>
 		</div>
-        <?
-        //настройки сайта
-        /*$APPLICATION->IncludeComponent(
-            "bitrix:main.include",
-            "",
-            Array(
-                "COMPONENT_TEMPLATE" => ".default",
-                "AREA_FILE_SHOW" => "file",
-                "AREA_FILE_SUFFIX" => "inc",
-                "EDIT_TEMPLATE" => "",
-                "PATH" => "/includes/settings.php"
-            )
-        );*/?>
         <div id="svg-placeholder" class="hide"></div>
         <div class="layout">
-        <!-- для главной добавить класс home-page к page, для сравнения .compare-page, оформление заказа .checkout-page, lk - .profile-page -->
+        <!--    для главной добавить класс к page       .home-page, 
+            для сравнения                           .compare-page, 
+            оформление заказа                       .checkout-page, 
+            lk -                                    .profile-page, 
+            авторизация, регистрация                .authorize-page, 
+            бренды, сервисные центры -              .brands-page.white-page, 
+            бренд -                                 .brand-page-single, 
+            магазины -                              .shops-page.white-page,
+            ---------------------------------------------------
+            структура компании,                     .white-page
+            сервисцентр детальная, 
+            категория 
+        -->
         <?
         $bread = 'Y';
         $uri = $APPLICATION->GetCurUri();
+
         $pos = strrpos($uri, "personal/");
         if($pos == 1){$class = 'profile-page'; $bread = 'N';}
+
         $pos = strrpos($uri, "compare/");
         if($pos == 1) {$class = 'compare-page';}
-        $pos = strrpos($uri, "make/");
-        if($pos == 1) {$class = 'checkout-page';}
+
+        $pos = strrpos($uri, "checkout/");
+        if($pos == 1) {$class = 'checkout-page'; $bread = 'N';}
+
+        $pos = strrpos($uri, "cart/");
+        if($pos == 1) {$bread = 'N';}
+        
+        $pos = strrpos($uri, "brand/");
+        if($pos == 1) {$class = 'brands-page white-page';$bread = 'N';}
+
+        $pos = strrpos($uri, "shops/");
+        if($pos == 1) {$class = 'shops-page white-page';$bread = 'N';}
+
         if ($APPLICATION->GetCurPage(false) === '/') {$class = 'home-page';$bread = 'N';}
         ?>
             <div class="page <?=$class?>">
                 <!-- если не 404 -->
+                <div class="test" style="background: #ce2127;color: #fff;padding: 5px 0;text-align: center;">
+                    <div class="container row">
+                        Новая версия сайта находится на стадии тестирования. Приносим свои извинения за временные неудобства!
+                    </div>
+                </div>
                 <div class="header-wrapper">
                     <div class="topbar">
                         <div class="container row">
@@ -95,7 +115,7 @@ CUtil::InitJSCore(Array("ajax"));
                             <!--geo location-->
                             <div class="geo-box col l3">
                                 <svg class="icon"><use xlink:href="#location"/></svg>
-                                Петропавловск-Камчатский
+                                Тюмень
 
                                 <?
                                     /*CModule::IncludeModule("cityfranchise");
@@ -106,12 +126,31 @@ CUtil::InitJSCore(Array("ajax"));
                             <!--end geo location-->
                             <!-- extra menu-->
                             <div class="top-menu col l6">
+
+                                 <?$APPLICATION->IncludeComponent(
+                                    "bitrix:menu",
+                                    "topheader-menu",
+                                    Array(
+                                        "COMPONENT_TEMPLATE" => ".default",
+                                        "ROOT_MENU_TYPE" => "topheader",
+                                        "MENU_CACHE_TYPE" => "Y",
+                                        "MENU_CACHE_TIME" => "3600",
+                                        "MENU_CACHE_USE_GROUPS" => "Y",
+                                        "MENU_CACHE_GET_VARS" => array(""),
+                                        "MAX_LEVEL" => "1",
+                                        "CHILD_MENU_TYPE" => "top",
+                                        "USE_EXT" => "Y",
+                                        "DELAY" => "N",
+                                        "ALLOW_MULTI_SELECT" => "N"
+                                    )
+                                );?>
+                                 <?/*
                                 <ul class="menu horizontal-menu">
                                     <li class="menu-item"><a class="menu-link" href="#">Доставка и оплата</a></li>
                                     <li class="menu-item"><a class="menu-link" href="#">Гарантия и возврат</a></li>
                                     <li class="menu-item"><a class="menu-link" href="#">Организациям</a></li>
                                     <li class="menu-item"><a class="menu-link" href="#">Наши магазины</a></li>
-                                </ul>
+                                </ul>*/?>
                             </div>
                             <!--end extra menu-->
                             <!--personal-->
@@ -148,14 +187,39 @@ CUtil::InitJSCore(Array("ajax"));
                             <!--end phone and text-->
                             <!--search-->
                             <div class="search-box col l3">
-                                <input type="text" class="search inputtext" id="h-search" />
-                                <label for="h-search" class="textfield-placeholder">Поиск по товарам</label>
-                                <button class="search-btn btn btn-icon"><svg class="icon"><use xlink:href="#search"/></svg></button>
+                                <?//if($USER->IsAdmin()):?>
+                             <?$APPLICATION->IncludeComponent(
+                                    "zakrepi:search.title",
+                                    "zakrepi-search",
+                                    Array(
+                                        "CATEGORY_0" => array("iblock_1c_catalog"),
+                                        "CATEGORY_0_TITLE" => "",
+                                        "CATEGORY_0_iblock_1c_catalog" => array("10"),
+                                        "CHECK_DATES" => "N",
+                                        "COMPONENT_TEMPLATE" => ".default",
+                                        "CONTAINER_ID" => "title-search",
+                                        "INPUT_ID" => "title-search-input",
+                                        "NUM_CATEGORIES" => "1",
+                                        "ORDER" => "date",
+                                        "PAGE" => "#SITE_DIR#search/",
+                                        "SHOW_INPUT" => "Y",
+                                        "SHOW_OTHERS" => "N",
+                                        "TOP_COUNT" => "5",
+                                        "USE_LANGUAGE_GUESS" => "Y"
+                                    )
+                                );?>
+                                <?/*else:?>
+                                    <??><input type="text" class="search inputtext" id="h-search" /><??>
+                                    <label for="h-search" class="textfield-placeholder">Поиск по товарам</label>
+                                    <button class="search-btn btn btn-icon"><svg class="icon"><use xlink:href="#search"/></svg></button>
+                                <?endif;*/?>
                             </div>
                             <!--end search-->
                             <!--cart and like-->
                             <div class="shopping-card-box col l3">
-                                <a href="#" class="btn btn-favorite btn-icon col"><svg class="icon"><use xlink:href="#heart"/></svg></a>
+								<span id="small-favorite-ajax">
+									<?include($_SERVER['DOCUMENT_ROOT'].'/includes/header/small-favorite.php');?>
+								</span>
                                 <span id="small-basket-ajax">
                                     <?include($_SERVER['DOCUMENT_ROOT'].'/includes/header/small-basket.php');?>
                                 </span>
@@ -194,7 +258,7 @@ CUtil::InitJSCore(Array("ajax"));
                 <!-- /если не 404 -->
                 <div class="workarea-wrapper container">
                     <?
-                        if ($bread== 'Y'):
+                        if ($bread == 'Y'):
                     ?>
 
                     <!-- если не главная -->

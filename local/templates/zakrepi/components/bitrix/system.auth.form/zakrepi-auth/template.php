@@ -1,6 +1,12 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
-
+<?
+ShowMessage($arParams["~AUTH_RESULT"]);
+?>
+<?
+/*if ($arResult['SHOW_ERRORS'] == 'Y' && $arResult['ERROR'])
+    ShowMessage($arResult['ERROR_MESSAGE']);*/
+?>
 
 <form name="system_auth_form<?=$arResult["RND"]?>" method="post" target="_top" action="<?=$arResult["AUTH_URL"]?>">
     <?if($arResult["BACKURL"] <> ''):?>

@@ -48,7 +48,21 @@ if($arParams["~FOR_SPLIT"] == 'Y'):?>
                     <?if(($arParams["~FOR_SPLIT"] != 'Y') || (!is_array($service["FORM_HTML"]))):?>
 
                         <li class="soc-item">
-                            <a class="soc-link" href="javascript:void(0);" onclick="<?=$service['ONCLICK']?>">
+							<?	$class = '';
+								switch($service['ICON'])
+								{
+									case 'facebook':
+										$class = 'fb';
+										break;
+									case 'vkontakte':
+										$class = 'vk';
+										break;
+									case 'odnoklassniki':
+										$class = 'ok';
+										break;
+								}
+							?>
+                            <a class="soc-link <?=$class?>" href="javascript:void(0);" onclick="<?=$service['ONCLICK']?>">
                                 <svg class="icon">
                                     <use xlink:href="#<?=$service['ICON']?>"/>
                                 </svg>

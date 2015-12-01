@@ -21,7 +21,11 @@ use Bitrix\Main\Localization\Loc;
         ?>
         <div class="news-item news-card col l6">
             <a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="img-link">
-                <img class="item-img"src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" />
+                <?if($arItem['PREVIEW_PICTURE']['SRC'] != ''){?>
+                    <img class="item-img"src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" />
+                <?}else{?>
+                    <div class="no-img" style="height:300px; background: #363636;"></div>
+                <?}?>
                 <div class="overlay"></div>
                 <div class="item-text">
                     <div class="item-date"><?=$arItem['DATE_ACTIVE']?></div>

@@ -1,8 +1,5 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 ?>
-
-<pre><?//print_r($arResult);?></pre>
-
 <script type="text/javascript">
 	function fShowStore(id, showImages, formWidth, siteId)
 	{
@@ -126,7 +123,7 @@
 </script>
 
 <input type="hidden" name="BUYER_STORE" id="BUYER_STORE" value="<?=$arResult["BUYER_STORE"]?>" />
-
+<input type="hidden" name="DELIVERY_CLICK" id="DELIVERY_CLICK" value="<?=$arResult["DELIVERY_CLICK"]?>"/>
 <?
 if(!empty($arResult["DELIVERY"]))
 {
@@ -137,14 +134,14 @@ if(!empty($arResult["DELIVERY"]))
 			foreach ($arDelivery["PROFILES"] as $profile_id => $arProfile)
 			{
 				?>
-				<p>
+				<p id="DELIVERY_<?=$delivery_id?>" class="delevery-radio">
 					<input
 						type="radio"
 						id="ID_DELIVERY_<?=$delivery_id?>_<?=$profile_id?>"
 						name="<?=htmlspecialcharsbx($arProfile["FIELD_NAME"])?>"
 						value="<?=$delivery_id.":".$profile_id;?>"
 						<?=$arProfile["CHECKED"] == "Y" ? "checked=\"checked\"" : "";?>
-						onclick="submitFormDelivery('delivery-loader');"
+						onclick="submitFormDelivery('delivery-loader',this);"
 						/>
 
 					<label class="radio-lbl btn-toggle-block" for="ID_DELIVERY_<?=$delivery_id?>_<?=$profile_id?>">
@@ -170,13 +167,12 @@ if(!empty($arResult["DELIVERY"]))
 							$extraParams = "";
 
 						?>
-
-						<span onclick="BX('ID_DELIVERY_<?=$delivery_id?>_<?=$profile_id?>').checked=true;<?=$extraParams?>submitFormDelivery('delivery-loader');">
+						<span onclick="BX('ID_DELIVERY_<?=$delivery_id?>_<?=$profile_id?>').checked=true;<?=$extraParams?>submitFormDelivery('delivery-loader',this);">
 							<?=htmlspecialcharsbx($arDelivery["TITLE"])?>
 						</span>
 
 						<span class="bx_result_price" style="display:none"><!-- click on this should not cause form submit -->
-							<?
+							<?/*
 							if($arProfile["CHECKED"] == "Y" && doubleval($arResult["DELIVERY_PRICE"]) > 0):
 							?>
 								<div><?=GetMessage("SALE_DELIV_PRICE")?>:&nbsp;<b><?=$arResult["DELIVERY_PRICE_FORMATED"]?></b></div>
@@ -199,10 +195,10 @@ if(!empty($arResult["DELIVERY"]))
 									"EXTRA_PARAMS_CALLBACK" => $extraParams
 								), null, array('HIDE_ICONS' => 'Y'));
 							endif;
-							?>
+							*/?>
 						</span>
 
-						<span style="display:none" onclick="BX('ID_DELIVERY_<?=$delivery_id?>_<?=$profile_id?>').checked=true;submitFormDelivery('delivery-loader');">
+						<span style="display:none" onclick="BX('ID_DELIVERY_<?=$delivery_id?>_<?=$profile_id?>').checked=true;submitFormDelivery('delivery-loader',this);">
 							<?if (strlen($arProfile["DESCRIPTION"]) > 0):?>
 								<?=nl2br($arProfile["DESCRIPTION"])?>
 							<?else:?>
@@ -222,12 +218,13 @@ if(!empty($arResult["DELIVERY"]))
 			//else
 				$clickHandler = "onClick = \"BX('ID_DELIVERY_ID_".$arDelivery["ID"]."').checked=true;submitForm();\"";
 			?>
-			<p>
+			<p id="DELIVERY_<?= $arDelivery["ID"] ?>" class="delevery-radio">
+				
 				<input type="radio"
 					id="ID_DELIVERY_ID_<?= $arDelivery["ID"] ?>"
 					name="<?=htmlspecialcharsbx($arDelivery["FIELD_NAME"])?>"
 					value="<?= $arDelivery["ID"] ?>"<?if ($arDelivery["CHECKED"]=="Y") echo " checked";?>
-					onclick="submitFormDelivery('delivery-loader');"
+					onclick="submitFormDelivery('delivery-loader',this);"
 					/>
 
 				<label class="radio-lbl btn-toggle-block" for="ID_DELIVERY_ID_<?=$arDelivery["ID"]?>" <?=$clickHandler?>>

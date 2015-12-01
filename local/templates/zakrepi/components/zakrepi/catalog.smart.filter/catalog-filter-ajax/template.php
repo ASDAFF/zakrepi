@@ -36,12 +36,12 @@ $this->setFrameMode(true);
                 if(is_positive_int($arItem["VALUES"]["MIN"]["VALUE"]))
                     $price_min = number_format($arItem["VALUES"]["MIN"]["VALUE"],0,'',' ');
                 else
-                    $price_min = number_format($arItem["VALUES"]["MIN"]["VALUE"],2,'',' ');
+                    $price_min = number_format($arItem["VALUES"]["MIN"]["VALUE"],2,'.',' ');
 
                 if(is_positive_int($arItem["VALUES"]["MIN"]["VALUE"]))
                     $price_max = number_format($arItem["VALUES"]["MAX"]["VALUE"],0,'',' ');
                 else
-                    $price_max = number_format($arItem["VALUES"]["MAX"]["VALUE"],2,'',' ');
+                    $price_max = number_format($arItem["VALUES"]["MAX"]["VALUE"],0,'.',' ');
             ?>
             <li>
                 <div class="collapsible-header <?if($countActive <= $active_elements):?>active<?$countActive++; endif;?>">Цена</div>
@@ -463,12 +463,12 @@ $this->setFrameMode(true);
                     break;
                 default://CHECKBOXES
                     ?>
-                    <?$data_show = 5;?>
+                    <?$data_show = 4;?>
                         <li>
-                            <div class="collapsible-header  <?if($countActive <= $active_elements):?>active<?$countActive++; endif;?> <?if($arItem["DISPLAY_EXPANDED"]):?>active<?endif?>"><?=$arItem['NAME']?></div>
+                            <div class="collapsible-header  <?if($countActive <= $active_elements):?>active<?endif;?> <?if($arItem["DISPLAY_EXPANDED"]):?>active<?endif?>"><?=$arItem['NAME']?></div>
                             <div class="collapsible-body">
                                 <!-- если больше, чем data-show - .toggle-content-box, data-show - нужное количество, чтоб можно было настраивать в настройках компонента/фильтра, data-state - состояние по умолчанию (less/more) -->
-                                <div class="collapsible-body-content toggle-content-box" data-show="<?=$data_show?>" data-state="less">
+                                <div class="collapsible-body-content <?if(count($arItem["VALUES"]) > $data_show && $countActive <= $active_elements):?>toggle-content-box<?endif?>" data-show="<?=$data_show?>" data-state="less">
                                     <?foreach($arItem["VALUES"] as $val => $ar):?>
                                         <p class="range-field">
                                             <input
@@ -483,16 +483,17 @@ $this->setFrameMode(true);
                                                 />
                                             <label class="checkbox-lbl" data-role="label_<?=$ar["CONTROL_ID"]?>" for="<? echo $ar["CONTROL_ID"] ?>">
                                                 <?=$ar["VALUE"];?>
-                                                <? if ($arParams["DISPLAY_ELEMENT_COUNT"] !== "N" && isset($ar["ELEMENT_COUNT"])):?> <span data-role="count_<?=$ar["CONTROL_ID"]?>">(<?echo $ar["ELEMENT_COUNT"]?>)</span><? endif;?>
+                                                <? if ($arParams["DISPLAY_ELEMENT_COUNT"] !== "N" && isset($ar["ELEMENT_COUNT"])):?> (<span data-role="count_<?=$ar["CONTROL_ID"]?>"><?echo $ar["ELEMENT_COUNT"]?></span>)<? endif;?>
                                             </label>
                                         </p>
                                     <?endforeach;?>
-                                    <?if(count($arItem["VALUES"]) > $data_show):?>
+                                    <?if(count($arItem["VALUES"]) > $data_show && $countActive <= $active_elements):?>
                                         <div class="show-buttons">
-                                            <button class="btn-link show-more">Показать все</button>
-                                            <button class="btn-link show-less">Свернуть</button>
+                                            <span class="btn-link show-more">Показать все</span>
+                                            <span class="btn-link show-less">Свернуть</span>
                                         </div>
                                     <?endif;?>
+                                    <?$countActive++;?>
                                 </div>
                             </div>
                         </li>
@@ -535,6 +536,33 @@ $this->setFrameMode(true);
     var smartFilter = new JCSmartFilter('<?echo CUtil::JSEscape($arResult["FORM_ACTION"])?>', '<?=CUtil::JSEscape($arParams["FILTER_VIEW_MODE"])?>', <?=CUtil::PhpToJSObject($arResult["JS_FILTER_PARAMS"])?>);
 </script>
 <?*/?>
+<script>
+$(document).ready(function()
+{
+    $('.toggle-content-box').each(function(){
+        if($(this).attr('data-state')){
+            var state = $(this).attr('data-state');
+        } else {
+            var state = 'less';
+        }
+        if($(this).attr('data-show')){
+            var num = $(this).attr('data-show');
+        } else {
+            var num = <?=$data_show?>;
+        }
+        toggleContent($(this), 'init', state, num);
+    });
+
+    $('.show-buttons .show-more').click(function(){
+        toggleContent($(this).parents('.toggle-content-box'), 'toggle', 'more', $(this).parents('.toggle-content-box').attr('data-show'));
+        $(this).hide().siblings().show();
+    });
+    $('.show-buttons .show-less').click(function(){
+        toggleContent($(this).parents('.toggle-content-box'), 'toggle', 'less', $(this).parents('.toggle-content-box').attr('data-show'));
+        $(this).hide().siblings().show();
+    });
+})
+</script>
 <??>
 <script>
 	var smartFilter = new JCSmartFilter('<?echo CUtil::JSEscape($arResult["FORM_ACTION"])?>', '');

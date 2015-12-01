@@ -5,7 +5,7 @@
         <div class="lk-menu tooltip" data-box="#lk-menu-link" data-position="bottom-center">
             <div class="tooltip-tngl"></div>
             <ul class="menu tooltip-content">
-                <li class="menu-item"><a href="/personal/orders/" class="menu-link">Мои заказы</a></li>
+                <li class="menu-item"><a href="/personal/account/orders/" class="menu-link">Мои заказы</a></li>
                 <li class="menu-item"><a href="/personal/account/" class="menu-link">Личные данные</a></li>
                 <li class="menu-item"><a href="?logout=yes" class="menu-link">Выйти</a></li>
             </ul>

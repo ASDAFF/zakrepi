@@ -126,7 +126,7 @@ endif;
                     <p class="color-text text-light">Реквизиты организации</p>
                     <div class="table-field cols-2">
                         <span class="label">ИНН / КПП</span>
-                        <div class="field"><input type="text" id="inn" class="numbers" name="REGISTER[UF_INN]"/><label for="inn" class="textfield-placeholder">ИНН</label></div>/
+                        <div class="field"><input type="text" id="inn" class="numbers" maxlength="12" name="REGISTER[UF_INN]"/><label for="inn" class="textfield-placeholder">ИНН</label></div>/
                         <div class="field"><input type="text" id="kpp" class="numbers" name="REGISTER[UF_KPP]"/><label for="kpp" class="textfield-placeholder">КПП</label></div>
                     </div>
                     <div class="table-field cols-2">
@@ -352,7 +352,7 @@ endif;
             /*submit*/
             $('body').on('submit', 'form', function(){
                 error_count = 0;
-                $('input[type="email"], input[type="text"].required, input[type="text"].required.numbers, input[type="tel"],input[type="password"].pass,input[type="password"].pass_inp').change();
+                $('input[type="email"]#emailregister, input[type="text"].required, input[type="text"].required.numbers, input[type="tel"],input[type="password"].pass,input[type="password"].pass_inp').change();
                 if (error_count>0)
                 {
                     return false;

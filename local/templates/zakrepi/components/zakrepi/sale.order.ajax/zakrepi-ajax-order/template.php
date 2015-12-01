@@ -121,7 +121,7 @@ $APPLICATION->SetAdditionalCSS($templateFolder."/style.css");
 					BX('confirmorder').value = 'N';
 
 				var orderForm = BX('ORDER_FORM');
-				BX.showWait();
+				//BX.showWait();
 
 				<?if(CSaleLocation::isLocationProEnabled()):?>
 					BX.saleOrderAjax.cleanUp();
@@ -132,9 +132,10 @@ $APPLICATION->SetAdditionalCSS($templateFolder."/style.css");
 				return true;
 			}
             /*reload delivery*/
-            function submitFormDelivery(idDOM)
+            function submitFormDelivery(idDOM,obj)
             {
                 $('#'+idDOM).show();
+				$('#DELIVERY_CLICK').val($(obj).val());
                 submitForm();
             }
 
@@ -274,7 +275,7 @@ $APPLICATION->SetAdditionalCSS($templateFolder."/style.css");
 					<input type="hidden" name="profile_change" id="profile_change" value="N">
 					<input type="hidden" name="is_ajax_post" id="is_ajax_post" value="Y">
 					<input type="hidden" name="json" value="Y">
-					<a href="javascript:void();" <?/*?>onclick="submitForm('Y'); return false;"<?*/?> id="ORDER_CONFIRM_BUTTON" class="btn primary big fullwidth btn-checkout"><?=GetMessage("SOA_TEMPL_BUTTON")?></a>
+					<a href="javascript:void();" onclick="<?/*submitFormOK('Y'); return false;*/?>" id="ORDER_CONFIRM_BUTTON" class="btn primary big fullwidth btn-checkout"><?=GetMessage("SOA_TEMPL_BUTTON")?></a>
 				</form>
 				<?
 				if($arParams["DELIVERY_NO_AJAX"] == "N")
@@ -365,7 +366,7 @@ $APPLICATION->SetAdditionalCSS($templateFolder."/style.css");
             $(this).removeClass('dirty');
         }
     });
-
+		
 
     $(document).ready(function(){
         var fl = new Array(
@@ -404,6 +405,14 @@ $APPLICATION->SetAdditionalCSS($templateFolder."/style.css");
                 }
             }
         });
+		
+		$('body').on('change','input.addr-name-city, input.addr-name-street, input.addr-name-house', function(){
+            var val = $.trim($(this).val());
+            error = checkEmptiness(val, $(this));
+            if (error) {
+                error_count++;
+            }
+        });
 
         $('body').on('change', 'input[type="email"]', function(){
             var val = $.trim($(this).val());
@@ -419,19 +428,22 @@ $APPLICATION->SetAdditionalCSS($templateFolder."/style.css");
                 }
             }
         });
-
-        $('#ORDER_CONFIRM_BUTTON').click(function(){
+		$('body').on('click', '#ORDER_CONFIRM_BUTTON', function(){
             error_count = 0;
-            $('input[type="email"].required, input[type="text"].required, input[type="tel"].required.numbers').change();
-            if (error_count>0)
-            {
-                return false;
-            }
-            else
-            {
-                submitForm('Y');
-            }
-        })
-
+			
+			$('input[type="email"].required, input[type="text"].required, input[type="tel"].required.numbers').change();
+			if(($('#ID_DELIVERY_ID_3').prop('checked') || $('#ID_DELIVERY_ID_2').prop('checked') || $('#ID_DELIVERY_dpd_dpd').prop('checked')) && ($('[name="IS_ADDRESS_NEW"]').val() == 'Y' || $('[name="IS_ADDRESS_CHANGE"]').val() == 'Y'))
+			{
+				$('input.addr-name-city, input.addr-name-street, input.addr-name-house').change();
+			}
+			if (error_count>0)
+			{
+				return false;
+			}
+			else
+			{
+				submitForm('Y');
+			}
+        });
     })
 </script>

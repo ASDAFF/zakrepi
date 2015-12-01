@@ -357,6 +357,7 @@
                         </li>
                     </ul>
                 </li>
+				
                 <li class="menu-item parent"><a class="menu-link" href="#">отдых и туризм</a>
                     <ul class="submenu level-2 parent-box">
                         <li class="submenu-item active parent"><a class="submenu-link active" href="#">Лодки и лодочные моторы</a>
@@ -428,7 +429,6 @@
     </div>
 <?*/?>
 
-
     <div class="main-menu">
         <div class="container row">
             <ul class="menu horizontal-multilevel-menu col">
@@ -443,15 +443,16 @@
 
     <?if ($arItem["IS_PARENT"]):?>
 
-    <?if ($arItem["DEPTH_LEVEL"] == 1):?>
-                <li class="menu-item parent"><a class="menu-link" href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
-                    <ul class="submenu level-2 parent-box">
-    <?else:?>
-                <li class="submenu-item  parent"><a class="submenu-link" href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
-                    <ul class="submenu level-<?=$arItem["DEPTH_LEVEL"]+1?> parent-box">
-        <?endif?>
+		<?if ($arItem["DEPTH_LEVEL"] == 1):?>
+					<li class="menu-item parent">
+						<a class="menu-link" href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+						<ul class="submenu level-2 <?if($arItem['HAVE_CHILD'] == 'Y'):?>parent-box<?endif;?>">
+		<?else:?>
+					<li class="submenu-item  parent"><a class="submenu-link" href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+						<ul class="submenu level-<?=$arItem["DEPTH_LEVEL"]+1?> parent-box">
+		<?endif?>
 
-        <?else:?>
+    <?else:?>
 
             <?if ($arItem["PERMISSION"] > "D"):?>
 

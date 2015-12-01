@@ -1,0 +1,60 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Акции", 
+		"/promo/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	/*Array(
+		"Помощь в выборе товара", 
+		"/pomoshch_v_vybore/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Тест-драйв", 
+		"/obzor_tovarov/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Сервисный центр", 
+		"/service/", 
+		Array(), 
+		Array(), 
+		"" 
+	),*/
+	Array(
+		"Бренды", 
+		"/brand/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	/*Array(
+		"Крепыж-бонус", 
+		"/bonus/", 
+		Array(), 
+		Array(), 
+		"" 
+	),*/
+	/*Array(
+		"Подарочные сертификаты", 
+		"/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	),*/
+	/*Array(
+		"Центр поддержки пенсионеров-садоводов", 
+		"/vantage/", 
+		Array(), 
+		Array(), 
+		"" 
+	)*/
+);
+?>

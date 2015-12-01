@@ -71,13 +71,14 @@ endif;
 	</div>
 </div>
 
-<div style="display:block">
-		<?
+<??>
+<div style="display:none">
+		<?/*
 		PrintPropsForm($arResult["ORDER_PROP"]["USER_PROPS_N"], $arParams["TEMPLATE_LOCATION"], $arParams["DELIVERY_PROPERTIES_".$arResult["DEFAULT_PERSON_TYPE_ID"]]);
 		PrintPropsForm($arResult["ORDER_PROP"]["USER_PROPS_Y"], $arParams["TEMPLATE_LOCATION"], $arParams["DELIVERY_PROPERTIES_".$arResult["DEFAULT_PERSON_TYPE_ID"]]);
-		?>
+		*/?>
 </div>
-
+<??>
 <script type="text/javascript">
 	function fGetBuyerProps(el)
 	{
