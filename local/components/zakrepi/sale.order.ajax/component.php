@@ -2147,10 +2147,8 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
 				else
 					$arFields["AFFILIATE_ID"] = false;
 
-
-
+                //Для физ лиц
 				$comment = '';
-                
                 $comment .= 'Фамилия: '.$_REQUEST["ORDER_PROP_1"];
                 $comment .= ' Имя: '.$_REQUEST['ORDER_PROP_2'];
                 $comment .= ' Телефон: '.$_REQUEST['ORDER_PROP_3'];
@@ -2162,7 +2160,7 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
 
                     $store = CCatalogStore::GetList(
                         array(),
-                        array('ID'=>$_REQUEST['BUYER_STORE']),
+                        array('ID'=>1),
                         false,
                         false,
                         array("ADDRESS")
@@ -2173,13 +2171,18 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
                 }
                 else
                 {
-                    $comment .=' Адрес доставки: '.$_REQUEST['ORDER_PROP_6'];
-                }
+                    $city = 'г. '.$_REQUEST['ORDER_PROP_19'];
+                    $street = 'ул. '.$_REQUEST['ORDER_PROP_10'];
+                    $home = 'д. '.$_REQUEST['ORDER_PROP_11'];
+                    $korpus = 'корп. '.$_REQUEST['ORDER_PROP_12'];
+                    $flat = 'кв. '.$_REQUEST['ORDER_PROP_13'];
 
-               // AddOrderProperty('UR_ADDRESS', 'ADDRESS_ORDER_ORGANIZATION', $ID);
-                //$comment .= 'ÔÈÎ: '.$_REQUEST['ORDER_PROP_1'];
-                //AddMessage2Log('$aStore = '.print_r($comment, true),'');
+                    $comment .=' Адрес доставки: ';
+                    $comment .= $city.' '.$street.' '.$home.' '.$korpus.' '.$flat;
+                }
                 $arFields["USER_DESCRIPTION"] = $comment;
+
+
 
 
 				$arResult["ORDER_ID"] = (int)CSaleOrder::DoSaveOrder($arOrderDat, $arFields, 0, $arResult["ERROR"]);
