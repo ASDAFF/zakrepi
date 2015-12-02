@@ -2,68 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b94893a-e1d6-4c97-9d95-37d54e5f8c7a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/news/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/news/detail.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/favicon.ico" afterPath="$PROJECT_DIR$/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.top.menu_ext.php" afterPath="$PROJECT_DIR$/.top.menu_ext.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/ajax.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/ajax.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal/auth.php" afterPath="$PROJECT_DIR$/personal/auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/sale.basket.basket/basket/basket_items.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/sale.basket.basket/basket/basket_items.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/catalog/catalog.php" afterPath="$PROJECT_DIR$/includes/catalog/catalog.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/components/zakrepi/catalog.element/component.php" afterPath="$PROJECT_DIR$/local/components/zakrepi/catalog.element/component.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/components/zakrepi/sale.order.ajax/component.php" afterPath="$PROJECT_DIR$/local/components/zakrepi/sale.order.ajax/component.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/confirm.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/confirm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/delivery.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/delivery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/brand/detail.php" afterPath="$PROJECT_DIR$/brand/detail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/news/detail.php" afterPath="$PROJECT_DIR$/news/detail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/promo/detail.php" afterPath="$PROJECT_DIR$/promo/detail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/footer.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/js/function.js" afterPath="$PROJECT_DIR$/local/templates/zakrepi/js/function.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/php_interface/include/function.php" afterPath="$PROJECT_DIR$/local/php_interface/include/function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/php_interface/include/function_bitrix.php" afterPath="$PROJECT_DIR$/local/php_interface/include/function_bitrix.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/components/zakrepi/sale.order.ajax/functions.php" afterPath="$PROJECT_DIR$/local/components/zakrepi/sale.order.ajax/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/header.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/upload/1c_catalog/import.xml" afterPath="$PROJECT_DIR$/upload/1c_catalog/import.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/index.php" afterPath="$PROJECT_DIR$/auth/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/brand/index.php" afterPath="$PROJECT_DIR$/brand/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/index.php" afterPath="$PROJECT_DIR$/catalog/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/modules/zakrepisettigs/install/index.php" afterPath="$PROJECT_DIR$/local/modules/zakrepisettigs/install/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/news/index.php" afterPath="$PROJECT_DIR$/news/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal/index.php" afterPath="$PROJECT_DIR$/personal/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal/account/index.php" afterPath="$PROJECT_DIR$/personal/account/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/news/list.php" afterPath="$PROJECT_DIR$/includes/news/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/promo/list.php" afterPath="$PROJECT_DIR$/includes/promo/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/modules/zakrepisettigs/options.php" afterPath="$PROJECT_DIR$/local/modules/zakrepisettigs/options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/modules/zakrepisettigs/lang/ru/options.php" afterPath="$PROJECT_DIR$/local/modules/zakrepisettigs/lang/ru/options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/header/personal.php" afterPath="$PROJECT_DIR$/includes/header/personal.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/props.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/props.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/props_format.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/props_format.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal/registration.php" afterPath="$PROJECT_DIR$/personal/registration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/related_props.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/related_props.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/modules/useraddress/lib/function/remove_address_user.php" afterPath="$PROJECT_DIR$/local/modules/useraddress/lib/function/remove_address_user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.compare.result/.default/result_modifier.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.compare.result/.default/result_modifier.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.element/catalog-element/result_modifier.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.element/catalog-element/result_modifier.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.compare.result/.default/script.js" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.compare.result/.default/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/js/script.js" afterPath="$PROJECT_DIR$/local/templates/zakrepi/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/php_interface/include/settings.php" afterPath="$PROJECT_DIR$/local/php_interface/include/settings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/product/store.php" afterPath="$PROJECT_DIR$/includes/product/store.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/js/svg-lib.js" afterPath="$PROJECT_DIR$/local/templates/zakrepi/js/svg-lib.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/main.register/registration/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/main.register/registration/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/menu/top-menu/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/menu/top-menu/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/news/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/news/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/promo/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/promo/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/slider_home/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/slider_home/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/sale.basket.basket/favorites/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/sale.basket.basket/favorites/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/sale.basket.basket/favorites/lang/ru/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/sale.basket.basket/favorites/lang/ru/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/socserv.auth.form/soc-zakrepi-auth/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/socserv.auth.form/soc-zakrepi-auth/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/system.auth.form/zakrepi-auth/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/system.auth.form/zakrepi-auth/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.compare.result/.default/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.compare.result/.default/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.element/catalog-element/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.element/catalog-element/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.section/catalog-section/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.section/catalog-section/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/template.php" afterPath="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/templates/zakrepi/template_styles.css" afterPath="$PROJECT_DIR$/local/templates/zakrepi/template_styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/urlrewrite.php" afterPath="$PROJECT_DIR$/urlrewrite.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/urlwrite_old.php" afterPath="$PROJECT_DIR$/urlwrite_old.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zakrepi.iws" />
@@ -89,51 +30,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dbconn.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bitrix/php_interface/dbconn.php">
+      <file leaf-file-name="init.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local/php_interface/init.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="646">
-              <caret line="11" column="31" selection-start-line="3" selection-start-column="0" selection-end-line="11" selection-end-column="31" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="391">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".settings.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bitrix/.settings.php">
+      <file leaf-file-name="function_bitrix.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local/php_interface/include/function_bitrix.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.653847" vertical-offset="192" max-vertical-offset="1054">
-              <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+            <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="1870">
+              <caret line="25" column="78" selection-start-line="25" selection-start-column="78" selection-end-line="25" selection-end-column="78" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="function.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/php_interface/include/function.php">
+      <file leaf-file-name="urlrewrite.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/urlrewrite.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.5" vertical-offset="2244" max-vertical-offset="3383">
-              <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+            <state vertical-scroll-proportion="-23.923077" vertical-offset="1129" max-vertical-offset="2601">
+              <caret line="103" column="47" selection-start-line="103" selection-start-column="47" selection-end-line="103" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CSotbitDPD.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bitrix/modules/sotbit.dpd/classes/general/CSotbitDPD.php">
+      <file leaf-file-name=".footerbuyer.menu.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.footerbuyer.menu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.375" vertical-offset="3485" max-vertical-offset="5321">
-              <caret line="223" column="30" selection-start-line="223" selection-start-column="30" selection-end-line="223" selection-end-column="30" />
+            <state vertical-scroll-proportion="-19.346153" vertical-offset="194" max-vertical-offset="1105">
+              <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="soap.php" pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/soap.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/articles/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.769231" vertical-offset="4123" max-vertical-offset="14654">
-              <caret line="259" column="20" selection-start-line="259" selection-start-column="20" selection-end-line="259" selection-end-column="20" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="306">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/articles/list.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1139">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="404.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/404.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="629">
+              <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.27991217" vertical-offset="867" max-vertical-offset="2652">
+              <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/personal/account/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="2941">
+              <caret line="10" column="35" selection-start-line="9" selection-start-column="8" selection-end-line="10" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -152,13 +133,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/news.list/reviews/template.php" />
-        <option value="$PROJECT_DIR$/local/php_interface/init.php" />
-        <option value="$PROJECT_DIR$/includes/product/reviews.php" />
-        <option value="$PROJECT_DIR$/includes/header/small-basket.php" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/sale.basket.basket.small/cart/template.php" />
         <option value="$PROJECT_DIR$/compare/index.php" />
-        <option value="$PROJECT_DIR$/urlrewrite.php" />
         <option value="$PROJECT_DIR$/urlwrite_old.php" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/sale.basket.basket/favorites/basket_items.php" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/sale.basket.basket/favorites/basket_items_delay.php" />
@@ -171,7 +147,6 @@
         <option value="$PROJECT_DIR$/includes/product/store.php" />
         <option value="$PROJECT_DIR$/catalog/detail.php" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/breadcrumb/bread/template.php" />
-        <option value="$PROJECT_DIR$/local/php_interface/include/function_bitrix.php" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.section/catalog-section/result_modifier.php" />
         <option value="$PROJECT_DIR$/.top.menu_ext.php" />
         <option value="$PROJECT_DIR$/compare/.section.php" />
@@ -199,10 +174,16 @@
         <option value="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/props.php" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/props_format.php" />
         <option value="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/template.php" />
-        <option value="$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/related_props.php" />
         <option value="$PROJECT_DIR$/bitrix/.settings.php" />
-        <option value="$PROJECT_DIR$/local/php_interface/include/function.php" />
         <option value="$PROJECT_DIR$/bitrix/modules/sotbit.dpd/classes/general/CSotbitDPD.php" />
+        <option value="$PROJECT_DIR$/local/php_interface/include/function.php" />
+        <option value="$PROJECT_DIR$/local/components/zakrepi/sale.order.ajax/component.php" />
+        <option value="$PROJECT_DIR$/personal/account/index.php" />
+        <option value="$PROJECT_DIR$/local/php_interface/include/function_bitrix.php" />
+        <option value="$PROJECT_DIR$/urlrewrite.php" />
+        <option value="$PROJECT_DIR$/.footerbuyer.menu.php" />
+        <option value="$PROJECT_DIR$/404.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -210,8 +191,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="1912" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1040" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -255,6 +236,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -283,7 +265,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bitrix" />
+              <option name="myItemId" value="local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zakrepi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -297,11 +287,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bitrix" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
+              <option name="myItemId" value="local" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -315,51 +301,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bitrix" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sotbit.dpd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zakrepi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bitrix" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sotbit.dpd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="general" />
+              <option name="myItemId" value="articles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -397,15 +344,15 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -424,8 +371,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1296" height="1040" extended-state="7" />
-    <editor active="true" />
+    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -434,7 +381,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28317153" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18283582" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -472,83 +419,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/local/modules/useraddress/admin/user_address_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64365256" vertical-offset="306" max-vertical-offset="3026">
-          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/useraddress/admin/user_address_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26564217" vertical-offset="132" max-vertical-offset="1734">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/modules/useraddress/classes/general/cUserAddress.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7277717" vertical-offset="1071" max-vertical-offset="2686">
-          <caret line="102" column="21" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/result_modifier.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41053787" vertical-offset="0" max-vertical-offset="911">
-          <caret line="22" column="99" selection-start-line="22" selection-start-column="99" selection-end-line="22" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/component_epilog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="937">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07464325" vertical-offset="0" max-vertical-offset="911">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/.parameters.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36553237" vertical-offset="194" max-vertical-offset="1105">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/xml.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7416481" vertical-offset="666" max-vertical-offset="1564">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.smart.filter/component.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3227223" vertical-offset="6234" max-vertical-offset="14722">
-          <caret line="384" column="47" selection-start-line="384" selection-start-column="34" selection-end-line="384" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/catalog.smart.filter/catalog-filter-ajax/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5311804" vertical-offset="7768" max-vertical-offset="9299">
-          <caret line="485" column="229" selection-start-line="485" selection-start-column="48" selection-end-line="485" selection-end-column="229" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/catalog/filter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18660812" vertical-offset="0" max-vertical-offset="911">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/local/components/zakrepi/catalog.smart.filter/templates/visual_vertical/template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7037862" vertical-offset="8701" max-vertical-offset="10030">
@@ -661,13 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="937">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/template_styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="120660" max-vertical-offset="121992">
@@ -700,7 +563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="20672">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -725,14 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/components/bitrix/sale.location.selector.search/templates/.default/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6067" max-vertical-offset="7004">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/map.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4505">
@@ -742,68 +596,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.26923" vertical-offset="6865" max-vertical-offset="7718">
-          <caret line="444" column="32" selection-start-line="444" selection-start-column="32" selection-end-line="444" selection-end-column="32" />
-          <folding>
-            <marker date="1448988221387" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1448988221387" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1448988221387" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1448988221387" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="6644" max-vertical-offset="7514">
+          <caret line="431" column="32" selection-start-line="431" selection-start-column="32" selection-end-line="431" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/related_props.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.576923" vertical-offset="2519" max-vertical-offset="5219">
-          <caret line="172" column="53" selection-start-line="172" selection-start-column="53" selection-end-line="172" selection-end-column="53" />
-          <folding>
-            <marker date="1448988221380" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1448988221380" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1448988221380" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1448988221380" expanded="true" signature="-1:-1" placeholder="{&quot;url&quot;: '&lt;?=$templateFolder?&gt;/ajax.php'...}" />
-            <marker date="1448988221380" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1448988221380" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1448988221380" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1448988221380" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1448988221380" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="1890" max-vertical-offset="3043">
+          <caret line="73" column="62" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/props.php">
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8234552" vertical-offset="1979" max-vertical-offset="2873">
-          <caret line="78" column="12" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
-          <folding />
+        <state vertical-scroll-proportion="0.597146" vertical-offset="0" max-vertical-offset="911">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/index.php">
+    <entry file="file://$PROJECT_DIR$/bitrix/components/bitrix/sale.location.selector.search/templates/.default/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1275">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-          <folding />
+        <state vertical-scroll-proportion="-6.093917" vertical-offset="6067" max-vertical-offset="7004">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/props_format.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5661765" vertical-offset="6627" max-vertical-offset="7497">
-          <caret line="417" column="22" selection-start-line="417" selection-start-column="22" selection-end-line="417" selection-end-column="22" />
-          <folding>
-            <marker date="1448988221379" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1448988221379" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1448988221379" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
+        <state vertical-scroll-proportion="0.54565704" vertical-offset="6344" max-vertical-offset="7242">
+          <caret line="402" column="22" selection-start-line="402" selection-start-column="22" selection-end-line="402" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.029637761" vertical-offset="364" max-vertical-offset="1275">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/props.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7167947" vertical-offset="1945" max-vertical-offset="2856">
+          <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/zakrepi/sale.order.ajax/zakrepi-ajax-order/delivery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.89215684" vertical-offset="3261" max-vertical-offset="4233">
-          <caret line="149" column="63" selection-start-line="149" selection-start-column="63" selection-end-line="149" selection-end-column="63" />
-          <folding />
+        <state vertical-scroll-proportion="-0.8106904" vertical-offset="3312" max-vertical-offset="4284">
+          <caret line="152" column="63" selection-start-line="152" selection-start-column="63" selection-end-line="152" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -811,54 +654,140 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="937">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/components/bitrix/main.register/registration/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5440" max-vertical-offset="6681">
+        <state vertical-scroll-proportion="0.62138087" vertical-offset="4882" max-vertical-offset="6239">
           <caret line="325" column="15" selection-start-line="312" selection-start-column="12" selection-end-line="325" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/php_interface/dbconn.php">
+    <entry file="file://$PROJECT_DIR$/bitrix/modules/sotbit.dpd/classes/general/CSotbitDPD.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="646">
-          <caret line="11" column="31" selection-start-line="3" selection-start-column="0" selection-end-line="11" selection-end-column="31" />
+        <state vertical-scroll-proportion="-0.062568605" vertical-offset="2301" max-vertical-offset="5321">
+          <caret line="132" column="11" selection-start-line="132" selection-start-column="11" selection-end-line="132" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bitrix/.settings.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.653847" vertical-offset="192" max-vertical-offset="1054">
-          <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.73984635" vertical-offset="125" max-vertical-offset="1054">
+          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/modules/sotbit.dpd/delivery/delivery_sotbit_dpd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3172338" vertical-offset="170" max-vertical-offset="3621">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitrix/php_interface/dbconn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22392975" vertical-offset="0" max-vertical-offset="911">
+          <caret line="12" column="31" selection-start-line="3" selection-start-column="0" selection-end-line="12" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/components/zakrepi/sale.order.ajax/component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.0" vertical-offset="36483" max-vertical-offset="44047">
+          <caret line="2182" column="0" selection-start-line="2182" selection-start-column="0" selection-end-line="2182" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local/php_interface/include/function.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.5" vertical-offset="2244" max-vertical-offset="3383">
-          <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+        <state vertical-scroll-proportion="-29.807692" vertical-offset="2710" max-vertical-offset="3689">
+          <caret line="205" column="50" selection-start-line="205" selection-start-column="50" selection-end-line="205" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/soap.php">
+    <entry file="file://$PROJECT_DIR$/local/php_interface/init.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.769231" vertical-offset="4123" max-vertical-offset="14654">
-          <caret line="259" column="20" selection-start-line="259" selection-start-column="20" selection-end-line="259" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="937">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bitrix/modules/sotbit.dpd/classes/general/CSotbitDPD.php">
+    <entry file="file://$PROJECT_DIR$/personal/account/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.375" vertical-offset="3485" max-vertical-offset="5321">
-          <caret line="223" column="30" selection-start-line="223" selection-start-column="30" selection-end-line="223" selection-end-column="30" />
+        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="2941">
+          <caret line="10" column="35" selection-start-line="9" selection-start-column="8" selection-end-line="10" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/php_interface/include/function_bitrix.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="1870">
+          <caret line="25" column="78" selection-start-line="25" selection-start-column="78" selection-end-line="25" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/urlrewrite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.923077" vertical-offset="1129" max-vertical-offset="2601">
+          <caret line="103" column="47" selection-start-line="103" selection-start-column="47" selection-end-line="103" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.footerbuyer.menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.346153" vertical-offset="194" max-vertical-offset="1105">
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/articles/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="937">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/articles/list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/404.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="629">
+          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.01864035" vertical-offset="0" max-vertical-offset="912">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/templates/zakrepi/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.27991217" vertical-offset="867" max-vertical-offset="2652">
+          <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
           <folding />
         </state>
       </provider>

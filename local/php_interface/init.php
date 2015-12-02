@@ -9,7 +9,7 @@ include 'include/settings.php';
  * loader();
  * */
 include 'include/function.php';
-define("LOG_FILENAME", $_SERVER["DOCUMENT_ROOT"]."/log.txt");
+
 /*работа с пользователями и пользовательскими свойствами*/
 include 'include/users.php';
 

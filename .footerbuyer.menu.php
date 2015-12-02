@@ -7,27 +7,6 @@ $aMenuLinks = Array(
 		Array(), 
 		"" 
 	),
-	/*Array(
-		"Помощь в выборе товара", 
-		"/pomoshch_v_vybore/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Тест-драйв", 
-		"/obzor_tovarov/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Сервисный центр", 
-		"/service/", 
-		Array(), 
-		Array(), 
-		"" 
-	),*/
 	Array(
 		"Бренды", 
 		"/brand/", 
@@ -35,6 +14,27 @@ $aMenuLinks = Array(
 		Array(), 
 		"" 
 	),
+    Array(
+        "Крепыж \"Бонус\"",
+        "/bonus/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Центр поддержки пенсионеров садоводов",
+        "/cpp/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Подарочные сертификаты",
+        "/sertificat/",
+        Array(),
+        Array(),
+        ""
+    ),
 	/*Array(
 		"Крепыж-бонус", 
 		"/bonus/", 

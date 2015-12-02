@@ -192,3 +192,21 @@ function deleteGET($url, $name, $amp = true) {
     else $url = $url_part; // Если параметров не осталось, то просто берём всё, что идёт до знака ?
     return $url; // Возвращаем итоговый URL
   }
+
+//метод класса, который добавляет свойство (код/значение) к заказу, динамически узнавая идентификатор свойства:
+function AddOrderProperty($code, $value, $order) {
+    if (!strlen($code)) {
+        return false;
+    }
+    if (CModule::IncludeModule('sale')) {
+        if ($arProp = CSaleOrderProps::GetList(array(), array('CODE' => $code))->Fetch()) {
+            return CSaleOrderPropsValue::Add(array(
+                'NAME' => $arProp['NAME'],
+                'CODE' => $arProp['CODE'],
+                'ORDER_PROPS_ID' => $arProp['ID'],
+                'ORDER_ID' => $order,
+                'VALUE' => $value,
+            ));
+        }
+    }
+}

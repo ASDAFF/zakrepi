@@ -107,20 +107,19 @@ $arUrlRewrite = array(
         "CONDITION" => "#^/contacts/#",
         "PATH" => "/static_page/contacts.php",
     ),
-
-    /*
       array(
-        "CONDITION" => "#^/history/#",
-        "PATH" => "/content/history.php",
+        "CONDITION" => "#^/bonus/#",
+        "PATH" => "/static_page/bonus.php",
     ),
        array(
-        "CONDITION" => "#^/history/#",
-        "PATH" => "/content/history.php",
+        "CONDITION" => "#^/cpp/#",
+        "PATH" => "/static_page/cpp.php",
     ),
         array(
-        "CONDITION" => "#^/history/#",
-        "PATH" => "/content/history.php",
+        "CONDITION" => "#^/sertificat/#",
+        "PATH" => "/static_page/sertificat.php",
     ),
+    /*
          array(
         "CONDITION" => "#^/history/#",
         "PATH" => "/content/history.php",

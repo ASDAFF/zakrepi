@@ -1494,6 +1494,8 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
 							{
 								//$arResult["DELIVERY"]['dpd']['PROFILES']['dpd']["CHECKED"] = "Y";
                                 //$arResult["DELIVERY_CLICK"] = $k;
+                                //$arResult["DELIVERY"][$k]["CHECKED"] = "Y";
+                                $arResult["DELIVERY_CLICK"] = $k;
 								$bf = true;
 							}
                             else{
@@ -1541,6 +1543,9 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
                                     $arUserResult["DELIVERY_ID"] = $k.":".$kk;
                                     
                                     if($_POST['DELIVERY_CLICK'] == $k.":".$kk){
+
+                                        $arResult["DELIVERY_CLICK"] = $k.":".$kk;
+                                        $arResult["DELIVERY"][$k]["PROFILES"][$kk]["CHECKED"] = "Y";
                                         $bf = true;
                                     }
                                     else{
@@ -2153,8 +2158,8 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
                 
                 if($_REQUEST['DELIVERY_ID'] == 1)
                 {
-                    
-                    
+
+
                     $store = CCatalogStore::GetList(
                         array(),
                         array('ID'=>$_REQUEST['BUYER_STORE']),
@@ -2170,6 +2175,8 @@ if ($USER->IsAuthorized() || $arParams["ALLOW_AUTO_REGISTER"] == "Y" )
                 {
                     $comment .=' Адрес доставки: '.$_REQUEST['ORDER_PROP_6'];
                 }
+
+               // AddOrderProperty('UR_ADDRESS', 'ADDRESS_ORDER_ORGANIZATION', $ID);
                 //$comment .= 'ÔÈÎ: '.$_REQUEST['ORDER_PROP_1'];
                 //AddMessage2Log('$aStore = '.print_r($comment, true),'');
                 $arFields["USER_DESCRIPTION"] = $comment;

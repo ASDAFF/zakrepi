@@ -9,67 +9,34 @@ AddEventHandler("sale", "OnSaleComponentOrderComplete", Array("CommentOrder", "O
 
 class CommentOrder{
     function OrderCommentPlus($ID, $arFields){
-        
-        /*require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/htmls.ordercomment/order_filelds_list.php");
-
-        $arOrderFieldsList = Array(
-            "ID" => GetMessage("SPS_ORDER_ID"), 
-            "DATE_INSERT" => GetMessage("SPS_ORDER_DATETIME"), 
-            "DATE_INSERT_DATE" => GetMessage("SPS_ORDER_DATE"), 
-            "SHOULD_PAY" => GetMessage("SPS_ORDER_PRICE"), 
-            "CURRENCY" => GetMessage("SPS_ORDER_CURRENCY"), 
-            "PRICE" => GetMessage("SPS_ORDER_SUM"), 
-            "LID" => GetMessage("SPS_ORDER_SITE"), 
-            "PRICE_DELIVERY" => GetMessage("SPS_ORDER_PRICE_DELIV"), 
-            "DISCOUNT_VALUE" => GetMessage("SPS_ORDER_DESCOUNT"), 
-            "USER_ID" => GetMessage("SPS_ORDER_USER_ID"), 
-            "PAY_SYSTEM_ID" => GetMessage("SPS_ORDER_PS"), 
-            "DELIVERY_ID" => GetMessage("SPS_ORDER_DELIV"), 
-            "TAX_VALUE" => GetMessage("SPS_ORDER_TAX"),
-            "USER_DESCRIPTION" => GetMessage("SPS_USER_DESCRIPTION"));
-
-        $AddComment = array();
-        foreach($arOrderFieldsList as $Field => $Desc){
-
-            if(COption::GetOptionString("htmls.ordercomment", $Field) == "Y"){
-                if($Field == 'DATE_INSERT_DATE'){
-                    $AddComment[] = CDatabase::FormatDate($arFields['DATE_INSERT'], "YYYY-MM-DD HH:MI:SS", "DD.MM.YYYY");
-                }
-                elseif($Field == 'DATE_INSERT'){
-                    $AddComment[] = CDatabase::FormatDate($arFields['DATE_INSERT'], "YYYY-MM-DD HH:MI:SS", "DD.MM.YYYY HH:MI:SS");
-                }
-                elseif($Field == 'SHOULD_PAY'){
-                    $AddComment[] = $arFields['PRICE'];
-                }
-                elseif($Field == "PAY_SYSTEM_ID"){
-                    $arPaySys = CSalePaySystem::GetByID($arFields['PAY_SYSTEM_ID'], $arFields['PERSON_TYPE_ID']);
-                    $AddComment[] = $arPaySys["NAME"];
-                }
-                elseif($Field == "DELIVERY_ID"){
-                    $arDeliv = CSaleDelivery::GetByID($arFields[$Field]);
-                    $AddComment[] = $arDeliv["NAME"];
-                }
-                elseif(!empty($arFields[$Field])){
-                    $AddComment[] = $arFields[$Field];
-                }
-            }
-        }
-
-        $OrderProps = CSaleOrderPropsValue::GetOrderProps($ID);
-        while ($arProps = $OrderProps->Fetch()){
-            if(COption::GetOptionString("htmls.ordercomment", "PROP_" . $arProps['ORDER_PROPS_ID']) == "Y"){
-                $AddComment[] = $arProps['VALUE'];
-            }
-        }
-*/
         $upFields = array("COMMENTS" => $arFields["USER_DESCRIPTION"]);
-        CSaleOrder::Update($ID, $upFields);
-        /*if(count($AddComment) > 0){
-            $upFields = array("COMMENTS" => implode(COption::GetOptionString("htmls.ordercomment", "SPS_SEPARATOR", ", "), $AddComment));
-            CSaleOrder::Update($ID, $upFields);
-        }*/
-    }
+        $arOrder = CSaleOrder::GetByID($ID);
+        if($arOrder['PERSON_TYPE_ID'] == 2)
+        {
+            //Если Юр лицо добавляем значения реквизитов в заказ для выгрузки в 1С
+            $user = $arOrder['USER_ID'];
+            $rsUser = CUser::GetByID($user);
+            $arUser = $rsUser->Fetch();
 
+            AddOrderProperty('UF_LEGAL_ADDRESS', $arUser['UF_LEGAL_ADDRESS'], $ID);
+            AddOrderProperty('UF_INN', $arUser['UF_INN'], $ID);
+            AddOrderProperty('UF_KPP', $arUser['UF_KPP'], $ID);
+            AddOrderProperty('UF_OKPO', $arUser['UF_OKPO'], $ID);
+            AddOrderProperty('UF_OGRN', $arUser['UF_OGRN'], $ID);
+            AddOrderProperty('UF_CONTACT_MANAGER', $arUser['UF_CONTACT_MANAGER'], $ID);
+
+            AddOrderProperty('UF_NAME_BANK', $arUser['UF_NAME_BANK'], $ID);
+            AddOrderProperty('UF_BIC_BANK', $arUser['UF_BIC_BANK'], $ID);
+            AddOrderProperty('UF_CHECKING_ACCOUNT', $arUser['UF_CHECKING_ACCOUNT'], $ID);
+            AddOrderProperty('UF_CORR_ACCOUNT', $arUser['UF_CORR_ACCOUNT'], $ID);
+            /*
+                AddOrderProperty('UF_LEGAL_ADDRESS', $arUser['UF_LEGAL_ADDRESS'], $ID);
+                AddOrderProperty('UF_LEGAL_ADDRESS', $arUser['UF_LEGAL_ADDRESS'], $ID);
+                AddOrderProperty('UF_LEGAL_ADDRESS', $arUser['UF_LEGAL_ADDRESS'], $ID);
+            */
+        }
+        CSaleOrder::Update($ID, $upFields);
+    }
 }
 
 
